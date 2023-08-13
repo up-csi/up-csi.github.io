@@ -1,0 +1,24 @@
+name: Test and Build Project
+
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Repository
+        uses: actions/checkout@v3
+      - name: Install `pnpm`
+        run: npm install -g pnpm
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Check Formatting
+        run: pnpm fmt
+      - name: Check Lints
+        run: pnpm lint
+      - name: Build for Production
+        run: pnpm build
