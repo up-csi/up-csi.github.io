@@ -1,0 +1,43 @@
+{
+    "name": "up-csi",
+    "version": "0.0.0",
+    "description": "The official website for UP CSI.",
+    "type": "module",
+    "source": "src/index.html",
+    "scripts": {
+        "dev": "parcel",
+        "watch": "parcel watch",
+        "build": "parcel build",
+        "fmt": "prettier --check .",
+        "fmt:fix": "prettier --write .",
+        "lint": "htmlhint src/**/*.html && stylelint src/**/*.css && eslint src/**/*.ts"
+    },
+    "devDependencies": {
+        "@parcel/bundler-default": "^2.9.3",
+        "@parcel/compressor-raw": "^2.9.3",
+        "@parcel/core": "^2.9.3",
+        "@parcel/namer-default": "^2.9.3",
+        "@parcel/optimizer-css": "^2.9.3",
+        "@parcel/optimizer-htmlnano": "^2.9.3",
+        "@parcel/optimizer-swc": "^2.9.3",
+        "@parcel/packager-css": "^2.9.3",
+        "@parcel/packager-html": "^2.9.3",
+        "@parcel/packager-js": "^2.9.3",
+        "@parcel/reporter-dev-server": "^2.9.3",
+        "@parcel/resolver-default": "^2.9.3",
+        "@parcel/runtime-js": "^2.9.3",
+        "@parcel/transformer-css": "^2.9.3",
+        "@parcel/transformer-html": "^2.9.3",
+        "@parcel/transformer-js": "^2.9.3",
+        "@typescript-eslint/eslint-plugin": "^6.3.0",
+        "@typescript-eslint/parser": "^6.3.0",
+        "eslint": "^8.47.0",
+        "eslint-config-prettier": "^9.0.0",
+        "htmlhint": "^1.1.4",
+        "parcel": "^2.9.3",
+        "prettier": "^3.0.1",
+        "stylelint": "^15.10.2",
+        "stylelint-config-standard": "^34.0.0",
+        "typescript": "^5.1.6"
+    }
+}
