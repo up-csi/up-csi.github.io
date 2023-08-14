@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Panamera';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        local('Panamera'),
+        url('./regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Panamera';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        local('Panamera'),
+        url('./bold.woff2') format('woff2');
+}

@@ -1,3 +1,5 @@
+@import url('../fonts/panamera/font.css');
+
 :root {
-    margin: 0;
+    font-family: Panamera, sans-serif;
 }

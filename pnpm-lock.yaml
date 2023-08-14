@@ -35,6 +35,9 @@ devDependencies:
   '@parcel/packager-js':
     specifier: ^2.9.3
     version: 2.9.3(@parcel/core@2.9.3)
+  '@parcel/packager-raw':
+    specifier: ^2.9.3
+    version: 2.9.3(@parcel/core@2.9.3)
   '@parcel/reporter-dev-server':
     specifier: ^2.9.3
     version: 2.9.3(@parcel/core@2.9.3)
