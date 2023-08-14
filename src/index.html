@@ -7,6 +7,84 @@
         <title>Hello world!</title>
     </head>
     <body>
-        <strong>Learn. <em>Create.</em> Innovate.</strong>
+        <nav>
+            <ul>
+                <li>Projects</li>
+                <li>About Us</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Learn. <em>Create.</em> Innovate.</h1>
+            <p>
+                UP CSI is a service-oriented organization. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Animi, hic!
+            </p>
+        </header>
+        <main>
+            <section>
+                <h1>What We Do</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus
+                    ratione sit enim quos quo iure voluptates saepe, praesentium accusamus tempore
+                    quas, officiis beatae harum animi blanditiis aperiam. Excepturi, corrupti.
+                </p>
+                <ul>
+                    <li>Helping the community...</li>
+                    <li>Solving your problems...</li>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                </ul>
+            </section>
+            <section>
+                <form method="POST" action="/contact">
+                    <div>
+                        <label for="email">Your Email Address</label>
+                        <input
+                            required
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="user@example.com"
+                        />
+                    </div>
+                    <div>
+                        <label for="sub">Subject</label>
+                        <input
+                            required
+                            type="text"
+                            name="sub"
+                            id="sub"
+                            placeholder="Hello there!"
+                        />
+                    </div>
+                    <div>
+                        <label for="msg">Message</label>
+                        <textarea
+                            required
+                            rows="6"
+                            name="msg"
+                            id="msg"
+                            placeholder="Type your message here."
+                        ></textarea>
+                    </div>
+                    <button type="submit">Send Email</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <!-- TODO: Use actual SVG social icons here. -->
+                <li><a href="mailto:dcs.innovate@gmail.com">dcs.innovate@gmail.com</a></li>
+                <li><a href="https://www.facebook.com/upcsi">Facebook</a></li>
+                <li><a href="https://twitter.com/officialupcsi">Twitter</a></li>
+                <li>
+                    <a href="https://www.linkedin.com/company/up-center-for-student-innovations/"
+                        >LinkedIn</a
+                    >
+                </li>
+            </ul>
+        </footer>
     </body>
 </html>
