@@ -39,8 +39,8 @@
             </section>
             <section>
                 <form method="POST" action="/contact">
-                    <div>
-                        <label for="email">Your Email Address</label>
+                    <label>
+                        <span>Your Email Address</span>
                         <input
                             required
                             type="email"
@@ -48,9 +48,9 @@
                             id="email"
                             placeholder="user@example.com"
                         />
-                    </div>
-                    <div>
-                        <label for="sub">Subject</label>
+                    </label>
+                    <label>
+                        <span>Subject</span>
                         <input
                             required
                             type="text"
@@ -58,9 +58,9 @@
                             id="sub"
                             placeholder="Hello there!"
                         />
-                    </div>
-                    <div>
-                        <label for="msg">Message</label>
+                    </label>
+                    <label>
+                        <span>Message</span>
                         <textarea
                             required
                             rows="6"
@@ -68,7 +68,7 @@
                             id="msg"
                             placeholder="Type your message here."
                         ></textarea>
-                    </div>
+                    </label>
                     <button type="submit">Send Email</button>
                 </form>
             </section>

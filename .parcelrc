@@ -1,7 +1,7 @@
 {
     "bundler": "@parcel/bundler-default",
     "transformers": {
-        "*.css": ["@parcel/transformer-css"],
+        "*.css": ["@parcel/transformer-postcss", "@parcel/transformer-css"],
         "*.{js,ts,mjs}": ["@parcel/transformer-js"],
         "*.html": ["@parcel/transformer-html"]
     },
