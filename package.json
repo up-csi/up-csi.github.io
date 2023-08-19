@@ -14,6 +14,7 @@
         "lint": "htmlhint src/**/*.html && stylelint src/**/*.css && eslint src/**/*.ts"
     },
     "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^5.0.0",
         "@parcel/bundler-default": "^2.9.3",
         "@parcel/compressor-raw": "^2.9.3",
         "@parcel/core": "^2.9.3",
@@ -40,6 +41,7 @@
         "parcel": "^2.9.3",
         "postcss": "^8.4.28",
         "prettier": "^3.0.1",
+        "purgecss": "^5.0.0",
         "stylelint": "^15.10.2",
         "stylelint-config-standard": "^34.0.0",
         "tailwindcss": "^3.3.3",
