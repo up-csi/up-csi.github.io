@@ -11,7 +11,7 @@
         "build": "parcel build",
         "fmt": "prettier --check .",
         "fmt:fix": "prettier --write .",
-        "lint": "htmlhint src/**/*.html && stylelint src/**/*.css && eslint src/**/*.ts"
+        "lint": "htmlhint src/**/*.html && stylelint src/**/*.css && eslint **/*.ts"
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^5.0.0",
