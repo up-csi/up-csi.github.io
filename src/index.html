@@ -15,7 +15,7 @@
                 <li>Contact</li>
             </ul>
         </nav>
-        <header class="prose dark:prose-invert">
+        <header class="prose m-16 dark:prose-invert">
             <h1 class="font-heading">Learn. <em>Create.</em> Innovate.</h1>
             <p>
                 UP CSI is a service-oriented organization. Lorem ipsum dolor sit amet consectetur
@@ -23,7 +23,7 @@
             </p>
         </header>
         <main>
-            <section class="prose dark:prose-invert">
+            <section class="prose m-16 max-w-none dark:prose-invert">
                 <h1 class="font-heading">What We Do</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus
@@ -38,7 +38,11 @@
                     <li>Lorem, ipsum dolor.</li>
                 </ul>
             </section>
-            <form method="POST" action="/contact" class="space-y-2">
+            <form
+                method="POST"
+                action="/contact"
+                class="m-16 block flex flex-col gap-4 rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800"
+            >
                 <x-label>
                     <fill:default>
                         <span>Your Email Address</span>
@@ -67,7 +71,7 @@
                         ></x-textarea>
                     </fill:default>
                 </x-label>
-                <x-button type="submit">
+                <x-button type="submit" class="w-fit">
                     <fill:default>Submit</fill:default>
                 </x-button>
             </form>
