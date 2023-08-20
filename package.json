@@ -17,6 +17,7 @@
         "lint:js": "eslint **/*.{js,ts}"
     },
     "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^5.0.0",
         "@linthtml/linthtml": "^0.9.5",
         "@linthtml/linthtml-config-recommended": "^0.1.0",
         "@parcel/bundler-default": "^2.9.3",
