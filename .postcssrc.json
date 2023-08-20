@@ -1,6 +1,1 @@
-{
-    "plugins": {
-        "tailwindcss": true,
-        "@fullhuman/postcss-purgecss": { "content": ["./src/**/*.html"] }
-    }
-}
+{ "plugins": { "tailwindcss": true } }
