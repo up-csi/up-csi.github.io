@@ -11,10 +11,12 @@
         "build": "parcel build",
         "fmt": "prettier --check .",
         "fmt:fix": "prettier --write .",
-        "lint": "htmlhint src/**/*.html && stylelint src/**/*.css && eslint **/*.ts"
+        "lint": "linthtml src/**/*.html && stylelint src/**/*.css && eslint **/*.ts"
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^5.0.0",
+        "@linthtml/linthtml": "^0.9.5",
+        "@linthtml/linthtml-config-recommended": "^0.1.0",
         "@parcel/bundler-default": "^2.9.3",
         "@parcel/compressor-raw": "^2.9.3",
         "@parcel/core": "^2.9.3",
@@ -39,9 +41,9 @@
         "@typescript-eslint/parser": "^6.4.0",
         "eslint": "^8.47.0",
         "eslint-config-prettier": "^9.0.0",
-        "htmlhint": "^1.1.4",
         "parcel": "^2.9.3",
         "postcss": "^8.4.28",
+        "posthtml-component": "^1.1.0",
         "prettier": "^3.0.2",
         "prettier-plugin-tailwindcss": "^0.5.3",
         "purgecss": "^5.0.0",
