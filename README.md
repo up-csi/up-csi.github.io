@@ -1,9 +1,12 @@
 # UP CSI Website
 
-The University of the Philippines Center for Student Innovations (UP CSI) website is a statically generated website built with the [Parcel] bundler. It is primarily written in raw HTML and styled with pre-configured [Tailwind] CSS components, themes, and utilities. Form submissions are scripted with [TypeScript](https://www.typescriptlang.org/) where plain JavaScript is insufficient (e.g., type annotations).
+The University of the Philippines Center for Student Innovations (UP CSI) website is a statically generated website built with the [Parcel] bundler. It is primarily written in augmented HTML (thanks to the [`posthtml-components`] plugin for [PostHTML]) and styled with pre-configured [Tailwind] CSS components, themes, and utilities from [Flowbite]. Form submissions are scripted with [TypeScript](https://www.typescriptlang.org/) where plain JavaScript is insufficient (e.g., type annotations).
 
 [Parcel]: https://parceljs.org/
 [Tailwind]: https://tailwindcss.com/
+[PostHTML]: https://posthtml.org/
+[`posthtml-components`]: https://thewebartisan7.github.io/posthtml-components/index.html
+[Flowbite]: https://flowbite.com/
 
 # Development
 
