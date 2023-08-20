@@ -1,16 +1,27 @@
-name: Run Formatters and Linters
+name: Deploy to GitHub Pages
 
 on:
   workflow_dispatch:
   push:
     branches: main
-  pull_request:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  ci:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Repository
+      - name: Checkout
         uses: actions/checkout@v3
       - name: Enable Corepack for `pnpm`
         run: corepack enable
@@ -27,7 +38,14 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
         run: pnpm install
-      - name: Check Formatting
-        run: pnpm fmt
-      - name: Check Lints
-        run: pnpm lint
+      - name: Build Website
+        run: pnpm build
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: dist
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
