@@ -39,38 +39,38 @@
                 </ul>
             </section>
             <section>
-                <form method="POST" action="/contact">
-                    <label>
-                        <span>Your Email Address</span>
-                        <input
-                            required
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="user@example.com"
-                        />
-                    </label>
-                    <label>
-                        <span>Subject</span>
-                        <input
-                            required
-                            type="text"
-                            name="sub"
-                            id="sub"
-                            placeholder="Hello there!"
-                        />
-                    </label>
-                    <label>
-                        <span>Message</span>
-                        <textarea
-                            required
-                            rows="6"
-                            name="msg"
-                            id="msg"
-                            placeholder="Type your message here."
-                        ></textarea>
-                    </label>
-                    <x-button type="submit"></x-button>
+                <form method="POST" action="/contact" class="space-y-2">
+                    <x-label>
+                        <fill:default>
+                            <span>Your Email Address</span>
+                            <x-input
+                                type="email"
+                                required
+                                name="email"
+                                placeholder="user@example.com"
+                            />
+                        </fill:default>
+                    </x-label>
+                    <x-label>
+                        <fill:default>
+                            <span>Subject</span>
+                            <x-input required name="sub" placeholder="Hello there!" />
+                        </fill:default>
+                    </x-label>
+                    <x-label>
+                        <fill:default>
+                            <span>Message</span>
+                            <x-textarea
+                                required
+                                rows="6"
+                                name="msg"
+                                placeholder="Type your message here."
+                            ></textarea>
+                        </fill:default>
+                    </x-label>
+                    <x-button type="submit">
+                        <fill:default>Submit</fill:default>
+                    </x-button>
                 </form>
             </section>
         </main>
