@@ -62,6 +62,9 @@ devDependencies:
   '@parcel/transformer-postcss':
     specifier: ^2.9.3
     version: 2.9.3(@parcel/core@2.9.3)
+  '@parcel/transformer-posthtml':
+    specifier: ^2.9.3
+    version: 2.9.3(@parcel/core@2.9.3)
   '@tailwindcss/forms':
     specifier: ^0.5.4
     version: 0.5.4(tailwindcss@3.3.3)
