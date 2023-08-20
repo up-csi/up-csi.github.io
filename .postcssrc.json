@@ -1,1 +1,1 @@
-{ "plugins": { "tailwindcss": true } }
+{ "plugins": { "tailwindcss": true, "postcss-prune-var": true } }

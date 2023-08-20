@@ -46,6 +46,7 @@
         "eslint-config-prettier": "^9.0.0",
         "parcel": "^2.9.3",
         "postcss": "^8.4.28",
+        "postcss-prune-var": "^1.1.1",
         "posthtml-component": "^1.1.0",
         "prettier": "^3.0.2",
         "prettier-plugin-tailwindcss": "^0.5.3",
