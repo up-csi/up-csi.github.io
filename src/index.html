@@ -50,36 +50,28 @@
                     id="contact"
                 >
                     <x-label>
-                        <fill:default>
-                            <span>Your Email Address</span>
-                            <x-input
-                                type="email"
-                                required
-                                name="email"
-                                placeholder="user@example.com"
-                            ></x-input>
-                        </fill:default>
+                        <span>Your Email Address</span>
+                        <x-input
+                            type="email"
+                            required
+                            name="email"
+                            placeholder="user@example.com"
+                        ></x-input>
                     </x-label>
                     <x-label>
-                        <fill:default>
-                            <span>Subject</span>
-                            <x-input required name="sub" placeholder="Hello there!"></x-input>
-                        </fill:default>
+                        <span>Subject</span>
+                        <x-input required name="sub" placeholder="Hello there!"></x-input>
                     </x-label>
                     <x-label>
-                        <fill:default>
-                            <span>Message</span>
-                            <x-textarea
-                                required
-                                rows="6"
-                                name="msg"
-                                placeholder="Type your message here."
-                            ></x-textarea>
-                        </fill:default>
+                        <span>Message</span>
+                        <x-textarea
+                            required
+                            rows="6"
+                            name="msg"
+                            placeholder="Type your message here."
+                        ></x-textarea>
                     </x-label>
-                    <x-button type="submit" class="w-fit">
-                        <fill:default>Submit</fill:default>
-                    </x-button>
+                    <x-button type="submit" class="w-fit">Submit</x-button>
                 </form>
             </section>
         </main>
