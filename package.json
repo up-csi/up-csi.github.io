@@ -6,7 +6,7 @@
     "packageManager": "pnpm@8.6.12",
     "source": "src/index.html",
     "scripts": {
-        "dev": "parcel --no-hmr",
+        "dev": "parcel",
         "watch": "parcel watch --no-hmr",
         "build": "parcel build",
         "fmt": "prettier --check .",
