@@ -1,1 +1,0 @@
-{ "plugins": { "posthtml-component": { "root": "./src/components" } } }

@@ -1,4 +1,4 @@
 .DS_Store
-.parcel-cache
+.svelte-kit
 node_modules
-dist
+build

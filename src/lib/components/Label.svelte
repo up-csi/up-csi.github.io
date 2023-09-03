@@ -1,4 +1,3 @@
-<!-- linthtml-disable doctype-first -->
 <label class="block space-y-2 text-sm font-medium">
-    <yield></yield>
+    <slot />
 </label>
