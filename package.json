@@ -10,14 +10,13 @@
         "build": "vite build",
         "preview": "vite preview",
         "sync": "svelte-kit sync",
-        "check": "svelte-check --tsconfig ./tsconfig.json",
-        "check:watch": "pnpm check --watch",
         "fmt": "prettier --plugin=prettier-plugin-svelte --plugin=prettier-plugin-tailwindcss --check .",
         "fmt:fix": "prettier --plugin=prettier-plugin-svelte --plugin=prettier-plugin-tailwindcss --write .",
-        "lint": "pnpm lint:html && pnpm lint:css && pnpm lint:js",
+        "lint": "pnpm lint:html && pnpm lint:css && pnpm lint:js && pnpm lint:svelte",
         "lint:html": "linthtml src/**/*.html",
         "lint:css": "stylelint src/**/*.css",
-        "lint:js": "eslint **/*.{js,svelte,ts}"
+        "lint:js": "eslint **/*.{js,svelte,ts}",
+        "lint:svelte": "svelte-check --tsconfig ./tsconfig.json"
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^5.0.0",
