@@ -38,6 +38,8 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
         run: pnpm install
+      - name: Synchronize SvelteKit
+        run: pnpm sync
       - name: Build Website
         run: pnpm build
       - name: Setup Pages
@@ -45,7 +47,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: dist
+          path: build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
