@@ -2,16 +2,20 @@
     import './app.css';
 </script>
 
-<nav class="sticky top-0 bg-inherit shadow-md">
-    <!-- TODO: UP CSI Logo -->
-    <ul class="flex flex-row justify-end gap-4 p-4">
-        <li>People</li>
-        <li>Events</li>
-        <li>Partnerships</li>
-        <li>Newsletter</li>
-    </ul>
-</nav>
-<slot />
+<header class="sticky top-0 bg-inherit p-4 shadow-md">
+    <nav>
+        <!-- TODO: UP CSI Logo -->
+        <ul class="flex flex-row justify-end gap-4">
+            <li>People</li>
+            <li>Events</li>
+            <li>Partnerships</li>
+            <li>Newsletter</li>
+        </ul>
+    </nav>
+</header>
+<main class="shadow-xl">
+    <slot />
+</main>
 <footer class="p-8 sm:p-12 md:p-16">
     <ul class="flex flex-row flex-wrap justify-center gap-8">
         <!-- TODO: Use actual SVG social icons here. -->
