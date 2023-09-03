@@ -32,7 +32,6 @@
         "require-atomic-updates": "error",
         "block-scoped-var": "error",
         "class-methods-use-this": "error",
-        "consistent-return": "error",
         "consistent-this": ["error", "self"],
         "curly": ["error", "multi"],
         "default-case": "error",

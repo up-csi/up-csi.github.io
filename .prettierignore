@@ -1,7 +1,7 @@
 .DS_Store
 .parcel-cache
+build
 node_modules
-dist
 .env
 .env.*
 !.env.example
