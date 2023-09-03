@@ -6,10 +6,10 @@
     <nav>
         <!-- TODO: UP CSI Logo -->
         <ul class="flex flex-row justify-end gap-4">
-            <li>People</li>
-            <li>Events</li>
-            <li>Partnerships</li>
-            <li>Newsletter</li>
+            <li><a href="/people/" class="py-4">People</a></li>
+            <li><a href="/events/" class="py-4">Events</a></li>
+            <li><a href="/partners/" class="py-4">Partnerships</a></li>
+            <li><a href="/news/" class="py-4">Newsletter</a></li>
         </ul>
     </nav>
 </header>

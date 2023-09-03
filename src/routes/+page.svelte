@@ -8,14 +8,16 @@
 <section class="prose p-8 dark:prose-invert sm:p-12 md:p-16">
     <h1 class="font-heading">Learn. <em>Create.</em> Innovate.</h1>
     <p>
-        UP CSI is a service-oriented organization. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, hic!
+        UP CSI is a service-oriented organization. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Animi, hic!
     </p>
 </section>
 <section class="prose p-8 dark:prose-invert sm:p-12 md:p-16">
     <h1 class="font-heading">What We Do</h1>
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus ratione sit enim quos quo iure
-        voluptates saepe, praesentium accusamus tempore quas, officiis beatae harum animi blanditiis aperiam. Excepturi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus ratione sit enim
+        quos quo iure voluptates saepe, praesentium accusamus tempore quas, officiis beatae harum
+        animi blanditiis aperiam. Excepturi.
     </p>
     <ul>
         <li>Helping the community...</li>
