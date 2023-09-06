@@ -18,6 +18,9 @@ We use [`pnpm`] as the package manager for [Node.js]. See the installation guide
 # Install the project dependencies.
 pnpm install
 
+# One-time setup of the auto-generated `.svelte-kit` folder.
+pnpm sync
+
 # Same as the file watcher, but also starts a developer server at
 # `localhost:5173` by default. Live-reloading and hot module replacement
 # has been disabled by default.
