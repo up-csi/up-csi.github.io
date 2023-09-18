@@ -2,7 +2,9 @@
     import './app.css';
 </script>
 
-<header class="sticky top-0 bg-inherit p-4 shadow-md">
+<header
+    class="sticky top-0 flex items-center justify-between bg-inherit bg-white p-4 px-8 shadow-md dark:bg-slate-800"
+>
     <nav>
         <!-- TODO: UP CSI Logo -->
         <ul class="flex flex-row justify-end gap-4">
