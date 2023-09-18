@@ -1,17 +1,20 @@
 <script>
     import './app.css';
+    import upcsi from '$lib/icons/upcsi.svg';
 </script>
 
 <header
     class="sticky top-0 flex items-center justify-between bg-inherit bg-white p-4 px-8 shadow-md dark:bg-slate-800"
 >
+    <a href="/">
+        <img src="{upcsi}" alt="UP CSI Logo" class="object-contain" width="20" />
+    </a>
     <nav>
-        <!-- TODO: UP CSI Logo -->
         <ul class="flex flex-row justify-end gap-4">
-            <li><a href="/people/" class="py-4">People</a></li>
-            <li><a href="/events/" class="py-4">Events</a></li>
-            <li><a href="/partners/" class="py-4">Partnerships</a></li>
-            <li><a href="/news/" class="py-4">Newsletter</a></li>
+            <li><a class="py-4" href="/people/">People</a></li>
+            <li><a class="py-4" href="/events/">Events</a></li>
+            <li><a class="py-4" href="/partners/">Partnerships</a></li>
+            <li><a class="py-4" href="/news/">Newsletter</a></li>
         </ul>
     </nav>
 </header>
