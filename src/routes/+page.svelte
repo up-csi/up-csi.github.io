@@ -44,6 +44,19 @@
         </li>
     </ul>
 </section>
+<section class="prose max-w-2xl max-w-full p-8 dark:prose-invert sm:p-12 md:p-16">
+    <h1 class="font-heading">What We Do</h1>
+    <p>
+        Our mission is to provide opportunities for students to enhance their software engineering
+        and their innovative thinking by:
+    </p>
+    <ul>
+        <li>Enhancing and upskilling student abilities through our developer training program.</li>
+        <li>Exploring avenues for industry partnerships.</li>
+        <li>Fulfilling the needs of the community through technological innovation.</li>
+        <li>Providing solutions to <em>your</em> problems.</li>
+    </ul>
+</section>
 <section class="prose p-8 dark:prose-invert sm:p-12 md:p-16">
     <h1 class="font-heading">Connect with Us</h1>
     <form
