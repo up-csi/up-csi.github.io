@@ -9,9 +9,9 @@
     <h1 class="font-heading">Learn. Create. <em>Innovate.</em></h1>
     <h2 class="font-heading">University of the Philippines Center for Student Innovations</h2>
     <p>
-        A service-oriented organization aimed towards the enhancement of student learning from the
-        University of the Philippines Diliman, Department of Computer Science by working with
-        real-world projects.
+        We are a service-oriented organization aimed towards the enhancement of student learning
+        from the University of the Philippines Diliman, Department of Computer Science by working
+        with real-world projects.
     </p>
 </section>
 <section class="prose max-w-2xl max-w-full p-8 dark:prose-invert sm:p-12 md:p-16">
