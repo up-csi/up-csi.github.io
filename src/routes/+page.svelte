@@ -39,7 +39,7 @@
             Establish DCS as a center of student innovation and excellent in software engineering.
         </li>
         <li>
-            Improve people’s lives by producing works that advocate the right use of Computer
+            Improve people's lives by producing works that advocate the right use of Computer
             Science and Software Engineering.
         </li>
     </ul>
