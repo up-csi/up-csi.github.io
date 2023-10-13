@@ -24,7 +24,7 @@
 <footer class="p-8 sm:p-12 md:p-16">
     <ul class="flex flex-row flex-wrap justify-center gap-8">
         <!-- TODO: Use actual SVG social icons here. -->
-        <li><a href="mailto:dcs.innovate@gmail.com">dcs.innovate@gmail.com</a></li>
+        <li><a href="mailto:lino@up-csi.org">lino@up-csi.org</a></li>
         <li>
             <a target="_blank" rel="noopener" href="https://www.facebook.com/upcsi"> Facebook </a>
         </li>
