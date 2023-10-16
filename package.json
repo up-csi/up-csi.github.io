@@ -44,7 +44,7 @@
         "svelte": "^4.2.1",
         "svelte-check": "^3.5.2",
         "tailwindcss": "^3.3.3",
-        "terser": "^5.21.0",
+        "terser": "^5.22.0",
         "typescript": "^5.2.2",
         "vite": "^4.4.11"
     }
