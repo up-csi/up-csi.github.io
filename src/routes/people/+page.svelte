@@ -4,9 +4,7 @@
     import bastiOrtiz from '$lib/people/basti-ortiz.webp';
     import beaDiokno from '$lib/people/bea-diokno.webp';
     import calebBunye from '$lib/people/caleb-bunye.webp';
-    import execExtra from '$lib/people/exec-1280.webp';
     import execFull from '$lib/people/exec.webp';
-    import execLarge from '$lib/people/exec-1024.webp';
     import execMedium from '$lib/people/exec-768.webp';
     import execSmall from '$lib/people/exec-640.webp';
     import eyronTanael from '$lib/people/eyron-tanael.webp';
@@ -16,13 +14,11 @@
 
 <article class="prose max-w-none dark:prose-invert">
     <h1>People</h1>
-    <figure>
-        <picture>
+    <figure class="flex flex-col items-center">
+        <picture class="max-w-3xl">
             <source type="image/webp" srcset={execSmall} media="(max-width:640px)" />
-            <source type="image/webp" srcset={execMedium} media="(max-width:768px)" />
-            <source type="image/webp" srcset={execLarge} media="(max-width:1024px)" />
-            <source type="image/webp" srcset={execExtra} media="(max-width:1280px)" />
-            <img src={execFull} width="1568" height="1203" alt="The Executive Board" class="max-w-[1568px]" />
+            <source type="image/webp" srcset={execMedium} />
+            <img src={execFull} width="1568" height="1203" alt="The Executive Board" />
         </picture>
         <figcaption>The 2023-2024 Executive Board</figcaption>
     </figure>
