@@ -5,8 +5,10 @@
     export let pos: string;
 </script>
 
-<div class="max-w-[192px]">
+<figure class="max-w-[192px]">
     <img {src} width="192" height="192" class="block rounded-2xl" {alt} />
-    <p><strong>{alt}</strong></p>
-    <p>{pos}</p>
-</div>
+    <figcaption>
+        <p><strong>{alt}</strong></p>
+        <p>{pos}</p>
+    </figcaption>
+</figure>
