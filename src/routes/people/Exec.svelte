@@ -1,7 +1,10 @@
 <script lang="ts">
     import type { HTMLImgAttributes } from 'svelte/elements';
+    // eslint-disable-next-line init-declarations
     export let src: HTMLImgAttributes['src'];
+    // eslint-disable-next-line init-declarations
     export let alt: HTMLImgAttributes['alt'];
+    // eslint-disable-next-line init-declarations
     export let pos: string;
 </script>
 

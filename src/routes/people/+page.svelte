@@ -10,8 +10,8 @@
     import execMedium from '$lib/people/exec-768.webp';
     import execSmall from '$lib/people/exec-640.webp';
     import eyronTanael from '$lib/people/eyron-tanael.webp';
-    import jellyRaborar from '$lib/people/jelly-raborar.webp';
     import hansLorico from '$lib/people/hans-lorico.webp';
+    import jellyRaborar from '$lib/people/jelly-raborar.webp';
 </script>
 
 <article class="prose max-w-none dark:prose-invert">
@@ -22,7 +22,7 @@
             <source type="image/webp" srcset={execMedium} media="(max-width:768px)" />
             <source type="image/webp" srcset={execLarge} media="(max-width:1024px)" />
             <source type="image/webp" srcset={execExtra} media="(max-width:1280px)" />
-            <img src={execFull} width="1568" height="1203" alt="The Executive Board" />
+            <img src={execFull} width="1568" height="1203" alt="The Executive Board" class="max-w-[1568px]" />
         </picture>
         <figcaption>The 2023-2024 Executive Board</figcaption>
     </figure>
