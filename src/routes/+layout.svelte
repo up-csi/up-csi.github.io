@@ -18,7 +18,7 @@
         </ul>
     </nav>
 </header>
-<main class="shadow-xl">
+<main class="m-4 shadow-xl">
     <slot />
 </main>
 <footer class="p-8 sm:p-12 md:p-16">
