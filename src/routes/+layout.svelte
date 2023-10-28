@@ -7,7 +7,7 @@
     class="sticky top-0 flex items-center justify-between bg-inherit bg-white p-4 px-8 shadow-md dark:bg-slate-800"
 >
     <a href="/">
-        <img src="{upcsi}" alt="UP CSI Logo" class="object-contain" width="20" />
+        <img src={upcsi} alt="UP CSI Logo" class="object-contain" width="20" />
     </a>
     <nav>
         <ul class="flex flex-row justify-end gap-4">
@@ -18,7 +18,7 @@
         </ul>
     </nav>
 </header>
-<main class="shadow-xl">
+<main class="m-4 shadow-xl">
     <slot />
 </main>
 <footer class="p-8 sm:p-12 md:p-16">
