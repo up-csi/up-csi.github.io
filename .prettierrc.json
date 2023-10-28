@@ -12,7 +12,6 @@
             "files": "*.svelte",
             "options": {
                 "parser": "svelte",
-                "svelteStrictMode": true,
                 "svelteAllowShorthand": true
             }
         }

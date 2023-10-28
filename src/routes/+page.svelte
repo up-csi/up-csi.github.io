@@ -62,7 +62,7 @@
     <form
         class="block flex flex-col gap-4 rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800"
         id="contact"
-        on:submit|preventDefault|stopPropagation|capture="{() => alert('Work in progress!')}"
+        on:submit|preventDefault|stopPropagation|capture={() => alert('Work in progress!')}
     >
         <Label>
             <span>Your Email Address</span>
@@ -74,7 +74,7 @@
         </Label>
         <Label>
             <span>Message</span>
-            <TextArea rows="{6}" name="msg" placeholder="Type your message here." />
+            <TextArea rows={6} name="msg" placeholder="Type your message here." />
         </Label>
         <Button type="submit">Submit</Button>
     </form>

@@ -11,7 +11,7 @@
 
 <article class="prose max-w-none dark:prose-invert">
     <h1>People</h1>
-    <section class="not-prose flex flex-wrap gap-4 justify-around">
+    <section class="not-prose flex flex-wrap justify-around gap-4">
         <Exec src={calebBunye} alt="Caleb Bunye" pos="President" />
         <Exec src={hansLorico} alt="Hans Lorico" pos="Vice President for Innovation" />
         <Exec src={eyronTanael} alt="Eyron Tanael" pos="Vice President for Service" />
