@@ -29,6 +29,6 @@
         <Exec src={bastiOrtiz} alt="Basti Ortiz" pos="Director for Engineering" />
         <Exec src={arianRey} alt="Arian Rey" pos="Director for Membership & Internals" />
         <Exec src={jellyRaborar} alt="Jelly Raborar" pos="Director for Branding & Creatives" />
-        <Exec src={beaDiokno} alt="Bea Diokno" pos="Director for External Affairs" />
+        <Exec src={beaDiokno} alt="Bea Diokno" pos="Director for External Relations" />
     </section>
 </article>
