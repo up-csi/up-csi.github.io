@@ -4,7 +4,7 @@
 </script>
 
 <header
-    class="sticky top-0 flex items-center justify-between bg-inherit bg-white p-4 px-8 shadow-md dark:bg-slate-800"
+    class="sticky top-0 flex items-center justify-between bg-white p-4 px-8 shadow-md dark:bg-black"
 >
     <a href="/">
         <img src={upcsi} alt="UP CSI Logo" class="object-contain" width="20" />
@@ -18,7 +18,7 @@
         </ul>
     </nav>
 </header>
-<main class="m-4 shadow-xl">
+<main class="m-4">
     <slot />
 </main>
 <footer class="p-8 sm:p-12 md:p-16">
@@ -26,19 +26,18 @@
         <!-- TODO: Use actual SVG social icons here. -->
         <li><a href="mailto:lino@up-csi.org">lino@up-csi.org</a></li>
         <li>
-            <a target="_blank" rel="noopener" href="https://www.facebook.com/upcsi"> Facebook </a>
+            <a target="_blank" rel="noopener" href="https://www.facebook.com/upcsi">Facebook</a>
         </li>
         <li>
-            <a target="_blank" rel="noopener" href="https://twitter.com/officialupcsi"> Twitter </a>
+            <a target="_blank" rel="noopener" href="https://twitter.com/officialupcsi">Twitter</a>
         </li>
         <li>
             <a
                 target="_blank"
                 rel="noopener"
                 href="https://www.linkedin.com/company/up-center-for-student-innovations/"
+                >LinkedIn</a
             >
-                LinkedIn
-            </a>
         </li>
         <li>
             <a target="_blank" rel="noopener" href="https://github.com/up-csi ">GitHub</a>
