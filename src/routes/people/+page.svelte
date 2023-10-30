@@ -22,7 +22,7 @@
         </picture>
         <figcaption>The 2023-2024 Executive Board</figcaption>
     </figure>
-    <section class="not-prose flex flex-wrap justify-around gap-4">
+    <section class="not-prose flex flex-wrap justify-around gap-8">
         <Exec src={calebBunye} alt="Caleb Bunye" pos="President" />
         <Exec src={hansLorico} alt="Hans Lorico" pos="Vice President for Innovation" />
         <Exec src={eyronTanael} alt="Eyron Tanael" pos="Vice President for Service" />
