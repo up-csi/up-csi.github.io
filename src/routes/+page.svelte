@@ -1,13 +1,18 @@
-<section class="prose max-w-2xl p-8 dark:prose-invert sm:p-12 md:p-16">
-    <h1 class="font-heading">Learn. Create. <em>Innovate.</em></h1>
-    <h2 class="font-heading">University of the Philippines Center for Student Innovations</h2>
+<section class="flex h-[72vh] items-center">
+    <div class="prose dark:prose-invert">
+        <h1 class="font-heading">Learn. Create. <em>Innovate.</em></h1>
+        <p>With the University of the Philippines Center for Student Innovations.</p>
+    </div>
+</section>
+<section class="prose max-w-full dark:prose-invert">
+    <h1 class="font-heading">Who We Are</h1>
     <p>
         We are a service-oriented organization aimed towards the enhancement of student learning
         from the University of the Philippines Diliman, Department of Computer Science by working
         with real-world projects.
     </p>
 </section>
-<section class="prose max-w-2xl max-w-full p-8 dark:prose-invert sm:p-12 md:p-16">
+<section class="prose max-w-full dark:prose-invert">
     <h1 class="font-heading">Our Mission</h1>
     <ul>
         <li>
@@ -21,7 +26,7 @@
         </li>
     </ul>
 </section>
-<section class="prose max-w-2xl max-w-full p-8 dark:prose-invert sm:p-12 md:p-16">
+<section class="prose max-w-full dark:prose-invert">
     <h1 class="font-heading">Our Vision</h1>
     <ul>
         <li>
@@ -37,7 +42,7 @@
         </li>
     </ul>
 </section>
-<section class="prose max-w-2xl max-w-full p-8 dark:prose-invert sm:p-12 md:p-16">
+<section class="prose max-w-full dark:prose-invert">
     <h1 class="font-heading">What We Do</h1>
     <p>
         Our mission is to provide opportunities for students to enhance their software engineering
@@ -50,6 +55,7 @@
         <li>Providing solutions to <em>your</em> problems.</li>
     </ul>
 </section>
-<section class="prose p-8 dark:prose-invert sm:p-12 md:p-16">
+<section class="prose max-w-full dark:prose-invert">
     <h1 class="font-heading">Connect with Us</h1>
+    <a href="mailto:lino@up-csi.org">Send a Message</a>
 </section>
