@@ -1,5 +1,6 @@
 <script>
     import './app.css';
+    import NavList from './NavList.svelte';
     import upcsi from '$lib/icons/upcsi.svg';
 </script>
 
@@ -9,14 +10,7 @@
     <a href="/">
         <img src={upcsi} alt="UP CSI Logo" class="object-contain" width="20" />
     </a>
-    <nav>
-        <ul class="flex flex-row justify-end gap-4">
-            <li><a class="py-4" href="/people/">People</a></li>
-            <li><a class="py-4" href="/events/">Events</a></li>
-            <li><a class="py-4" href="/partners/">Partnerships</a></li>
-            <li><a class="py-4" href="/news/">Newsletter</a></li>
-        </ul>
-    </nav>
+    <nav><NavList /></nav>
 </header>
 <main class="m-4 space-y-16 sm:m-8 xl:m-32 xl:my-16">
     <slot />
