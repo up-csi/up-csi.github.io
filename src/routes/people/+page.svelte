@@ -13,7 +13,6 @@
 </script>
 
 <article class="prose max-w-none dark:prose-invert">
-    <h1>People</h1>
     <figure class="flex flex-col items-center">
         <picture class="max-w-3xl">
             <source type="image/webp" srcset={execSmall} media="(max-width:640px)" />
