@@ -1,4 +1,4 @@
-<section class="flex h-[72vh] items-center">
+<section class="flex h-[90vh] max-h-[572px] items-center">
     <div class="prose dark:prose-invert">
         <h1 class="font-heading">Learn. Create. <em>Innovate.</em></h1>
         <p>With the University of the Philippines Center for Student Innovations.</p>
