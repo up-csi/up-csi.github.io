@@ -7,6 +7,7 @@ export default {
     experimental: { optimizeUniversalDefaults: true },
     content: ['./src/**/*.{css,html,js,svelte,ts}'],
     theme: {
+        backgroundImage: { lino: 'url("$lib/lino-hero.svg")' },
         fontFamily: { heading: ['Panamera', ...defaultTheme.fontFamily.sans] },
         colors: {
             black: {

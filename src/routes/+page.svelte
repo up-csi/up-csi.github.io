@@ -1,16 +1,14 @@
-<section class="flex h-[90vh] max-h-[572px] items-center">
+<section
+    class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
+>
     <div class="prose dark:prose-invert">
         <h1 class="font-heading">Learn. Create. <em>Innovate.</em></h1>
-        <p>With the University of the Philippines Center for Student Innovations.</p>
+        <p>
+            We are a service-oriented organization aimed towards the enhancement of student learning
+            from the University of the Philippines Diliman, Department of Computer Science by
+            working with real-world projects.
+        </p>
     </div>
-</section>
-<section class="prose max-w-full dark:prose-invert">
-    <h1 class="font-heading">Who We Are</h1>
-    <p>
-        We are a service-oriented organization aimed towards the enhancement of student learning
-        from the University of the Philippines Diliman, Department of Computer Science by working
-        with real-world projects.
-    </p>
 </section>
 <section class="prose max-w-full dark:prose-invert">
     <h1 class="font-heading">Our Mission</h1>
