@@ -1,5 +1,6 @@
 import autoprefixer from 'autoprefixer';
 import { defineConfig } from 'vite';
+// @ts-expect-error This module currently does not provide type declarations.
 import pruneVar from 'postcss-prune-var';
 import purgeCss from '@fullhuman/postcss-purgecss';
 import { sveltekit } from '@sveltejs/kit/vite';
