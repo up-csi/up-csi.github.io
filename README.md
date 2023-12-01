@@ -1,11 +1,10 @@
 # UP CSI Website
 
-The University of the Philippines Center for Student Innovations (UP CSI) website is a statically generated website built with the [SvelteKit] framework, which uses [Vite] as its build system under the hood. Components are then styled as [Flowbite] components using [TailwindCSS].
+The University of the Philippines Center for Student Innovations (UP CSI) website is a statically generated website built with the [SvelteKit] framework, which uses [Vite] as its build system under the hood. Components are then styled using [TailwindCSS].
 
 [SvelteKit]: https://kit.svelte.dev/
 [Vite]: https://vitejs.dev/
 [TailwindCSS]: https://tailwindcss.com/
-[Flowbite]: https://flowbite.com/
 
 # Development
 
