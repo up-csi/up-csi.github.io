@@ -32,11 +32,11 @@ pnpm build
 pnpm preview
 ```
 
-To maintain a high standard in the codebase, we use [GitHub Actions] to automatically run formatters (i.e., [Prettier]), linters (i.e., [HTMLHint], [Stylelint], [ESLint], and [Svelte Check]), and builders (i.e., [Parcel]) for each push to the repository (including pull requests). We strive to keep `main` at a green state (i.e., all tests pass) at all times. **No exceptions.**
+To maintain a high standard in the codebase, we use [GitHub Actions] to automatically run formatters (i.e., [Prettier]), linters (i.e., [LintHTML], [Stylelint], [ESLint], and [Svelte Check]), and builders (i.e., [Vite]) for each push to the repository (including pull requests). We strive to keep `main` at a green state (i.e., all tests pass) at all times. **No exceptions.**
 
 [GitHub Actions]: https://github.com/features/actions
 [Prettier]: https://prettier.io/
-[HTMLHint]: https://htmlhint.com/
+[LintHTML]: https://linthtml.vercel.app/
 [Stylelint]: https://stylelint.io/
 [ESLint]: https://eslint.org/
 [Svelte Check]: https://www.npmjs.com/package/svelte-check
