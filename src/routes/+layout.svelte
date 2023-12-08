@@ -5,7 +5,7 @@
 </script>
 
 <header
-    class="sticky top-0 flex items-center justify-between bg-white p-4 px-8 shadow-md dark:bg-black"
+    class="bg-white sticky top-0 flex items-center justify-between p-4 px-8 shadow-md dark:bg-black"
 >
     <a href="/">
         <img src={upcsi} alt="UP CSI Logo" class="object-contain" width="20" />
