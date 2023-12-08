@@ -1,3 +1,3 @@
-<article class="prose dark:prose-invert">
+<article class="prose">
     <h1>Events</h1>
 </article>

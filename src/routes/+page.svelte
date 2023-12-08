@@ -1,8 +1,8 @@
 <section
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
 >
-    <div class="prose dark:prose-invert">
-        <h1 class="font-heading">Learn. Create. <em>Innovate.</em></h1>
+    <div class="prose">
+        <h1 class="font-dm">Learn. Create. Innovate.</h1>
         <p>
             We are a service-oriented organization aimed towards the enhancement of student learning
             from the University of the Philippines Diliman, Department of Computer Science by
@@ -10,8 +10,8 @@
         </p>
     </div>
 </section>
-<section class="prose max-w-full dark:prose-invert">
-    <h1 class="font-heading">Our Mission</h1>
+<section class="prose max-w-full">
+    <h1 class="font-dm">Our Mission</h1>
     <ul>
         <li>
             Create development camps wherein students can enrich their skills in Software
@@ -24,8 +24,8 @@
         </li>
     </ul>
 </section>
-<section class="prose max-w-full dark:prose-invert">
-    <h1 class="font-heading">Our Vision</h1>
+<section class="prose max-w-full">
+    <h1 class="font-dm">Our Vision</h1>
     <ul>
         <li>
             Develop well-rounded DCS students with fundamental classroom learning through practical
@@ -40,8 +40,8 @@
         </li>
     </ul>
 </section>
-<section class="prose max-w-full dark:prose-invert">
-    <h1 class="font-heading">What We Do</h1>
+<section class="prose max-w-full">
+    <h1 class="font-dm">What We Do</h1>
     <p>
         Our mission is to provide opportunities for students to enhance their software engineering
         and their innovative thinking by:
@@ -53,7 +53,7 @@
         <li>Providing solutions to <em>your</em> problems.</li>
     </ul>
 </section>
-<section class="prose max-w-full dark:prose-invert">
-    <h1 class="font-heading">Connect with Us</h1>
+<section class="prose max-w-full">
+    <h1 class="font-dm">Connect with Us</h1>
     <a href="mailto:lino@up-csi.org">Send a Message</a>
 </section>
