@@ -10,19 +10,14 @@ export default {
         backgroundImage: { lino: 'url("$lib/lino-hero.svg")' },
         fontFamily: { heading: ['Panamera', ...defaultTheme.fontFamily.sans] },
         colors: {
-            black: {
-                DEFAULT: '#212121',
-                50: '#1E1E1E',
-            },
-            blue: {
-                DEFAULT: '#00C6D7',
-                50: '#00747E',
-            },
-            white: {
-                DEFAULT: '#F9FAFB',
-                50: '#FFFFFF',
-            },
-            yellow: '#F7CF2F',
+            'csi-blue': '#00C6D7',
+            'csi-black': '#212121',
+            'csi-yellow': '#F7CF2F',
+            'csi-white': '#F9FAFB',
+            'warm-white': '#E0E1E0',
+            'blue-white': '#D7E6ED',
+            blue: '#35ADBB',
+            black: '#253242',
         },
     },
     plugins: [forms, typo],
