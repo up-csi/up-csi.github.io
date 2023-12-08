@@ -8,7 +8,10 @@ export default {
     content: ['./src/**/*.{css,html,js,svelte,ts}'],
     theme: {
         backgroundImage: { lino: 'url("$lib/lino-hero.svg")' },
-        fontFamily: { heading: ['Panamera', ...defaultTheme.fontFamily.sans] },
+        fontFamily: {
+            dm: ['DMSans', ...defaultTheme.fontFamily.sans],
+            inter: ['Inter', ...defaultTheme.fontFamily.sans],
+        },
         colors: {
             'csi-blue': '#00C6D7',
             'csi-black': '#212121',
