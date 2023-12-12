@@ -1,2 +1,4 @@
 <!-- Blue Button -->
-<button class="rounded-full bg-csi-blue text-black font-inter text-center max-w-md w-32 h-10">Get in Touch</button>
+<button class="h-10 w-32 max-w-md rounded-full bg-csi-blue text-center font-inter text-black"
+    >Get in Touch</button
+>
