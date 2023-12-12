@@ -1,7 +1,7 @@
 <script>
-    import Button1 from '$lib/components/Button1.svelte';
-    import Button2 from '$lib/components/Button2.svelte';
+    import BlackButton from '$lib/components/BlackButton.svelte';
+    import BlueButton from '$lib/components/BlueBotton.svelte';
 </script>
 
-<Button1 />
-<Button2 />
+<BlackButton />
+<BlueButton />

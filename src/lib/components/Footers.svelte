@@ -1,8 +1,8 @@
 <script>
-    import CFooter from '$lib/components/CFooter.svelte';
-    import SFooter from '$lib/components/SFooter.svelte';
+    import CenterFooter from '$lib/components/CenterFooter.svelte';
+    import SidesFooter from '$lib/components/SidesFooter.svelte';
 </script>
 
-<SFooter />
+<SidesFooter />
 <br />
-<CFooter />
+<CenterFooter />
