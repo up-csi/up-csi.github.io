@@ -3,6 +3,7 @@
     import SidesFooter from '$lib/components/SidesFooter.svelte';
 </script>
 
-<SidesFooter />
-<br />
-<CenterFooter />
+<footer class="mx-auto flex flex-col p-4">
+    <SidesFooter />
+    <CenterFooter />
+</footer>
