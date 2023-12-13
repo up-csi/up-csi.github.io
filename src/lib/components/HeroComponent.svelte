@@ -4,7 +4,7 @@
             Learn. Create. <br /> Innovate.
         </h1>
         <p class="pb-8 text-sm text-black">With UP Center for Student Innovations.</p>
-        <button class="rounded-full bg-black px-4 py-2 text-csi-white"> Get in Touch </button>
+        <button class="rounded-full bg-black px-4 py-2 text-csi-white">Get in Touch</button>
     </div>
     <div class="w-2/4">
         <img src="src/lib/lino-sablay.svg" alt="Lino Sablay" />
