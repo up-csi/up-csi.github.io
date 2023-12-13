@@ -1,5 +1,5 @@
 <script>
-    import BlackButton from './BlackButton.svelte';
+    import BlackButton from '$lib/components/BlackButton.svelte';
     import lino from '$lib/lino-hero.svg';
 </script>
 
