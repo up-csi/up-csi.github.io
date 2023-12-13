@@ -5,9 +5,4 @@
 <div class="w-96">
     <h1 class="font-dm text-3xl">Develop well-rounded DCS students</h1>
     <p>with fundamental classroom learning through practical experience</p>
-
-    <!-- Attribution for Placeholder Image -->
-    <div class="mt-10 text-blue underline">
-        <a href="https://storyset.com/web">Web illustrations by Storyset</a>
-    </div>
 </div>
