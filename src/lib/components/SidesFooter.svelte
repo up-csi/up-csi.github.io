@@ -11,7 +11,6 @@
         <a href="https://twitter.com/officialupcsi">Twitter</a>
         <a href="https://www.linkedin.com/company/up-center-for-student-innovations/">LinkedIn</a>
         <a href="https://github.com/up-csi">GitHub</a>
-
         <a class="mt-4 text-sm" href="https://storyset.com/web">Web illustrations by Storyset</a>
     </div>
 </div>
