@@ -1,6 +1,7 @@
 <script>
     import upcsi from '$lib/icons/upcsi.svg';
 </script>
+
 <nav>
     <ul
         class="flex flex-row items-center justify-between gap-4 rounded-xl bg-warm-white py-1 pl-8 pr-1"
