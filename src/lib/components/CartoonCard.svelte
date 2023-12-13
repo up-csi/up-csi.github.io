@@ -1,5 +1,5 @@
-<div class="bg-csi-blue rounded-b-[50px] rounded-t-[180px] w-96 px-2 pt-20">
-    <img src="src/lib/cartoon-card-placeholder.svg" alt="Corporate Cartoon">
+<div class="w-96 rounded-b-[50px] rounded-t-[180px] bg-csi-blue px-2 pt-20">
+    <img src="src/lib/cartoon-card-placeholder.svg" alt="Corporate Cartoon" />
 </div>
 
 <div class="w-96">
@@ -7,7 +7,7 @@
     <p>with fundamental classroom learning through practical experience</p>
 
     <!-- Attribution for Placeholder Image -->
-    <div class="mt-10 underline text-blue">
+    <div class="mt-10 text-blue underline">
         <a href="https://storyset.com/web">Web illustrations by Storyset</a>
     </div>
 </div>
