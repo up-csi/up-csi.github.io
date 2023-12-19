@@ -1,3 +1,7 @@
+<script>
+    import Carousel from '$lib/components/Carousel.svelte';
+</script>
+
 <section
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
 >
@@ -53,6 +57,9 @@
         <li>Providing solutions to <em>your</em> problems.</li>
     </ul>
 </section>
+
+<section><Carousel /></section>
+
 <section class="prose max-w-full">
     <h1 class="font-dm">Connect with Us</h1>
     <a href="mailto:lino@up-csi.org">Send a Message</a>
