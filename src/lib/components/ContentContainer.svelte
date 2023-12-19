@@ -1,27 +1,10 @@
 <script lang="ts">
-    import type { HTMLImgAttributes } from 'svelte/elements';
-
     // eslint-disable-next-line init-declarations
     export let topText: string;
     // eslint-disable-next-line init-declarations
     export let headerText: string;
     // eslint-disable-next-line init-declarations
     export let bottomText: string;
-
-    // eslint-disable-next-line init-declarations
-    export let imageText1: string;
-    // eslint-disable-next-line init-declarations
-    export let imageText2: string;
-
-    // eslint-disable-next-line init-declarations
-    export let src1: HTMLImgAttributes['src'];
-    // eslint-disable-next-line init-declarations
-    export let src2: HTMLImgAttributes['src'];
-
-    // eslint-disable-next-line init-declarations
-    export let alt1: HTMLImgAttributes['alt'];
-    // eslint-disable-next-line init-declarations
-    export let alt2: HTMLImgAttributes['alt'];
 </script>
 
 <div
@@ -33,15 +16,10 @@
         <p class="m-0">{bottomText}</p>
     </div>
 
-    <!-- Container for placeholder basic card components -->
-    <div class="flex h-full flex-1 flex-col items-center gap-6 lg:flex-row lg:items-start">
-        <div class="flex w-full flex-1 flex-col items-center gap-4">
-            <img src={src1} alt={alt1} class="m-0 rounded-3xl bg-black text-csi-white" />
-            <p class="mx-2 my-0 text-center text-black">{imageText1}</p>
+    <!-- Container for basic card components -->
+    {#if $$slots.cards}
+        <div class="flex h-full flex-1 flex-col items-center gap-6 lg:flex-row lg:items-start">
+            <slot name="cards" />
         </div>
-        <div class="flex w-full flex-1 flex-col items-center gap-4">
-            <img src={src2} alt={alt2} class="m-0 rounded-3xl bg-black text-csi-white" />
-            <p class="mx-2 my-0 text-center text-black">{imageText2}</p>
-        </div>
-    </div>
+    {/if}
 </div>
