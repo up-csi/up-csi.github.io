@@ -1,3 +1,7 @@
+<script lang="ts">
+    import ContentContainer from '$lib/components/ContentContainer.svelte';
+</script>
+
 <section
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
 >
@@ -52,6 +56,19 @@
         <li>Fulfilling the needs of the community through technological innovation.</li>
         <li>Providing solutions to <em>your</em> problems.</li>
     </ul>
+</section>
+<section class="prose max-w-full">
+    <h1 class="font-dm">Why UP CSI?</h1>
+    <ContentContainer
+        topText="For organizations"
+        headerText="We offer services catered to your specific software needs."
+        bottomText="Automate the busy work in your day-to-day operations so people can get home on time more often."
+    />
+    <ContentContainer
+        topText="For students"
+        headerText="We enhance and upskill student abilities."
+        bottomText="Automate the busy work in your day-to-day operations so people can get home on time more often."
+    />
 </section>
 <section class="prose max-w-full">
     <h1 class="font-dm">Connect with Us</h1>
