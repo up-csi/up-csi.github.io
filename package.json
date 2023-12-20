@@ -4,7 +4,6 @@
     "description": "The official website for UP CSI.",
     "type": "module",
     "packageManager": "pnpm@8.12.1",
-    "source": "src/index.html",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
