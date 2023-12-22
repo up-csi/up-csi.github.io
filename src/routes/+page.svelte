@@ -59,16 +59,30 @@
 </section>
 <section class="prose max-w-full">
     <h1 class="font-dm">Why UP CSI?</h1>
-    <ContentContainer
-        topText="For organizations"
-        headerText="We offer services catered to your specific software needs."
-        bottomText="Automate the busy work in your day-to-day operations so people can get home on time more often."
-    />
-    <ContentContainer
-        topText="For students"
-        headerText="We enhance and upskill student abilities."
-        bottomText="Automate the busy work in your day-to-day operations so people can get home on time more often."
-    />
+    <ContentContainer>
+        <svelte:fragment slot="text">
+            <p class="m-0">For organizations</p>
+            <h2 class="m-0 font-dm font-normal text-black">
+                We offer services catered to your specific software needs.
+            </h2>
+            <p class="m-0">
+                Automate the busy work in your day-to-day operations so people can get home on time
+                more often.
+            </p>
+        </svelte:fragment>
+    </ContentContainer>
+    <ContentContainer>
+        <svelte:fragment slot="text">
+            <p class="m-0">For students</p>
+            <h2 class="m-0 font-dm font-normal text-black">
+                We enhance and upskill student abilities.
+            </h2>
+            <p class="m-0">
+                Automate the busy work in your day-to-day operations so people can get home on time
+                more often.
+            </p>
+        </svelte:fragment>
+    </ContentContainer>
 </section>
 <section class="prose max-w-full">
     <h1 class="font-dm">Connect with Us</h1>
