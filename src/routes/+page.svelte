@@ -1,6 +1,6 @@
 <script>
-    import ContentContainer from '$lib/components/ContentContainer.svelte';
     import Carousel from '$lib/components/Carousel.svelte';
+    import ContentContainer from '$lib/components/ContentContainer.svelte';
 </script>
 
 <section
