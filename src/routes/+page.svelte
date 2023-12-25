@@ -1,5 +1,6 @@
 <script>
     import ContentContainer from '$lib/components/ContentContainer.svelte';
+    import Carousel from '$lib/components/Carousel.svelte';
 </script>
 
 <section
@@ -15,7 +16,7 @@
     </div>
 </section>
 <section class="prose max-w-full">
-    <h1 class="font-dm">Our Mission</h1>
+    <h2 class="font-dm">Our Mission</h2>
     <ul>
         <li>
             Create development camps wherein students can enrich their skills in Software
@@ -29,7 +30,7 @@
     </ul>
 </section>
 <section class="prose max-w-full">
-    <h1 class="font-dm">Our Vision</h1>
+    <h2 class="font-dm">Our Vision</h2>
     <ul>
         <li>
             Develop well-rounded DCS students with fundamental classroom learning through practical
@@ -45,7 +46,7 @@
     </ul>
 </section>
 <section class="prose max-w-full">
-    <h1 class="font-dm">What We Do</h1>
+    <h2 class="font-dm">What We Do</h2>
     <p>
         Our mission is to provide opportunities for students to enhance their software engineering
         and their innovative thinking by:
@@ -83,6 +84,10 @@
             </p>
         </svelte:fragment>
     </ContentContainer>
+</section>
+<section class="prose max-w-full">
+    <h3 class="text-center font-dm">We've worked with</h3>
+    <Carousel />
 </section>
 <section class="prose max-w-full">
     <h1 class="font-dm">Connect with Us</h1>
