@@ -4,6 +4,5 @@
     <div class="flex flex-1 flex-col gap-4">
         <slot name="text" />
     </div>
-
     <slot name="cards" />
 </div>
