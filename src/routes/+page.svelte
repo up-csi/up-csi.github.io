@@ -74,18 +74,15 @@
                     time more often.
                 </p>
             </svelte:fragment>
-
             <svelte:fragment slot="cards">
                 <CartoonCard>
                     <svelte:fragment slot="card_content">Development</svelte:fragment>
                 </CartoonCard>
-
                 <CartoonCard>
                     <svelte:fragment slot="card_content">Development</svelte:fragment>
                 </CartoonCard>
             </svelte:fragment>
         </ContentContainer>
-
         <ContentContainer>
             <svelte:fragment slot="text">
                 <h2 class="m-0 font-dm">For students</h2>
@@ -103,7 +100,6 @@
                         >Developer Training Program & Dev Camp</svelte:fragment
                     >
                 </CartoonCard>
-
                 <CartoonCard>
                     <svelte:fragment slot="card_content">Technology Workshops</svelte:fragment>
                 </CartoonCard>
