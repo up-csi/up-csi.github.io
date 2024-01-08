@@ -1,8 +1,8 @@
 <script>
     import BlueButton from '$lib/components/BlueButton.svelte';
     import Carousel from '$lib/components/Carousel.svelte';
-    import ContentContainer from '$lib/components/ContentContainer.svelte';
     import CartoonCard from '$lib/components/CartoonCard.svelte';
+    import ContentContainer from '$lib/components/ContentContainer.svelte';
 </script>
 
 <section
@@ -99,7 +99,9 @@
             </svelte:fragment>
             <svelte:fragment slot="cards">
                 <CartoonCard>
-                    <svelte:fragment slot="card_content">Developer Training Program & Dev Camp</svelte:fragment>
+                    <svelte:fragment slot="card_content"
+                        >Developer Training Program & Dev Camp</svelte:fragment
+                    >
                 </CartoonCard>
 
                 <CartoonCard>
