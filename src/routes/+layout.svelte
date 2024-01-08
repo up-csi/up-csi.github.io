@@ -1,6 +1,7 @@
 <script>
     import './app.css';
     import NavList from './NavList.svelte';
+    import SidesFooter from '$lib/components/SidesFooter.svelte';
     import upcsi from '$lib/icons/upcsi.svg';
 </script>
 
@@ -13,4 +14,6 @@
 <main class="m-4 space-y-16 sm:m-8 xl:m-32 xl:my-16">
     <slot />
 </main>
-<footer class="p-8 sm:p-12 md:p-16"></footer>
+<footer class="p-8 sm:p-12 md:p-16">
+    <SidesFooter />
+</footer>
