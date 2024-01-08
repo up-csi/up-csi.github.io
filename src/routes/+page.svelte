@@ -5,7 +5,7 @@
     import HeroComponent from '$lib/components/HeroComponent.svelte';
 </script>
 
-<section> 
+<section>
     <HeroComponent />
 </section>
 
