@@ -1,6 +1,8 @@
 <script>
+    import BlueButton from '$lib/components/BlueButton.svelte';
     import Carousel from '$lib/components/Carousel.svelte';
     import ContentContainer from '$lib/components/ContentContainer.svelte';
+    import SidesFooter from '$lib/components/SidesFooter.svelte';
 </script>
 
 <section
@@ -93,5 +95,6 @@
 </section>
 <section class="prose max-w-full">
     <h1 class="font-dm">Connect with Us</h1>
-    <a href="mailto:lino@up-csi.org">Send a Message</a>
+    <BlueButton />
+    <SidesFooter />
 </section>
