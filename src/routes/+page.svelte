@@ -3,7 +3,12 @@
     import Carousel from '$lib/components/Carousel.svelte';
     import CartoonCard from '$lib/components/CartoonCard.svelte';
     import ContentContainer from '$lib/components/ContentContainer.svelte';
+    import HeroComponent from '$lib/components/HeroComponent.svelte';
 </script>
+
+<section>
+    <HeroComponent />
+</section>
 
 <section
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
