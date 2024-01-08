@@ -9,7 +9,6 @@
 <section>
     <HeroComponent />
 </section>
-
 <section
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
 >
@@ -80,12 +79,8 @@
                 </p>
             </svelte:fragment>
             <svelte:fragment slot="cards">
-                <CartoonCard>
-                    <svelte:fragment slot="card_content">Development</svelte:fragment>
-                </CartoonCard>
-                <CartoonCard>
-                    <svelte:fragment slot="card_content">Development</svelte:fragment>
-                </CartoonCard>
+                <CartoonCard>Development</CartoonCard>
+                <CartoonCard>Development</CartoonCard>
             </svelte:fragment>
         </ContentContainer>
         <ContentContainer>
@@ -100,14 +95,8 @@
                 </p>
             </svelte:fragment>
             <svelte:fragment slot="cards">
-                <CartoonCard>
-                    <svelte:fragment slot="card_content"
-                        >Developer Training Program & Dev Camp</svelte:fragment
-                    >
-                </CartoonCard>
-                <CartoonCard>
-                    <svelte:fragment slot="card_content">Technology Workshops</svelte:fragment>
-                </CartoonCard>
+                <CartoonCard>Developer Training Program & DevCamp</CartoonCard>
+                <CartoonCard>Technology Workshops</CartoonCard>
             </svelte:fragment>
         </ContentContainer>
     </div>
