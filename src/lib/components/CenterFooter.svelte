@@ -1,4 +1,4 @@
-<div class="flex h-auto w-40 flex-col text-center">
+<footer class="flex h-auto w-40 flex-col px-8 text-center">
     <p class="mx-auto mb-4 max-w-fit text-lg">
         UP CSI is a service-oriented organization for student learning
     </p>
@@ -11,4 +11,4 @@
         <a href="https://github.com/up-csi">GitHub</a>
         <a class="mt-4 text-sm" href="https://storyset.com/web">Web illustrations by Storyset</a>
     </div>
-</div>
+</footer>
