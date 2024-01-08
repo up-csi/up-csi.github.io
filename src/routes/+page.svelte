@@ -1,3 +1,9 @@
+<script>
+    import HeroComponent from '../lib/components/HeroComponent.svelte';
+</script>
+
+<section><HeroComponent /></section>
+
 <section
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
 >
