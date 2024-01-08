@@ -1,9 +1,8 @@
-import type { Handle } from '@sveltejs/kit';
 import { building } from '$app/environment';
 import nano from 'htmlnano';
 
 // https://kit.svelte.dev/docs/migrating#integrations-html-minifier
-export const handle = (({ event, resolve }) => {
+export function handle({ event, resolve }) {
     let page = '';
     return resolve(event, {
         async transformPageChunk({ html, done }) {
@@ -14,4 +13,4 @@ export const handle = (({ event, resolve }) => {
             return result;
         },
     });
-}) satisfies Handle;
+}
