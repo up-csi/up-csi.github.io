@@ -4,7 +4,7 @@
 
 <nav>
     <ul
-        class="flex flex-row items-center justify-between gap-4 rounded-xl bg-warm-white py-1 pl-8 pr-1"
+        class="m-2 flex flex-row items-center justify-between gap-4 rounded-xl bg-warm-white py-1 pl-8 pr-1"
     >
         <li>
             <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />

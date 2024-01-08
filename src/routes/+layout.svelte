@@ -3,8 +3,12 @@
     import NavList from './NavList.svelte';
     import SidesFooter from '$lib/components/SidesFooter.svelte';
     import upcsi from '$lib/icons/upcsi.svg';
+    import Navbar from '$lib/components/NavbarComponent.svelte';
 </script>
 
+<section>
+    <Navbar />
+</section>
 <header class="sticky top-0 flex items-center justify-between bg-csi-white p-4 px-8 shadow-md">
     <a href="/">
         <img src={upcsi} alt="UP CSI Logo" class="object-contain" width="20" />
