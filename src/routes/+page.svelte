@@ -2,6 +2,7 @@
     import BlueButton from '$lib/components/BlueButton.svelte';
     import Carousel from '$lib/components/Carousel.svelte';
     import ContentContainer from '$lib/components/ContentContainer.svelte';
+    import CartoonCard from '$lib/components/CartoonCard.svelte';
 </script>
 
 <section
@@ -73,7 +74,18 @@
                     time more often.
                 </p>
             </svelte:fragment>
+
+            <svelte:fragment slot="cards">
+                <CartoonCard>
+                    <svelte:fragment slot="card_content">Development</svelte:fragment>
+                </CartoonCard>
+
+                <CartoonCard>
+                    <svelte:fragment slot="card_content">Development</svelte:fragment>
+                </CartoonCard>
+            </svelte:fragment>
         </ContentContainer>
+
         <ContentContainer>
             <svelte:fragment slot="text">
                 <h2 class="m-0 font-dm">For students</h2>
@@ -84,6 +96,15 @@
                     Automate the busy work in your day-to-day operations so people can get home on
                     time more often.
                 </p>
+            </svelte:fragment>
+            <svelte:fragment slot="cards">
+                <CartoonCard>
+                    <svelte:fragment slot="card_content">Developer Training Program & Dev Camp</svelte:fragment>
+                </CartoonCard>
+
+                <CartoonCard>
+                    <svelte:fragment slot="card_content">Technology Workshops</svelte:fragment>
+                </CartoonCard>
             </svelte:fragment>
         </ContentContainer>
     </div>
