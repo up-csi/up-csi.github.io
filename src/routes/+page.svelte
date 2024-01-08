@@ -1,8 +1,8 @@
 <script>
-    import HeroComponent from '../lib/components/HeroComponent.svelte';
+    import BlueButton from '$lib/components/BlueButton.svelte';
+    import Carousel from '$lib/components/Carousel.svelte';
+    import ContentContainer from '$lib/components/ContentContainer.svelte';
 </script>
-
-<section><HeroComponent /></section>
 
 <section
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
@@ -17,7 +17,7 @@
     </div>
 </section>
 <section class="prose max-w-full">
-    <h1 class="font-dm">Our Mission</h1>
+    <h2 class="font-dm">Our Mission</h2>
     <ul>
         <li>
             Create development camps wherein students can enrich their skills in Software
@@ -31,7 +31,7 @@
     </ul>
 </section>
 <section class="prose max-w-full">
-    <h1 class="font-dm">Our Vision</h1>
+    <h2 class="font-dm">Our Vision</h2>
     <ul>
         <li>
             Develop well-rounded DCS students with fundamental classroom learning through practical
@@ -47,7 +47,7 @@
     </ul>
 </section>
 <section class="prose max-w-full">
-    <h1 class="font-dm">What We Do</h1>
+    <h2 class="font-dm">What We Do</h2>
     <p>
         Our mission is to provide opportunities for students to enhance their software engineering
         and their innovative thinking by:
@@ -60,6 +60,39 @@
     </ul>
 </section>
 <section class="prose max-w-full">
+    <h1 class="font-dm">Why UP CSI?</h1>
+    <div class="space-y-4">
+        <ContentContainer>
+            <svelte:fragment slot="text">
+                <h2 class="m-0 font-dm">For organizations</h2>
+                <h3 class="m-0 font-dm font-normal text-black">
+                    We offer services catered to your specific software needs.
+                </h3>
+                <p class="m-0">
+                    Automate the busy work in your day-to-day operations so people can get home on
+                    time more often.
+                </p>
+            </svelte:fragment>
+        </ContentContainer>
+        <ContentContainer>
+            <svelte:fragment slot="text">
+                <h2 class="m-0 font-dm">For students</h2>
+                <h3 class="m-0 font-dm font-normal text-black">
+                    We enhance and upskill student abilities.
+                </h3>
+                <p class="m-0">
+                    Automate the busy work in your day-to-day operations so people can get home on
+                    time more often.
+                </p>
+            </svelte:fragment>
+        </ContentContainer>
+    </div>
+</section>
+<section class="prose max-w-full">
+    <h3 class="text-center font-dm">We've worked with</h3>
+    <Carousel />
+</section>
+<section class="prose max-w-full">
     <h1 class="font-dm">Connect with Us</h1>
-    <a href="mailto:lino@up-csi.org">Send a Message</a>
+    <BlueButton />
 </section>
