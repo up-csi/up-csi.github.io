@@ -1,13 +1,13 @@
 <script>
     import './app.css';
     import NavList from './NavList.svelte';
+    import NavBar from '$lib/components/NavBar.svelte';
     import SidesFooter from '$lib/components/SidesFooter.svelte';
     import upcsi from '$lib/icons/upcsi.svg';
-    import Navbar from '$lib/components/NavbarComponent.svelte';
 </script>
 
 <section>
-    <Navbar />
+    <NavBar />
 </section>
 <header class="sticky top-0 flex items-center justify-between bg-csi-white p-4 px-8 shadow-md">
     <a href="/">
