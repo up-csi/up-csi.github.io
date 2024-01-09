@@ -1,7 +1,7 @@
 <script>
     import './app.css';
-    import NavList from './NavList.svelte';
     import NavBar from '$lib/components/NavBar.svelte';
+    import NavList from './NavList.svelte';
     import SidesFooter from '$lib/components/SidesFooter.svelte';
     import upcsi from '$lib/icons/upcsi.svg';
 </script>
