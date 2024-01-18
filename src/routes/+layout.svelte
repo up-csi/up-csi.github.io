@@ -1,19 +1,11 @@
 <script>
     import './app.css';
     import NavBar from '$lib/components/NavBar.svelte';
-    import NavList from './NavList.svelte';
     import SidesFooter from '$lib/components/SidesFooter.svelte';
-    import upcsi from '$lib/icons/upcsi.svg';
 </script>
 
-<section>
+<header class="sticky top-0">
     <NavBar />
-</section>
-<header class="sticky top-0 flex items-center justify-between bg-csi-white p-4 px-8 shadow-md">
-    <a href="/">
-        <img src={upcsi} alt="UP CSI Logo" class="object-contain" width="20" />
-    </a>
-    <nav><NavList /></nav>
 </header>
 <main class="m-4 space-y-16 sm:m-8 xl:m-32 xl:my-16">
     <slot />
