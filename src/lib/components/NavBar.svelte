@@ -13,19 +13,16 @@
             <a href="/">Home</a>
         </li>
         <li>
-            <a href="/about/">About</a>
+            <a href="/news/">News</a>
         </li>
         <li>
-            <a href="/team/">Team</a>
+            <a href="/people/">People</a>
         </li>
         <li>
             <a href="/events/">Events</a>
         </li>
         <li>
-            <a href="/projects/">Projects</a>
-        </li>
-        <li>
-            <a class="" href="/newsletter/">Newsletter</a>
+            <a href="/partners/">Partners</a>
         </li>
         <li>
             <button class="rounded-xl bg-csi-blue px-5 py-2">Get Started</button>
