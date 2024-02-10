@@ -2,6 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   workflow_dispatch:
+  pull_request:
   push:
     branches: main
 
@@ -33,10 +34,18 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-      - name: Install Dependencies
-        run: pnpm install
+      - name: Check Formatting
+        run: pnpm fmt
+      - name: Check HTML
+        run: pnpm lint:html
+      - name: Check CSS
+        run: pnpm lint:css
       - name: Synchronize SvelteKit
         run: pnpm sync
+      - name: Check Svelte
+        run: pnpm lint:svelte
+      - name: Check JavaScript
+        run: pnpm lint:js
       - name: Build Website
         run: pnpm build
       - name: Setup Pages
