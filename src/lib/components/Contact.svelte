@@ -9,7 +9,7 @@
     </div>
     <div class="flex w-fit flex-col items-center justify-center gap-8 md:items-start md:gap-6">
         <h1
-            class="m-0 text-center font-dm text-3xl font-light text-csi-black dark:text-csi-white sm:text-5xl md:text-left"
+            class="m-0 text-center font-dm text-3xl font-light text-csi-black sm:text-5xl md:text-left dark:text-csi-white"
         >
             Let's innovate together!
         </h1>
