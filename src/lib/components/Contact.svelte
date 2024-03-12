@@ -11,6 +11,6 @@
         <h1 class="mb-6 font-dm text-3xl font-light text-csi-black sm:text-5xl">
             Let's innovate together!
         </h1>
-        <BlackButton />
+        <BlackButton>Shoot us a message</BlackButton>
     </div>
 </section>
