@@ -107,5 +107,5 @@
 </section>
 <section class="prose max-w-full">
     <h1 class="font-dm">Connect with Us</h1>
-    <BlueButton />
+    <BlueButton>Shoot us a Message</BlueButton>
 </section>

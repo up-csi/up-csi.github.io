@@ -1,3 +1,5 @@
-<button class="h-10 w-32 max-w-md rounded-full bg-csi-blue text-center font-inter text-black"
-    >Get in Touch</button
+<button
+    class="rounded-full bg-csi-blue px-4 py-2 text-center font-inter text-black dark:bg-black dark:text-csi-white"
 >
+    <slot />
+</button>
