@@ -1,7 +1,7 @@
 <script>
     import './app.css';
     import NavBar from '$lib/components/NavBar.svelte';
-    import SidesFooter from '$lib/components/SidesFooter.svelte';
+    import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <header class="sticky top-0">
@@ -10,4 +10,4 @@
 <main class="m-4 space-y-16 sm:m-8 xl:m-32 xl:my-16">
     <slot />
 </main>
-<SidesFooter />
+<Footer />
