@@ -1,4 +1,4 @@
-<footer class="flex flex-col md:flex-row h-auto w-auto justify-between gap-4 p-20 font-inter text-center text-xl">
+<footer class="flex flex-col md:flex-row h-auto w-auto justify-between gap-4 p-20 font-inter text-center text-xl text-csi-black dark:text-csi-white">
     <div class="flex flex-col items-center md:items-start justify-start gap-9 md:text-left">
         <p class="text-2xl max-w-64">
             UP CSI is a service-oriented organization for student learning
