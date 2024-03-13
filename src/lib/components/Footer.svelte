@@ -22,8 +22,7 @@
             <p><a href="https://github.com/up-csi">GitHub</a></p>
         </div>
         <div>
-            <p>Site built with SvelteKit</p>
-
+            <p>Built with <a href="https://kit.svelte.dev/">SvelteKit</a>.</p>
             <!-- To remove after placeholder images are replaced -->
             <a href="https://storyset.com/web" class="text-sm underline"
                 >Web illustrations by Storyset</a
