@@ -1,7 +1,7 @@
 <script>
     import './app.css';
-    import Footer from '$lib/components/Footer.svelte';
-    import NavBar from '$lib/components/NavBar.svelte';
+    import Footer from './Footer.svelte';
+    import NavBar from './NavBar.svelte';
 </script>
 
 <header class="sticky top-0">
