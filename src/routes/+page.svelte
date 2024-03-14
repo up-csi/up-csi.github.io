@@ -1,7 +1,7 @@
 <script>
-    import BlueButton from '$lib/components/BlueButton.svelte';
     import Carousel from '$lib/components/Carousel.svelte';
     import CartoonCard from '$lib/components/CartoonCard.svelte';
+    import Contact from '$lib/components/Contact.svelte';
     import ContentContainer from '$lib/components/ContentContainer.svelte';
     import HeroComponent from '$lib/components/HeroComponent.svelte';
 </script>
@@ -106,6 +106,5 @@
     <Carousel />
 </section>
 <section class="prose max-w-full">
-    <h1 class="font-dm">Connect with Us</h1>
-    <BlueButton>Shoot us a Message</BlueButton>
+    <Contact />
 </section>
