@@ -4,8 +4,8 @@
 </script>
 
 <section class="flex flex-col items-center justify-center gap-3 px-8 py-12 md:flex-row">
-    <div class="w-48 p-4 sm:flex-shrink-0">
-        <img {src} alt="Cool Lino" class="m-0" />
+    <div class="p-4 sm:flex-shrink-0">
+        <img {src} alt="Cool Lino" class="m-0 w-52" />
     </div>
     <div class="flex w-fit flex-col items-center justify-center gap-8 md:items-start md:gap-6">
         <h1
