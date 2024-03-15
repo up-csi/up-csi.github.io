@@ -21,6 +21,7 @@ export default {
             'blue-white': '#D7E6ED',
             blue: '#35ADBB',
             black: '#253242',
+            gray: '#A6A6A6',
         },
     },
     plugins: [forms, typo],
