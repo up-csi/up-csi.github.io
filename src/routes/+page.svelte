@@ -70,11 +70,11 @@
     <div class="space-y-4">
         <ContentContainer>
             <svelte:fragment slot="text">
-                <h2 class="m-0 font-dm">For organizations</h2>
-                <h3 class="m-0 font-dm font-normal text-black">
+                <p class="m-0">For organizations</p>
+                <h3 class="m-0 font-dm font-normal black text-2xl sm:text-3xl">
                     We offer services catered to your specific software needs.
                 </h3>
-                <p class="m-0">
+                <p class="m-0 leading-5 sm:leading-6">
                     Automate the busy work in your day-to-day operations so people can get home on
                     time more often.
                 </p>
@@ -86,11 +86,11 @@
         </ContentContainer>
         <ContentContainer>
             <svelte:fragment slot="text">
-                <h2 class="m-0 font-dm">For students</h2>
-                <h3 class="m-0 font-dm font-normal text-black">
+                <p class="m-0">For students</p>
+                <h3 class="m-0 font-dm font-normal black text-2xl sm:text-3xl">
                     We enhance and upskill student abilities.
                 </h3>
-                <p class="m-0">
+                <p class="m-0 leading-5 sm:leading-6">
                     Automate the busy work in your day-to-day operations so people can get home on
                     time more often.
                 </p>
