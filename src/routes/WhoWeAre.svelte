@@ -1,5 +1,5 @@
 <script>
-    import BlackButton from '$lib/components/BlackButton.svelte';
+    import Button from '$lib/components/Button.svelte';
     import src from '$lib/lino-sablay.svg';
 </script>
 
@@ -14,10 +14,10 @@
             from the University of the Philippines Diliman, Department of Computer Science by
             working with real-world projects.
         </p>
-        <div class="flex justify-center md:block">
-            <BlackButton>
+        <div class="w-full">
+            <Button>
                 <span>See About</span>
-            </BlackButton>
+            </Button>
         </div>
     </div>
 </div>
