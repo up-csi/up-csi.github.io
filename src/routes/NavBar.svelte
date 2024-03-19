@@ -4,9 +4,9 @@
 
 <nav>
     <ul
-        class="flex w-full flex-row items-center justify-between gap-4 bg-warm-white py-1 pl-8 pr-1 lg:w-fit lg:rounded-xl"
+        class="flex w-full flex-row items-center justify-between gap-4 bg-warm-white py-1 pr-1 lg:w-fit lg:rounded-xl"
     >
-        <li>
+        <li class="mx-6 sm:mx-10 lg:ml-8 lg:mr-4">
             <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
         </li>
         <li class="hidden lg:block">
@@ -28,10 +28,10 @@
             <button class="rounded-xl px-5 py-2 text-black">darkMode</button>
         </li>
         <li class="hidden lg:block">
-            <button class="rounded-xl bg-csi-blue px-5 py-2">Get in Touch</button>
+            <button class="rounded-lg bg-csi-blue px-5 py-2">Get in Touch</button>
         </li>
-        <li class="lg:hidden">
-            <button class="rounded-xl bg-black px-5 py-2 text-csi-white">Get Started</button>
+        <li class="mx-6 sm:mx-10 my-2 lg:hidden">
+            <button class="rounded-lg bg-black px-5 py-2 text-csi-white">Get Started</button>
         </li>
     </ul>
 </nav>
