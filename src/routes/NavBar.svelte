@@ -38,3 +38,31 @@
         </li>
     </ul>
 </nav>
+
+<div class="hidden h-svh bg-blue-white flex flex-col">
+    <div class="fixed bottom-0 w-full">
+        <ul class="w-full">
+            <li class="m-4">
+                <a href="/" class="font-dm text-csi-black dark:text-csi-white text-2xl">Home</a>
+                <!-- <img src={darkmode} alt="Toggle Dark Mode" class="h-6 mx-4 dark:hidden object-contain" />
+                <img src={lightmode} alt="Toggle Light Mode" class="h-6 mx-4 hidden dark:block object-contain" /> -->
+            </li>
+            <li class="m-4">
+                <a href="/about/" class="font-dm text-csi-black dark:text-csi-white text-2xl">About</a>
+            </li>
+            <li class="m-4">
+                <a href="/events/" class="font-dm text-csi-black dark:text-csi-white text-2xl">Events</a>
+            </li>
+            <li class="m-4">
+                <a href="/projects/" class="font-dm text-csi-black dark:text-csi-white text-2xl">Projects</a>
+            </li>
+            <li class="m-4">
+                <a href="/news/" class="font-dm text-csi-black dark:text-csi-white text-2xl">Newsletter</a>
+            </li>
+            <li class="m-4">
+                <button class="font-dm text-csi-black dark:text-csi-white text-2xl">Get in Touch</button>
+            </li>
+        </ul>
+        <div class="w-full flex justify-center items-center my-4"><button class="rounded-full bg-[#eff5f7] py-3 px-6">Close</button></div>
+    </div> 
+</div>
