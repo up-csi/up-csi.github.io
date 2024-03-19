@@ -2,9 +2,9 @@
     import upcsi from '$lib/icons/upcsi.svg';
 </script>
 
-<nav>
+<nav class="flex justify-center items-center">
     <ul
-        class="flex w-full flex-row items-center justify-between gap-4 bg-warm-white py-1 pr-1 lg:w-fit lg:rounded-xl"
+        class="flex flex-row items-center justify-between gap-4 bg-warm-white p-1 w-full lg:w-fit lg:rounded-xl"
     >
         <li class="mx-6 sm:mx-10 lg:ml-8 lg:mr-4">
             <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
