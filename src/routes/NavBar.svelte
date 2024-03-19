@@ -12,19 +12,19 @@
             <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
         </li>
         <li class="hidden lg:block">
-            <a href="/">Home</a>
+            <a href="/" class="text-csi-black dark:text-csi-white">Home</a>
         </li>
         <li class="hidden lg:block">
-            <a href="/about/">About</a>
+            <a href="/about/" class="text-csi-black dark:text-csi-white">About</a>
         </li>
         <li class="hidden lg:block">
-            <a href="/events/">Events</a>
+            <a href="/events/" class="text-csi-black dark:text-csi-white">Events</a>
         </li>
         <li class="hidden lg:block">
-            <a href="/projects/">Projects</a>
+            <a href="/projects/" class="text-csi-black dark:text-csi-white">Projects</a>
         </li>
         <li class="hidden lg:block">
-            <a href="/news/">Newsletter</a>
+            <a href="/news/" class="text-csi-black dark:text-csi-white">Newsletter</a>
         </li>
         <li class="hidden lg:block">
             <img src={darkmode} alt="Toggle Dark Mode" class="h-6 mx-4 dark:hidden object-contain" />
