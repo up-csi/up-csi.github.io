@@ -1,5 +1,7 @@
 <script>
     import upcsi from '$lib/icons/upcsi.svg';
+    import darkmode from '$lib/icons/darkmode.svg'
+    import lightmode from '$lib/icons/lightmode.svg'
 </script>
 
 <nav class="flex justify-center items-center">
@@ -25,7 +27,8 @@
             <a href="/news/">Newsletter</a>
         </li>
         <li class="hidden lg:block">
-            <button class="rounded-xl px-5 py-2 text-black">darkMode</button>
+            <img src={darkmode} alt="Toggle Dark Mode" class="h-6 mx-4 dark:hidden object-contain" />
+            <img src={lightmode} alt="Toggle Light Mode" class="h-6 mx-4 hidden dark:block object-contain" />
         </li>
         <li class="hidden lg:block">
             <button class="rounded-lg bg-csi-blue px-5 py-2">Get in Touch</button>
