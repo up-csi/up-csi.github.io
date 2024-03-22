@@ -41,17 +41,17 @@
 </script>
 
 <div class="flex w-full justify-center gap-5 overflow-clip">
-    {#each shownPartners as partner (partner.id)}
+    {#each shownPartners as { id, name } (id)}
         <div animate:flip={{ duration: 500 }}>
-            <CarouselCard name={partner.name} />
+            <CarouselCard {name} />
         </div>
     {/each}
 </div>
 
 <div class="my-4 flex w-full justify-center gap-5 overflow-clip lg:hidden">
-    {#each shownPartnersMobile as partner (partner.id)}
+    {#each shownPartnersMobile as { id, name } (id)}
         <div animate:flip={{ duration: 500 }}>
-            <CarouselCard name={partner.name} />
+            <CarouselCard {name} />
         </div>
     {/each}
 </div>
