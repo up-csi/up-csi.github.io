@@ -1,4 +1,5 @@
 <script>
+    import { flip } from 'svelte/animate';
     import CarouselCard from './CarouselCard.svelte';
 
     let partners = [
@@ -27,6 +28,8 @@
 
 <div class="flex justify-center gap-5 w-full overflow-clip">
     {#each shownPartners as partner (partner.id)}
-        <CarouselCard name={partner.name}/>
+        <div animate:flip|global={{ duration: 500 }}>
+            <CarouselCard name={partner.name}/>
+        </div>
     {/each}
 </div>
