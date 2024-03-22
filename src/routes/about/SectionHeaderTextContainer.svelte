@@ -6,10 +6,10 @@
 
 <div class="bg-white p-3 flex flex-col w-full md:flex-row items-center md:items-start gap-5">
     <!--PLACEHOLDER IMAGES-->
-    <div class="w-full md:w-1/2">
+    <div class="w-full md:w-7/12">
         <img src={src} alt="UP CSI Logo Placeholder" class="md:h-[500px] bg-warm-white rounded-3xl"/>
     </div>
-    <div class="flex flex-col md:w-1/2 font-dm gap-5">
+    <div class="flex flex-col md:w-5/12 font-dm gap-5">
         <div class="flex flex-col items-center md:items-start md:pb-6">
             <img src={upcsi} alt="Circle placeholder" class="h-20 w-20 p-2 rounded-full bg-black"/>
         </div>
