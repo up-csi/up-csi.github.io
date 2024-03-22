@@ -15,9 +15,13 @@
         {id: 10, name: "amet"},
         {id: 11, name: "consectetur"},
     ];
+
+    $: setTimeout(() => {
+        partners = [...partners.slice(1, partners.length), ...partners.slice(0, 1)];
+    }, 2000);
 </script>
 
-<div class="flex flex-wrap justify-center gap-5">
+<div class="flex justify-center gap-5 w-full overflow-clip">
     {#each partners as partner (partner.id)}
         <CarouselCard name={partner.name}/>
     {/each}
