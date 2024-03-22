@@ -15,8 +15,10 @@ export default {
         colors: {
             'csi-blue': '#00C6D7',
             'csi-black': '#212121',
+            'csi-black-50': '#1D1D1D',
             'csi-yellow': '#F7CF2F',
             'csi-white': '#F9FAFB',
+            'csi-white-50': '#F6F6F6',
             'warm-white': '#E0E1E0',
             'blue-white': '#D7E6ED',
             blue: '#35ADBB',
