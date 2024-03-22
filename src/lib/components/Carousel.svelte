@@ -1,6 +1,5 @@
 <script>
     import CarouselCard from './CarouselCard.svelte';
-
     const partners = [
         { id: 0, name: 'Lorem' },
         { id: 1, name: 'ipsum' },
@@ -17,18 +16,8 @@
     ];
 </script>
 
-<div class="flex w-full snap-x justify-start gap-5 overflow-x-scroll">
+<div class="flex w-full snap-x justify-start gap-4 overflow-x-scroll">
     {#each partners as { id, name } (id)}
-        <div>
-            <CarouselCard {name} />
-        </div>
-    {/each}
-</div>
-
-<div class="my-4 flex w-full snap-x justify-start gap-5 overflow-x-scroll lg:hidden">
-    {#each partners as { id, name } (id)}
-        <div>
-            <CarouselCard {name} />
-        </div>
+        <div><CarouselCard {name} /></div>
     {/each}
 </div>
