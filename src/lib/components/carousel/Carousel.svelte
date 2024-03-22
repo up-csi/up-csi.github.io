@@ -1,5 +1,5 @@
 <script>
-    import CarouselCard from './CarouselCard.svelte';
+    import CarouselCard from './Card.svelte';
     const partners = [
         { id: 0, name: 'Lorem' },
         { id: 1, name: 'ipsum' },

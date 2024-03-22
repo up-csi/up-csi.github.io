@@ -1,5 +1,4 @@
 <script>
-    /** @type {String} */
     export let name = '';
 </script>
 

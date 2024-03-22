@@ -1,5 +1,5 @@
 <script>
-    import Carousel from '$lib/components/Carousel.svelte';
+    import Carousel from '$lib/components/carousel/Carousel.svelte';
     import CartoonCard from '$lib/components/CartoonCard.svelte';
     import Contact from '$lib/components/Contact.svelte';
     import ContentContainer from '$lib/components/ContentContainer.svelte';
