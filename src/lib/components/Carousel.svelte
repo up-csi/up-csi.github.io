@@ -16,13 +16,17 @@
         {id: 11, name: "consectetur"},
     ];
 
+    let shownPartners = partners.slice(0, 7);
+    let next = 8;
+
     $: setTimeout(() => {
-        partners = [...partners.slice(1, partners.length), ...partners.slice(0, 1)];
+        shownPartners = [...shownPartners.slice(1, shownPartners.length), ...partners.slice(next, next + 1)];
+        next = (next + 1) % partners.length;
     }, 2000);
 </script>
 
 <div class="flex justify-center gap-5 w-full overflow-clip">
-    {#each partners as partner (partner.id)}
+    {#each shownPartners as partner (partner.id)}
         <CarouselCard name={partner.name}/>
     {/each}
 </div>
