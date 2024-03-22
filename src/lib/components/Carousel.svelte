@@ -2,7 +2,7 @@
     import { flip } from 'svelte/animate';
     import CarouselCard from './CarouselCard.svelte';
 
-    let partners = [
+    const partners = [
         {id: 0, name: "Lorem"},
         {id: 1, name: "ipsum"},
         {id: 2, name: "dolor"},
@@ -20,14 +20,29 @@
     let shownPartners = partners.slice(0, 7);
     let next = 8;
 
+    const mobilePartnersStart = Math.round(partners.length / 3)
+    let shownPartnersMobile = partners.slice(mobilePartnersStart, mobilePartnersStart + 7);
+    let nextMobile = mobilePartnersStart + 8;
+
     $: setTimeout(() => {
         shownPartners = [...shownPartners.slice(1, shownPartners.length), ...partners.slice(next, next + 1)];
         next = (next + 1) % partners.length;
+
+        shownPartnersMobile = [...shownPartnersMobile.slice(1, shownPartnersMobile.length), ...partners.slice(nextMobile, nextMobile + 1)];
+        nextMobile = (nextMobile + 1) % partners.length;
     }, 2000);
 </script>
 
 <div class="flex justify-center gap-5 w-full overflow-clip">
     {#each shownPartners as partner (partner.id)}
+        <div animate:flip|global={{ duration: 500 }}>
+            <CarouselCard name={partner.name}/>
+        </div>
+    {/each}
+</div>
+
+<div class="flex justify-center gap-5 w-full overflow-clip my-4 lg:hidden">
+    {#each shownPartnersMobile as partner (partner.id)}
         <div animate:flip|global={{ duration: 500 }}>
             <CarouselCard name={partner.name}/>
         </div>
