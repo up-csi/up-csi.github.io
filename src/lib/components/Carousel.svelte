@@ -17,7 +17,7 @@
     ];
 </script>
 
-<div class="flex w-full justify-start gap-5 snap-x overflow-x-scroll">
+<div class="flex w-full snap-x justify-start gap-5 overflow-x-scroll">
     {#each partners as { id, name } (id)}
         <div>
             <CarouselCard {name} />
@@ -25,7 +25,7 @@
     {/each}
 </div>
 
-<div class="my-4 flex w-full justify-start gap-5 snap-x overflow-x-scroll lg:hidden">
+<div class="my-4 flex w-full snap-x justify-start gap-5 overflow-x-scroll lg:hidden">
     {#each partners as { id, name } (id)}
         <div>
             <CarouselCard {name} />
