@@ -11,7 +11,8 @@
 </section>
 <section
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
->
+    id="about"
+    >
     <div class="prose">
         <h1 class="font-dm">Learn. Create. Innovate.</h1>
         <p>

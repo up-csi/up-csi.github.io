@@ -18,13 +18,13 @@
             <a href="/" class="text-csi-black dark:text-csi-white">Home</a>
         </li>
         <li class="hidden lg:block">
-            <a href="/about/" class="text-csi-black dark:text-csi-white">About</a>
+            <a href="/#about" class="text-csi-black dark:text-csi-white">About</a>
         </li>
         <li class="hidden lg:block">
             <a href="/events/" class="text-csi-black dark:text-csi-white">Events</a>
         </li>
         <li class="hidden lg:block">
-            <a href="/projects/" class="text-csi-black dark:text-csi-white">Projects</a>
+            <a href="/" class="text-csi-black dark:text-csi-white">Projects</a>
         </li>
         <li class="hidden lg:block">
             <a href="/news/" class="text-csi-black dark:text-csi-white">Newsletter</a>
@@ -95,7 +95,7 @@
                     <a href="/" class="font-dm text-2xl text-csi-black dark:text-csi-white">Home</a>
                 </li>
                 <li class="m-4">
-                    <a href="/about/" class="font-dm text-2xl text-csi-black dark:text-csi-white"
+                    <a href="/#about" class="font-dm text-2xl text-csi-black dark:text-csi-white"
                         >About</a
                     >
                 </li>
@@ -105,7 +105,7 @@
                     >
                 </li>
                 <li class="m-4">
-                    <a href="/projects/" class="font-dm text-2xl text-csi-black dark:text-csi-white"
+                    <a href="/" class="font-dm text-2xl text-csi-black dark:text-csi-white"
                         >Projects</a
                     >
                 </li>
