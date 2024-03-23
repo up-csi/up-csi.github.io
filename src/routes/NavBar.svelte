@@ -2,6 +2,7 @@
     import upcsi from '$lib/icons/upcsi.svg';
     import darkmode from '$lib/icons/darkmode.svg'
     import lightmode from '$lib/icons/lightmode.svg'
+    import { darkMode } from '$lib/dark-mode';
 
     let mobileMenu = false;
 </script>
@@ -29,15 +30,15 @@
             <a href="/news/" class="text-csi-black dark:text-csi-white">Newsletter</a>
         </li>
         <li class="hidden lg:block">
-          <button class="flex justify-center items-center"><img src={darkmode} alt="Toggle Dark Mode" class="h-6 mx-4 dark:hidden object-contain" /></button>
-          <button class="flex justify-center items-center"><img src={lightmode} alt="Toggle Light Mode" class="h-6 mx-4 hidden dark:block object-contain" /></button>
+          <button class="flex justify-center items-center" on:click={() => { darkMode.update((dm) => dm = !dm) }}><img src={darkmode} alt="Toggle Dark Mode" class="h-6 mx-4 dark:hidden object-contain" /></button>
+          <button class="flex justify-center items-center" on:click={() => { darkMode.update((dm) => dm = !dm) }}><img src={lightmode} alt="Toggle Light Mode" class="h-6 mx-4 hidden dark:block object-contain" /></button>
         </li>
         <li class="hidden lg:block">
             <button class="rounded-lg bg-csi-blue px-5 py-2">Get in Touch</button>
         </li>
         <li class="mx-6 sm:mx-10 my-2 lg:hidden flex flex-row items-center">
-            <button class="flex justify-center items-center"><img src={darkmode} alt="Toggle Dark Mode" class="h-6 mx-4 dark:hidden object-contain" /></button>
-            <button class="flex justify-center items-center"><img src={lightmode} alt="Toggle Light Mode" class="h-6 mx-4 hidden dark:block object-contain" /></button>
+            <button class="flex justify-center items-center" on:click={() => { darkMode.update((dm) => dm = !dm) }}><img src={darkmode} alt="Toggle Dark Mode" class="h-6 mx-4 dark:hidden object-contain" /></button>
+            <button class="flex justify-center items-center" on:click={() => { darkMode.update((dm) => dm = !dm) }}><img src={lightmode} alt="Toggle Light Mode" class="h-6 mx-4 hidden dark:block object-contain" /></button>
             <button class="rounded-lg bg-black px-5 py-2 text-csi-white" on:click={() => mobileMenu = true}>Get Started</button>
         </li>
     </ul>
