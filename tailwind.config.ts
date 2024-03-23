@@ -1,10 +1,10 @@
+import { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import typo from '@tailwindcss/typography';
 
-/** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: 'selector',
+    darkMode: 'class',
     experimental: { optimizeUniversalDefaults: true },
     content: ['./src/**/*.{css,html,js,svelte,ts}'],
     theme: {
@@ -26,4 +26,4 @@ export default {
         },
     },
     plugins: [forms, typo],
-};
+} satisfies Config;
