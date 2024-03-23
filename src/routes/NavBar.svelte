@@ -7,28 +7,18 @@
     let mobileMenu = false;
 </script>
 
-<nav class="flex items-center justify-center">
+<nav class="flex items-center justify-center bg-white dark:bg-black">
     <ul
-        class="flex w-full flex-row items-center justify-between gap-4 bg-[#fcfdfd] p-1 lg:w-fit lg:rounded-xl dark:bg-[#0d0d0d]"
+        class="flex w-full flex-row items-center justify-between gap-4 bg-[#fcfdfd] p-1 dark:bg-[#0d0d0d] lg:w-fit lg:rounded-xl"
     >
         <li class="mx-6 sm:mx-10 lg:ml-8 lg:mr-4">
             <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
         </li>
-        <li class="hidden lg:block">
-            <a href="/" class="text-csi-black dark:text-csi-white">Home</a>
-        </li>
-        <li class="hidden lg:block">
-            <a href="/#about" class="text-csi-black dark:text-csi-white">About</a>
-        </li>
-        <li class="hidden lg:block">
-            <a href="/events/" class="text-csi-black dark:text-csi-white">Events</a>
-        </li>
-        <li class="hidden lg:block">
-            <a href="/" class="text-csi-black dark:text-csi-white">Projects</a>
-        </li>
-        <li class="hidden lg:block">
-            <a href="/news/" class="text-csi-black dark:text-csi-white">Newsletter</a>
-        </li>
+        <li class="hidden lg:block"><a href="/">Home</a></li>
+        <li class="hidden lg:block"><a href="/#about">About</a></li>
+        <li class="hidden lg:block"><a href="/events/">Events</a></li>
+        <li class="hidden lg:block"><a href="/">Projects</a></li>
+        <li class="hidden lg:block"><a href="/news/">Newsletter</a></li>
         <li class="hidden lg:block">
             <button
                 class="flex items-center justify-center"
@@ -86,41 +76,18 @@
         </li>
     </ul>
 </nav>
-
 {#if mobileMenu}
     <div class="flex h-svh flex-col bg-blue-white">
-        <div class="fixed bottom-0 w-full">
-            <ul class="w-full">
-                <li class="m-4">
-                    <a href="/" class="font-dm text-2xl text-csi-black dark:text-csi-white">Home</a>
-                </li>
-                <li class="m-4">
-                    <a href="/#about" class="font-dm text-2xl text-csi-black dark:text-csi-white"
-                        >About</a
-                    >
-                </li>
-                <li class="m-4">
-                    <a href="/events/" class="font-dm text-2xl text-csi-black dark:text-csi-white"
-                        >Events</a
-                    >
-                </li>
-                <li class="m-4">
-                    <a href="/" class="font-dm text-2xl text-csi-black dark:text-csi-white"
-                        >Projects</a
-                    >
-                </li>
-                <li class="m-4">
-                    <a href="/news/" class="font-dm text-2xl text-csi-black dark:text-csi-white"
-                        >Newsletter</a
-                    >
-                </li>
-                <li class="m-4">
-                    <button class="font-dm text-2xl text-csi-black dark:text-csi-white"
-                        >Get in Touch</button
-                    >
-                </li>
+        <div class="fixed bottom-0 w-full space-y-4">
+            <ul class="w-full font-dm text-2xl text-csi-black dark:text-csi-white">
+                <li class="m-4"><a href="/">Home</a></li>
+                <li class="m-4"><a href="/#about">About</a></li>
+                <li class="m-4"><a href="/events/">Events</a></li>
+                <li class="m-4"><a href="/">Projects</a></li>
+                <li class="m-4"><a href="/news/">Newsletter</a></li>
+                <li class="m-4"><button>Get in Touch</button></li>
             </ul>
-            <div class="my-4 flex w-full items-center justify-center">
+            <div class="flex w-full items-center justify-center">
                 <button
                     class="rounded-full bg-[#eff5f7] px-6 py-3"
                     on:click={() => (mobileMenu = false)}>Close</button
