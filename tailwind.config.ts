@@ -4,7 +4,7 @@ import forms from '@tailwindcss/forms';
 import typo from '@tailwindcss/typography';
 
 export default {
-    darkMode: 'class',
+    darkMode: 'selector',
     content: ['./src/**/*.{css,html,js,svelte,ts}'],
     theme: {
         backgroundImage: { lino: 'url("$lib/lino-hero.svg")' },
