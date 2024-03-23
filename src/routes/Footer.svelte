@@ -1,5 +1,5 @@
 <footer
-    class="flex h-auto w-auto flex-col justify-between gap-4 p-20 text-center font-inter text-xl text-csi-black md:flex-row dark:text-csi-white"
+    class="flex h-auto w-auto flex-col justify-between gap-4 p-20 text-center font-inter text-xl text-csi-black dark:text-csi-white md:flex-row"
 >
     <div class="flex flex-col items-center justify-start gap-9 md:items-start md:text-left">
         <p class="max-w-64 text-2xl">

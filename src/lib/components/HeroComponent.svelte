@@ -4,7 +4,7 @@
 
 <!--The current bg color is a placeholder, this should be a gradient-->
 <div
-    class="flex flex-col justify-center rounded-3xl bg-blue-white pt-36 md:flex-row dark:bg-csi-blue"
+    class="flex flex-col justify-center rounded-3xl bg-blue-white pt-36 dark:bg-csi-blue md:flex-row"
 >
     <div
         class="flex flex-col items-center pb-8 text-center md:w-5/12 md:items-start md:pl-20 md:text-left"
