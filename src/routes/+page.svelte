@@ -10,6 +10,7 @@
     <HeroComponent />
 </section>
 <section
+    id="about"
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
 >
     <div class="prose">
