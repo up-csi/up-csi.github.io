@@ -4,7 +4,7 @@
     /* TODO: implement the anchors for the buttons so that the page scrolls/jumps to those points when the buttons are clicked */
 </script>
 
-<div class="bg-white flex w-full flex-col items-center gap-5 p-3 md:flex-row md:items-start">
+<div class="flex w-full flex-col items-center gap-5 bg-white p-3 md:flex-row md:items-start">
     <!--PLACEHOLDER IMAGES-->
     <div class="w-full md:w-7/12">
         <img {src} alt="UP CSI Logo Placeholder" class="rounded-3xl bg-warm-white md:h-[500px]" />
