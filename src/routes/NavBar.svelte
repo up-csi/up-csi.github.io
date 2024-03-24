@@ -16,7 +16,7 @@
             <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
         </li>
         <li class="hidden lg:block"><a href="/">Home</a></li>
-        <li class="hidden lg:block"><a href="/#about">About</a></li>
+        <li class="hidden lg:block"><a href="/about">About</a></li>
         <li class="hidden lg:block"><a href="/events/">Events</a></li>
         <li class="hidden lg:block"><a href="/">Projects</a></li>
         <li class="hidden lg:block"><a href="/news/">Newsletter</a></li>
