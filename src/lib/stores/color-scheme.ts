@@ -1,4 +1,4 @@
-import { type Readable, writable} from 'svelte/store';
+import { type Readable, writable } from 'svelte/store';
 import { getContext, hasContext, setContext } from 'svelte';
 import { assert } from '$lib/assert';
 import { browser } from '$app/environment';
