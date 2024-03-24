@@ -1,10 +1,10 @@
+import { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import typo from '@tailwindcss/typography';
 
-/** @type {import('tailwindcss').Config} */
 export default {
-    experimental: { optimizeUniversalDefaults: true },
+    darkMode: 'selector',
     content: ['./src/**/*.{css,html,js,svelte,ts}'],
     theme: {
         backgroundImage: { lino: 'url("$lib/lino-hero.svg")' },
@@ -22,7 +22,8 @@ export default {
             blue: '#35ADBB',
             black: '#253242',
             gray: '#A6A6A6',
+            white: '#FFFFFF',
         },
     },
     plugins: [forms, typo],
-};
+} satisfies Config;
