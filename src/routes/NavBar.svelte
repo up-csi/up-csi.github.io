@@ -1,15 +1,16 @@
 <script>
-    import { darkMode } from '$lib/dark-mode';
     import darkmode from '$lib/icons/darkmode.svg';
+    import { get } from '$lib/stores/color-scheme';
     import lightmode from '$lib/icons/lightmode.svg';
     import upcsi from '$lib/icons/upcsi.svg';
 
     let mobileMenu = false;
+    const theme = get();
 </script>
 
 <nav class="flex items-center justify-center bg-white dark:bg-black">
     <ul
-        class="flex w-full flex-row items-center justify-between gap-4 bg-[#fcfdfd] p-1 dark:bg-[#0d0d0d] lg:w-fit lg:rounded-xl"
+        class="flex w-full flex-row items-center justify-between gap-4 bg-[#fcfdfd] p-1 lg:w-fit lg:rounded-xl dark:bg-[#0d0d0d]"
     >
         <li class="mx-6 sm:mx-10 lg:ml-8 lg:mr-4">
             <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
@@ -20,22 +21,14 @@
         <li class="hidden lg:block"><a href="/">Projects</a></li>
         <li class="hidden lg:block"><a href="/news/">Newsletter</a></li>
         <li class="hidden lg:block">
-            <button
-                class="flex items-center justify-center"
-                on:click={() => {
-                    darkMode.update(dm => (dm = !dm));
-                }}
+            <button class="flex items-center justify-center" on:click={theme.toggle}
                 ><img
                     src={darkmode}
                     alt="Toggle Dark Mode"
                     class="mx-4 h-6 object-contain dark:hidden"
                 /></button
             >
-            <button
-                class="flex items-center justify-center"
-                on:click={() => {
-                    darkMode.update(dm => (dm = !dm));
-                }}
+            <button class="flex items-center justify-center" on:click={theme.toggle}
                 ><img
                     src={lightmode}
                     alt="Toggle Light Mode"
@@ -47,22 +40,14 @@
             <button class="rounded-lg bg-csi-blue px-5 py-2">Get in Touch</button>
         </li>
         <li class="mx-6 my-2 flex flex-row items-center sm:mx-10 lg:hidden">
-            <button
-                class="flex items-center justify-center"
-                on:click={() => {
-                    darkMode.update(dm => (dm = !dm));
-                }}
+            <button class="flex items-center justify-center" on:click={theme.toggle}
                 ><img
                     src={darkmode}
                     alt="Toggle Dark Mode"
                     class="mx-4 h-6 object-contain dark:hidden"
                 /></button
             >
-            <button
-                class="flex items-center justify-center"
-                on:click={() => {
-                    darkMode.update(dm => (dm = !dm));
-                }}
+            <button class="flex items-center justify-center" on:click={theme.toggle}
                 ><img
                     src={lightmode}
                     alt="Toggle Light Mode"

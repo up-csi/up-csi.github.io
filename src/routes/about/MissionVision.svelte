@@ -3,7 +3,7 @@
 </script>
 
 <div
-    class="flex flex-col gap-16 rounded-3xl bg-warm-white px-8 py-12 font-dm dark:bg-csi-black dark:text-csi-white md:px-12"
+    class="flex flex-col gap-16 rounded-3xl bg-warm-white px-8 py-12 font-dm md:px-12 dark:bg-csi-black dark:text-csi-white"
 >
     <div class="flex flex-col gap-8">
         <div class="text-center text-2xl">Mission</div>
