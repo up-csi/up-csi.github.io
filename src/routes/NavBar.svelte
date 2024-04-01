@@ -8,9 +8,9 @@
     const theme = get();
 </script>
 
-<nav class="flex items-center justify-center bg-white dark:bg-black">
+<nav class="flex items-center justify-center">
     <ul
-        class="flex w-full flex-row items-center justify-between gap-4 bg-[#fcfdfd] p-1 lg:w-fit lg:rounded-xl dark:bg-[#0d0d0d]"
+        class="flex w-full flex-row items-center justify-between gap-4 bg-csi-neutral-50 p-1 text-csi-black lg:w-fit lg:rounded-xl dark:bg-csi-neutral-950 dark:text-csi-white"
     >
         <li class="mx-6 sm:mx-10 lg:ml-8 lg:mr-4">
             <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
@@ -37,7 +37,7 @@
             >
         </li>
         <li class="hidden lg:block">
-            <button class="rounded-lg bg-csi-blue px-5 py-2">Get in Touch</button>
+            <button class="rounded-lg bg-csi-blue px-5 py-2 text-csi-black">Get in Touch</button>
         </li>
         <li class="mx-6 my-2 flex flex-row items-center sm:mx-10 lg:hidden">
             <button class="flex items-center justify-center" on:click={theme.toggle}
@@ -62,8 +62,8 @@
     </ul>
 </nav>
 {#if mobileMenu}
-    <div class="flex h-svh flex-col bg-blue-white">
-        <div class="fixed bottom-0 w-full space-y-4">
+    <div class="flex h-svh flex-col bg-blue-white dark:bg-black">
+        <div class="fixed bottom-0 w-full space-y-4 pb-12">
             <ul class="w-full font-dm text-2xl text-csi-black dark:text-csi-white">
                 <li class="m-4"><a href="/">Home</a></li>
                 <li class="m-4"><a href="/about">About</a></li>
@@ -74,7 +74,7 @@
             </ul>
             <div class="flex w-full items-center justify-center">
                 <button
-                    class="rounded-full bg-[#eff5f7] px-6 py-3"
+                    class="rounded-full bg-csi-white/75 px-6 py-3 text-csi-black dark:bg-csi-neutral-600/75 dark:text-csi-white"
                     on:click={() => (mobileMenu = false)}>Close</button
                 >
             </div>
