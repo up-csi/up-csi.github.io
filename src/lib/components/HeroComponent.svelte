@@ -1,6 +1,6 @@
 <script>
-    import src from '$lib/lino-sablay.svg';
     import Button from './Button.svelte';
+    import src from '$lib/lino-sablay.svg';
 </script>
 
 <div

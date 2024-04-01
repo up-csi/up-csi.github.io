@@ -47,13 +47,13 @@ export default {
                         '--tw-prose-invert-body': theme('colors.csi-white'),
                         '--tw-prose-invert-headings': theme('colors.csi-white'),
                         '--tw-prose-invert-bullets': theme('colors.csi-white'),
-                    }
-                }
+                    },
+                },
             }),
             backgroundImage: {
                 lino: 'url("$lib/lino-hero.svg")',
             },
-        }
+        },
     },
     plugins: [forms, typo],
 } satisfies Config;

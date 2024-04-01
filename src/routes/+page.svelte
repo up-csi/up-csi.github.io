@@ -22,7 +22,7 @@
         </p>
     </div>
 </section>
-<section class="prose dark:prose-invert max-w-full">
+<section class="prose max-w-full dark:prose-invert">
     <h2 class="font-dm">Our Mission</h2>
     <ul>
         <li>
@@ -36,7 +36,7 @@
         </li>
     </ul>
 </section>
-<section class="prose dark:prose-invert max-w-full">
+<section class="prose max-w-full dark:prose-invert">
     <h2 class="font-dm">Our Vision</h2>
     <ul>
         <li>
@@ -52,7 +52,7 @@
         </li>
     </ul>
 </section>
-<section class="prose dark:prose-invert max-w-full">
+<section class="prose max-w-full dark:prose-invert">
     <h2 class="font-dm">What We Do</h2>
     <p>
         Our mission is to provide opportunities for students to enhance their software engineering
@@ -65,7 +65,7 @@
         <li>Providing solutions to <em>your</em> problems.</li>
     </ul>
 </section>
-<section class="prose dark:prose-invert max-w-full">
+<section class="prose max-w-full dark:prose-invert">
     <h1 class="font-dm">Why UP CSI?</h1>
     <div class="space-y-4">
         <ContentContainer>
@@ -106,10 +106,10 @@
         </ContentContainer>
     </div>
 </section>
-<section class="prose dark:prose-invert max-w-full">
+<section class="prose max-w-full dark:prose-invert">
     <h3 class="text-center font-dm">We've worked with</h3>
     <Carousel />
 </section>
-<section class="prose dark:prose-invert max-w-full">
+<section class="prose max-w-full dark:prose-invert">
     <Contact />
 </section>
