@@ -5,7 +5,7 @@
 </script>
 
 <section
-    class="flex w-full flex-col items-center gap-5 rounded-3xl bg-white p-3 md:flex-row md:items-start dark:bg-csi-black dark:text-white"
+    class="flex flex-col items-center gap-5 bg-csi-white p-3 text-csi-black md:flex-row md:items-start dark:bg-csi-black dark:text-csi-white"
 >
     <!--PLACEHOLDER IMAGES-->
     <div class="w-full md:w-7/12">
@@ -23,15 +23,11 @@
         <p class="text-3xl">
             To create a center where students can innovate with the latest technology.
         </p>
-        <div class="text-center md:text-left">
-            <button
-                class="rounded-full bg-black px-4 py-2 text-csi-white dark:bg-csi-blue dark:text-csi-black"
+        <div class="text-center text-csi-white md:text-left dark:text-csi-black">
+            <button class="rounded-full bg-black px-4 py-2 dark:bg-csi-blue"
                 >Mission and Vision</button
             >
-            <button
-                class="rounded-full bg-black px-4 py-2 text-csi-white dark:bg-csi-blue dark:text-csi-black"
-                >See Team</button
-            >
+            <button class="rounded-full bg-black px-4 py-2 dark:bg-csi-blue">See Team</button>
         </div>
     </div>
 </section>
