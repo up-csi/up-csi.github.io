@@ -1,5 +1,6 @@
 <script>
     import src from '$lib/lino-sablay.svg';
+    import Button from './Button.svelte';
 </script>
 
 <div
@@ -17,10 +18,7 @@
         <p class="pb-8 text-sm text-black dark:text-csi-white">
             With UP Center for Student Innovations.
         </p>
-        <button
-            class="rounded-full bg-black px-4 py-2 text-csi-white dark:bg-csi-blue dark:text-csi-white"
-            >Get in Touch</button
-        >
+        <Button>Get in Touch</Button>
     </div>
     <div class="flex flex-col items-center md:flex-row">
         <img {src} alt="Lino Sablay" class="w-[550px]" />
