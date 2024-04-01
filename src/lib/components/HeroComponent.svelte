@@ -2,9 +2,8 @@
     import src from '$lib/lino-sablay.svg';
 </script>
 
-<!--The current bg color is a placeholder, this should be a gradient-->
 <div
-    class="flex flex-col justify-center rounded-3xl bg-blue-white pt-36 md:flex-row dark:bg-csi-blue"
+    class="flex flex-col justify-center rounded-3xl bg-gradient-to-b from-csi-blue/25 to-blue-white/25 pt-36 md:flex-row dark:from-csi-blue/50 dark:to-blue-neutral/25"
 >
     <div
         class="flex flex-col items-center pb-8 text-center md:w-5/12 md:items-start md:pl-20 md:text-left"

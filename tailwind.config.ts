@@ -7,7 +7,6 @@ export default {
     darkMode: 'selector',
     content: ['./src/**/*.{css,html,js,svelte,ts}'],
     theme: {
-        backgroundImage: { lino: 'url("$lib/lino-hero.svg")' },
         fontFamily: {
             dm: ['DMSans', ...defaultTheme.fontFamily.sans],
             inter: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -32,6 +31,7 @@ export default {
             },
             'warm-white': '#E0E1E0',
             'blue-white': '#D7E6ED',
+            'blue-neutral': '#32718E',
             blue: '#35ADBB',
             black: '#253242',
             gray: '#A6A6A6',
@@ -49,7 +49,10 @@ export default {
                         '--tw-prose-invert-bullets': theme('colors.csi-white'),
                     }
                 }
-            })
+            }),
+            backgroundImage: {
+                lino: 'url("$lib/lino-hero.svg")',
+            },
         }
     },
     plugins: [forms, typo],
