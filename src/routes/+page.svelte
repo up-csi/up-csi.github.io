@@ -13,7 +13,7 @@
     id="about"
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
 >
-    <div class="prose">
+    <div class="prose dark:prose-invert">
         <h1 class="font-dm">Learn. Create. Innovate.</h1>
         <p>
             We are a service-oriented organization aimed towards the enhancement of student learning
@@ -22,7 +22,7 @@
         </p>
     </div>
 </section>
-<section class="prose max-w-full">
+<section class="prose dark:prose-invert max-w-full">
     <h2 class="font-dm">Our Mission</h2>
     <ul>
         <li>
@@ -36,7 +36,7 @@
         </li>
     </ul>
 </section>
-<section class="prose max-w-full">
+<section class="prose dark:prose-invert max-w-full">
     <h2 class="font-dm">Our Vision</h2>
     <ul>
         <li>
@@ -52,7 +52,7 @@
         </li>
     </ul>
 </section>
-<section class="prose max-w-full">
+<section class="prose dark:prose-invert max-w-full">
     <h2 class="font-dm">What We Do</h2>
     <p>
         Our mission is to provide opportunities for students to enhance their software engineering
@@ -65,7 +65,7 @@
         <li>Providing solutions to <em>your</em> problems.</li>
     </ul>
 </section>
-<section class="prose max-w-full">
+<section class="prose dark:prose-invert max-w-full">
     <h1 class="font-dm">Why UP CSI?</h1>
     <div class="space-y-4">
         <ContentContainer>
@@ -106,10 +106,10 @@
         </ContentContainer>
     </div>
 </section>
-<section class="prose max-w-full">
+<section class="prose dark:prose-invert max-w-full">
     <h3 class="text-center font-dm">We've worked with</h3>
     <Carousel />
 </section>
-<section class="prose max-w-full">
+<section class="prose dark:prose-invert max-w-full">
     <Contact />
 </section>

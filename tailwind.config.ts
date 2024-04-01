@@ -37,6 +37,20 @@ export default {
             gray: '#A6A6A6',
             white: '#FFFFFF',
         },
+        extend: {
+            typography: ({ theme }) => ({
+                DEFAULT: {
+                    css: {
+                        '--tw-prose-body': theme('colors.csi-black'),
+                        '--tw-prose-headings': theme('colors.csi-black'),
+                        '--tw-prose-bullets': theme('colors.csi-black'),
+                        '--tw-prose-invert-body': theme('colors.csi-white'),
+                        '--tw-prose-invert-headings': theme('colors.csi-white'),
+                        '--tw-prose-invert-bullets': theme('colors.csi-white'),
+                    }
+                }
+            })
+        }
     },
     plugins: [forms, typo],
 } satisfies Config;
