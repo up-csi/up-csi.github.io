@@ -66,7 +66,7 @@
     </ul>
 </section>
 <section class="prose max-w-full dark:prose-invert">
-    <h1 class="font-dm">Why UP CSI?</h1>
+    <h1 class="font-normal text-center">Why UP CSI?</h1>
     <div class="space-y-4">
         <ContentContainer>
             <svelte:fragment slot="text">
