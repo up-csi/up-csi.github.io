@@ -14,7 +14,7 @@
             from the University of the Philippines Diliman, Department of Computer Science by
             working with real-world projects.
         </p>
-        <div class="w-full">
+        <div class="text-center md:text-left w-full">
             <Button>
                 <span>See About</span>
             </Button>

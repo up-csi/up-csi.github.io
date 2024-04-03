@@ -4,11 +4,13 @@
     import Contact from '$lib/components/Contact.svelte';
     import ContentContainer from '$lib/components/ContentContainer.svelte';
     import HeroComponent from '$lib/components/HeroComponent.svelte';
+    import WhoWeAre from './WhoWeAre.svelte';
 </script>
 
 <section>
     <HeroComponent />
 </section>
+<WhoWeAre />
 <section
     id="about"
     class="flex items-center bg-lino bg-contain bg-center bg-no-repeat bg-origin-content sm:h-[40vh] sm:bg-right lg:h-[60vh]"
