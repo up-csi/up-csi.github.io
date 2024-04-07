@@ -59,7 +59,7 @@ export default {
             width: {
                 '104': '26rem',
                 '156': '39rem',
-            }
+            },
         },
     },
     plugins: [forms, typo],
