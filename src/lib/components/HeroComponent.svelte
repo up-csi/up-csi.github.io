@@ -4,23 +4,22 @@
 </script>
 
 <div
-    class="flex flex-col justify-center rounded-3xl bg-gradient-to-b from-csi-blue/25 to-blue-white/25 pt-36 md:flex-row dark:from-csi-blue/50 dark:to-blue-neutral/25"
+    class="h-auto lg:h-136 flex flex-col lg:flex-row justify-between items-center rounded-3xl bg-gradient-to-b from-csi-blue/25 to-blue-white/25 dark:from-csi-blue/50 dark:to-blue-neutral/25"
 >
     <div
-        class="flex flex-col items-center pb-8 text-center md:w-5/12 md:items-start md:pl-20 md:text-left"
+        class="mb-12 mt-24 mx-5 lg:mr-0 lg:ml-20 xl:ml-40 gap-12 flex flex-col items-center lg:items-start text-center lg:text-left"
     >
-        <h1 class="md:text-6x1 pb-2 font-dm text-5xl font-bold text-black dark:text-csi-white">
-            Learn. Create.
-        </h1>
-        <h1 class="md:text-6x1 pb-2 font-dm text-5xl font-bold text-black dark:text-csi-white">
-            Innovate.
-        </h1>
-        <p class="pb-8 text-sm text-black dark:text-csi-white">
-            With UP Center for Student Innovations.
-        </p>
+        <div class="gap-3 flex flex-col text-csi-black dark:text-csi-white">
+            <h1 class="font-dm text-5xl sm:text-6xl font-bold sm:w-104 leading-tight">
+                Learn. Create. Innovate.
+            </h1>
+            <p class="text-sm">
+                With UP Center for Student Innovations.
+            </p>
+        </div>
         <Button>Get in Touch</Button>
     </div>
-    <div class="flex flex-col items-center md:flex-row">
-        <img {src} alt="Lino Sablay" class="w-[550px]" />
+    <div class="h-full lg:mr-6 flex flex-col items-center justify-end">
+        <img {src} alt="Lino Sablay" class="w-156 relative top-4 sm:top-6" />
     </div>
 </div>
