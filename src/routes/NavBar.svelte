@@ -10,7 +10,7 @@
 
 <nav class="flex items-center justify-center">
     <ul
-        class="flex w-full flex-row items-center justify-between gap-4 bg-csi-neutral-50 p-1 text-csi-black lg:w-fit lg:rounded-xl dark:bg-csi-neutral-950 dark:text-csi-white"
+        class="flex w-full flex-row items-center justify-between gap-4 bg-csi-neutral-50 p-1 text-csi-black shadow-md lg:w-fit lg:rounded-xl dark:bg-csi-neutral-950 dark:text-csi-white"
     >
         <li class="mx-6 sm:mx-10 lg:ml-8 lg:mr-4">
             <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
