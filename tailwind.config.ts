@@ -53,13 +53,6 @@ export default {
             backgroundImage: {
                 lino: 'url("$lib/lino-hero.svg")',
             },
-            height: {
-                '136': '34rem',
-            },
-            width: {
-                '104': '26rem',
-                '156': '39rem',
-            },
         },
     },
     plugins: [forms, typo],
