@@ -7,7 +7,9 @@
     let mobileMenu = false;
     const theme = get();
 
-    function closeMenu(){ mobileMenu = false };
+    function closeMenu() {
+        mobileMenu = false;
+    }
 </script>
 
 <nav class="flex items-center justify-center">
