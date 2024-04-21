@@ -18,7 +18,7 @@
         <li class="hidden lg:block"><a href="/">Home</a></li>
         <li class="hidden lg:block"><a href="/about">About</a></li>
         <li class="hidden lg:block"><a href="/events/">Events</a></li>
-        <li class="hidden lg:block"><a href="/">Projects</a></li>
+        <li class="hidden lg:block"><a href="/projects/">Projects</a></li>
         <li class="hidden lg:block">
             <button class="flex items-center justify-center" on:click={theme.toggle}
                 ><img
@@ -67,7 +67,7 @@
                 <li class="m-4"><a href="/">Home</a></li>
                 <li class="m-4"><a href="/about">About</a></li>
                 <li class="m-4"><a href="/events/">Events</a></li>
-                <li class="m-4"><a href="/">Projects</a></li>
+                <li class="m-4"><a href="/projects/">Projects</a></li>
                 <li class="m-4"><button>Get in Touch</button></li>
             </ul>
             <div class="flex w-full items-center justify-center">
