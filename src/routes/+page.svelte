@@ -1,5 +1,4 @@
 <script>
-    import Carousel from '$lib/components/carousel/Carousel.svelte';
     import CartoonCard from '$lib/components/CartoonCard.svelte';
     import Contact from '$lib/components/Contact.svelte';
     import ContentContainer from '$lib/components/ContentContainer.svelte';
@@ -54,7 +53,6 @@
 </section>
 <section class="prose max-w-full dark:prose-invert">
     <h3 class="text-center font-dm">We've worked with</h3>
-    <Carousel />
 </section>
 <section class="prose max-w-full dark:prose-invert">
     <Contact />
