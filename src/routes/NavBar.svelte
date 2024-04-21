@@ -6,6 +6,8 @@
 
     let mobileMenu = false;
     const theme = get();
+
+    function closeMenu(){ mobileMenu = false };
 </script>
 
 <nav class="flex items-center justify-center">
@@ -55,7 +57,7 @@
             >
             <button
                 class="rounded-lg bg-black px-5 py-2 text-csi-white"
-                on:click={() => (mobileMenu = true)}>Get Started</button
+                on:click={() => (mobileMenu = !mobileMenu)}>Get Started</button
             >
         </li>
     </ul>
@@ -64,16 +66,16 @@
     <div class="flex h-svh flex-col bg-blue-white dark:bg-black">
         <div class="fixed bottom-0 w-full space-y-4 pb-12">
             <ul class="w-full font-dm text-2xl text-csi-black dark:text-csi-white">
-                <li class="m-4"><a href="/">Home</a></li>
-                <li class="m-4"><a href="/about">About</a></li>
-                <li class="m-4"><a href="/events/">Events</a></li>
-                <li class="m-4"><a href="/projects/">Projects</a></li>
-                <li class="m-4"><button>Get in Touch</button></li>
+                <li class="m-4"><a href="/" on:click={closeMenu}>Home</a></li>
+                <li class="m-4"><a href="/about" on:click={closeMenu}>About</a></li>
+                <li class="m-4"><a href="/events/" on:click={closeMenu}>Events</a></li>
+                <li class="m-4"><a href="/projects/" on:click={closeMenu}>Projects</a></li>
+                <li class="m-4"><button on:click={closeMenu}>Get in Touch</button></li>
             </ul>
             <div class="flex w-full items-center justify-center">
                 <button
                     class="rounded-full bg-csi-white/75 px-6 py-3 text-csi-black dark:bg-csi-neutral-600/75 dark:text-csi-white"
-                    on:click={() => (mobileMenu = false)}>Close</button
+                    on:click={closeMenu}>Close</button
                 >
             </div>
         </div>
