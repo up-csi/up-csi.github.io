@@ -52,5 +52,23 @@
         "description": "On its tenth year, UP CSI celebrates a decade of innovation and excellence with its members and alumni who became a part of this incredible journey.",
         "src": "/thumbnails/events/ASCENS10N.webp",
         "url": "/events/"
+    },
+    {
+        "state": "Upcoming",
+        "type": "Internal",
+        "title": "ASCENS10N",
+        "dates": "August 4 - August 6, 2023",
+        "description": "On its tenth year, UP CSI celebrates a decade of innovation and excellence with its members and alumni who became a part of this incredible journey.",
+        "src": "/thumbnails/events/ASCENS10N.webp",
+        "url": "/events/"
+    },
+    {
+        "state": "Upcoming",
+        "type": "Internal",
+        "title": "ASCENS10N",
+        "dates": "August 4 - August 6, 2023",
+        "description": "On its tenth year, UP CSI celebrates a decade of innovation and excellence with its members and alumni who became a part of this incredible journey.",
+        "src": "/thumbnails/events/ASCENS10N.webp",
+        "url": "/events/"
     }
 ]
