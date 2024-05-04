@@ -36,6 +36,7 @@ export default {
             black: '#253242',
             gray: '#A6A6A6',
             white: '#FFFFFF',
+            transparent: '#00000000',
         },
         extend: {
             typography: ({ theme }) => ({
