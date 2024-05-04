@@ -13,9 +13,8 @@
     ];
 
     $: currentFilter = 'All';
-    $: filteredEvents = events.filter(
-        ({ tag }) => currentFilter === 'All' || tag === currentFilter,
-    );
+    $: filteredEvents =
+        currentFilter === 'All' ? events : events.filter(({ tag }) => tag === currentFilter);
 
     export let perPage = 6; // Max number of events per page of the pagination
     $: pages = Math.ceil(filteredEvents.length / perPage);
