@@ -1,17 +1,34 @@
-<script>
-    import { page } from "$app/stores";
+<script lang="ts">
     import EventCard from "./EventCard.svelte";
-
     import events from "./events.json"
 
+    const filters: string[] = [
+        'All',
+        'EX Series',
+        'App Process',
+        'General Assembly',
+        'Partnership',
+        'Workshop',
+        'Other'
+    ];
+
+    $: currentFilter = 'All';
+
+    $: filteredEvents = events.filter((event) => {
+            if (currentFilter === 'All')
+                return true;
+            else
+                return event.tag === currentFilter;
+        }
+    );
+
     export let perPage = 6;
-    let pages = Math.ceil(events.length / perPage);
+    $: pages = Math.ceil(filteredEvents.length / perPage);
 
     $: currentPage = 0;
     $: start = currentPage * perPage;
     $: end = (currentPage === pages) ? events.length - 1 : start + perPage - 1;
-
-    $: eventsInPage = events.slice(start, end + 1);
+    $: filteredEventsInPage = filteredEvents.slice(start, end + 1);
 
     function nextPage() {
         currentPage += 1;
@@ -21,15 +38,34 @@
         currentPage -= 1;
     }
 
-    function setPage(newPage = 0) {
+    function setPage(newPage: number) {
         currentPage = newPage;
+    }
+
+    function setFilter(filter: string) {
+        currentFilter = filter;
+        currentPage = 0;
     }
 </script>
 
 <div class="flex flex-col gap-10">
+    <div class="flex flex-row justify-center">
+        <ul class="list-none m-0 p-1 flex flex-row flex-wrap justify-center gap-2 max-w-screen-sm lg:max-w-fit bg-csi-neutral-50 dark:bg-csi-neutral-900 rounded-lg shadow-lg">
+            {#each filters as filter}
+                <li class="m-0 p-0">
+                    <button
+                        class="min-h-10 px-6 rounded-md shrink-0 {(currentFilter === filter) ? "bg-csi-blue text-csi-black" : "bg-csi-neutral-100 dark:bg-csi-neutral-700"}"
+                        on:click={_ => setFilter(filter)}
+                    >
+                        {filter}
+                    </button>
+                </li>
+            {/each}
+        </ul>
+    </div>
     <div class="flex justify-center">
         <div class="grid w-fit items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {#each eventsInPage as event}
+            {#each filteredEventsInPage as event}
             <EventCard src={event.src} alt={`Image of ${event.title}`} href={event.url}>
                 <svelte:fragment>
                     <p class="m-0">{event.state} - {event.type}</p>
