@@ -1,7 +1,10 @@
-<script>
-    export let src = '';
-    export let alt = '';
-    export let href = '';
+<script lang="ts">
+    // eslint-disable-next-line init-declarations
+    export let src: string;
+    // eslint-disable-next-line init-declarations
+    export let alt: string;
+    // eslint-disable-next-line init-declarations
+    export let href: string;
 </script>
 
 <div
