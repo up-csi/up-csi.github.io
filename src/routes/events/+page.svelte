@@ -1,8 +1,8 @@
 <script>
-    import EventsPanel from "./EventsPanel.svelte";
+    import EventsPanel from './EventsPanel.svelte';
 </script>
 
-<article class="prose dark:prose-invert max-w-full">
+<article class="prose max-w-full dark:prose-invert">
     <h1>Events</h1>
 
     <EventsPanel />

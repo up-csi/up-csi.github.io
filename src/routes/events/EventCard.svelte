@@ -1,12 +1,14 @@
-<script lang='ts'>
-    export let src: string;
-    export let alt: string;
-    export let href: string;
+<script>
+    export let src = '';
+    export let alt = '';
+    export let href = '';
 </script>
 
-<div class="flex flex-col w-full md:w-72 h-auto md:h-[32rem] rounded-2xl overflow-hidden shadow-lg bg-csi-neutral-50 dark:bg-csi-neutral-900">
-    <img {src} {alt} class="h-64 md:h-48 object-cover m-0 shrink-0"/>
-    <div class="flex flex-col gap-2 h-full justify-between overflow-hidden m-3">
+<div
+    class="flex h-auto w-full flex-col overflow-hidden rounded-2xl bg-csi-neutral-50 shadow-lg md:h-[32rem] md:w-72 dark:bg-csi-neutral-900"
+>
+    <img {src} {alt} class="m-0 h-64 shrink-0 object-cover md:h-48" />
+    <div class="m-3 flex h-full flex-col justify-between gap-2 overflow-hidden">
         <slot />
         <p class="m-0"><a {href}>More Info</a></p>
     </div>
