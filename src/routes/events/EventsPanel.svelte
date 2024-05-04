@@ -2,7 +2,7 @@
     import EventCard from './EventCard.svelte';
     import events from './events.json';
 
-    const filters: string[] = [
+    const filters = [
         'All',
         'EX Series',
         'App Process',
@@ -13,11 +13,9 @@
     ];
 
     $: currentFilter = 'All';
-
-    $: filteredEvents = events.filter(event => {
-        if (currentFilter === 'All') return true;
-        return event.tag === currentFilter;
-    });
+    $: filteredEvents = events.filter(
+        ({ tag }) => currentFilter === 'All' || tag === currentFilter,
+    );
 
     export let perPage = 6; // Max number of events per page of the pagination
     $: pages = Math.ceil(filteredEvents.length / perPage);
@@ -59,11 +57,13 @@
             class="m-0 flex max-w-screen-sm list-none flex-row flex-wrap justify-center gap-2 rounded-lg bg-csi-neutral-50 p-1 shadow-lg lg:max-w-fit dark:bg-csi-neutral-900"
         >
             {#each filters as filter}
+                {@const neutral =
+                    currentFilter === filter
+                        ? 'bg-csi-blue text-csi-black'
+                        : 'bg-csi-neutral-100 dark:bg-csi-neutral-700'}
                 <li class="m-0 p-0">
                     <button
-                        class="min-h-10 shrink-0 rounded-md px-6 {currentFilter === filter
-                            ? 'bg-csi-blue text-csi-black'
-                            : 'bg-csi-neutral-100 dark:bg-csi-neutral-700'}"
+                        class="min-h-10 shrink-0 rounded-md px-6 {neutral}"
                         on:click={() => setFilter(filter)}
                     >
                         {filter}
@@ -74,13 +74,13 @@
     </div>
     <div class="flex justify-center">
         <div class="grid w-fit grid-cols-1 items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {#each filteredEventsInPage as event}
-                <EventCard src={event.src} alt={`Image of ${event.title}`} href={event.url}>
+            {#each filteredEventsInPage as { type, state, url, title, src, dates, description }}
+                <EventCard {src} alt="image of {title}" href={url}>
                     <svelte:fragment>
-                        <p class="m-0">{event.state} - {event.type}</p>
-                        <h2 class="m-0">{event.title}</h2>
-                        <p class="m-0">{event.dates}</p>
-                        <p class="m-0 grow overflow-hidden">{event.description}</p>
+                        <p class="m-0">{state} - {type}</p>
+                        <h2 class="m-0">{title}</h2>
+                        <p class="m-0">{dates}</p>
+                        <p class="m-0 grow overflow-hidden">{description}</p>
                     </svelte:fragment>
                 </EventCard>
             {/each}
@@ -99,12 +99,12 @@
                     &lt;
                 </button>
             </li>
-            {#each [...Array(pages).keys()] as pageIndex}
+            {#each Array(pages) as _, pageIndex}
+                {@const neutral =
+                    pageIndex === currentPage ? 'bg-csi-neutral-100 dark:bg-csi-neutral-700' : ''}
                 <li class="m-0 p-0">
                     <button
-                        class="flex size-10 items-center justify-center {pageIndex === currentPage
-                            ? 'bg-csi-neutral-100 dark:bg-csi-neutral-700'
-                            : ''}"
+                        class="flex size-10 items-center justify-center {neutral}"
                         on:click={() => setPage(pageIndex)}
                     >
                         {pageIndex + 1}
