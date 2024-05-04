@@ -1,7 +1,7 @@
 <script lang='ts'>
-    export let src = '';
-    export let alt = '';
-    export let href = '';
+    export let src: string;
+    export let alt: string;
+    export let href: string;
 </script>
 
 <div class="flex flex-col w-72 h-[32rem] rounded-2xl overflow-hidden shadow-lg bg-csi-neutral-50 dark:bg-csi-neutral-900">

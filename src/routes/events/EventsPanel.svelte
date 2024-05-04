@@ -22,28 +22,36 @@
         }
     );
 
-    export let perPage = 6;
+    export let perPage = 6; // Max number of events per page of the pagination
     $: pages = Math.ceil(filteredEvents.length / perPage);
 
-    $: currentPage = 0;
+    let currentPage = 0;
+
+    // Computes first and last card in the page to do a correct slice
     $: start = currentPage * perPage;
     $: end = (currentPage === pages) ? events.length - 1 : start + perPage - 1;
     $: filteredEventsInPage = filteredEvents.slice(start, end + 1);
 
+    // Goes to the next page in the pagination
     function nextPage() {
         currentPage += 1;
     }
 
+    // Goes to the previous page in the pagingation
     function backPage() {
         currentPage -= 1;
     }
 
+    // Sets page to the page number clicked
     function setPage(newPage: number) {
         currentPage = newPage;
     }
 
+    // Sets current filter
     function setFilter(filter: string) {
         currentFilter = filter;
+
+        // Page is reset back to the first to avoid users from going to a page with no cards
         currentPage = 0;
     }
 </script>
