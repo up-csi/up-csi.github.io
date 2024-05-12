@@ -38,12 +38,12 @@ export default {
             white: '#FFFFFF',
             transparent: '#00000000',
             committees: {
-                'innov': '#F9961E',
-                'service': '#F9D51F',
-                'exte': '#3F5FAC',
+                innov: '#F9961E',
+                service: '#F9D51F',
+                exte: '#3F5FAC',
                 'm-and-i': '#F26C9F',
                 'b-and-c': '#47B749',
-                'engg': '#E53333',
+                engg: '#E53333',
             },
         },
         extend: {

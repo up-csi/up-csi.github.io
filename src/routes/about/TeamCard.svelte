@@ -12,22 +12,32 @@
 </script>
 
 <div
-    class="grid grid-cols-1 grid-rows-[1fr auto] md:grid-rows-1 content-start items-start md:aspect-square overflow-hidden md:rounded-2xl md:shadow-lg"
+    class="grid-rows-[1fr auto] grid grid-cols-1 content-start items-start overflow-hidden md:aspect-square md:grid-rows-1 md:rounded-2xl md:shadow-lg"
     role="img"
     on:mouseenter={_ => setOverlayVisibility(true)}
     on:mouseleave={_ => setOverlayVisibility(false)}
 >
-    <img {src} {alt} height="300px" loading="lazy" class="m-0 col-start-1 row-start-1 object-cover rounded-2xl h-56 md:h-auto" />
+    <img
+        {src}
+        {alt}
+        height="300px"
+        loading="lazy"
+        class="col-start-1 row-start-1 m-0 h-56 rounded-2xl object-cover md:h-auto"
+    />
     {#if isOverlayVisible}
-        <div class="z-10 col-start-1 row-start-1 h-full hidden md:flex flex-col justify-end p-4 gap-2 text-csi-white bg-csi-black/70">
+        <div
+            class="z-10 col-start-1 row-start-1 hidden h-full flex-col justify-end gap-2 bg-csi-black/70 p-4 text-csi-white md:flex"
+        >
             <slot />
         </div>
     {:else}
-        <div class="z-10 col-start-1 row-start-1 p-1 hidden md:flex flex-col w-full h-full justify-end">
+        <div
+            class="z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end p-1 md:flex"
+        >
             <slot name="tag" />
         </div>
     {/if}
-    <div class="flex md:hidden flex-col gap-2 col-start-1 row-start-2">
+    <div class="col-start-1 row-start-2 flex flex-col gap-2 md:hidden">
         <slot />
     </div>
 </div>
