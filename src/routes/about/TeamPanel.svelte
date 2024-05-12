@@ -34,6 +34,18 @@
             default:            return linkIcon;
         }
     }
+
+    function getCommitteeColor(committee: string) {
+        switch (committee) {
+            case 'Innovation':              return 'bg-committees-innov';
+            case 'Service':                 return 'bg-committees-service';
+            case 'External Relations':      return 'bg-committees-exte';
+            case 'Membership & Internals':  return 'bg-committees-m-and-i';
+            case 'Branding & Creatives':    return 'bg-committees-b-and-c';
+            case 'Engineering':             return 'bg-committees-engg';
+            default:                        return 'bg-csi-blue';
+        }
+    }
 </script>
 
 <section class="prose max-w-full dark:prose-invert flex flex-col items-center gap-8 p-6 md:p-12 rounded-3xl w-full bg-blue-white dark:bg-black">
@@ -62,7 +74,7 @@
         </div>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        {#each filteredTeam as { name, title, imgFilename, socials }}
+        {#each filteredTeam as { name, title, committee, imgFilename, socials }}
             <TeamCard src={`/about/${imgFilename}?url`} alt="image of {name}">
                 <div>
                     <p class="m-0 text-md md:text-lg">{name}</p>
@@ -74,7 +86,7 @@
                     {/each}
                 </div>
 
-                <div slot="tag" class="z-10 absolute left-2 bottom-2 w-fit h-fit py-1 px-4 rounded-full bg-csi-white">
+                <div slot="tag" class="z-10 absolute left-2 bottom-2 py-1 px-4 rounded-full {getCommitteeColor(committee)}">
                     <p class="m-0 text-csi-black">{name}</p>
                 </div>
             </TeamCard>
