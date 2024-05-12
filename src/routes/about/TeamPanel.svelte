@@ -48,13 +48,13 @@
     }
 </script>
 
-<section class="prose max-w-full dark:prose-invert flex flex-col items-center gap-8 p-6 md:p-12 rounded-3xl w-full bg-blue-white dark:bg-black">
+<section class="prose max-w-full dark:prose-invert flex flex-col items-center gap-8 px-6 py-16 md:p-12 rounded-3xl w-full bg-blue-white dark:bg-black">
     <div class="flex flex-col items-center text-center w-full lg:w-2/3">
         <p class="m-0">The Team</p>
         <h1 class="mb-4 font-normal text-3xl md:text-4xl w-full sm:w-3/4">Meet the people that make innovation possible.</h1>
         <div class="flex flex-row justify-center">
             <ul
-                class="m-0 p-0 flex max-w-screen-sm list-none flex-row flex-wrap justify-center gap-2 rounded-lg lg:max-w-fit" 
+                class="m-0 p-0 flex max-w-screen-sm list-none flex-row flex-wrap justify-center gap-4 rounded-lg lg:max-w-fit" 
             >
                 {#each committees as committee}
                     {@const neutral =
@@ -73,20 +73,20 @@
             </ul>
         </div>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-12 md:gap-6">
         {#each filteredTeam as { name, title, committee, imgFilename, socials }}
             <TeamCard src={`/about/${imgFilename}?url`} alt="image of {name}">
                 <div>
                     <p class="m-0 text-md md:text-lg">{name}</p>
                     <p class="m-0 text-xs leading-tight">{title}</p>
                 </div>
-                <div class="flex flex-row gap-2">
+                <div class="flex flex-row gap-2 flex-wrap">
                     {#each Object.entries(socials) as [ social, href ]}
                         <a {href} target="_blank"><img class="m-0 w-5 h-5" src={getSocialIcon(social)} alt="{name}'s {social}" /></a>
                     {/each}
                 </div>
 
-                <div slot="tag" class="z-10 absolute left-2 bottom-2 py-1 px-4 rounded-full {getCommitteeColor(committee)}">
+                <div slot="tag" class="h-fit w-fit py-1 px-4 rounded-full {getCommitteeColor(committee)}">
                     <p class="m-0 text-csi-black">{name}</p>
                 </div>
             </TeamCard>
