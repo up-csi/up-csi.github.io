@@ -89,8 +89,8 @@
                     {/each}
                 </div>
 
-                <div slot="tag" class="h-fit w-fit py-1 px-4 rounded-full {getCommitteeColor(committee)}">
-                    <p class="m-0 text-csi-black">{name}</p>
+                <div slot="tag" class="h-fit w-fit py-1 px-3 rounded-full {getCommitteeColor(committee)}">
+                    <p class="m-0 text-csi-black text-sm">{name}</p>
                 </div>
             </TeamCard>
         {/each}

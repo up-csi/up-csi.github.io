@@ -23,7 +23,7 @@
             <slot />
         </div>
     {:else}
-        <div class="z-10 col-start-1 row-start-1 p-2 hidden md:flex flex-col w-full h-full justify-end">
+        <div class="z-10 col-start-1 row-start-1 p-1 hidden md:flex flex-col w-full h-full justify-end">
             <slot name="tag" />
         </div>
     {/if}
