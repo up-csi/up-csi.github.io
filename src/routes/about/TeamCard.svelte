@@ -19,7 +19,7 @@
 >
     <img {src} {alt} height="300px" loading="lazy" class="m-0 col-start-1 row-start-1 object-cover rounded-2xl h-56 md:h-auto" />
     {#if isOverlayVisible}
-        <div class="z-10 col-start-1 row-start-1 h-full hidden md:flex flex-col justify-end p-4 gap-2 text-csi-white bg-csi-black/80">
+        <div class="z-10 col-start-1 row-start-1 h-full hidden md:flex flex-col justify-end p-4 gap-2 text-csi-white bg-csi-black/70">
             <slot />
         </div>
     {:else}
