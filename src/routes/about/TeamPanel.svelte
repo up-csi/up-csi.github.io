@@ -17,7 +17,7 @@
         'Engineering',
     ];
 
-    $: currentCommittee = 'Everyone';
+    $: currentCommittee = 'Executive Board';
     $: filteredTeam =
         currentCommittee === 'Everyone'
             ? team
