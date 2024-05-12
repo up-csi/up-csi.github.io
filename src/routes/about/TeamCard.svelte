@@ -9,11 +9,11 @@
         name: string,
         title: string,
         committee: string,
-        imgSrc: string,
+        imgFilename: string,
         socials: { [social: string]: string | undefined }
     };
 
-    const { name, title, imgSrc, socials } = member;
+    const { name, title, imgFilename, socials } = member;
 
     let isOverlayVisible = false;
 
@@ -41,7 +41,7 @@
     on:mouseenter={_ => setOverlayVisibility(true)}
     on:mouseleave={_ => setOverlayVisibility(false)}
 >
-    <img src={imgSrc + '?url'} alt="image of {name}" loading="lazy" class="m-0 col-start-1 row-start-1 object-cover" />
+    <img src={`/about/${imgFilename}?url`} alt="image of {name}" loading="lazy" class="m-0 col-start-1 row-start-1 object-cover" />
     {#if isOverlayVisible}
         <div class="z-10 col-start-1 row-start-1 h-full flex flex-col justify-end p-4 gap-2 text-csi-white bg-csi-black/80">
             <div>

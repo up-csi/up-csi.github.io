@@ -3,7 +3,7 @@
         "name": "Caleb Bunye",
         "title": "President",
         "committee": "Executive Board",
-        "imgSrc": "/people/caleb-bunye.webp",
+        "imgFilename": "caleb-bunye.webp",
         "socials": {
             "github": "https://github.com",
             "linkedin": "https://linkedin.com",
