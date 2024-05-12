@@ -20,6 +20,9 @@
 
     $: currentCommittee = 'Everyone';
     $: filteredTeam = currentCommittee === 'Everyone' ? team : team.filter(({ committee }) => committee === currentCommittee);
+    $: sortedFilteredTeam = filteredTeam.sort((a, b) => {
+        return committees.indexOf(a.committee) - committees.indexOf(b.committee);
+    });
 
     // Sets current filter
     function setFilter(committee: string) {
@@ -74,7 +77,7 @@
         </div>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-12 md:gap-6">
-        {#each filteredTeam as { name, title, committee, imgFilename, socials }}
+        {#each sortedFilteredTeam as { name, title, committee, imgFilename, socials }}
             <TeamCard src={`/about/${imgFilename}?url`} alt="image of {name}">
                 <div>
                     <p class="m-0 text-md md:text-lg">{name}</p>
