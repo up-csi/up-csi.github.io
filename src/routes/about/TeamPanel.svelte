@@ -1,4 +1,9 @@
 <script lang="ts">
+    import githubIcon from "$lib/icons/github.svg";
+    import linkedinIcon from "$lib/icons/linkedin.svg";
+    import instagramIcon from "$lib/icons/instagram.svg";
+    import linkIcon from "$lib/icons/link.svg";
+
     import TeamCard from "./TeamCard.svelte";
     import team from "./team.json";
 
@@ -19,6 +24,15 @@
     // Sets current filter
     function setFilter(committee: string) {
         currentCommittee = committee;
+    }
+
+    function getSocialIcon(social: string) {
+        switch (social) {
+            case 'github':      return githubIcon;
+            case 'linkedin':    return linkedinIcon;
+            case 'instagram':   return instagramIcon;
+            default:            return linkIcon;
+        }
     }
 </script>
 
@@ -48,8 +62,22 @@
         </div>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        {#each filteredTeam as member}
-            <TeamCard {member} />
+        {#each filteredTeam as { name, title, imgFilename, socials }}
+            <TeamCard src={`/about/${imgFilename}?url`} alt="image of {name}">
+                <div>
+                    <p class="m-0 text-md md:text-lg">{name}</p>
+                    <p class="m-0 text-xs leading-tight">{title}</p>
+                </div>
+                <div class="flex flex-row gap-2">
+                    {#each Object.entries(socials) as [ social, href ]}
+                        <a {href} target="_blank"><img class="m-0 w-5 h-5" src={getSocialIcon(social)} alt="{name}'s {social}" /></a>
+                    {/each}
+                </div>
+
+                <div slot="tag" class="z-10 absolute left-2 bottom-2 w-fit h-fit py-1 px-4 rounded-full bg-csi-white">
+                    <p class="m-0 text-csi-black">{name}</p>
+                </div>
+            </TeamCard>
         {/each}
     </div>
 </section>
