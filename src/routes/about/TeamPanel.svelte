@@ -26,10 +26,6 @@
         (a, b) => committees.indexOf(a.committee) - committees.indexOf(b.committee),
     );
 
-    function setFilter(committee: string) {
-        currentCommittee = committee;
-    }
-
     function getSocialIcon(social: string) {
         switch (social) {
             case 'github':
@@ -83,7 +79,7 @@
                     <li class="m-0 p-0">
                         <button
                             class="min-h-10 shrink-0 rounded-md px-6 shadow-md {neutral}"
-                            on:click={() => setFilter(committee)}
+                            on:click={() => (currentCommittee = committee)}
                         >
                             {committee}
                         </button>
