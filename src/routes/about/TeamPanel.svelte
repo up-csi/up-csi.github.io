@@ -52,9 +52,9 @@
             case 'External Relations':
                 return 'bg-committees-exte';
             case 'Membership & Internals':
-                return 'bg-committees-m-and-i';
+                return 'bg-committees-mni';
             case 'Branding & Creatives':
-                return 'bg-committees-b-and-c';
+                return 'bg-committees-bnc';
             case 'Engineering':
                 return 'bg-committees-engg';
             default:
