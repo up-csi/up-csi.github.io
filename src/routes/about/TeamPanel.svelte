@@ -1,10 +1,9 @@
 <script lang="ts">
+    import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
+    import { Icon } from '@steeze-ui/svelte-icon';
+    import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
-    import githubIcon from '$lib/icons/github.svg';
-    import instagramIcon from '$lib/icons/instagram.svg';
-    import linkIcon from '$lib/icons/link.svg';
-    import linkedinIcon from '$lib/icons/linkedin.svg';
-    import team from './team.json';
+    import caleb from '$lib/people/caleb-bunye.webp';
 
     const committees = [
         'Everyone',
@@ -15,6 +14,99 @@
         'Membership & Internals',
         'Branding & Creatives',
         'Engineering',
+    ];
+
+    const team = [
+        {
+            name: 'Caleb Bunye',
+            title: 'President',
+            committee: 'Executive Board',
+            img: caleb,
+            socials: {
+                github: 'https://github.com',
+                linkedin: 'https://linkedin.com',
+                instagram: 'https://instagram.com',
+                website: 'https://google.com',
+            },
+        },
+        {
+            name: 'Caleb Bunye 2',
+            title: 'President',
+            committee: 'Innovation',
+            img: caleb,
+            socials: {
+                github: 'https://github.com',
+                linkedin: 'https://linkedin.com',
+                instagram: 'https://instagram.com',
+                website: 'https://google.com',
+            },
+        },
+        {
+            name: 'Caleb Bunye 3',
+            title: 'President',
+            committee: 'Service',
+            img: caleb,
+            socials: {
+                github: 'https://github.com',
+                linkedin: 'https://linkedin.com',
+                website: 'https://google.com',
+            },
+        },
+        {
+            name: 'Caleb Bunye 4',
+            title: 'President',
+            committee: 'External Relations',
+            img: caleb,
+            socials: {
+                linkedin: 'https://linkedin.com',
+                instagram: 'https://instagram.com',
+                website: 'https://google.com',
+            },
+        },
+        {
+            name: 'Caleb Bunye 5',
+            title: 'President',
+            committee: 'Membership & Internals',
+            img: caleb,
+            socials: {
+                github: 'https://github.com',
+                linkedin: 'https://linkedin.com',
+                instagram: 'https://instagram.com',
+            },
+        },
+        {
+            name: 'Caleb Bunye 6',
+            title: 'President',
+            committee: 'Branding & Creatives',
+            img: caleb,
+            socials: {
+                github: 'https://github.com',
+                linkedin: 'https://linkedin.com',
+                instagram: 'https://instagram.com',
+            },
+        },
+        {
+            name: 'Caleb Bunye 7',
+            title: 'President',
+            committee: 'Engineering',
+            img: caleb,
+            socials: {
+                github: 'https://github.com',
+                instagram: 'https://instagram.com',
+                website: 'https://google.com',
+            },
+        },
+        {
+            name: 'Caleb Bunye 8',
+            title: 'President',
+            committee: 'Executive Board',
+            img: caleb,
+            socials: {
+                github: 'https://github.com',
+                linkedin: 'https://linkedin.com',
+                instagram: 'https://instagram.com',
+            },
+        },
     ];
 
     $: currentCommittee = 'Executive Board';
@@ -29,13 +121,13 @@
     function getSocialIcon(social: string) {
         switch (social) {
             case 'github':
-                return githubIcon;
+                return Github;
             case 'linkedin':
-                return linkedinIcon;
+                return Linkedin;
             case 'instagram':
-                return instagramIcon;
+                return Instagram;
             default:
-                return linkIcon;
+                return Link;
         }
     }
 
@@ -91,21 +183,16 @@
     <div
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
-        {#each sortedFilteredTeam as { name, title, committee, imgFilename, socials }}
-            <TeamCard src="/about/${imgFilename}?url" alt="image of {name}">
+        {#each sortedFilteredTeam as { name, title, committee, img, socials }}
+            <TeamCard src={img} alt="image of {name}">
                 <div>
                     <p class="text-md m-0 md:text-lg">{name}</p>
                     <p class="m-0 text-xs leading-tight">{title}</p>
                 </div>
                 <div class="flex flex-row flex-wrap gap-2">
                     {#each Object.entries(socials) as [social, href]}
-                        <a {href} target="_blank"
-                            ><img
-                                class="m-0 h-5 w-5"
-                                src={getSocialIcon(social)}
-                                alt="{name}'s {social}"
-                            /></a
-                        >
+                        {@const src = getSocialIcon(social)}
+                        <a {href} target="_blank"><Icon {src} class="size-5" /></a>
                     {/each}
                 </div>
                 <div
