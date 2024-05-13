@@ -22,11 +22,10 @@
         currentCommittee === 'Everyone'
             ? team
             : team.filter(({ committee }) => committee === currentCommittee);
-    $: sortedFilteredTeam = filteredTeam.sort((a, b) => {
-        return committees.indexOf(a.committee) - committees.indexOf(b.committee);
-    });
+    $: sortedFilteredTeam = structuredClone(filteredTeam).sort(
+        (a, b) => committees.indexOf(a.committee) - committees.indexOf(b.committee),
+    );
 
-    // Sets current filter
     function setFilter(committee: string) {
         currentCommittee = committee;
     }
@@ -84,7 +83,7 @@
                     <li class="m-0 p-0">
                         <button
                             class="min-h-10 shrink-0 rounded-md px-6 shadow-md {neutral}"
-                            on:click={_ => setFilter(committee)}
+                            on:click={() => setFilter(committee)}
                         >
                             {committee}
                         </button>
@@ -97,7 +96,7 @@
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
         {#each sortedFilteredTeam as { name, title, committee, imgFilename, socials }}
-            <TeamCard src={`/about/${imgFilename}?url`} alt="image of {name}">
+            <TeamCard src="/about/${imgFilename}?url" alt="image of {name}">
                 <div>
                     <p class="text-md m-0 md:text-lg">{name}</p>
                     <p class="m-0 text-xs leading-tight">{title}</p>
@@ -113,7 +112,6 @@
                         >
                     {/each}
                 </div>
-
                 <div
                     slot="tag"
                     class="h-fit w-fit rounded-full px-3 py-1 {getCommitteeColor(committee)}"
