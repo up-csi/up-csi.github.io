@@ -37,6 +37,14 @@ export default {
             gray: '#A6A6A6',
             white: '#FFFFFF',
             transparent: '#00000000',
+            committees: {
+                innov: '#F9961E',
+                service: '#F9D51F',
+                exte: '#3F5FAC',
+                mni: '#F26C9F',
+                bnc: '#47B749',
+                engg: '#E53333',
+            },
         },
         extend: {
             typography: ({ theme }) => ({
