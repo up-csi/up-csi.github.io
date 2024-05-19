@@ -17,7 +17,7 @@ export function handle({ event, resolve }) {
 
 /** @type {import('@sveltejs/kit').HandleServerError} */
 export function handleError({ error, status }) {
-    console.error(error.stack);
+    // console.error(error.stack);
 
     return { message: 'Woops! An error occurred.' }
 }
