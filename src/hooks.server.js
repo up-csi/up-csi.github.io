@@ -14,10 +14,3 @@ export function handle({ event, resolve }) {
         },
     });
 }
-
-/** @type {import('@sveltejs/kit').HandleServerError} */
-export function handleError() {
-    return {
-        message: 'Woops! An error occurred.',
-    };
-}
