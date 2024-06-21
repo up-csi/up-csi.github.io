@@ -7,10 +7,10 @@
     {#if $page.status === 404}
         <Err404 />
     {:else}
-        <h1>{$page.status}</h1>
-        <h1>{$page.error.message}</h1>
+        <p>{$page.status}</p>
+        <p>{$page.error.message}</p>
     {/if}
 {:else}
-    <h1>{$page.status}</h1>
-    <h1>Woops! An error occurred.</h1>
+    <p>{$page.status}</p>
+    <p>Woops! An error occurred.</p>
 {/if}
