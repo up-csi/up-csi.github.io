@@ -1,6 +1,6 @@
 <script>
+    import Err404 from '$lib/components/error/Err404.svelte';
     import { page } from '$app/stores';
-    import Err404 from '$lib/components/error/Err404.svelte'
 </script>
 
 {#if $page.error}
