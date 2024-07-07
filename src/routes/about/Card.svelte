@@ -1,10 +1,10 @@
-<script>
-    export let src = '$lib/lino-sablay.svg';
-    export let bgStyles = 'bg-csi-neutral-200 rounded-t-full rounded-b-xl';
+<script lang="ts">
+    // eslint-disable-next-line init-declarations
+    export let src: string;
 </script>
 
 <div class="flex w-full flex-col gap-2 md:w-1/4">
-    <div class={`flex h-3/5 w-full items-center justify-center ${bgStyles}`}>
+    <div class="flex h-3/5 w-full items-center justify-center">
         <img {src} alt="Placeholder" />
     </div>
     <div class="h-2/5 w-full">
