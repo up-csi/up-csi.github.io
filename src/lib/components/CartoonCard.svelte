@@ -2,8 +2,10 @@
     export let src;
 </script>
 
-<div class="mb-8 flex flex-col md:mb-0 md:w-2/5 xl:w-3/5 h-full">
-    <div class="flex aspect-square overflow-y-hidden items-center rounded-3xl bg-csi-blue px-2 pt-5">
+<div class="mb-8 flex h-full flex-col md:mb-0 md:w-2/5 xl:w-3/5">
+    <div
+        class="flex aspect-square items-center overflow-y-hidden rounded-3xl bg-csi-blue px-2 pt-5"
+    >
         <img {src} alt="Corporate Cartoon" />
     </div>
     {#if $$slots.title || $$slots.default}

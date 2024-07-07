@@ -4,10 +4,10 @@
 </script>
 
 <div class="flex w-full flex-col gap-2 md:w-1/4">
-    <div class={`flex w-full justify-center items-center h-3/5 ${bgStyles}`}>
+    <div class={`flex h-3/5 w-full items-center justify-center ${bgStyles}`}>
         <img {src} alt="Placeholder" />
     </div>
-    <div class="w-full h-2/5">
+    <div class="h-2/5 w-full">
         <h1 class="text-2xl">
             <slot name="heading" />
         </h1>
