@@ -4,8 +4,8 @@
     import ContentContainer from '$lib/components/ContentContainer.svelte';
     import HeroComponent from '$lib/components/HeroComponent.svelte';
     import WhoWeAre from './WhoWeAre.svelte';
-    import services from '$lib/cartoon-card-placeholder.svg';
     import devcamps from '$lib/cartoons/devcamps.svg';
+    import services from '$lib/cartoon-card-placeholder.svg';
     import tech from '$lib/cartoons/tech.svg';
 </script>
 

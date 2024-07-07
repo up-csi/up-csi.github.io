@@ -1,11 +1,11 @@
 <script>
     import Card from './Card.svelte';
+    import create from '$lib/cartoons/create.svg';
     import develop from '$lib/cartoons/develop.svg';
     import establish from '$lib/cartoons/establish.svg';
     import improve from '$lib/cartoons/improve.svg';
-    import learn from '$lib/cartoons/learn.svg';
-    import create from '$lib/cartoons/create.svg';
     import innovate from '$lib/cartoons/innovate.svg';
+    import learn from '$lib/cartoons/learn.svg';
 </script>
 
 <section

@@ -1,5 +1,5 @@
 <script>
-    export let src;
+    export let src = '$lib/lino-sablay.svg';
 </script>
 
 <div class="mb-8 flex h-full flex-col md:mb-0 md:w-2/5 xl:w-3/5">

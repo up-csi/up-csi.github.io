@@ -1,5 +1,5 @@
 <script>
-    export let src;
+    export let src = '$lib/lino-sablay.svg';
     export let bgStyles = 'bg-csi-neutral-200 rounded-t-full rounded-b-xl';
 </script>
 
