@@ -4,6 +4,9 @@
     import ContentContainer from '$lib/components/ContentContainer.svelte';
     import HeroComponent from '$lib/components/HeroComponent.svelte';
     import WhoWeAre from './WhoWeAre.svelte';
+    import devcamps from '$lib/cartoons/devcamps.svg';
+    import services from '$lib/cartoon-card-placeholder.svg';
+    import tech from '$lib/cartoons/tech.svg';
 </script>
 
 <section>
@@ -27,8 +30,7 @@
                 </p>
             </svelte:fragment>
             <svelte:fragment slot="cards">
-                <CartoonCard>Development</CartoonCard>
-                <CartoonCard>Development</CartoonCard>
+                <CartoonCard src={services}></CartoonCard>
             </svelte:fragment>
         </ContentContainer>
         <ContentContainer>
@@ -45,8 +47,8 @@
                 </p>
             </svelte:fragment>
             <svelte:fragment slot="cards">
-                <CartoonCard>Developer Training Program & DevCamp</CartoonCard>
-                <CartoonCard>Technology Workshops</CartoonCard>
+                <CartoonCard src={devcamps}>Developer Training Program & DevCamp</CartoonCard>
+                <CartoonCard src={tech}>Technology Workshops</CartoonCard>
             </svelte:fragment>
         </ContentContainer>
     </div>
