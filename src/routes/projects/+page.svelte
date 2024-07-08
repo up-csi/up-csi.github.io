@@ -1,5 +1,5 @@
 <script>
-    import EventsPanel from '../events/EventsPanel.svelte';
+    import ProjectsPanel from '$lib/components/EventsPanel.svelte';
     import ascenc10n from '$lib/events/ascension.webp';
     import bootcamp10 from '$lib/events/bootcamp-10.webp';
     import csflight from '$lib/events/csflight.webp';
@@ -110,5 +110,5 @@
 </script>
 
 <article class="prose max-w-full dark:prose-invert">
-    <EventsPanel filters={filters} events={events}/>
+    <ProjectsPanel filters={filters} events={events}/>
 </article>

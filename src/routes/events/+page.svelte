@@ -1,5 +1,5 @@
 <script>
-    import EventsPanel from './EventsPanel.svelte';
+    import EventsPanel from '$lib/components/EventsPanel.svelte';
     import ascenc10n from '$lib/events/ascension.webp';
     import bootcamp10 from '$lib/events/bootcamp-10.webp';
     import csflight from '$lib/events/csflight.webp';
