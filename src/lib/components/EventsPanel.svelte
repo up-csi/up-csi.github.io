@@ -10,7 +10,7 @@
         description: string;
         src: string;
         url: string;
-    }
+    };
 
     // eslint-disable-next-line init-declarations
     export let filters: string[];

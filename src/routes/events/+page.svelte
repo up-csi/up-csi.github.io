@@ -110,5 +110,5 @@
 </script>
 
 <article class="prose max-w-full dark:prose-invert">
-    <EventsPanel filters={filters} events={events} />
+    <EventsPanel {filters} {events} />
 </article>
