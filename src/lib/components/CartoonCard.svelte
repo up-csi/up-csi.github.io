@@ -9,9 +9,8 @@
     >
         <img {src} alt="Corporate Cartoon" />
     </div>
-    {#if $$slots.title || $$slots.default}
+    {#if $$slots.default}
         <div class="leading-6">
-            <h1 class="text-center font-dm text-3xl"><slot name="title" /></h1>
             <p class="text-center text-csi-black dark:text-csi-white"><slot /></p>
         </div>
     {/if}
