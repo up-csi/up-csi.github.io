@@ -19,7 +19,7 @@
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^6.0.0",
-        "@linthtml/linthtml": "^0.9.6",
+        "@linthtml/linthtml": "^0.10.1",
         "@linthtml/linthtml-config-recommended": "^0.1.0",
         "@steeze-ui/heroicons": "^2.4.0",
         "@steeze-ui/simple-icons": "^1.9.0",
