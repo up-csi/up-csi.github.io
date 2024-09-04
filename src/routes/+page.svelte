@@ -54,8 +54,5 @@
     </div>
 </section>
 <section class="prose max-w-full dark:prose-invert">
-    <h3 class="text-center font-dm">We've worked with</h3>
-</section>
-<section class="prose max-w-full dark:prose-invert">
     <Contact />
 </section>
