@@ -1,6 +1,6 @@
 <script>
     import EventsPanel from '$lib/components/EventsPanel.svelte';
-    import events from './events.js';
+    import events from './events';
 
     const filters = [
         'All',
