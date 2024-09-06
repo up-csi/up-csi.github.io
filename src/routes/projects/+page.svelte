@@ -1,6 +1,6 @@
 <script>
-    import projects from './projects.js';
     import ProjectsPanel from '$lib/components/EventsPanel.svelte';
+    import projects from './projects.js';
 
     const filters = ['All', 'Service', 'Innovation', 'Other'];
 </script>
