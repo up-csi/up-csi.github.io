@@ -38,16 +38,10 @@ jobs:
         run: pnpm install
       - name: Check Formatting
         run: pnpm fmt
-      - name: Check HTML
-        run: pnpm lint:html
-      - name: Check CSS
-        run: pnpm lint:css
       - name: Synchronize SvelteKit
         run: pnpm sync
-      - name: Check Svelte
-        run: pnpm lint:svelte
-      - name: Check JavaScript
-        run: pnpm lint:js
+      - name: Check All Lints in Parallel
+        run: pnpm lint
       - name: Build Website
         run: pnpm build
       - name: Setup Pages
