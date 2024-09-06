@@ -1,3 +1,4 @@
+import type { Event } from '$lib/components/EventsPanel.svelte';
 import lino from '$lib/lino-sablay.svg';
 
 export default [
@@ -11,4 +12,4 @@ export default [
         src: lino,
         url: '/projects/',
     },
-];
+] satisfies Event[];

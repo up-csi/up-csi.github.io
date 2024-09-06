@@ -1,7 +1,5 @@
-<script lang="ts">
-    import EventCard from './EventCard.svelte';
-
-    type Event = {
+<script lang="ts" context="module">
+    export interface Event {
         tag: string;
         state: string;
         type: string;
@@ -10,7 +8,11 @@
         description: string;
         src: string;
         url: string;
-    };
+    }
+</script>
+
+<script lang="ts">
+    import EventCard from '$lib/components/EventCard.svelte';
 
     // eslint-disable-next-line init-declarations
     export let filters: string[];

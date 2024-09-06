@@ -1,3 +1,4 @@
+import type { Event } from '$lib/components/EventsPanel.svelte';
 import ascenc10n from '$lib/events/ascension.webp';
 import bootcamp10 from '$lib/events/bootcamp-10.webp';
 import csflight from '$lib/events/csflight.webp';
@@ -94,4 +95,4 @@ export default [
         src: firstGa2023,
         url: '/events/',
     },
-];
+] satisfies Event[];
