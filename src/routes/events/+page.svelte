@@ -1,7 +1,18 @@
 <script>
-    import EventsPanel from './EventsPanel.svelte';
+    import EventsPanel from '$lib/components/EventsPanel.svelte';
+    import events from './events';
+
+    const filters = [
+        'All',
+        'EX Series',
+        'App Process',
+        'General Assembly',
+        'Partnership',
+        'Workshop',
+        'Other',
+    ];
 </script>
 
 <article class="prose max-w-full dark:prose-invert">
-    <EventsPanel />
+    <EventsPanel {filters} {events} />
 </article>
