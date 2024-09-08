@@ -9,7 +9,7 @@
 tags and schedule - pass as props
 image, event name, description - pass as slot -->
 <div
-    class="flex w-full flex-col items-center justify-center gap-6 rounded-3xl bg-csi-white p-4 text-center md:flex-row md:justify-normal md:gap-8 md:text-left"
+    class="flex w-full flex-col items-center justify-center gap-6 rounded-3xl bg-csi-neutral-50 p-4 text-center shadow-lg md:flex-row md:justify-normal md:gap-8 md:text-left dark:bg-csi-neutral-900"
 >
     <div class="flex w-full flex-col border-b-2 md:w-1/3 md:flex-row md:border-b-0">
         <slot name="image" />
