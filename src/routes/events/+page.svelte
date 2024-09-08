@@ -1,7 +1,8 @@
 <script>
-    import EventsPanel from '$lib/components/EventsPanel.svelte';
-    import lino from '$lib/lino-sablay.svg';
     import events from './events';
+    import lino from '$lib/lino-sablay.svg';
+
+    import EventsPanel from '$lib/components/EventsPanel.svelte';
     import FeaturedEvent from './FeaturedEvent.svelte';
 
     const filters = [
