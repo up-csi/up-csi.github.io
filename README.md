@@ -20,9 +20,8 @@ pnpm install
 # One-time setup of the auto-generated `.svelte-kit` folder.
 pnpm sync
 
-# Same as the file watcher, but also starts a developer server at
-# `localhost:5173` by default. Live-reloading and hot module replacement
-# has been disabled by default.
+# Starts a developer server at `localhost:5173` by default.
+# Live-reloading and hot module replacement are enabled.
 pnpm dev
 
 # Build and optimize the project. Static assets are saved to `build/`.
