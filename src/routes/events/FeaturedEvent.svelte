@@ -6,9 +6,18 @@
     export let schedule: string[];
 </script>
 
-<!-- Featured Card Event
-tags and schedule - pass as props
-image, event name, description - pass as slot -->
+<!--
+@component
+**Props:**
+- `tags: string[]`
+- `schedule: string[]`
+
+
+**Slots:**
+- `image`
+- `name`
+- `description`
+-->
 <div
     class="flex w-full flex-col items-center justify-center gap-6 rounded-3xl bg-csi-neutral-50 p-4 text-center shadow-lg md:flex-row md:justify-normal md:gap-8 md:text-left dark:bg-csi-neutral-900"
 >
