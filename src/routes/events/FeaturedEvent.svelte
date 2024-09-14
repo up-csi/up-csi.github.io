@@ -1,8 +1,9 @@
 <script lang="ts">
+    import { Tag } from './events';
     import Button from '$lib/components/Button.svelte';
 
-    export let tags: string[] = [];
-    export let schedule: string[] = [];
+    export let tags: Tag[];
+    export let schedule: string[];
 </script>
 
 <!-- Featured Card Event
