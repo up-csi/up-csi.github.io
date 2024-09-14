@@ -20,9 +20,7 @@ image, event name, description - pass as slot -->
         <!-- Tags -->
         <div class="flex gap-4">
             {#each tags as tag}
-                <Button>
-                    {tag}
-                </Button>
+                <Button>{tag}</Button>
             {/each}
         </div>
 
