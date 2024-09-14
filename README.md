@@ -1,7 +1,8 @@
 # UP CSI Website
 
-The University of the Philippines Center for Student Innovations (UP CSI) website is a statically generated website built with the [SvelteKit] framework, which uses [Vite] as its build system under the hood. Components are then styled using [TailwindCSS].
+The [University of the Philippines Center for Student Innovations (UP CSI)][CSI] website is a statically generated website built with the [SvelteKit] framework, which uses [Vite] as its build system under the hood. Components are then styled using [TailwindCSS].
 
+[CSI]: https://up-csi.org/
 [SvelteKit]: https://kit.svelte.dev/
 [Vite]: https://vitejs.dev/
 [TailwindCSS]: https://tailwindcss.com/
@@ -20,9 +21,8 @@ pnpm install
 # One-time setup of the auto-generated `.svelte-kit` folder.
 pnpm sync
 
-# Same as the file watcher, but also starts a developer server at
-# `localhost:5173` by default. Live-reloading and hot module replacement
-# has been disabled by default.
+# Starts a developer server at `localhost:5173` by default.
+# Live-reloading and hot module replacement are enabled.
 pnpm dev
 
 # Build and optimize the project. Static assets are saved to `build/`.
