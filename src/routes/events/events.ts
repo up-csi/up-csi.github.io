@@ -1,4 +1,5 @@
 import type { Event } from '$lib/components/EventsPanel.svelte';
+
 import ascenc10n from '$lib/events/ascension.webp';
 import bootcamp10 from '$lib/events/bootcamp-10.webp';
 import csflight from '$lib/events/csflight.webp';
@@ -8,11 +9,32 @@ import gitWorkshop from '$lib/events/git-workshop.webp';
 import pyrolympics from '$lib/events/pyrolympics.webp';
 import yearEndGa2023 from '$lib/events/year-end-GA-2023.webp';
 
+export const enum Tag {
+    All = 'All',
+    EX = 'EX Series',
+    App = 'App Process',
+    GA = 'General Assembly',
+    Partnership = 'Partnership',
+    Workshop = 'Workshop',
+    Other = 'Other',
+}
+
+export const enum State {
+    Past = 'Past',
+    Present = 'Ongoing',
+    Future = 'Future',
+}
+
+export const enum Type {
+    Internal = 'Internal',
+    External = 'External',
+}
+
 export default [
     {
-        tag: 'Other',
-        state: 'Past',
-        type: 'Internal',
+        tag: Tag.Other,
+        state: State.Past,
+        type: Type.Internal,
         title: 'ASCENS10N',
         dates: 'August 4 - August 6, 2023',
         description:
@@ -21,9 +43,9 @@ export default [
         url: '/events/',
     },
     {
-        tag: 'EX Series',
-        state: 'Past',
-        type: 'External',
+        tag: Tag.EX,
+        state: State.Past,
+        type: Type.External,
         title: 'EX Series 2023',
         dates: 'August 4 - August 6, 2023',
         description:
@@ -32,9 +54,9 @@ export default [
         url: '/events/',
     },
     {
-        tag: 'App Process',
-        state: 'Past',
-        type: 'Internal',
+        tag: Tag.App,
+        state: State.Past,
+        type: Type.Internal,
         title: 'CSFlight',
         dates: 'August 4 - August 6, 2023',
         description:
@@ -43,9 +65,9 @@ export default [
         url: '/events/',
     },
     {
-        tag: 'Partnership',
-        state: 'Past',
-        type: 'External',
+        tag: Tag.Partnership,
+        state: State.Past,
+        type: Type.External,
         title: 'Bootcamp 10.0',
         dates: 'August 4 - August 6, 2023',
         description: 'Nisi consequat consequat nisi ipsum. Ut dolore dolore officia ea ipsum.',
@@ -53,9 +75,9 @@ export default [
         url: '/events/',
     },
     {
-        tag: 'Workshop',
-        state: 'Past',
-        type: 'External',
+        tag: Tag.Partnership,
+        state: State.Past,
+        type: Type.External,
         title: 'Git Workshop',
         dates: 'August 4 - August 6, 2023',
         description:
@@ -64,9 +86,9 @@ export default [
         url: '/events/',
     },
     {
-        tag: 'General Assembly',
-        state: 'Past',
-        type: 'Internal',
+        tag: Tag.GA,
+        state: State.Past,
+        type: Type.Internal,
         title: 'Year-end General Assembly 2023',
         dates: 'August 4 - August 6, 2023',
         description: 'Proident in aliqua proident quis ex ad excepteur culpa sunt.',
@@ -74,9 +96,9 @@ export default [
         url: '/events/',
     },
     {
-        tag: 'App Process',
-        state: 'Past',
-        type: 'Internal',
+        tag: Tag.App,
+        state: State.Past,
+        type: Type.Internal,
         title: 'Pyrolympics',
         dates: 'August 4 - August 6, 2023',
         description:
@@ -85,9 +107,9 @@ export default [
         url: '/events/',
     },
     {
-        tag: 'General Assembly',
-        state: 'Past',
-        type: 'Internal',
+        tag: Tag.GA,
+        state: State.Past,
+        type: Type.Internal,
         title: 'First GA 2324B',
         dates: 'August 4 - August 6, 2023',
         description:
