@@ -1,8 +1,10 @@
 <script lang="ts">
-    import { Tag } from './events';
     import Button from '$lib/components/Button.svelte';
+    import { Tag } from './events';
 
+    // eslint-disable-next-line init-declarations
     export let tags: Tag[];
+    // eslint-disable-next-line init-declarations
     export let schedule: string[];
 </script>
 
