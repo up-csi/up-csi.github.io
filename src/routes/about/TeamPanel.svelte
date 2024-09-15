@@ -2,8 +2,9 @@
     import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
     import { Icon } from '@steeze-ui/svelte-icon';
     import { Link } from '@steeze-ui/heroicons';
-    import TeamCard from './TeamCard.svelte';
+
     import caleb from '$lib/people/caleb-bunye.webp';
+    import TeamCard from './TeamCard.svelte';
 
     const committees = [
         'Everyone',

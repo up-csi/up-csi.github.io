@@ -1,7 +1,6 @@
 <script>
     import Button from '$lib/components/Button.svelte';
     import src from '$lib/lino-sablay.svg';
-    import { goto } from '$app/navigation';
 </script>
 
 <div class="flex flex-col items-center justify-center gap-12 font-dm md:flex-row">
@@ -17,7 +16,7 @@
         </p>
         <div class="w-full text-center md:text-left">
             <Button>
-                <button on:click={() => goto('/about')}>See About</button>
+                <a href="/about/">See About</a>
             </Button>
         </div>
     </div>

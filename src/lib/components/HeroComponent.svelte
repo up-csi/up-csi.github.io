@@ -1,12 +1,6 @@
 <script>
     import Button from './Button.svelte';
     import src from '$lib/lino-sablay.svg';
-    function scrollToContact() {
-        const contactSection = document.getElementById('contact-section');
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
 </script>
 
 <div
@@ -22,7 +16,7 @@
             <p class="text-sm">With UP Center for Student Innovations.</p>
         </div>
         <Button>
-            <button on:click={scrollToContact}>Get in Touch</button>
+            <a href="/about/">See About</a>
         </Button>
     </div>
     <div class="flex h-full flex-col items-center justify-end lg:mr-6">

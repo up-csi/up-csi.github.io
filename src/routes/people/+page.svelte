@@ -1,9 +1,12 @@
 <script>
-    import Exec from './Exec.svelte';
+    import { contactSection } from '$lib/stores/contactStore';
+
     import arianRey from '$lib/people/arian-rey.webp';
     import bastiOrtiz from '$lib/people/basti-ortiz.webp';
     import beaDiokno from '$lib/people/bea-diokno.webp';
     import calebBunye from '$lib/people/caleb-bunye.webp';
+    import Contact from '$lib/components/Contact.svelte';
+    import Exec from './Exec.svelte';
     import execFull from '$lib/people/exec.webp';
     import execMedium from '$lib/people/exec-768.webp';
     import execSmall from '$lib/people/exec-640.webp';
@@ -31,3 +34,7 @@
         <Exec src={beaDiokno} alt="Bea Diokno" pos="Director for External Relations" />
     </section>
 </article>
+
+<section bind:this={$contactSection} class="prose max-w-full dark:prose-invert">
+    <Contact />
+</section>

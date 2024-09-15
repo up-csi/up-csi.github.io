@@ -1,9 +1,12 @@
 <script>
     import events, { Tag } from './events';
-    import lino from '$lib/lino-sablay.svg';
 
+    import { contactSection } from '$lib/stores/contactStore';
+
+    import Contact from '$lib/components/Contact.svelte';
     import EventsPanel from '$lib/components/EventsPanel.svelte';
     import FeaturedEvent from './FeaturedEvent.svelte';
+    import lino from '$lib/lino-sablay.svg';
 
     const filters = [
         'All',
@@ -24,3 +27,7 @@
     </FeaturedEvent>
     <EventsPanel {filters} {events} />
 </article>
+
+<section bind:this={$contactSection} class="prose max-w-full dark:prose-invert">
+    <Contact />
+</section>

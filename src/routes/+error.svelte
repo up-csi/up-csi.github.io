@@ -1,6 +1,6 @@
 <script>
-    import ThonkLino from '$lib/lino-thonk.png';
     import { page } from '$app/stores';
+    import ThonkLino from '$lib/lino-thonk.png';
     $: ({ error, status } = $page);
 </script>
 

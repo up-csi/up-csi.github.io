@@ -1,12 +1,13 @@
 <script>
     import CartoonCard from '$lib/components/CartoonCard.svelte';
     import Contact from '$lib/components/Contact.svelte';
+    import { contactSection } from '$lib/stores/contactStore';
     import ContentContainer from '$lib/components/ContentContainer.svelte';
-    import HeroComponent from '$lib/components/HeroComponent.svelte';
-    import WhoWeAre from './WhoWeAre.svelte';
     import devcamps from '$lib/cartoons/devcamps.svg';
+    import HeroComponent from '$lib/components/HeroComponent.svelte';
     import services from '$lib/cartoon-card-placeholder.svg';
     import tech from '$lib/cartoons/tech.svg';
+    import WhoWeAre from './WhoWeAre.svelte';
 </script>
 
 <section>
@@ -53,6 +54,6 @@
         </ContentContainer>
     </div>
 </section>
-<section id="contact-section" class="prose max-w-full dark:prose-invert">
+<section bind:this={$contactSection} class="prose max-w-full dark:prose-invert">
     <Contact />
 </section>

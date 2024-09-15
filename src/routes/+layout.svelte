@@ -1,9 +1,9 @@
 <script>
     import './app.css';
     import { get, init } from '$lib/stores/color-scheme';
+    import { browser } from '$app/environment';
     import Footer from './Footer.svelte';
     import NavBar from './NavBar.svelte';
-    import { browser } from '$app/environment';
 
     init();
     const theme = get();

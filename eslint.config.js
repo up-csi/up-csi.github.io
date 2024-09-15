@@ -104,7 +104,10 @@ export default tsEslint.config(
             'prefer-template': 'error',
             radix: 'error',
             'require-await': 'error',
-            'sort-imports': ['error', { allowSeparatedGroups: true }],
+            'sort-imports': [
+                'error',
+                { ignoreCase: true, ignoreDeclarationSort: false, allowSeparatedGroups: true },
+            ],
             'spaced-comment': ['error', 'always', { markers: ['/'] }],
             yoda: ['warn', 'never', { exceptRange: true }],
         },

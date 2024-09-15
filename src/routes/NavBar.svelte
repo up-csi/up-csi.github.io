@@ -1,9 +1,9 @@
 <script>
+    import { contactSection } from '$lib/stores/contactStore';
     import darkmode from '$lib/icons/darkmode.svg';
     import { get } from '$lib/stores/color-scheme';
     import lightmode from '$lib/icons/lightmode.svg';
     import upcsi from '$lib/icons/upcsi.svg';
-
     let mobileMenu = false;
     const theme = get();
 
@@ -12,9 +12,9 @@
     }
 
     function scrollToContact() {
-        const contactSection = document.getElementById('contact-section');
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if ($contactSection) {
+            closeMenu();
+            $contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
 </script>
@@ -83,7 +83,7 @@
                 <li class="m-4"><a href="/about" on:click={closeMenu}>About</a></li>
                 <li class="m-4"><a href="/events/" on:click={closeMenu}>Events</a></li>
                 <li class="m-4"><a href="/projects/" on:click={closeMenu}>Projects</a></li>
-                <li class="m-4"><button on:click={closeMenu}>Get in Touch</button></li>
+                <li class="m-4"><button on:click={scrollToContact}>Get in Touch</button></li>
             </ul>
             <div class="flex w-full items-center justify-center">
                 <button
