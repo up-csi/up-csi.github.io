@@ -10,6 +10,13 @@
     function closeMenu() {
         mobileMenu = false;
     }
+
+    function scrollToContact() {
+        const contactSection = document.getElementById('contact-section');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
 </script>
 
 <nav class="flex items-center justify-center">
@@ -41,7 +48,10 @@
             >
         </li>
         <li class="hidden lg:block">
-            <button class="rounded-lg bg-csi-blue px-5 py-2 text-csi-black">Get in Touch</button>
+            <button
+                class="rounded-lg bg-csi-blue px-5 py-2 text-csi-black"
+                on:click={scrollToContact}>Get in Touch</button
+            >
         </li>
         <li class="mx-6 my-2 flex flex-row items-center sm:mx-10 lg:hidden">
             <button class="flex items-center justify-center" on:click={theme.toggle}

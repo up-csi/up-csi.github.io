@@ -53,6 +53,6 @@
         </ContentContainer>
     </div>
 </section>
-<section class="prose max-w-full dark:prose-invert">
+<section id="contact-section" class="prose max-w-full dark:prose-invert">
     <Contact />
 </section>
