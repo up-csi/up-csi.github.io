@@ -112,7 +112,7 @@
                         <a {href} target="_blank"
                             ><Icon
                                 {src}
-                                class="size-5 text-csi-black md:text-csi-white dark:text-csi-white"
+                                class="size-5 text-csi-black transition-colors hover:text-csi-blue md:text-csi-white dark:text-csi-white"
                             /></a
                         >
                     {/each}
