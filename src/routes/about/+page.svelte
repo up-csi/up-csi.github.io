@@ -4,6 +4,8 @@
     import SectionHeaderTextContainer from './SectionHeaderTextContainer.svelte';
 </script>
 
-<SectionHeaderTextContainer />
-<MissionVision />
-<Contact />
+<article class="prose max-w-full dark:prose-invert">
+    <SectionHeaderTextContainer />
+    <MissionVision />
+    <Contact />
+</article>
