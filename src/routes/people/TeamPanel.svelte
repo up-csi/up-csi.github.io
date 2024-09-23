@@ -87,7 +87,7 @@
                             : 'bg-csi-white text-csi-black dark:bg-blue-white'}
                     <li class="m-0 p-0">
                         <button
-                            class="min-h-10 shrink-0 rounded-md px-6 shadow-md {neutral}"
+                            class="min-h-10 shrink-0 rounded-md px-6 shadow-md {neutral} transition-colors"
                             on:click={() => (currentCommittee = committee)}
                         >
                             {committee}
