@@ -1,9 +1,19 @@
+<script lang="ts" context="module">
+    export interface Member {
+        name: string;
+        title: string;
+        committee: string;
+        img: string;
+        socials: Record<string, string>;
+    }
+</script>
+
 <script lang="ts">
     import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
     import { Icon } from '@steeze-ui/svelte-icon';
     import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
-    import caleb from '$lib/people/caleb-bunye.webp';
+    import team from './team';
 
     const committees = [
         'Everyone',
@@ -14,99 +24,6 @@
         'Membership & Internals',
         'Branding & Creatives',
         'Engineering',
-    ];
-
-    const team = [
-        {
-            name: 'Caleb Bunye',
-            title: 'President',
-            committee: 'Executive Board',
-            img: caleb,
-            socials: {
-                github: 'https://github.com',
-                linkedin: 'https://linkedin.com',
-                instagram: 'https://instagram.com',
-                website: 'https://google.com',
-            },
-        },
-        {
-            name: 'Caleb Bunye 2',
-            title: 'President',
-            committee: 'Innovation',
-            img: caleb,
-            socials: {
-                github: 'https://github.com',
-                linkedin: 'https://linkedin.com',
-                instagram: 'https://instagram.com',
-                website: 'https://google.com',
-            },
-        },
-        {
-            name: 'Caleb Bunye 3',
-            title: 'President',
-            committee: 'Service',
-            img: caleb,
-            socials: {
-                github: 'https://github.com',
-                linkedin: 'https://linkedin.com',
-                website: 'https://google.com',
-            },
-        },
-        {
-            name: 'Caleb Bunye 4',
-            title: 'President',
-            committee: 'External Relations',
-            img: caleb,
-            socials: {
-                linkedin: 'https://linkedin.com',
-                instagram: 'https://instagram.com',
-                website: 'https://google.com',
-            },
-        },
-        {
-            name: 'Caleb Bunye 5',
-            title: 'President',
-            committee: 'Membership & Internals',
-            img: caleb,
-            socials: {
-                github: 'https://github.com',
-                linkedin: 'https://linkedin.com',
-                instagram: 'https://instagram.com',
-            },
-        },
-        {
-            name: 'Caleb Bunye 6',
-            title: 'President',
-            committee: 'Branding & Creatives',
-            img: caleb,
-            socials: {
-                github: 'https://github.com',
-                linkedin: 'https://linkedin.com',
-                instagram: 'https://instagram.com',
-            },
-        },
-        {
-            name: 'Caleb Bunye 7',
-            title: 'President',
-            committee: 'Engineering',
-            img: caleb,
-            socials: {
-                github: 'https://github.com',
-                instagram: 'https://instagram.com',
-                website: 'https://google.com',
-            },
-        },
-        {
-            name: 'Caleb Bunye 8',
-            title: 'President',
-            committee: 'Executive Board',
-            img: caleb,
-            socials: {
-                github: 'https://github.com',
-                linkedin: 'https://linkedin.com',
-                instagram: 'https://instagram.com',
-            },
-        },
     ];
 
     $: currentCommittee = 'Executive Board';
@@ -170,7 +87,7 @@
                             : 'bg-csi-white text-csi-black dark:bg-blue-white'}
                     <li class="m-0 p-0">
                         <button
-                            class="min-h-10 shrink-0 rounded-md px-6 shadow-md {neutral}"
+                            class="min-h-10 shrink-0 rounded-md px-6 shadow-md {neutral} transition-colors"
                             on:click={() => (currentCommittee = committee)}
                         >
                             {committee}
@@ -192,7 +109,12 @@
                 <div class="flex flex-row flex-wrap gap-2">
                     {#each Object.entries(socials) as [social, href]}
                         {@const src = getSocialIcon(social)}
-                        <a {href} target="_blank"><Icon {src} class="size-5" /></a>
+                        <a {href} target="_blank"
+                            ><Icon
+                                {src}
+                                class="size-5 text-csi-black transition-colors hover:text-csi-blue md:text-csi-white dark:text-csi-white"
+                            /></a
+                        >
                     {/each}
                 </div>
                 <div

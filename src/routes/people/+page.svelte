@@ -1,5 +1,7 @@
 <script>
     import Exec from './Exec.svelte';
+    import TeamPanel from './TeamPanel.svelte';
+
     import arianRey from '$lib/people/arian-rey.webp';
     import bastiOrtiz from '$lib/people/basti-ortiz.webp';
     import beaDiokno from '$lib/people/bea-diokno.webp';
@@ -12,8 +14,8 @@
     import jellyRaborar from '$lib/people/jelly-raborar.webp';
 </script>
 
-<article class="prose max-w-none">
-    <figure class="flex flex-col items-center">
+<article class="prose flex max-w-none flex-col gap-8">
+    <figure class="m-0 flex flex-col items-center">
         <picture class="max-w-3xl">
             <source type="image/webp" srcset={execSmall} media="(max-width:640px)" />
             <source type="image/webp" srcset={execMedium} />
@@ -30,4 +32,5 @@
         <Exec src={jellyRaborar} alt="Jelly Raborar" pos="Director for Branding & Creatives" />
         <Exec src={beaDiokno} alt="Bea Diokno" pos="Director for External Relations" />
     </section>
+    <TeamPanel />
 </article>
