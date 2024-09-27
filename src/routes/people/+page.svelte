@@ -13,14 +13,36 @@
     import hansLorico from '$lib/people/hans-lorico.webp';
     import jellyRaborar from '$lib/people/jelly-raborar.webp';
 
+    import arrowUpDark from "$lib/icons/arrowupdark.svg";
+    import arrowUpLight from "$lib/icons/arrowuplight.svg";
+    import arrowDownDark from "$lib/icons/arrowdowndark.svg";
+    import arrowDownLight from "$lib/icons/arrowdownlight.svg";
+    import { get } from '$lib/stores/color-scheme';
+
     let pastExec = false;
+    const theme = get();
 </script>
 
 <section>
     <TeamPanel />
 </section>
 <section>
-    <button on:click={() => { pastExec = !pastExec; }}>2023-2024</button>
+    <div class="flex w-full mb-4 flex-col items-center text-center">
+        <h1 class="w-full text-3xl sm:w-3/4 md:text-4xl text-csi-black dark:text-csi-white">
+            The Past Executive Boards
+        </h1>
+    </div>
+
+    <button class="w-full mb-4 text-csi-black dark:text-csi-white border-b-2 border-inherit" on:click={() => { pastExec = !pastExec; }}>
+        <div class="flex w-full flex-row items-center text-center">
+            {#if pastExec}
+                <img src={$theme ? arrowUpLight : arrowUpDark} alt="Toggle Dropdown" class="h-4 pr-2" />
+            {:else}
+                <img src={$theme ? arrowDownLight : arrowDownDark} alt="Toggle Dropdown" class="h-4 pr-2" />
+            {/if}
+            <h2 class="text-xl md:text-2xl">2023-2024</h2>
+        </div>
+    </button>
     {#if pastExec}
         <section class="prose flex max-w-none flex-col gap-8">
             <figure class="m-0 flex flex-col items-center">
