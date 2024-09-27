@@ -3,6 +3,10 @@
     import TeamPanel from './TeamPanel.svelte';
 
     import arianRey from '$lib/people/arian-rey.webp';
+    import arrowDownDark from '$lib/icons/arrowdowndark.svg';
+    import arrowDownLight from '$lib/icons/arrowdownlight.svg';
+    import arrowUpDark from '$lib/icons/arrowupdark.svg';
+    import arrowUpLight from '$lib/icons/arrowuplight.svg';
     import bastiOrtiz from '$lib/people/basti-ortiz.webp';
     import beaDiokno from '$lib/people/bea-diokno.webp';
     import calebBunye from '$lib/people/caleb-bunye.webp';
@@ -12,12 +16,8 @@
     import eyronTanael from '$lib/people/eyron-tanael.webp';
     import hansLorico from '$lib/people/hans-lorico.webp';
     import jellyRaborar from '$lib/people/jelly-raborar.webp';
-    import lino from '$lib/lino-hero.svg'
+    import lino from '$lib/lino-hero.svg';
 
-    import arrowUpDark from "$lib/icons/arrowupdark.svg";
-    import arrowUpLight from "$lib/icons/arrowuplight.svg";
-    import arrowDownDark from "$lib/icons/arrowdowndark.svg";
-    import arrowDownLight from "$lib/icons/arrowdownlight.svg";
     import { get } from '$lib/stores/color-scheme';
 
     let pastExec = false;
@@ -25,7 +25,7 @@
 </script>
 
 <section>
-    <section class="mb-8 prose flex max-w-none flex-col gap-8">
+    <section class="prose mb-8 flex max-w-none flex-col gap-8">
         <figure class="m-0 flex flex-col items-center">
             <!-- <picture class="max-w-3xl">
                 <source type="image/webp" srcset={execSmall} media="(max-width:640px)" />
@@ -47,18 +47,31 @@
     <TeamPanel />
 </section>
 <section>
-    <div class="flex w-full mb-4 flex-col items-center text-center">
-        <h1 class="w-full text-3xl sm:w-3/4 md:text-4xl text-csi-black dark:text-csi-white">
+    <div class="mb-4 flex w-full flex-col items-center text-center">
+        <h1 class="w-full text-3xl text-csi-black sm:w-3/4 md:text-4xl dark:text-csi-white">
             The Past Executive Boards
         </h1>
     </div>
 
-    <button class="w-full mb-4 text-csi-black dark:text-csi-white border-b-2 border-inherit" on:click={() => { pastExec = !pastExec; }}>
+    <button
+        class="border-inherit mb-4 w-full border-b-2 text-csi-black dark:text-csi-white"
+        on:click={() => {
+            pastExec = !pastExec;
+        }}
+    >
         <div class="flex w-full flex-row items-center text-center">
             {#if pastExec}
-                <img src={$theme ? arrowUpLight : arrowUpDark} alt="Toggle Dropdown" class="h-4 pr-2" />
+                <img
+                    src={$theme ? arrowUpLight : arrowUpDark}
+                    alt="Toggle Dropdown"
+                    class="h-4 pr-2"
+                />
             {:else}
-                <img src={$theme ? arrowDownLight : arrowDownDark} alt="Toggle Dropdown" class="h-4 pr-2" />
+                <img
+                    src={$theme ? arrowDownLight : arrowDownDark}
+                    alt="Toggle Dropdown"
+                    class="h-4 pr-2"
+                />
             {/if}
             <h2 class="text-xl md:text-2xl">2023-2024</h2>
         </div>
@@ -79,7 +92,11 @@
                 <Exec src={eyronTanael} alt="Eyron Tanael" pos="Vice President for Service" />
                 <Exec src={bastiOrtiz} alt="Basti Ortiz" pos="Director for Engineering" />
                 <Exec src={arianRey} alt="Arian Rey" pos="Director for Membership & Internals" />
-                <Exec src={jellyRaborar} alt="Jelly Raborar" pos="Director for Branding & Creatives" />
+                <Exec
+                    src={jellyRaborar}
+                    alt="Jelly Raborar"
+                    pos="Director for Branding & Creatives"
+                />
                 <Exec src={beaDiokno} alt="Bea Diokno" pos="Director for External Relations" />
             </section>
         </section>
