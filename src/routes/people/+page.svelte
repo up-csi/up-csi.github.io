@@ -12,6 +12,7 @@
     import eyronTanael from '$lib/people/eyron-tanael.webp';
     import hansLorico from '$lib/people/hans-lorico.webp';
     import jellyRaborar from '$lib/people/jelly-raborar.webp';
+    import lino from '$lib/lino-hero.svg'
 
     import arrowUpDark from "$lib/icons/arrowupdark.svg";
     import arrowUpLight from "$lib/icons/arrowuplight.svg";
@@ -24,6 +25,25 @@
 </script>
 
 <section>
+    <section class="mb-8 prose flex max-w-none flex-col gap-8">
+        <figure class="m-0 flex flex-col items-center">
+            <!-- <picture class="max-w-3xl">
+                <source type="image/webp" srcset={execSmall} media="(max-width:640px)" />
+                <source type="image/webp" srcset={execMedium} />
+                <img src={execFull} width="1568" height="1203" alt="The Executive Board" />
+            </picture> -->
+            <figcaption>The 2024-2025 Executive Board</figcaption>
+        </figure>
+        <section class="not-prose flex flex-wrap justify-around gap-8">
+            <Exec src={lino} alt="Andri Crisostomo" pos="President" />
+            <Exec src={lino} alt="Andri Crisostomo" pos="Vice President for Innovation" />
+            <Exec src={lino} alt="David Zamuco" pos="Vice President for Service" />
+            <Exec src={lino} alt="Victor Reyes" pos="Director for Engineering" />
+            <Exec src={lino} alt="Bianca Amurao" pos="Director for Membership & Internals" />
+            <Exec src={lino} alt="Clarisse Bucu" pos="Director for Branding & Creatives" />
+            <Exec src={lino} alt="Sean Tolentino" pos="Director for External Relations" />
+        </section>
+    </section>
     <TeamPanel />
 </section>
 <section>
