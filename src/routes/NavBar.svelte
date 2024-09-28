@@ -70,7 +70,8 @@
         <div class="fixed bottom-0 w-full space-y-4 pb-12">
             <ul class="w-full font-dm text-2xl text-csi-black dark:text-csi-white">
                 <li class="m-4"><a href="/" on:click={closeMenu}>Home</a></li>
-                <li class="m-4"><a href="/about" on:click={closeMenu}>About</a></li>
+                <li class="m-4"><a href="/about/" on:click={closeMenu}>About</a></li>
+                <li class="m-4"><a href="/people/" on:click={closeMenu}>People</a></li>
                 <li class="m-4"><a href="/events/" on:click={closeMenu}>Events</a></li>
                 <li class="m-4"><a href="/projects/" on:click={closeMenu}>Projects</a></li>
                 <li class="m-4"><button on:click={closeMenu}>Get in Touch</button></li>
