@@ -25,8 +25,7 @@
                     We offer services catered to your specific software needs.
                 </h3>
                 <p class="m-0 leading-5 text-csi-black sm:leading-6 dark:text-csi-white">
-                    Automate the busy work in your day-to-day operations so people can get home on
-                    time more often.
+                    Need a small site or a full-scale project? Contact us to see how we can help.
                 </p>
             </svelte:fragment>
             <svelte:fragment slot="cards">
@@ -42,8 +41,8 @@
                     We enhance and upskill student abilities.
                 </h3>
                 <p class="m-0 leading-5 text-csi-black sm:leading-6 dark:text-csi-white">
-                    Automate the busy work in your day-to-day operations so people can get home on
-                    time more often.
+                    From training programs to external workshops, we elevate students' development
+                    skills.
                 </p>
             </svelte:fragment>
             <svelte:fragment slot="cards">
