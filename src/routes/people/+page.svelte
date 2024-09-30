@@ -26,14 +26,7 @@
 
 <section>
     <section class="prose mb-8 flex max-w-none flex-col gap-8">
-        <figure class="m-0 flex flex-col items-center">
-            <!-- <picture class="max-w-3xl">
-                <source type="image/webp" srcset={execSmall} media="(max-width:640px)" />
-                <source type="image/webp" srcset={execMedium} />
-                <img src={execFull} width="1568" height="1203" alt="The Executive Board" />
-            </picture> -->
-            <figcaption>The 2024-2025 Executive Board</figcaption>
-        </figure>
+        <h1 class="w-full font-normal text-3xl text-center text-csi-black md:text-4xl dark:text-csi-white">The 2024-2025 Executive Board</h1>
         <section class="not-prose flex flex-wrap justify-around gap-8">
             <Exec src={lino} alt="Andri Crisostomo" pos="President" />
             <Exec src={lino} alt="Andri Crisostomo" pos="Vice President for Innovation" />
@@ -47,11 +40,9 @@
     <TeamPanel />
 </section>
 <section>
-    <div class="mb-4 flex w-full flex-col items-center text-center">
-        <h1 class="w-full text-3xl text-csi-black sm:w-3/4 md:text-4xl dark:text-csi-white">
-            The Past Executive Boards
-        </h1>
-    </div>
+    <h1 class="w-full text-3xl text-center text-csi-black md:text-4xl dark:text-csi-white">
+        The Past Executive Boards
+    </h1>
 
     <button
         class="border-inherit mb-4 w-full border-b-2 text-csi-black dark:text-csi-white"
