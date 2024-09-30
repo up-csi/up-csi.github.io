@@ -1,5 +1,6 @@
 import autoprefixer from 'autoprefixer';
 import { defineConfig } from 'vite';
+import { enhancedImages } from '@sveltejs/enhanced-img';
 // @ts-expect-error This module currently does not provide type declarations.
 import pruneVar from 'postcss-prune-var';
 import purgeCss from '@fullhuman/postcss-purgecss';
@@ -7,7 +8,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import tailwind from 'tailwindcss';
 
 export default defineConfig({
-    plugins: [sveltekit()],
+    plugins: [enhancedImages(), sveltekit()],
     css: {
         postcss: {
             plugins: [
