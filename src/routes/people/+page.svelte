@@ -23,7 +23,11 @@
 
 <section>
     <section class="prose mb-8 flex max-w-none flex-col gap-8">
-        <h1 class="w-full font-normal text-3xl text-center text-csi-black md:text-4xl dark:text-csi-white">The 2024-2025 Executive Board</h1>
+        <h1
+            class="w-full text-center text-3xl font-normal text-csi-black md:text-4xl dark:text-csi-white"
+        >
+            The 2024-2025 Executive Board
+        </h1>
         <section class="not-prose flex flex-wrap justify-around gap-8">
             <Exec src={lino} alt="Andri Crisostomo" pos="President" />
             <Exec src={lino} alt="Andri Crisostomo" pos="Vice President for Innovation" />
@@ -37,7 +41,7 @@
     <TeamPanel />
 </section>
 <section>
-    <h1 class="w-full text-3xl text-center text-csi-black md:text-4xl dark:text-csi-white">
+    <h1 class="w-full text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
         The Past Executive Boards
     </h1>
 
@@ -67,7 +71,11 @@
     {#if pastExec}
         <section class="prose flex max-w-none flex-col gap-8">
             <figure class="m-0 flex flex-col items-center">
-                <enhanced:img src="/src/lib/people/exec-768.webp" sizes="(min-width:768px) 768px, (min-width:640px) 640px" alt="The 2023-2024 Executive Board" />
+                <enhanced:img
+                    src="/src/lib/people/exec-768.webp"
+                    sizes="(min-width:768px) 768px, (min-width:640px) 640px"
+                    alt="The 2023-2024 Executive Board"
+                />
                 <figcaption>The 2023-2024 Executive Board</figcaption>
             </figure>
             <section class="not-prose flex flex-wrap justify-around gap-8">
@@ -75,7 +83,11 @@
                 <Exec src={hansLorico} alt="Hans Lorico" pos="Vice President for Innovation" />
                 <Exec src={eyronTanael} alt="Eyron Tanael" pos="Vice President for Service" />
                 <Exec src={bastiOrtiz} alt="Basti Ortiz" pos="Director for Engineering" />
-                <Exec src={arianRey} alt="Arian Rey" pos="Director for Membership &amp; Internals" />
+                <Exec
+                    src={arianRey}
+                    alt="Arian Rey"
+                    pos="Director for Membership &amp; Internals"
+                />
                 <Exec
                     src={jellyRaborar}
                     alt="Jelly Raborar"
