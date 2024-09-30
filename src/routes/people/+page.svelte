@@ -12,8 +12,8 @@
     import jellyRaborar from '$lib/people/jelly-raborar.webp';
     import lino from '$lib/lino-hero.svg';
 
+    import { ChevronDown, ChevronUp } from '@steeze-ui/heroicons';
     import { Icon } from '@steeze-ui/svelte-icon';
-    import { ChevronUp, ChevronDown } from '@steeze-ui/heroicons';
 
     let pastExec = false;
 </script>
@@ -38,7 +38,7 @@
     <TeamPanel />
 </section>
 <section>
-    <h1 class="w-full mb-4 text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
+    <h1 class="mb-4 w-full text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
         The Past Executive Boards
     </h1>
 
@@ -50,9 +50,9 @@
     >
         <div class="flex w-full flex-row items-center text-center">
             {#if pastExec}
-                <Icon src={ChevronUp} class="text-csi-black w-6 mr-1 dark:text-csi-white" />
+                <Icon src={ChevronUp} class="mr-1 w-6 text-csi-black dark:text-csi-white" />
             {:else}
-                <Icon src={ChevronDown} class="text-csi-black w-6 mr-1 dark:text-csi-white" />
+                <Icon src={ChevronDown} class="mr-1 w-6 text-csi-black dark:text-csi-white" />
             {/if}
             <h2 class="text-xl md:text-2xl">2023-2024</h2>
         </div>

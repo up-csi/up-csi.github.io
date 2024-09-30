@@ -1,7 +1,7 @@
 <script>
-    import { get } from '$lib/stores/color-scheme';
-    import { Icon } from '@steeze-ui/svelte-icon';
     import { Moon, Sun } from '@steeze-ui/heroicons';
+    import { Icon } from '@steeze-ui/svelte-icon';
+    import { get } from '$lib/stores/color-scheme';
     import upcsi from '$lib/icons/upcsi.svg';
 
     let mobileMenu = false;
@@ -26,10 +26,10 @@
         <li class="hidden lg:block"><a href="/projects/">Projects</a></li>
         <li class="hidden lg:block">
             <button class="flex items-center justify-center" on:click={theme.toggle}
-                ><Icon src={Moon} theme="solid" class="h-6 mx-2 dark:hidden" /></button
+                ><Icon src={Moon} theme="solid" class="mx-2 h-6 dark:hidden" /></button
             >
             <button class="flex items-center justify-center" on:click={theme.toggle}
-                ><Icon src={Sun} theme="solid" class="h-6 mx-2 hidden dark:block" /></button
+                ><Icon src={Sun} theme="solid" class="mx-2 hidden h-6 dark:block" /></button
             >
         </li>
         <li class="hidden lg:block">
@@ -37,10 +37,10 @@
         </li>
         <li class="mx-6 my-2 flex flex-row items-center sm:mx-10 lg:hidden">
             <button class="flex items-center justify-center" on:click={theme.toggle}
-                ><Icon src={Moon} theme="solid" class="h-6 mx-4 dark:hidden" /></button
+                ><Icon src={Moon} theme="solid" class="mx-4 h-6 dark:hidden" /></button
             >
             <button class="flex items-center justify-center" on:click={theme.toggle}
-                ><Icon src={Sun} theme="solid" class="h-6 mx-4 hidden dark:block" /></button
+                ><Icon src={Sun} theme="solid" class="mx-4 hidden h-6 dark:block" /></button
             >
             <button
                 class="rounded-lg bg-black px-5 py-2 text-csi-white"
