@@ -32,8 +32,8 @@
             <Exec src={lino} alt="Andri Crisostomo" pos="Vice President for Innovation" />
             <Exec src={lino} alt="David Zamuco" pos="Vice President for Service" />
             <Exec src={lino} alt="Victor Reyes" pos="Director for Engineering" />
-            <Exec src={lino} alt="Bianca Amurao" pos="Director for Membership & Internals" />
-            <Exec src={lino} alt="Clarisse Bucu" pos="Director for Branding & Creatives" />
+            <Exec src={lino} alt="Bianca Amurao" pos="Director for Membership &amp; Internals" />
+            <Exec src={lino} alt="Clarisse Bucu" pos="Director for Branding &amp; Creatives" />
             <Exec src={lino} alt="Sean Tolentino" pos="Director for External Relations" />
         </section>
     </section>
@@ -82,11 +82,11 @@
                 <Exec src={hansLorico} alt="Hans Lorico" pos="Vice President for Innovation" />
                 <Exec src={eyronTanael} alt="Eyron Tanael" pos="Vice President for Service" />
                 <Exec src={bastiOrtiz} alt="Basti Ortiz" pos="Director for Engineering" />
-                <Exec src={arianRey} alt="Arian Rey" pos="Director for Membership & Internals" />
+                <Exec src={arianRey} alt="Arian Rey" pos="Director for Membership &amp; Internals" />
                 <Exec
                     src={jellyRaborar}
                     alt="Jelly Raborar"
-                    pos="Director for Branding & Creatives"
+                    pos="Director for Branding &amp; Creatives"
                 />
                 <Exec src={beaDiokno} alt="Bea Diokno" pos="Director for External Relations" />
             </section>
