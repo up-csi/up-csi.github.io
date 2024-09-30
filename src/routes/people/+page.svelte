@@ -10,9 +10,6 @@
     import bastiOrtiz from '$lib/people/basti-ortiz.webp';
     import beaDiokno from '$lib/people/bea-diokno.webp';
     import calebBunye from '$lib/people/caleb-bunye.webp';
-    import execFull from '$lib/people/exec.webp';
-    import execMedium from '$lib/people/exec-768.webp';
-    import execSmall from '$lib/people/exec-640.webp';
     import eyronTanael from '$lib/people/eyron-tanael.webp';
     import hansLorico from '$lib/people/hans-lorico.webp';
     import jellyRaborar from '$lib/people/jelly-raborar.webp';
@@ -70,11 +67,7 @@
     {#if pastExec}
         <section class="prose flex max-w-none flex-col gap-8">
             <figure class="m-0 flex flex-col items-center">
-                <picture class="max-w-3xl">
-                    <source type="image/webp" srcset={execSmall} media="(max-width:640px)" />
-                    <source type="image/webp" srcset={execMedium} />
-                    <img src={execFull} width="1568" height="1203" alt="The Executive Board" />
-                </picture>
+                <enhanced:img src="/src/lib/people/exec-768.webp" sizes="(min-width:768px) 768px, (min-width:640px) 640px" alt="The 2023-2024 Executive Board" />
                 <figcaption>The 2023-2024 Executive Board</figcaption>
             </figure>
             <section class="not-prose flex flex-wrap justify-around gap-8">
