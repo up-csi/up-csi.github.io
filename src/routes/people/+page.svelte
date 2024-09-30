@@ -38,7 +38,7 @@
     <TeamPanel />
 </section>
 <section>
-    <h1 class="w-full text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
+    <h1 class="w-full mb-4 text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
         The Past Executive Boards
     </h1>
 
