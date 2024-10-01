@@ -3,7 +3,6 @@
     import { Icon } from '@steeze-ui/svelte-icon';
     import { get } from '$lib/stores/color-scheme';
     import upcsi from '$lib/icons/upcsi.svg';
-    import { page } from '$app/stores';
 
     let mobileMenu = false;
     const theme = get();
@@ -12,13 +11,6 @@
         mobileMenu = false;
     }
 
-    $: path = $page.url.pathname;
-    /**
-     * @param {string} href
-     */
-    function isActive(href) {
-        return path.startsWith(href);
-    }
 </script>
 
 <div
