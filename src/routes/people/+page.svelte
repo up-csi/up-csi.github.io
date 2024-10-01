@@ -3,10 +3,6 @@
     import TeamPanel from './TeamPanel.svelte';
 
     import arianRey from '$lib/people/arian-rey.webp';
-    import arrowDownDark from '$lib/icons/arrowdowndark.svg';
-    import arrowDownLight from '$lib/icons/arrowdownlight.svg';
-    import arrowUpDark from '$lib/icons/arrowupdark.svg';
-    import arrowUpLight from '$lib/icons/arrowuplight.svg';
     import bastiOrtiz from '$lib/people/basti-ortiz.webp';
     import beaDiokno from '$lib/people/bea-diokno.webp';
     import calebBunye from '$lib/people/caleb-bunye.webp';
@@ -16,10 +12,10 @@
     import jellyRaborar from '$lib/people/jelly-raborar.webp';
     import lino from '$lib/lino-hero.svg';
 
-    import { get } from '$lib/stores/color-scheme';
+    import { ChevronDown, ChevronUp } from '@steeze-ui/heroicons';
+    import { Icon } from '@steeze-ui/svelte-icon';
 
     let pastExec = false;
-    const theme = get();
 </script>
 
 <section>
@@ -42,7 +38,7 @@
     <TeamPanel />
 </section>
 <section>
-    <h1 class="w-full text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
+    <h1 class="mb-4 w-full text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
         The Past Executive Boards
     </h1>
 
@@ -54,17 +50,9 @@
     >
         <div class="flex w-full flex-row items-center text-center">
             {#if pastExec}
-                <img
-                    src={$theme ? arrowUpLight : arrowUpDark}
-                    alt="Toggle Dropdown"
-                    class="h-4 pr-2"
-                />
+                <Icon src={ChevronUp} class="mr-1 w-6 text-csi-black dark:text-csi-white" />
             {:else}
-                <img
-                    src={$theme ? arrowDownLight : arrowDownDark}
-                    alt="Toggle Dropdown"
-                    class="h-4 pr-2"
-                />
+                <Icon src={ChevronDown} class="mr-1 w-6 text-csi-black dark:text-csi-white" />
             {/if}
             <h2 class="text-xl md:text-2xl">2023-2024</h2>
         </div>
