@@ -10,7 +10,9 @@
     $: if (browser) document.documentElement.classList.toggle('dark', $theme);
 </script>
 
-<header class="sticky top-0 z-50 lg:inset-x-0 lg:top-12">
+<header
+    class="sticky top-0 z-50 bg-blue-white backdrop-blur supports-[backdrop-filter]:bg-blue-white/85 lg:inset-x-0 dark:bg-black supports-[backdrop-filter]:dark:bg-black/85"
+>
     <NavBar />
 </header>
 <main class="m-4 space-y-16 sm:m-8 sm:mt-5 lg:my-16 xl:mx-32">
