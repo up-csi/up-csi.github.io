@@ -13,7 +13,7 @@
 </script>
 
 <div
-    class="flex w-full items-center justify-between p-5 font-dm text-csi-neutral-700 shadow-md lg:p-4 lg:text-csi-neutral-300 lg:shadow-none xl:px-0 dark:text-csi-neutral-300 dark:lg:text-csi-neutral-500"
+    class="flex w-full items-center justify-between p-5 sm:px-8 font-dm text-csi-neutral-700 shadow-md lg:p-4 lg:text-csi-neutral-300 lg:shadow-none xl:px-0 dark:text-csi-neutral-300 dark:lg:text-csi-neutral-500"
 >
     <a
         class=" ml-1 flex flex-row items-center justify-center lg:ml-4 lg:rounded-xl lg:bg-csi-black lg:px-8 lg:py-4 lg:shadow-xl xl:ml-32 dark:lg:bg-csi-white"
@@ -53,7 +53,7 @@
         </ul>
     </nav>
     <div
-        class="flex flex-row items-center gap-3 pr-1 sm:pr-4 lg:mr-4 lg:rounded-xl lg:bg-csi-black lg:p-3 lg:px-3 lg:shadow-xl xl:mr-32 dark:lg:bg-csi-white"
+        class="flex flex-row items-center gap-3 pr-1 lg:mr-4 lg:rounded-xl lg:bg-csi-black lg:p-3 lg:px-3 lg:shadow-xl xl:mr-32 dark:lg:bg-csi-white"
     >
         <a
             href="mailto:lino@up-csi.org"
@@ -69,7 +69,7 @@
             <Icon src={Sun} size="24px" theme="solid" class="hidden dark:block" />
         </button>
         <button
-            class="mx-2 block rounded-xl border border-csi-neutral-200 p-2 py-2 transition-colors duration-200 hover:bg-light-gray lg:hidden dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
+            class="block rounded-xl border border-csi-neutral-200 p-2 py-2 transition-colors duration-200 hover:bg-light-gray lg:hidden dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
             on:click={() => (mobileMenu = !mobileMenu)}
         >
             {#if mobileMenu}
