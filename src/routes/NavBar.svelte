@@ -1,5 +1,5 @@
 <script>
-    import { Moon, Sun, Bars3, XMark } from '@steeze-ui/heroicons';
+    import { Bars3, Moon, Sun, XMark } from '@steeze-ui/heroicons';
     import { Icon } from '@steeze-ui/svelte-icon';
     import { get } from '$lib/stores/color-scheme';
     import upcsi from '$lib/icons/upcsi.svg';
