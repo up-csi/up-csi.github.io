@@ -1,5 +1,5 @@
 .DS_Store
-.parcel-cache
+.svelte-kit
 build
 node_modules
 .env
