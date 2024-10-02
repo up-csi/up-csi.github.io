@@ -10,7 +10,6 @@
     function closeMenu() {
         mobileMenu = false;
     }
-
 </script>
 
 <div
