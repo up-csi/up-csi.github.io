@@ -1,37 +1,29 @@
-<script lang="ts" context="module">
-    export interface Event {
-        tag: string;
-        state: string;
-        type: string;
-        title: string;
-        dates: string;
-        description: string;
-        src: string;
-        url: string;
-    }
-</script>
-
 <script lang="ts">
+    import type { Event } from '$lib/events/events';
+    import type { Project } from '$lib/projects/projects';
     import EventCard from '$lib/components/EventCard.svelte';
+    import ProjectCard from './ProjectCard.svelte';
 
     // eslint-disable-next-line init-declarations
     export let filters: string[];
     // eslint-disable-next-line init-declarations
-    export let events: Event[];
+    export let cardsInfo: (Event | Project)[];
+
+    export let cardComponent: typeof EventCard | typeof ProjectCard;
 
     $: currentFilter = 'All';
-    $: filteredEvents =
-        currentFilter === 'All' ? events : events.filter(({ tag }) => tag === currentFilter);
+    $: filteredCards =
+        currentFilter === 'All' ? cardsInfo : cardsInfo.filter(({ tag }) => tag === currentFilter);
 
     export let perPage = 6; // Max number of events per page of the pagination
-    $: pages = Math.ceil(filteredEvents.length / perPage);
+    $: pages = Math.ceil(filteredCards.length / perPage);
 
     let currentPage = 0;
 
     // Computes first and last card in the page to do a correct slice
     $: start = currentPage * perPage;
-    $: end = currentPage === pages ? events.length - 1 : start + perPage - 1;
-    $: filteredEventsInPage = filteredEvents.slice(start, end + 1);
+    $: end = currentPage === pages ? cardsInfo.length - 1 : start + perPage - 1;
+    $: filteredCardsInPage = filteredCards.slice(start, end + 1);
 
     // Goes to the next page in the pagination
     function nextPage() {
@@ -80,15 +72,8 @@
     </div>
     <div class="flex justify-center">
         <div class="grid w-fit grid-cols-1 items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {#each filteredEventsInPage as { type, state, url, title, src, dates, description }}
-                <EventCard {src} alt="image of {title}" href={url}>
-                    <svelte:fragment>
-                        <p class="m-0">{state} - {type}</p>
-                        <h2 class="m-0">{title}</h2>
-                        <p class="m-0">{dates}</p>
-                        <p class="m-0 grow overflow-hidden">{description}</p>
-                    </svelte:fragment>
-                </EventCard>
+            {#each filteredCardsInPage as cardProps}
+                <svelte:component this={cardComponent} {...cardProps} />
             {/each}
         </div>
     </div>

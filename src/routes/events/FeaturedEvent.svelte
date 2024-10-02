@@ -1,6 +1,6 @@
 <script lang="ts">
     import Button from '$lib/components/Button.svelte';
-    import { Tag } from './events';
+    import { Tag } from '$lib/events/events';
 
     // eslint-disable-next-line init-declarations
     export let tags: Tag[];

@@ -1,5 +1,3 @@
-import type { Event } from '$lib/components/EventsPanel.svelte';
-
 import ascenc10n from '$lib/events/ascension.webp';
 import bootcamp10 from '$lib/events/bootcamp-10.webp';
 import csflight from '$lib/events/csflight.webp';
@@ -8,6 +6,17 @@ import firstGa2023 from '$lib/events/first-GA-2324B.webp';
 import gitWorkshop from '$lib/events/git-workshop.webp';
 import pyrolympics from '$lib/events/pyrolympics.webp';
 import yearEndGa2023 from '$lib/events/year-end-GA-2023.webp';
+
+export interface Event {
+    tag: string;
+    state: string;
+    type: string;
+    title: string;
+    dates: string;
+    description: string;
+    src: string;
+    url: string;
+}
 
 export const enum Tag {
     All = 'All',
