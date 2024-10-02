@@ -35,6 +35,8 @@ export default {
             blue: '#35ADBB',
             black: '#253242',
             gray: '#A6A6A6',
+            'light-gray': '#F0F0F0',
+            'dark-gray': '#323232',
             white: '#FFFFFF',
             transparent: '#00000000',
             committees: {

@@ -11,7 +11,7 @@
 </script>
 
 <header
-    class="sticky top-0 z-50 bg-blue-white backdrop-blur supports-[backdrop-filter]:bg-blue-white/85 lg:inset-x-0 dark:bg-black supports-[backdrop-filter]:dark:bg-black/85"
+    class="sticky top-0 z-50 bg-csi-white lg:inset-x-0 lg:bg-transparent dark:bg-csi-black dark:lg:bg-transparent"
 >
     <NavBar />
 </header>

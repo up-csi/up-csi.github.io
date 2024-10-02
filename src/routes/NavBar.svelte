@@ -13,62 +13,67 @@
 </script>
 
 <div
-    class="flex w-full items-center justify-between p-5 font-dm text-csi-neutral-500 shadow-md dark:text-csi-neutral-300"
+    class="flex w-full items-center justify-between p-5 font-dm text-csi-neutral-700 shadow-md lg:p-4 lg:text-csi-neutral-300 lg:shadow-none xl:px-0 dark:text-csi-neutral-300 dark:lg:text-csi-neutral-500"
 >
-    <nav class="flex w-full pl-3 sm:pl-6 xl:pl-32">
-        <ul class="flex w-full flex-row items-center justify-between gap-10 p-1 lg:w-fit">
-            <li class="flex flex-row items-center">
-                <a class="flex flex-row items-center" href="/">
-                    <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
-                    <p class=" pl-3 text-lg font-bold text-csi-blue">UP CSI</p>
-                </a>
-            </li>
+    <a
+        class=" ml-1 flex flex-row items-center justify-center lg:ml-4 lg:rounded-xl lg:bg-csi-black lg:px-8 lg:py-4 lg:shadow-xl xl:ml-32 dark:lg:bg-csi-white"
+        href="/"
+    >
+        <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
+        <p class=" text-nowrap pl-3 text-lg font-bold text-csi-blue">UP CSI</p>
+    </a>
+    <nav
+        class="mx-4 hidden w-full rounded-xl bg-csi-black px-2 py-4 lg:block lg:shadow-xl dark:lg:bg-csi-white"
+    >
+        <ul class="flex w-full flex-row items-center justify-between gap-6 py-1 lg:w-fit">
             <li>
                 <a
-                    class="hidden transition-colors duration-300 ease-in-out hover:text-csi-blue lg:block"
+                    class=" rounded-lg p-3 transition-colors duration-300 ease-in-out hover:bg-dark-gray hover:text-csi-blue dark:hover:bg-light-gray"
                     href="/about/">About</a
                 >
             </li>
             <li>
                 <a
-                    class="hidden transition-colors duration-300 ease-in-out hover:text-csi-blue lg:block"
+                    class=" rounded-lg p-3 transition-colors duration-300 ease-in-out hover:bg-dark-gray hover:text-csi-blue dark:hover:bg-light-gray"
                     href="/people/">People</a
                 >
             </li>
             <li>
                 <a
-                    class="hidden transition-colors duration-300 ease-in-out hover:text-csi-blue lg:block"
+                    class=" rounded-lg p-3 transition-colors duration-300 ease-in-out hover:bg-dark-gray hover:text-csi-blue dark:hover:bg-light-gray"
                     href="/events/">Events</a
                 >
             </li>
             <li>
                 <a
-                    class="hidden transition-colors duration-300 ease-in-out hover:text-csi-blue lg:block"
+                    class=" rounded-lg p-3 transition-colors duration-300 ease-in-out hover:bg-dark-gray hover:text-csi-blue dark:hover:bg-light-gray"
                     href="/projects/">Projects</a
                 >
             </li>
         </ul>
     </nav>
-    <div class="flex flex-row items-center gap-3 pr-1 sm:pr-4 xl:pr-32">
+    <div
+        class="flex flex-row items-center gap-3 pr-1 sm:pr-4 lg:mr-4 lg:rounded-xl lg:bg-csi-black lg:p-3 lg:px-3 lg:shadow-xl xl:mr-32 dark:lg:bg-csi-white"
+    >
         <a
             href="mailto:lino@up-csi.org"
-            class="hidden whitespace-nowrap rounded-lg bg-csi-blue px-5 py-2 text-csi-white ring-csi-blue transition-colors duration-300 hover:bg-blue-white hover:text-csi-neutral-900 hover:shadow-inner hover:ring-2 lg:block dark:text-csi-black dark:hover:bg-black dark:hover:text-csi-white"
+            class="hidden whitespace-nowrap rounded-lg bg-csi-blue px-5 py-2 text-csi-white ring-csi-blue transition-colors duration-300 hover:bg-blue-white hover:text-csi-neutral-900 hover:shadow-inner hover:ring-2 lg:block dark:text-csi-neutral-900 dark:hover:bg-black dark:hover:text-csi-white"
         >
             Contact Us
         </a>
         <button
-            class="rounded-xl border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-csi-neutral-200 hover:shadow-inner lg:mx-2 lg:block dark:border-csi-neutral-800 dark:hover:bg-csi-neutral-800"
+            class="rounded-xl border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-light-gray hover:shadow-inner lg:block lg:border-none lg:bg-dark-gray dark:border-csi-neutral-800 dark:hover:bg-dark-gray dark:lg:bg-light-gray"
             on:click={theme.toggle}
         >
             <Icon src={Moon} size="24px" theme="solid" class="dark:hidden " />
             <Icon src={Sun} size="24px" theme="solid" class="hidden dark:block" />
         </button>
         <button
-            class="mx-2 block rounded-xl border border-csi-neutral-200 p-2 py-2 transition-colors duration-200 hover:bg-csi-neutral-200 hover:text-csi-blue lg:hidden dark:border-csi-neutral-800 dark:hover:bg-csi-neutral-800"
+            class="mx-2 block rounded-xl border border-csi-neutral-200 p-2 py-2 transition-colors duration-200 hover:bg-light-gray lg:hidden dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
             on:click={() => (mobileMenu = !mobileMenu)}
         >
             {#if mobileMenu}
-                <Icon src={XMark} theme="solid" size="24px" />
+                <Icon src={XMark} theme="solid" class="hover:text-csi-blue" size="24px" />
             {:else}
                 <Icon src={Bars3} theme="solid" size="24px" />
             {/if}
@@ -77,7 +82,7 @@
 </div>
 {#if mobileMenu}
     <div
-        class="fixed right-0 top-0 block h-screen w-3/4 max-w-sm bg-blue-white lg:hidden dark:bg-black"
+        class="fixed right-0 top-0 block h-screen w-full bg-blue-white sm:w-3/4 sm:max-w-sm lg:hidden dark:bg-black"
     >
         <div class="flex h-full flex-col items-end justify-between p-8">
             <div class="flex flex-col items-end">
