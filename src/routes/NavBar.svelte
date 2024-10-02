@@ -13,7 +13,7 @@
 </script>
 
 <div
-    class="flex w-full items-center justify-between p-5 sm:px-8 font-dm text-csi-neutral-700 shadow-md lg:p-4 lg:text-csi-neutral-300 lg:shadow-none xl:px-0 dark:text-csi-neutral-300 dark:lg:text-csi-neutral-500"
+    class="flex w-full items-center justify-between p-5 font-dm text-csi-neutral-700 shadow-md sm:px-8 lg:p-4 lg:text-csi-neutral-300 lg:shadow-none xl:px-0 dark:text-csi-neutral-300 dark:lg:text-csi-neutral-500"
 >
     <a
         class=" ml-1 flex flex-row items-center justify-center lg:ml-4 lg:rounded-xl lg:bg-csi-black lg:px-8 lg:py-4 lg:shadow-xl xl:ml-32 dark:lg:bg-csi-white"
