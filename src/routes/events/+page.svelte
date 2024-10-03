@@ -1,10 +1,9 @@
 <script>
     import events, { Tag } from '$lib/events/events';
     import EventCard from '$lib/components/EventCard.svelte';
-    import lino from '$lib/lino-sablay.svg';
-
-    import FilterPagePanel from '$lib/components/FilterPagePanel.svelte';
     import FeaturedEvent from './FeaturedEvent.svelte';
+    import FilterPagePanel from '$lib/components/FilterPagePanel.svelte';
+    import lino from '$lib/lino-sablay.svg';
 
     const filters = [
         'All',

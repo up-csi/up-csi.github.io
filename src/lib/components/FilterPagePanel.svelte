@@ -1,15 +1,15 @@
 <script lang="ts">
     import type { Event } from '$lib/events/events';
-    import type { Project } from '$lib/projects/projects';
     import EventCard from '$lib/components/EventCard.svelte';
+    import type { Project } from '$lib/projects/projects';
     import ProjectCard from './ProjectCard.svelte';
 
     // eslint-disable-next-line init-declarations
     export let filters: string[];
     // eslint-disable-next-line init-declarations
     export let cardsInfo: (Event | Project)[];
-
-    export let cardComponent: typeof EventCard | typeof ProjectCard;
+    // eslint-disable-next-line init-declarations
+    export let cardComponent: typeof EventCard | typeof ProjectCard
 
     $: currentFilter = 'All';
     $: filteredCards =
@@ -73,7 +73,11 @@
     <div class="flex justify-center">
         <div class="grid w-fit grid-cols-1 items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
             {#each filteredCardsInPage as cardProps}
-                <svelte:component this={cardComponent} {...cardProps} />
+                {#if 'state' in cardProps && 'dates' in cardProps}
+                    <svelte:component this={cardComponent} {...cardProps} />
+                {:else}
+                    <svelte:component this={ProjectCard} {...cardProps} />
+                {/if}
             {/each}
         </div>
     </div>

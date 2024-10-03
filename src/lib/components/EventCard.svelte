@@ -1,10 +1,17 @@
 <script lang="ts">
-    export let src: string;
-    export let state: string;
-    export let type: string;
-    export let title: string;
+    // eslint-disable-next-line init-declarations
     export let dates: string;
+    // eslint-disable-next-line init-declarations
     export let description: string;
+    // eslint-disable-next-line init-declarations
+    export let src: string;
+    // eslint-disable-next-line init-declarations
+    export let state: string;
+    // eslint-disable-next-line init-declarations
+    export let title: string;
+    // eslint-disable-next-line init-declarations
+    export let type: string;
+    // eslint-disable-next-line init-declarations
     export let url: string;
 </script>
 
