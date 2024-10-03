@@ -9,7 +9,7 @@
     // eslint-disable-next-line init-declarations
     export let cardsInfo: (Event | Project)[];
     // eslint-disable-next-line init-declarations
-    export let cardComponent: typeof EventCard | typeof ProjectCard
+    export let cardComponent: typeof EventCard | typeof ProjectCard;
 
     $: currentFilter = 'All';
     $: filteredCards =
