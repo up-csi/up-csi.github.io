@@ -6,7 +6,7 @@ export interface Project {
     title: string;
     description: string;
     src: string;
-    url: string;
+    href: string;
 }
 
 export default [
@@ -16,6 +16,6 @@ export default [
         title: 'Service Project',
         description: 'Lorep ipsum.',
         src: lino,
-        url: '/projects/',
+        href: '/projects/',
     },
 ] satisfies Project[];

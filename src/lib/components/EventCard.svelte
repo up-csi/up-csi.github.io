@@ -12,7 +12,7 @@
     // eslint-disable-next-line init-declarations
     export let type: string;
     // eslint-disable-next-line init-declarations
-    export let url: string;
+    export let href: string;
 </script>
 
 <div
@@ -24,6 +24,6 @@
         <h2 class="m-0">{title}</h2>
         <p class="m-0">{dates}</p>
         <p class="m-0 grow overflow-hidden">{description}</p>
-        <p class="m-0"><a href={url}>More Info</a></p>
+        <p class="m-0"><a {href}>More Info</a></p>
     </div>
 </div>

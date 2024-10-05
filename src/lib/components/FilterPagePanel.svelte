@@ -8,8 +8,6 @@
     export let filters: string[];
     // eslint-disable-next-line init-declarations
     export let cardsInfo: (Event | Project)[];
-    // eslint-disable-next-line init-declarations
-    export let cardComponent: typeof EventCard | typeof ProjectCard;
 
     $: currentFilter = 'All';
     $: filteredCards =
@@ -73,8 +71,8 @@
     <div class="flex justify-center">
         <div class="grid w-fit grid-cols-1 items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
             {#each filteredCardsInPage as cardProps}
-                {#if 'state' in cardProps && 'dates' in cardProps}
-                    <svelte:component this={cardComponent} {...cardProps} />
+                {#if 'state' in cardProps}
+                    <svelte:component this={EventCard} {...cardProps} />
                 {:else}
                     <svelte:component this={ProjectCard} {...cardProps} />
                 {/if}

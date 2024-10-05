@@ -1,6 +1,5 @@
 <script>
     import events, { Tag } from '$lib/events/events';
-    import EventCard from '$lib/components/EventCard.svelte';
     import FeaturedEvent from './FeaturedEvent.svelte';
     import FilterPagePanel from '$lib/components/FilterPagePanel.svelte';
     import lino from '$lib/lino-sablay.svg';
@@ -22,5 +21,5 @@
         <svelte:fragment slot="name">Incoming App Process...</svelte:fragment>
         <svelte:fragment slot="description">Stay tuned...</svelte:fragment>
     </FeaturedEvent>
-    <FilterPagePanel {filters} cardComponent={EventCard} cardsInfo={events} />
+    <FilterPagePanel {filters} cardsInfo={events} />
 </article>
