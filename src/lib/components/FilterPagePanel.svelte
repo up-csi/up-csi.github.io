@@ -71,7 +71,7 @@
     <div class="flex justify-center">
         <div class="grid w-fit grid-cols-1 items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
             {#each filteredCardsInPage as cardProps}
-                {#if 'state' in cardProps}
+                {#if 'event' in cardProps}
                     <svelte:component this={EventCard} {...cardProps} />
                 {:else}
                     <svelte:component this={ProjectCard} {...cardProps} />
