@@ -10,12 +10,10 @@
     $: if (browser) document.documentElement.classList.toggle('dark', $theme);
 </script>
 
-<header
-    class="sticky top-0 z-50 bg-csi-white lg:inset-x-0 lg:bg-transparent dark:bg-csi-black dark:lg:bg-transparent"
->
+<header class="sticky inset-x-0 top-0 z-50 items-center justify-center p-3 lg:px-16">
     <NavBar />
 </header>
-<main class="m-4 space-y-16 sm:m-8 sm:mt-5 lg:my-16 xl:mx-32">
+<main class="m-4 space-y-16 sm:m-8 sm:mt-2 xl:mx-32">
     <!-- m-4 space-y-16 sm:m-8 xl:m-32 xl:my-16 -->
     <slot />
 </main>

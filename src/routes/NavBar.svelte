@@ -1,6 +1,7 @@
 <script>
     import { Bars3, Moon, Sun, XMark } from '@steeze-ui/heroicons';
     import { Icon } from '@steeze-ui/svelte-icon';
+    import { fly } from 'svelte/transition';
     import { get } from '$lib/stores/color-scheme';
     import upcsi from '$lib/icons/upcsi.svg';
 
@@ -13,89 +14,84 @@
 </script>
 
 <div
-    class="flex w-full items-center justify-between p-5 font-dm text-csi-neutral-700 shadow-md sm:px-8 lg:p-4 lg:text-csi-neutral-300 lg:shadow-none xl:px-0 dark:text-csi-neutral-300 dark:lg:text-csi-neutral-500"
+    class="flex items-center justify-between rounded-full border-2 border-light-gray bg-csi-white/90 p-1 font-dm text-csi-black shadow-xl backdrop-blur-xl lg:mx-24 dark:border-dark-gray dark:bg-csi-black/90 dark:text-csi-white"
 >
-    <a
-        class=" ml-1 flex flex-row items-center justify-center lg:ml-4 lg:rounded-xl lg:bg-csi-black lg:px-8 lg:py-4 lg:shadow-xl xl:ml-32 dark:lg:bg-csi-white"
-        href="/"
-    >
-        <img src={upcsi} alt="UP CSI Logo" class="h-8 object-contain" />
-        <p class=" text-nowrap pl-3 text-lg font-bold text-csi-blue">UP CSI</p>
+    <a class="flex items-center px-2" href="/">
+        <div class="mx-1 h-6 w-6">
+            <img src={upcsi} alt="UP CSI Logo" class="h-full w-full" />
+        </div>
+        <p class="text-nowrap text-xl font-bold tracking-tight text-csi-blue">UP CSI</p>
     </a>
-    <nav
-        class="mx-4 hidden w-full rounded-xl bg-csi-black px-2 py-4 lg:block lg:shadow-xl dark:lg:bg-csi-white"
-    >
-        <ul class="flex w-full flex-row items-center justify-between gap-6 py-1 lg:w-fit">
+    <nav class="absolute left-1/2 hidden -translate-x-1/2 lg:block">
+        <ul class="flex items-center gap-8">
             <li>
                 <a
-                    class=" rounded-lg p-3 transition-colors duration-300 ease-in-out hover:bg-dark-gray hover:text-csi-blue dark:hover:bg-light-gray"
+                    class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
                     href="/about/">About</a
                 >
             </li>
             <li>
                 <a
-                    class=" rounded-lg p-3 transition-colors duration-300 ease-in-out hover:bg-dark-gray hover:text-csi-blue dark:hover:bg-light-gray"
+                    class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
                     href="/people/">People</a
                 >
             </li>
             <li>
                 <a
-                    class=" rounded-lg p-3 transition-colors duration-300 ease-in-out hover:bg-dark-gray hover:text-csi-blue dark:hover:bg-light-gray"
+                    class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
                     href="/events/">Events</a
                 >
             </li>
             <li>
                 <a
-                    class=" rounded-lg p-3 transition-colors duration-300 ease-in-out hover:bg-dark-gray hover:text-csi-blue dark:hover:bg-light-gray"
+                    class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
                     href="/projects/">Projects</a
                 >
             </li>
         </ul>
     </nav>
-    <div
-        class="flex flex-row items-center gap-3 pr-1 lg:mr-4 lg:rounded-xl lg:bg-csi-black lg:p-3 lg:px-3 lg:shadow-xl xl:mr-32 dark:lg:bg-csi-white"
-    >
+    <div class="flex items-center gap-2">
+        <button
+            class="rounded-full border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-light-gray hover:shadow-inner dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
+            on:click={theme.toggle}
+        >
+            <Icon src={Moon} size="18px" theme="solid" class="dark:hidden" />
+            <Icon src={Sun} size="18px" theme="solid" class="hidden dark:block" />
+        </button>
         <a
             href="mailto:lino@up-csi.org"
-            class="hidden whitespace-nowrap rounded-lg bg-csi-blue px-5 py-2 text-csi-white ring-csi-blue transition-colors duration-300 hover:bg-blue-white hover:text-csi-neutral-900 hover:shadow-inner hover:ring-2 lg:block dark:text-csi-neutral-900 dark:hover:bg-black dark:hover:text-csi-white"
+            class="hidden whitespace-nowrap rounded-full border-2 border-csi-blue px-4 py-1 transition-colors duration-300 hover:bg-csi-blue hover:shadow-inner lg:block"
         >
             Contact Us
         </a>
+
         <button
-            class="rounded-xl border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-light-gray hover:shadow-inner lg:block lg:border-none lg:bg-dark-gray dark:border-csi-neutral-800 dark:hover:bg-dark-gray dark:lg:bg-light-gray"
-            on:click={theme.toggle}
-        >
-            <Icon src={Moon} size="24px" theme="solid" class="dark:hidden " />
-            <Icon src={Sun} size="24px" theme="solid" class="hidden dark:block" />
-        </button>
-        <button
-            class="block rounded-xl border border-csi-neutral-200 p-2 py-2 transition-colors duration-200 hover:bg-light-gray lg:hidden dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
+            class="rounded-full border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-light-gray lg:hidden dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
             on:click={() => (mobileMenu = !mobileMenu)}
         >
             {#if mobileMenu}
-                <Icon src={XMark} theme="solid" class="hover:text-csi-blue" size="24px" />
+                <Icon src={XMark} theme="solid" class="hover:text-csi-blue" size="18px" />
             {:else}
-                <Icon src={Bars3} theme="solid" size="24px" />
+                <Icon src={Bars3} theme="solid" size="18px" />
             {/if}
         </button>
     </div>
 </div>
 {#if mobileMenu}
     <div
-        class="fixed right-0 top-0 block h-screen w-full bg-blue-white sm:w-3/4 sm:max-w-sm lg:hidden dark:bg-black"
+        class="fixed inset-y-2 right-2 block h-[calc(100vh-1rem)] w-5/6 rounded-2xl bg-blue-white/95 font-dm text-xl backdrop-blur-2xl sm:w-3/4 sm:max-w-sm lg:hidden dark:bg-black/95 dark:text-csi-white"
+        transition:fly={{ x: 300, duration: 150 }}
     >
-        <div class="flex h-full flex-col items-end justify-between p-8">
+        <div class="flex h-full flex-col items-end justify-between p-4">
             <div class="flex flex-col items-end">
                 <button
-                    class="mx-2 block p-2 pb-6 transition-colors duration-200 ease-in-out
-                    hover:text-csi-blue dark:text-csi-white"
+                    class="p-1 pb-6 transition-colors duration-200 ease-in-out hover:text-csi-blue"
                     on:click={() => (mobileMenu = !mobileMenu)}
                 >
                     <Icon src={XMark} theme="solid" size="24px" />
                 </button>
                 <ul
-                    class="flex w-full flex-col items-end space-y-6 px-4
-                    font-dm text-xl text-csi-black dark:text-csi-white"
+                    class="flex w-full flex-col items-end space-y-6 px-2 text-csi-black dark:text-csi-white"
                 >
                     <li>
                         <a
@@ -129,7 +125,7 @@
             </div>
             <a
                 href="mailto:lino@up-csi.org"
-                class="w-full whitespace-nowrap rounded-lg bg-csi-blue px-5 py-2 text-center text-csi-white ring-csi-blue transition-colors duration-300 hover:bg-blue-white hover:text-csi-neutral-900 hover:shadow-inner hover:ring-2 lg:block dark:text-csi-black dark:hover:bg-black dark:hover:text-csi-white"
+                class="w-full whitespace-nowrap rounded-full border-2 border-csi-blue px-4 py-1 text-center transition-colors duration-300 hover:bg-csi-blue hover:shadow-inner"
             >
                 Contact Us
             </a>
