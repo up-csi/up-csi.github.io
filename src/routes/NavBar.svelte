@@ -14,7 +14,7 @@
 </script>
 
 <div
-    class="flex items-center justify-between rounded-full border-2 border-light-gray bg-csi-white/90 p-1 font-dm text-csi-black shadow-xl backdrop-blur-xl lg:mx-24 dark:border-dark-gray dark:bg-csi-black/90 dark:text-csi-white"
+    class="flex items-center justify-between rounded-full border-2 border-light-gray bg-csi-white/90 p-1 font-dm text-csi-black shadow-lg backdrop-blur-xl lg:mx-24 dark:border-dark-gray dark:bg-csi-black/90 dark:text-csi-white"
 >
     <a class="flex items-center px-2" href="/">
         <div class="mx-1 h-6 w-6">
@@ -79,7 +79,7 @@
 </div>
 {#if mobileMenu}
     <div
-        class="fixed inset-y-2 right-2 block h-[calc(100vh-1rem)] w-5/6 rounded-2xl bg-blue-white/95 font-dm text-xl backdrop-blur-2xl sm:w-3/4 sm:max-w-sm lg:hidden dark:bg-black/95 dark:text-csi-white"
+        class="fixed inset-2 block rounded-2xl bg-blue-white/95 font-dm text-xl backdrop-blur-2xl sm:left-auto sm:w-3/4 sm:max-w-sm lg:hidden dark:bg-black/95 dark:text-csi-white"
         transition:fly={{ x: 300, duration: 150 }}
     >
         <div class="flex h-full flex-col items-end justify-between p-4">
