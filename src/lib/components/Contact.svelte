@@ -1,5 +1,5 @@
 <script>
-    import Button from '$lib/components/Button.svelte';
+    import ButtonMailTo from '$lib/components/ButtonMailTo.svelte';
     import src from '$lib/lino-hero.svg';
 </script>
 
@@ -13,6 +13,6 @@
         >
             Let's innovate together!
         </h1>
-        <Button>Shoot us a message</Button>
+        <ButtonMailTo>Shoot us a message</ButtonMailTo>
     </div>
 </section>
