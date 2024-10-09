@@ -1,0 +1,12 @@
+{
+    "name": "Caleb Bunye",
+    "title": "President",
+    "committee": "Executive",
+    "img": "caleb-bunye.webp",
+    "socials": {
+        "github": "https://github.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com",
+        "website": "https://google.com"
+    }
+}

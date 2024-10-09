@@ -1,23 +1,15 @@
-<script lang="ts" context="module">
-    export interface Member {
-        name: string;
-        title: string;
-        committee: string;
-        img: string;
-        socials: Record<string, string>;
-    }
-</script>
-
-<script lang="ts">
+<script async lang="ts">
     import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
     import { Icon } from '@steeze-ui/svelte-icon';
     import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
-    import team from './team';
+    import getTeam from '$lib/people/team/team';
+
+    const team = getTeam();
 
     const committees = [
         'Everyone',
-        'Executive Board',
+        'Executive',
         'Innovation',
         'Service',
         'External Relations',
@@ -26,7 +18,7 @@
         'Engineering',
     ];
 
-    $: currentCommittee = 'Executive Board';
+    $: currentCommittee = 'Executive';
     $: filteredTeam =
         currentCommittee === 'Everyone'
             ? team
@@ -101,7 +93,7 @@
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
         {#each sortedFilteredTeam as { name, title, committee, img, socials }}
-            <TeamCard src={img} alt="image of {name}">
+            <TeamCard src={'/members/' + img} alt="image of {name}">
                 <div>
                     <p class="text-md m-0 md:text-lg">{name}</p>
                     <p class="m-0 text-xs leading-tight">{title}</p>
