@@ -1,5 +1,3 @@
-import type { Event } from '$lib/components/EventsPanel.svelte';
-
 import ascenc10n from '$lib/events/ascension.webp';
 import bootcamp10 from '$lib/events/bootcamp-10.webp';
 import csflight from '$lib/events/csflight.webp';
@@ -8,6 +6,17 @@ import firstGa2023 from '$lib/events/first-GA-2324B.webp';
 import gitWorkshop from '$lib/events/git-workshop.webp';
 import pyrolympics from '$lib/events/pyrolympics.webp';
 import yearEndGa2023 from '$lib/events/year-end-GA-2023.webp';
+
+export interface Event {
+    tag: string;
+    state: string;
+    type: string;
+    event: string;
+    dates: string;
+    description: string;
+    src: string;
+    href: string;
+}
 
 export const enum Tag {
     All = 'All',
@@ -35,86 +44,86 @@ export default [
         tag: Tag.Other,
         state: State.Past,
         type: Type.Internal,
-        title: 'ASCENS10N',
+        event: 'ASCENS10N',
         dates: 'August 4 - August 6, 2023',
         description:
             'On its tenth year, UP CSI celebrates a decade of innovation and excellence with its members and alumni who became a part of this incredible journey.',
         src: ascenc10n,
-        url: '/events/',
+        href: '/events/',
     },
     {
         tag: Tag.EX,
         state: State.Past,
         type: Type.External,
-        title: 'EX Series 2023',
+        event: 'EX Series 2023',
         dates: 'August 4 - August 6, 2023',
         description:
             'Aute incididunt officia exercitation ea aliqua officia culpa incididunt proident aliqua commodo velit.',
         src: ex2023,
-        url: '/events/',
+        href: '/events/',
     },
     {
         tag: Tag.App,
         state: State.Past,
         type: Type.Internal,
-        title: 'CSFlight',
+        event: 'CSFlight',
         dates: 'August 4 - August 6, 2023',
         description:
             'Qui eu voluptate non nostrud. Et irure reprehenderit pariatur nulla laboris ipsum ut tempor magna officia tempor mollit Lorem reprehenderit.',
         src: csflight,
-        url: '/events/',
+        href: '/events/',
     },
     {
         tag: Tag.Partnership,
         state: State.Past,
         type: Type.External,
-        title: 'Bootcamp 10.0',
+        event: 'Bootcamp 10.0',
         dates: 'August 4 - August 6, 2023',
         description: 'Nisi consequat consequat nisi ipsum. Ut dolore dolore officia ea ipsum.',
         src: bootcamp10,
-        url: '/events/',
+        href: '/events/',
     },
     {
         tag: Tag.Partnership,
         state: State.Past,
         type: Type.External,
-        title: 'Git Workshop',
+        event: 'Git Workshop',
         dates: 'August 4 - August 6, 2023',
         description:
             'Laboris ullamco do occaecat nostrud nisi irure. Ullamco nulla duis elit fugiat anim sint.',
         src: gitWorkshop,
-        url: '/events/',
+        href: '/events/',
     },
     {
         tag: Tag.GA,
         state: State.Past,
         type: Type.Internal,
-        title: 'Year-end General Assembly 2023',
+        event: 'Year-end General Assembly 2023',
         dates: 'August 4 - August 6, 2023',
         description: 'Proident in aliqua proident quis ex ad excepteur culpa sunt.',
         src: yearEndGa2023,
-        url: '/events/',
+        href: '/events/',
     },
     {
         tag: Tag.App,
         state: State.Past,
         type: Type.Internal,
-        title: 'Pyrolympics',
+        event: 'Pyrolympics',
         dates: 'August 4 - August 6, 2023',
         description:
             'Elit irure elit adipisicing consectetur nisi laborum mollit esse eu dolore nostrud laborum laborum. Excepteur nulla velit aliquip eiusmod duis.',
         src: pyrolympics,
-        url: '/events/',
+        href: '/events/',
     },
     {
         tag: Tag.GA,
         state: State.Past,
         type: Type.Internal,
-        title: 'First GA 2324B',
+        event: 'First GA 2324B',
         dates: 'August 4 - August 6, 2023',
         description:
             'Culpa consectetur enim fugiat in labore laborum et adipisicing Lorem. Enim mollit excepteur est ea nulla in nulla dolor et.',
         src: firstGa2023,
-        url: '/events/',
+        href: '/events/',
     },
 ] satisfies Event[];
