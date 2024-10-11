@@ -3,20 +3,11 @@
     import { Icon } from '@steeze-ui/svelte-icon';
     import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
-    import type { Member } from '$lib/people/team/team';
+    import { committees, type Member } from '$lib/people/team/team';
 
     export let team: Member[];
 
-    const committees = [
-        'Everyone',
-        'Executive',
-        'Innovation',
-        'Service',
-        'External Relations',
-        'Membership & Internals',
-        'Branding & Creatives',
-        'Engineering',
-    ];
+    const committeeFilters = ['Everyone', ...committees];
 
     $: currentCommittee = 'Executive';
     $: filteredTeam =
@@ -24,7 +15,7 @@
             ? team
             : team.filter(({ committee }) => committee === currentCommittee);
     $: sortedFilteredTeam = structuredClone(filteredTeam).sort(
-        (a, b) => committees.indexOf(a.committee) - committees.indexOf(b.committee),
+        (a, b) => committeeFilters.indexOf(a.committee) - committeeFilters.indexOf(b.committee),
     );
 
     function getSocialIcon(social: string) {
@@ -72,7 +63,7 @@
             <ul
                 class="m-0 flex max-w-screen-sm list-none flex-row flex-wrap justify-center gap-4 rounded-lg p-0 lg:max-w-fit"
             >
-                {#each committees as committee}
+                {#each committeeFilters as committee}
                     {@const neutral =
                         currentCommittee === committee
                             ? 'bg-black text-csi-white dark:bg-csi-blue dark:text-csi-black'

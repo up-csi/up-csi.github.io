@@ -1,3 +1,15 @@
+import { assert } from '$lib/assert';
+
+export const committees = [
+    'Executive',
+    'Innovation',
+    'Service',
+    'External Relations',
+    'Membership & Internals',
+    'Branding & Creatives',
+    'Engineering',
+];
+
 export interface Member {
     name: string;
     title: string;
@@ -33,6 +45,17 @@ export default async function getTeam(): Promise<Member[]> {
              * https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#imports-must-end-with-a-file-extension
              */
             memberObj.img = (await import(`$lib/people/team/images/${memberObj.img}.webp`)).default;
+
+            /**
+             * Other issues with JSON values should raise an error without us having to explicitly account for them.
+             * Might be good to improve this later, but this suffices for the moment.
+             */
+
+            assert(
+                committees.includes(memberObj.committee),
+                `committee "${memberObj.committee}" of "${memberObj.name}" does not exist`,
+            );
+
             team.push(memberObj);
         }
     }
