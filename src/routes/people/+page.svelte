@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Exec from './Exec.svelte';
     import TeamPanel from './TeamPanel.svelte';
 
@@ -14,6 +14,8 @@
 
     import { ChevronDown, ChevronUp } from '@steeze-ui/heroicons';
     import { Icon } from '@steeze-ui/svelte-icon';
+
+    export let data;
 
     let pastExec = false;
 </script>
@@ -35,7 +37,7 @@
             <Exec src={lino} alt="Sean Tolentino" pos="Director for External Relations" />
         </section>
     </section>
-    <TeamPanel />
+    <TeamPanel team={data.team} />
 </section>
 <section>
     <h1 class="mb-4 w-full text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">

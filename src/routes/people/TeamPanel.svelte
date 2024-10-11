@@ -1,11 +1,11 @@
-<script async lang="ts">
+<script lang="ts">
     import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
     import { Icon } from '@steeze-ui/svelte-icon';
     import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
-    import getTeam from '$lib/people/team/team';
+    import type { Member } from '$lib/people/team/team';
 
-    const team = getTeam();
+    export let team: Member[];
 
     const committees = [
         'Everyone',
