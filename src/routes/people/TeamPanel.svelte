@@ -1,10 +1,11 @@
 <script lang="ts">
     import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
+    import { type Member, committees } from '$lib/people/team/team';
     import { Icon } from '@steeze-ui/svelte-icon';
     import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
-    import { committees, type Member } from '$lib/people/team/team';
 
+    // eslint-disable-next-line init-declarations
     export let team: Member[];
 
     const committeeFilters = ['Everyone', ...committees];
