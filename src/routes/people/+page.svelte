@@ -15,6 +15,7 @@
     import { ChevronDown, ChevronUp } from '@steeze-ui/heroicons';
     import { Icon } from '@steeze-ui/svelte-icon';
 
+    // eslint-disable-next-line init-declarations
     export let data;
     $: ({ team } = data);
 
