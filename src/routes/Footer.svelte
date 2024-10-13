@@ -5,10 +5,7 @@
         <p class="max-w-64 text-2xl">
             UP CSI is a service-oriented organization for student learning
         </p>
-        <div>
-            <a class="underline" href="mailto:lino@up-csi.org">lino@up-csi.org</a>
-            <p>+63999999999</p>
-        </div>
+        <div><a class="underline" href="mailto:lino@up-csi.org">lino@up-csi.org</a></div>
     </div>
     <div class="flex flex-col items-center justify-start gap-9 md:items-end md:text-right">
         <div class="flex flex-col underline">
