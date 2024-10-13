@@ -1,11 +1,5 @@
 {
     "name": "Caleb Bunye v2",
     "title": "President",
-    "committee": "Innovation",
-    "img": "caleb-bunye",
-    "socials": {
-        "github": "https://github.com",
-        "instagram": "https://instagram.com",
-        "website": "https://google.com"
-    }
+    "committee": "Innovation"
 }

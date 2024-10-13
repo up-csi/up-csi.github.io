@@ -91,15 +91,17 @@
                     <p class="m-0 text-xs leading-tight">{title}</p>
                 </div>
                 <div class="flex flex-row flex-wrap gap-2">
-                    {#each Object.entries(socials) as [social, href]}
-                        {@const src = getSocialIcon(social)}
-                        <a {href} target="_blank"
-                            ><Icon
-                                {src}
-                                class="size-5 text-csi-black transition-colors hover:text-csi-blue md:text-csi-white dark:text-csi-white"
-                            /></a
-                        >
-                    {/each}
+                    {#if socials}
+                        {#each Object.entries(socials) as [social, href]}
+                            {@const src = getSocialIcon(social)}
+                            <a {href} target="_blank"
+                                ><Icon
+                                    {src}
+                                    class="size-5 text-csi-black transition-colors hover:text-csi-blue md:text-csi-white dark:text-csi-white"
+                                /></a
+                            >
+                        {/each}
+                    {/if}
                 </div>
                 <div
                     slot="tag"
