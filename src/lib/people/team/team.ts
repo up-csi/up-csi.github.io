@@ -18,7 +18,7 @@ export interface Member {
     socials: Record<string, string>;
 }
 
-export default async function getTeam(): Promise<Member[]> {
+export async function getTeam(): Promise<Member[]> {
     /**
      * The usage of dynamic imports in this function will have no effect on page load times.
      * This is because dynamically imported assets will still be bundled on build.

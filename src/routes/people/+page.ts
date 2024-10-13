@@ -1,4 +1,4 @@
-import getTeam from '$lib/people/team/team';
+import { getTeam } from '$lib/people/team/team';
 
 export async function load() {
     return {
