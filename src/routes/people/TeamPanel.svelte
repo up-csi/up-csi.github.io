@@ -1,6 +1,6 @@
 <script lang="ts">
+    import { COMMITTEES, type Member } from '$lib/models/member';
     import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
-    import { type Member, COMMITTEES } from '$lib/models/member';
     import { Icon } from '@steeze-ui/svelte-icon';
     import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
