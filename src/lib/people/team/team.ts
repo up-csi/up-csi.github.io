@@ -1,4 +1,5 @@
-import * as v from 'valibot';
+import { type InferOutput, parse } from 'valibot';
+import { Member } from '$lib/models/member';
 
 export const committees = [
     'Executive',
@@ -10,17 +11,7 @@ export const committees = [
     'Engineering',
 ];
 
-const MemberSchema = v.object({
-    name: v.string(),
-    title: v.string(),
-    committee: v.pipe(
-        v.string(),
-        v.check(i => committees.includes(i), 'invalid committee'),
-    ),
-    socials: v.optional(v.record(v.string(), v.pipe(v.string(), v.url()))),
-});
-
-export interface Member extends v.InferOutput<typeof MemberSchema> {
+export interface Member extends InferOutput<typeof Member> {
     img: string;
 }
 
@@ -35,13 +26,11 @@ export async function getTeam(): Promise<Member[]> {
         const base = path.match(baseRe)?.groups?.base;
         const img: string = (await import(`$lib/people/team/images/${base}.webp`)).default;
 
-        const member = v.parse(MemberSchema, await asset());
+        const member = parse(Member, await asset());
 
         // Type-safety enforced at build-time and run-time!
         return { ...member, img };
     });
 
-    const members = await Promise.all(promises);
-
-    return members;
+    return await Promise.all(promises);
 }
