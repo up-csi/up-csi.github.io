@@ -31,6 +31,7 @@
         "@sveltejs/vite-plugin-svelte": "^3.1.2",
         "@tailwindcss/forms": "^0.5.9",
         "@tailwindcss/typography": "^0.5.15",
+        "@types/node": "^22.7.5",
         "autoprefixer": "^10.4.20",
         "cssnano": "^7.0.6",
         "eslint": "^9.12.0",
