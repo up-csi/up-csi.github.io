@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
-    import { type Member, committees } from '$lib/models/member';
+    import { type Member, COMMITTEES } from '$lib/models/member';
     import { Icon } from '@steeze-ui/svelte-icon';
     import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
@@ -8,7 +8,7 @@
     // eslint-disable-next-line init-declarations
     export let team: Member[];
 
-    const committeeFilters = ['Everyone', ...committees];
+    const committeeFilters = ['Everyone', ...COMMITTEES];
 
     $: currentCommittee = 'Executive';
     $: filteredTeam =

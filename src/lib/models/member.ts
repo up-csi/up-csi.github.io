@@ -1,6 +1,6 @@
 import * as v from 'valibot';
 
-export const committees = [
+export const COMMITTEES = [
     'Executive',
     'Innovation',
     'Service',
@@ -8,7 +8,7 @@ export const committees = [
     'Membership & Internals',
     'Branding & Creatives',
     'Engineering',
-];
+] as const;
 
 export interface Member extends v.InferOutput<typeof Member> {
     src: string;
@@ -17,6 +17,6 @@ export interface Member extends v.InferOutput<typeof Member> {
 export const Member = v.object({
     name: v.string(),
     title: v.string(),
-    committee: v.picklist(committees),
+    committee: v.picklist(COMMITTEES),
     socials: v.optional(v.record(v.string(), v.pipe(v.string(), v.url()))),
 });
