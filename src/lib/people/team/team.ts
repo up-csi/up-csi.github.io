@@ -12,7 +12,7 @@ export const committees = [
 ];
 
 export interface Member extends InferOutput<typeof Member> {
-    img: string;
+    src: string;
 }
 
 const baseRe = /(?<base>\w+).json$/;
@@ -24,12 +24,12 @@ export async function getTeam(): Promise<Member[]> {
         // Derive the image name from the original path
         // It goes without saying that this may not be the right approach for this
         const base = path.match(baseRe)?.groups?.base;
-        const img: string = (await import(`$lib/people/team/images/${base}.webp`)).default;
+        const src: string = (await import(`$lib/people/team/images/${base}.webp`)).default;
 
         const member = parse(Member, await asset());
 
         // Type-safety enforced at build-time and run-time!
-        return { ...member, img };
+        return { ...member, src };
     });
 
     return await Promise.all(promises);

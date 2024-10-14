@@ -84,8 +84,8 @@
     <div
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
-        {#each sortedFilteredTeam as { name, title, committee, img, socials }}
-            <TeamCard src={img} alt="image of {name}">
+        {#each sortedFilteredTeam as { name, title, committee, src, socials }}
+            <TeamCard {src} alt="image of {name}">
                 <div>
                     <p class="text-md m-0 md:text-lg">{name}</p>
                     <p class="m-0 text-xs leading-tight">{title}</p>
