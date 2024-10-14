@@ -1,12 +1,22 @@
 import * as v from 'valibot';
-import { committees } from '$lib/people/team/team';
+
+export const committees = [
+    'Executive',
+    'Innovation',
+    'Service',
+    'External Relations',
+    'Membership & Internals',
+    'Branding & Creatives',
+    'Engineering',
+];
+
+export interface Member extends v.InferOutput<typeof Member> {
+    src: string;
+}
 
 export const Member = v.object({
     name: v.string(),
     title: v.string(),
-    committee: v.pipe(
-        v.string(),
-        v.check(i => committees.includes(i), 'invalid committee'),
-    ),
+    committee: v.picklist(committees),
     socials: v.optional(v.record(v.string(), v.pipe(v.string(), v.url()))),
 });
