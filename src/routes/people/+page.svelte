@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
     import Exec from './Exec.svelte';
     import TeamPanel from './TeamPanel.svelte';
 
