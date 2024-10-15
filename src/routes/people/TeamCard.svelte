@@ -20,7 +20,7 @@
         {alt}
         height="300px"
         loading="lazy"
-        class="col-start-1 row-start-1 m-0 h-56 rounded-2xl object-cover md:h-auto"
+        class="col-start-1 row-start-1 m-0 h-56 w-full rounded-2xl object-cover md:h-full"
     />
     {#if isOverlayVisible}
         <div
