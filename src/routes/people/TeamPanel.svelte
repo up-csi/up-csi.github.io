@@ -1,38 +1,22 @@
-<script lang="ts" context="module">
-    export interface Member {
-        name: string;
-        title: string;
-        committee: string;
-        img: string;
-        socials: Record<string, string>;
-    }
-</script>
-
 <script lang="ts">
+    import { COMMITTEES, type Member } from '$lib/models/member';
     import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
     import { Icon } from '@steeze-ui/svelte-icon';
     import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
-    import team from './team';
 
-    const committees = [
-        'Everyone',
-        'Executive Board',
-        'Innovation',
-        'Service',
-        'External Relations',
-        'Membership & Internals',
-        'Branding & Creatives',
-        'Engineering',
-    ];
+    // eslint-disable-next-line init-declarations
+    export let team: Member[];
 
-    $: currentCommittee = 'Executive Board';
+    const committeeFilters = ['Everyone', ...COMMITTEES];
+
+    $: currentCommittee = 'Executive';
     $: filteredTeam =
         currentCommittee === 'Everyone'
             ? team
             : team.filter(({ committee }) => committee === currentCommittee);
     $: sortedFilteredTeam = structuredClone(filteredTeam).sort(
-        (a, b) => committees.indexOf(a.committee) - committees.indexOf(b.committee),
+        (a, b) => committeeFilters.indexOf(a.committee) - committeeFilters.indexOf(b.committee),
     );
 
     function getSocialIcon(social: string) {
@@ -80,7 +64,7 @@
             <ul
                 class="m-0 flex max-w-screen-sm list-none flex-row flex-wrap justify-center gap-4 rounded-lg p-0 lg:max-w-fit"
             >
-                {#each committees as committee}
+                {#each committeeFilters as committee}
                     {@const neutral =
                         currentCommittee === committee
                             ? 'bg-black text-csi-white dark:bg-csi-blue dark:text-csi-black'
@@ -100,22 +84,24 @@
     <div
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
-        {#each sortedFilteredTeam as { name, title, committee, img, socials }}
-            <TeamCard src={img} alt="image of {name}">
+        {#each sortedFilteredTeam as { name, title, committee, src, socials }}
+            <TeamCard {src} alt="image of {name}">
                 <div>
                     <p class="text-md m-0 md:text-lg">{name}</p>
                     <p class="m-0 text-xs leading-tight">{title}</p>
                 </div>
                 <div class="flex flex-row flex-wrap gap-2">
-                    {#each Object.entries(socials) as [social, href]}
-                        {@const src = getSocialIcon(social)}
-                        <a {href} target="_blank"
-                            ><Icon
-                                {src}
-                                class="size-5 text-csi-black transition-colors hover:text-csi-blue md:text-csi-white dark:text-csi-white"
-                            /></a
-                        >
-                    {/each}
+                    {#if socials}
+                        {#each Object.entries(socials) as [social, href]}
+                            {@const src = getSocialIcon(social)}
+                            <a {href} target="_blank"
+                                ><Icon
+                                    {src}
+                                    class="size-5 text-csi-black transition-colors hover:text-csi-blue md:text-csi-white dark:text-csi-white"
+                                /></a
+                            >
+                        {/each}
+                    {/if}
                 </div>
                 <div
                     slot="tag"

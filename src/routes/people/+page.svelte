@@ -15,6 +15,10 @@
     import { ChevronDown, ChevronUp } from '@steeze-ui/heroicons';
     import { Icon } from '@steeze-ui/svelte-icon';
 
+    // eslint-disable-next-line init-declarations
+    export let data;
+    $: ({ team } = data);
+
     let pastExec = false;
 </script>
 
@@ -35,7 +39,7 @@
             <Exec src={lino} alt="Sean Tolentino" pos="Director for External Relations" />
         </section>
     </section>
-    <TeamPanel />
+    <TeamPanel {team} />
 </section>
 <section>
     <h1 class="mb-4 w-full text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
