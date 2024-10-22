@@ -16,11 +16,9 @@
     import jellyRaborar from '$lib/people/jelly-raborar.webp';
     import lino from '$lib/lino-hero.svg';
 
-    // eslint-disable-next-line init-declarations
-    export let data;
-    $: ({ team } = data);
-
-    let pastExec = false;
+    const { data } = $props();
+    const { team } = $derived(data);
+    let pastExec = $state(false);
 </script>
 
 <section>
@@ -49,9 +47,7 @@
 
     <button
         class="border-inherit mb-4 w-full border-b-2 text-csi-black dark:text-csi-white"
-        on:click={() => {
-            pastExec = !pastExec;
-        }}
+        onclick={() => (pastExec = !pastExec)}
     >
         <div class="flex w-full flex-row items-center text-center">
             {#if pastExec}
@@ -62,6 +58,7 @@
             <h2 class="text-xl md:text-2xl">2023-2024</h2>
         </div>
     </button>
+    <!-- TODO: Prefer <details> element here. -->
     {#if pastExec}
         <section class="prose flex max-w-none flex-col gap-8">
             <figure class="m-0 flex flex-col items-center">

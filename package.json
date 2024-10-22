@@ -23,7 +23,7 @@
         "@iconify/icons-simple-icons": "^1.2.74",
         "@iconify/svelte": "^4.0.2",
         "@sveltejs/kit": "^2.7.2",
-        "svelte": "^4.2.19",
+        "svelte": "^5.0.5",
         "valibot": "^0.42.1"
     },
     "devDependencies": {
@@ -32,7 +32,7 @@
         "@linthtml/linthtml-config-recommended": "^0.1.0",
         "@sveltejs/adapter-static": "^3.0.5",
         "@sveltejs/enhanced-img": "^0.3.9",
-        "@sveltejs/vite-plugin-svelte": "^3.1.2",
+        "@sveltejs/vite-plugin-svelte": "^4.0.0",
         "@tailwindcss/forms": "^0.5.9",
         "@tailwindcss/typography": "^0.5.15",
         "@types/node": "^22.7.8",
@@ -48,7 +48,7 @@
         "stylelint-config-standard": "^36.0.1",
         "stylelint-config-tailwindcss": "^0.0.7",
         "svelte-check": "^4.0.5",
-        "svelte-eslint-parser": "^0.41.1",
+        "svelte-eslint-parser": "^0.43.0",
         "tailwindcss": "^3.4.14",
         "typescript": "^5.6.3",
         "typescript-eslint": "^8.11.0",

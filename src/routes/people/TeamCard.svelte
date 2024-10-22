@@ -1,19 +1,25 @@
 <script lang="ts">
+    import type { HTMLImgAttributes } from 'svelte/elements';
+    import type { Snippet } from 'svelte';
     import { fade } from 'svelte/transition';
 
-    // eslint-disable-next-line init-declarations
-    export let src: string;
-    // eslint-disable-next-line init-declarations
-    export let alt: string;
+    interface Props {
+        src: HTMLImgAttributes['src'];
+        alt: HTMLImgAttributes['alt'];
+        tag?: Snippet;
+        children?: Snippet;
+    }
 
-    let isOverlayVisible = false;
+    const { src, alt, tag, children }: Props = $props();
+    let isOverlayVisible = $state(false);
 </script>
 
+<!-- TODO: Prefer using `hover:` modifiers in native CSS. -->
 <div
     class="grid-rows-[1fr auto] grid grid-cols-1 content-start items-start overflow-hidden md:aspect-square md:grid-rows-1 md:rounded-2xl md:shadow-lg"
     role="img"
-    on:mouseenter={() => (isOverlayVisible = true)}
-    on:mouseleave={() => (isOverlayVisible = false)}
+    onmouseenter={() => (isOverlayVisible = true)}
+    onmouseleave={() => (isOverlayVisible = false)}
 >
     <img
         {src}
@@ -27,17 +33,17 @@
             class="z-10 col-start-1 row-start-1 hidden h-full flex-col justify-end gap-2 bg-csi-black/70 p-4 text-csi-white md:flex"
             transition:fade={{ duration: 75 }}
         >
-            <slot />
+            {@render children?.()}
         </div>
     {:else}
         <div
             class="z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end p-1 md:flex"
             in:fade={{ duration: 75 }}
         >
-            <slot name="tag" />
+            {@render tag?.()}
         </div>
     {/if}
     <div class="col-start-1 row-start-2 flex flex-col gap-2 md:hidden">
-        <slot />
+        {@render children?.()}
     </div>
 </div>

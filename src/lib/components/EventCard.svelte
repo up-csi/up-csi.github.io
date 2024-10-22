@@ -1,18 +1,6 @@
 <script lang="ts">
-    // eslint-disable-next-line init-declarations
-    export let dates: string;
-    // eslint-disable-next-line init-declarations
-    export let description: string;
-    // eslint-disable-next-line init-declarations
-    export let src: string;
-    // eslint-disable-next-line init-declarations
-    export let state: string;
-    // eslint-disable-next-line init-declarations
-    export let event: string;
-    // eslint-disable-next-line init-declarations
-    export let type: string;
-    // eslint-disable-next-line init-declarations
-    export let href: string;
+    import type { Event } from '$lib/events/events';
+    const { src, event, state, type, dates, description, href }: Event = $props();
 </script>
 
 <div
@@ -22,6 +10,7 @@
     <div class="m-3 flex h-full flex-col justify-between gap-2 overflow-hidden">
         <p class="m-0">{state} - {type}</p>
         <h2 class="m-0">{event}</h2>
+        <!-- TODO: Use <time> element here for best accessibility. -->
         <p class="m-0">{dates}</p>
         <p class="m-0 grow overflow-hidden">{description}</p>
         <p class="m-0"><a {href}>More Info</a></p>

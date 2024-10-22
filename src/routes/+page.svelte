@@ -17,7 +17,7 @@
     <h1 class="text-center font-normal">Why UP CSI?</h1>
     <div class="space-y-4">
         <ContentContainer>
-            <svelte:fragment slot="text">
+            {#snippet text()}
                 <p class="m-0 text-csi-black dark:text-csi-white">For organizations</p>
                 <h3
                     class="m-0 font-dm text-2xl font-normal text-csi-black sm:text-3xl dark:text-csi-white"
@@ -27,13 +27,13 @@
                 <p class="m-0 leading-5 text-csi-black sm:leading-6 dark:text-csi-white">
                     Need a small site or a full-scale project? Contact us to see how we can help.
                 </p>
-            </svelte:fragment>
-            <svelte:fragment slot="cards">
+            {/snippet}
+            {#snippet cards()}
                 <CartoonCard src={services}></CartoonCard>
-            </svelte:fragment>
+            {/snippet}
         </ContentContainer>
         <ContentContainer>
-            <svelte:fragment slot="text">
+            {#snippet text()}
                 <p class="m-0 text-csi-black dark:text-csi-white">For students</p>
                 <h3
                     class="m-0 font-dm text-2xl font-normal text-csi-black sm:text-3xl dark:text-csi-white"
@@ -44,11 +44,11 @@
                     From training programs to external workshops, we elevate students' development
                     skills.
                 </p>
-            </svelte:fragment>
-            <svelte:fragment slot="cards">
+            {/snippet}
+            {#snippet cards()}
                 <CartoonCard src={devcamps}>Developer Training Program & DevCamp</CartoonCard>
                 <CartoonCard src={tech}>Technology Workshops</CartoonCard>
-            </svelte:fragment>
+            {/snippet}
         </ContentContainer>
     </div>
 </section>

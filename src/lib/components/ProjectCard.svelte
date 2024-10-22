@@ -1,14 +1,6 @@
 <script lang="ts">
-    // eslint-disable-next-line init-declarations
-    export let description: string;
-    // eslint-disable-next-line init-declarations
-    export let src: string;
-    // eslint-disable-next-line init-declarations
-    export let project: string;
-    // eslint-disable-next-line init-declarations
-    export let type: string;
-    // eslint-disable-next-line init-declarations
-    export let href: string;
+    import type { Project } from '$lib/projects/projects';
+    const { src, project, type, description, href }: Project = $props();
 </script>
 
 <div

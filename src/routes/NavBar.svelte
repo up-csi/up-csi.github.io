@@ -10,8 +10,8 @@
     import { get } from '$lib/stores/color-scheme';
     import upcsi from '$lib/icons/upcsi.svg';
 
-    let mobileMenu = false;
     const theme = get();
+    let mobileMenu = $state(false);
 
     function closeMenu() {
         mobileMenu = false;
@@ -58,7 +58,7 @@
     <div class="flex items-center gap-2">
         <button
             class="rounded-full border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-light-gray hover:shadow-inner dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
-            on:click={theme.toggle}
+            onclick={theme.toggle}
         >
             <Icon icon={Moon} width="18" height="18" class="dark:hidden" />
             <Icon icon={Sun} width="18" height="18" class="hidden dark:block" />
@@ -72,7 +72,7 @@
 
         <button
             class="rounded-full border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-light-gray lg:hidden dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
-            on:click={() => (mobileMenu = !mobileMenu)}
+            onclick={() => (mobileMenu = !mobileMenu)}
         >
             {#if mobileMenu}
                 <Icon icon={XMark} width="18" height="18" class="hover:text-csi-blue" />
@@ -91,7 +91,7 @@
             <div class="flex flex-col items-end">
                 <button
                     class="p-1 pb-6 transition-colors duration-200 ease-in-out hover:text-csi-blue"
-                    on:click={() => (mobileMenu = !mobileMenu)}
+                    onclick={() => (mobileMenu = !mobileMenu)}
                 >
                     <Icon icon={XMark} width="18" height="18" />
                 </button>
@@ -102,28 +102,28 @@
                         <a
                             class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
                             href="/about/"
-                            on:click={closeMenu}>About</a
+                            onclick={closeMenu}>About</a
                         >
                     </li>
                     <li>
                         <a
                             class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
                             href="/people/"
-                            on:click={closeMenu}>People</a
+                            onclick={closeMenu}>People</a
                         >
                     </li>
                     <li>
                         <a
                             class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
                             href="/events/"
-                            on:click={closeMenu}>Events</a
+                            onclick={closeMenu}>Events</a
                         >
                     </li>
                     <li>
                         <a
                             class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
                             href="/projects/"
-                            on:click={closeMenu}>Projects</a
+                            onclick={closeMenu}>Projects</a
                         >
                     </li>
                 </ul>

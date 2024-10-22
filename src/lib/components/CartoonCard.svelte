@@ -1,6 +1,12 @@
 <script lang="ts">
-    // eslint-disable-next-line init-declarations
-    export let src: string;
+    import type { Snippet } from 'svelte';
+
+    interface Props {
+        src: string;
+        children?: Snippet;
+    }
+
+    const { children, src }: Props = $props();
 </script>
 
 <div class="mb-8 flex h-full flex-col md:mb-0 md:w-2/5 xl:w-3/5">
@@ -9,9 +15,9 @@
     >
         <img {src} alt="Corporate Cartoon" />
     </div>
-    {#if $$slots.default}
+    {#if typeof children !== 'undefined'}
         <div class="leading-6">
-            <p class="text-center text-csi-black dark:text-csi-white"><slot /></p>
+            <p class="text-center text-csi-black dark:text-csi-white">{@render children()}</p>
         </div>
     {/if}
 </div>
