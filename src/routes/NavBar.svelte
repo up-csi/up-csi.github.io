@@ -1,6 +1,11 @@
 <script>
-    import { Bars3, Moon, Sun, XMark } from '@steeze-ui/heroicons';
-    import { Icon } from '@steeze-ui/svelte-icon';
+    import Icon from '@iconify/svelte';
+
+    import Bars3 from '@iconify/icons-heroicons/bars-3-solid';
+    import Moon from '@iconify/icons-heroicons/moon-solid';
+    import Sun from '@iconify/icons-heroicons/sun-solid';
+    import XMark from '@iconify/icons-heroicons/x-mark-solid';
+
     import { fly } from 'svelte/transition';
     import { get } from '$lib/stores/color-scheme';
     import upcsi from '$lib/icons/upcsi.svg';
@@ -55,8 +60,8 @@
             class="rounded-full border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-light-gray hover:shadow-inner dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
             on:click={theme.toggle}
         >
-            <Icon src={Moon} size="18px" theme="solid" class="dark:hidden" />
-            <Icon src={Sun} size="18px" theme="solid" class="hidden dark:block" />
+            <Icon icon={Moon} width="18" height="18" class="dark:hidden" />
+            <Icon icon={Sun} width="18" height="18" class="hidden dark:block" />
         </button>
         <a
             href="mailto:lino@up-csi.org"
@@ -70,9 +75,9 @@
             on:click={() => (mobileMenu = !mobileMenu)}
         >
             {#if mobileMenu}
-                <Icon src={XMark} theme="solid" class="hover:text-csi-blue" size="18px" />
+                <Icon icon={XMark} width="18" height="18" class="hover:text-csi-blue" />
             {:else}
-                <Icon src={Bars3} theme="solid" size="18px" />
+                <Icon icon={Bars3} width="18" height="18" />
             {/if}
         </button>
     </div>
@@ -88,7 +93,7 @@
                     class="p-1 pb-6 transition-colors duration-200 ease-in-out hover:text-csi-blue"
                     on:click={() => (mobileMenu = !mobileMenu)}
                 >
-                    <Icon src={XMark} theme="solid" size="24px" />
+                    <Icon icon={XMark} width="18" height="18" />
                 </button>
                 <ul
                     class="flex w-full flex-col items-end space-y-6 px-2 text-csi-black dark:text-csi-white"

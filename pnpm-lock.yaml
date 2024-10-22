@@ -8,15 +8,15 @@ importers:
 
   .:
     dependencies:
-      '@steeze-ui/heroicons':
-        specifier: ^2.4.0
-        version: 2.4.0
-      '@steeze-ui/simple-icons':
-        specifier: ^1.9.0
-        version: 1.9.0
-      '@steeze-ui/svelte-icon':
-        specifier: ^1.5.0
-        version: 1.5.0(svelte@4.2.19)
+      '@iconify/icons-heroicons':
+        specifier: ^1.2.9
+        version: 1.2.9
+      '@iconify/icons-simple-icons':
+        specifier: ^1.2.74
+        version: 1.2.74
+      '@iconify/svelte':
+        specifier: ^4.0.2
+        version: 4.0.2(svelte@4.2.19)
       '@sveltejs/kit':
         specifier: ^2.7.2
         version: 2.7.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0)))(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0))
@@ -352,6 +352,20 @@ packages:
     resolution: {integrity: sha512-JBxkERygn7Bv/GbN5Rv8Ul6LVknS+5Bp6RgDC/O8gEBU/yeH5Ui5C/OlWrTb6qct7LjjfT6Re2NxB0ln0yYybA==}
     engines: {node: '>=18.18'}
 
+  '@iconify/icons-heroicons@1.2.9':
+    resolution: {integrity: sha512-Zx+5+lj8wKnNxOhRPXBXkrA4qthpS1tnsbzxT7AzKnkdm2wdvDGBRTb+FYMp31HFv5MHT6BjrTCBgZ9p84cvug==}
+
+  '@iconify/icons-simple-icons@1.2.74':
+    resolution: {integrity: sha512-bsmbvwO8hauz49z740CYg70IDevOgshUoq4q1IKt6NnElnn+N2F6AseO3Uti82yUU4OHyQqkWjjUwoPTazlNnA==}
+
+  '@iconify/svelte@4.0.2':
+    resolution: {integrity: sha512-6BSrU85FzGfhQD3bTXpnkCCvBAglEt8T9QednVnXAYm4C+d3464y+pYMzhQNJm5mPId2cuiw+2wXlDflXllHDw==}
+    peerDependencies:
+      svelte: '>4.0.0'
+
+  '@iconify/types@2.0.0':
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -611,17 +625,6 @@ packages:
     resolution: {integrity: sha512-fbMkAF7fufku0N2dE5TBXcNlg0pt0cJue4xBRE2Qc5Vqikxr4VCgKj/ht6SMdFcOacVA9rqF70APJ8RN/4vMJw==}
     cpu: [x64]
     os: [win32]
-
-  '@steeze-ui/heroicons@2.4.0':
-    resolution: {integrity: sha512-gxOytXYV/lQiGxkZQC+CP5IWCa+d/vscRKn4JfZXgF8MZEzg9wfl1tTi/GOr3Eg93YkhlhNDwTIGWjhMaEwmvw==}
-
-  '@steeze-ui/simple-icons@1.9.0':
-    resolution: {integrity: sha512-E0Yy9AOMqrt0GSJCetk2a+1GavpLfM3xZkHjWXH+cCTV4Pl6rIy+5XcdbHqD4x1P2KuaHPcX1X7k3RtgOl7Sgg==}
-
-  '@steeze-ui/svelte-icon@1.5.0':
-    resolution: {integrity: sha512-Y0S7Qk2kO6byzOlD5SQGbOF2ZaKXJgfTkH78QUPcq579wiWMQJ5H14zL4XwtsPJ0DfkoL5qa3WaIdYkWb9A6AA==}
-    peerDependencies:
-      svelte: ^4.0.0
 
   '@sveltejs/adapter-static@3.0.5':
     resolution: {integrity: sha512-kFJR7RxeB6FBvrKZWAEzIALatgy11ISaaZbcPup8JdWUdrmmfUHHTJ738YHJTEfnCiiXi6aX8Q6ePY7tnSMD6Q==}
@@ -2658,6 +2661,21 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.1': {}
 
+  '@iconify/icons-heroicons@1.2.9':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify/icons-simple-icons@1.2.74':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify/svelte@4.0.2(svelte@4.2.19)':
+    dependencies:
+      '@iconify/types': 2.0.0
+      svelte: 4.2.19
+
+  '@iconify/types@2.0.0': {}
+
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
       '@img/sharp-libvips-darwin-arm64': 1.0.4
@@ -2883,14 +2901,6 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.24.0':
     optional: true
-
-  '@steeze-ui/heroicons@2.4.0': {}
-
-  '@steeze-ui/simple-icons@1.9.0': {}
-
-  '@steeze-ui/svelte-icon@1.5.0(svelte@4.2.19)':
-    dependencies:
-      svelte: 4.2.19
 
   '@sveltejs/adapter-static@3.0.5(@sveltejs/kit@2.7.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0)))(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0)))':
     dependencies:

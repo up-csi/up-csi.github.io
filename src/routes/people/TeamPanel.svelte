@@ -1,8 +1,12 @@
 <script lang="ts">
+    import Icon from '@iconify/svelte';
+    import Link from '@iconify/icons-heroicons/link-solid';
+
+    import GitHub from '@iconify/icons-simple-icons/github';
+    import Instagram from '@iconify/icons-simple-icons/instagram';
+    import LinkedIn from '@iconify/icons-simple-icons/linkedin';
+
     import { COMMITTEES, type Member } from '$lib/models/member';
-    import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
-    import { Icon } from '@steeze-ui/svelte-icon';
-    import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
 
     // eslint-disable-next-line init-declarations
@@ -22,9 +26,9 @@
     function getSocialIcon(social: string) {
         switch (social) {
             case 'github':
-                return Github;
+                return GitHub;
             case 'linkedin':
-                return Linkedin;
+                return LinkedIn;
             case 'instagram':
                 return Instagram;
             default:
@@ -93,10 +97,10 @@
                 <div class="flex flex-row flex-wrap gap-2">
                     {#if socials}
                         {#each Object.entries(socials) as [social, href]}
-                            {@const src = getSocialIcon(social)}
+                            {@const icon = getSocialIcon(social)}
                             <a {href} target="_blank"
                                 ><Icon
-                                    {src}
+                                    {icon}
                                     class="size-5 text-csi-black transition-colors hover:text-csi-blue md:text-csi-white dark:text-csi-white"
                                 /></a
                             >

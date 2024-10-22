@@ -1,4 +1,8 @@
 <script>
+    import ChevronDown from '@iconify/icons-heroicons/chevron-down-solid';
+    import ChevronUp from '@iconify/icons-heroicons/chevron-up-solid';
+    import Icon from '@iconify/svelte';
+
     import Exec from './Exec.svelte';
     import TeamPanel from './TeamPanel.svelte';
 
@@ -11,9 +15,6 @@
     import hansLorico from '$lib/people/hans-lorico.webp';
     import jellyRaborar from '$lib/people/jelly-raborar.webp';
     import lino from '$lib/lino-hero.svg';
-
-    import { ChevronDown, ChevronUp } from '@steeze-ui/heroicons';
-    import { Icon } from '@steeze-ui/svelte-icon';
 
     // eslint-disable-next-line init-declarations
     export let data;
@@ -54,9 +55,9 @@
     >
         <div class="flex w-full flex-row items-center text-center">
             {#if pastExec}
-                <Icon src={ChevronUp} class="mr-1 w-6 text-csi-black dark:text-csi-white" />
+                <Icon icon={ChevronUp} class="mr-1 w-6 text-csi-black dark:text-csi-white" />
             {:else}
-                <Icon src={ChevronDown} class="mr-1 w-6 text-csi-black dark:text-csi-white" />
+                <Icon icon={ChevronDown} class="mr-1 w-6 text-csi-black dark:text-csi-white" />
             {/if}
             <h2 class="text-xl md:text-2xl">2023-2024</h2>
         </div>
