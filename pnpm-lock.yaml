@@ -11,9 +11,6 @@ importers:
       '@eslint/js':
         specifier: ^9.13.0
         version: 9.13.0
-      '@fullhuman/postcss-purgecss':
-        specifier: ^6.0.0
-        version: 6.0.0(postcss@8.4.47)
       '@linthtml/linthtml':
         specifier: ^0.10.1
         version: 0.10.1(typescript@5.6.3)
@@ -65,9 +62,6 @@ importers:
       globals:
         specifier: ^14.0.0
         version: 14.0.0
-      postcss-prune-var:
-        specifier: ^1.1.2
-        version: 1.1.2
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -110,6 +104,9 @@ importers:
       vite:
         specifier: ^5.4.9
         version: 5.4.9(@types/node@22.7.8)(terser@5.36.0)
+      vite-plugin-tailwind-purgecss:
+        specifier: ^0.3.3
+        version: 0.3.3(tailwindcss@3.4.14)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0))
 
 packages:
 
@@ -337,11 +334,6 @@ packages:
   '@eslint/plugin-kit@0.2.1':
     resolution: {integrity: sha512-HFZ4Mp26nbWk9d/BpvP0YNL6W4UoZF0VFcTw/aPPA8RpOxeFQgK+ClABGgAUXs9Y/RGX/l1vOmrqz1MQt9MNuw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@fullhuman/postcss-purgecss@6.0.0':
-    resolution: {integrity: sha512-sUvk5PV7O5xvTJcxDYrQ00xlKtSxivvJdZrwgxE8F1GmNMs7w9U+dSbr83N/qEs9b+f+6QsZKXDs0k8nMjBIqA==}
-    peerDependencies:
-      postcss: ^8.0.0
 
   '@humanfs/core@0.19.0':
     resolution: {integrity: sha512-2cbWIHbZVEweE853g8jymffCA+NCMiuqeECeBBLm8dg2oFdjuGJhgN4UAbI+6v0CKbbhvtXA4qV8YR5Ji86nmw==}
@@ -1093,6 +1085,10 @@ packages:
     resolution: {integrity: sha512-GrwoxYN+uWlzO8uhUXRl0P+kHE4GtVPfYzVLcUxPL7KNdHKj66vvlhiweIHqYYXWlw+T8iLMp42Lm67ghw4WMQ==}
     engines: {node: '>= 4'}
 
+  domhandler@5.0.3:
+    resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
+    engines: {node: '>= 4'}
+
   domutils@2.8.0:
     resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
 
@@ -1113,6 +1109,10 @@ packages:
 
   entities@3.0.1:
     resolution: {integrity: sha512-WiyBqoomrwMdFG1e0kqvASYfnlb0lp8M5o5Fw2OFq1hNZxxcNk8Ik0Xm7LxzBhuidnZB/UtBqVCgUz3kBOP51Q==}
+    engines: {node: '>=0.12'}
+
+  entities@4.5.0:
+    resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
   env-paths@2.2.1:
@@ -1763,6 +1763,12 @@ packages:
     resolution: {integrity: sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==}
     engines: {node: '>=8'}
 
+  parse5-htmlparser2-tree-adapter@7.1.0:
+    resolution: {integrity: sha512-ruw5xyKs6lrpo9x9rCZqZZnIUntICjQAd0Wsmp396Ul9lN/h+ifgVV1x1gZHi8euej6wTfpqX8j+BFQxF0NS/g==}
+
+  parse5@7.2.0:
+    resolution: {integrity: sha512-ZkDsAOcxsUMZ4Lz5fVciOehNcJ+Gb8gTzcA4yl3wnc273BAybYWrQ+Ks/OjCjSEpjvQkDSeZbybK9qj2VHHdGA==}
+
   path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
     engines: {node: '>=8'}
@@ -1849,9 +1855,6 @@ packages:
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
-
-  postcss-prune-var@1.1.2:
-    resolution: {integrity: sha512-frMnVhQ4SXAY2tfRQmqfdIa6125XtfZUvB1D+t9n63Z12zp4MV6p7TAGipa7Ici9OoQt2XrXgVXdKBQD1ubTUw==}
 
   postcss-resolve-nested-selector@0.1.6:
     resolution: {integrity: sha512-0sglIs9Wmkzbr8lQwEyIzlDOOC9bGmfVKcJTaxv3vMmd3uo4o4DerC3En0bnmgceeql9BfC8hRkp7cg0fjdVqw==}
@@ -1962,6 +1965,9 @@ packages:
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
+
+  purgecss-from-html@6.0.0:
+    resolution: {integrity: sha512-GkgAUzgyC4kwcVY5+QOI2eqQghV1Lq7q2uIODAPIueiBn3mHpJOh9boSMjfUQg0/YU/ZEWq7SzjwetuqxTvD4g==}
 
   purgecss@6.0.0:
     resolution: {integrity: sha512-s3EBxg5RSWmpqd0KGzNqPiaBbWDz1/As+2MzoYVGMqgDqRTLBhJW6sywfTBek7OwNfoS/6pS0xdtvChNhFj2cw==}
@@ -2370,6 +2376,12 @@ packages:
     resolution: {integrity: sha512-C9C7b2p/8/TCN2g26tE9haoer2i8K4x0v2RXUiHsIjiz221vQuKItCQ+VyiVCsUMPXfJC/tlZsmCZVBz5jh7uA==}
     engines: {node: '>=18.0.0'}
 
+  vite-plugin-tailwind-purgecss@0.3.3:
+    resolution: {integrity: sha512-fsTAzcSdFKrhLxX8zTq3zaTFjk+APmJWOAy+1ujsmxkh9y8hIvM81dWEgdXK1k7suQjns+b7JsoIUkHpxLf5UA==}
+    peerDependencies:
+      tailwindcss: ^3.3.0
+      vite: ^4.1.1 || ^5.0.0
+
   vite@5.4.9:
     resolution: {integrity: sha512-20OVpJHh0PAM0oSOELa5GaZNWeDjcAvQjGXy2Uyr+Tp+/D2/Hdz6NLgpJLsarPTA2QJ6v8mX2P1ZfbsSKvdMkg==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -2633,11 +2645,6 @@ snapshots:
   '@eslint/plugin-kit@0.2.1':
     dependencies:
       levn: 0.4.1
-
-  '@fullhuman/postcss-purgecss@6.0.0(postcss@8.4.47)':
-    dependencies:
-      postcss: 8.4.47
-      purgecss: 6.0.0
 
   '@humanfs/core@0.19.0': {}
 
@@ -3370,6 +3377,10 @@ snapshots:
     dependencies:
       domelementtype: 2.3.0
 
+  domhandler@5.0.3:
+    dependencies:
+      domelementtype: 2.3.0
+
   domutils@2.8.0:
     dependencies:
       dom-serializer: 1.4.1
@@ -3387,6 +3398,8 @@ snapshots:
   entities@2.2.0: {}
 
   entities@3.0.1: {}
+
+  entities@4.5.0: {}
 
   env-paths@2.2.1: {}
 
@@ -4047,6 +4060,15 @@ snapshots:
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
 
+  parse5-htmlparser2-tree-adapter@7.1.0:
+    dependencies:
+      domhandler: 5.0.3
+      parse5: 7.2.0
+
+  parse5@7.2.0:
+    dependencies:
+      entities: 4.5.0
+
   path-exists@4.0.0: {}
 
   path-exists@5.0.0: {}
@@ -4109,10 +4131,6 @@ snapshots:
       postcss: 8.4.47
       postcss-selector-parser: 6.1.2
 
-  postcss-prune-var@1.1.2:
-    dependencies:
-      minimatch: 9.0.5
-
   postcss-resolve-nested-selector@0.1.6: {}
 
   postcss-safe-parser@6.0.0(postcss@8.4.47):
@@ -4161,6 +4179,11 @@ snapshots:
   prettier@3.3.3: {}
 
   punycode@2.3.1: {}
+
+  purgecss-from-html@6.0.0:
+    dependencies:
+      parse5: 7.2.0
+      parse5-htmlparser2-tree-adapter: 7.1.0
 
   purgecss@6.0.0:
     dependencies:
@@ -4675,6 +4698,16 @@ snapshots:
       sharp: 0.33.5
     transitivePeerDependencies:
       - rollup
+
+  vite-plugin-tailwind-purgecss@0.3.3(tailwindcss@3.4.14)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0)):
+    dependencies:
+      chalk: 5.3.0
+      css-tree: 2.3.1
+      fast-glob: 3.3.2
+      purgecss: 6.0.0
+      purgecss-from-html: 6.0.0
+      tailwindcss: 3.4.14
+      vite: 5.4.9(@types/node@22.7.8)(terser@5.36.0)
 
   vite@5.4.9(@types/node@22.7.8)(terser@5.36.0):
     dependencies:
