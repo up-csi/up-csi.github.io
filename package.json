@@ -23,6 +23,8 @@
         "@iconify/icons-simple-icons": "^1.2.74",
         "@iconify/svelte": "^4.0.2",
         "@sveltejs/kit": "^2.7.2",
+        "@types/html-minifier": "^4.0.5",
+        "html-minifier": "^4.0.0",
         "svelte": "^5.0.5",
         "valibot": "^0.42.1"
     },
