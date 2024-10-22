@@ -15,7 +15,7 @@
         "lint": "pnpm --parallel /^lint:/",
         "lint:html": "linthtml src/**/*.html",
         "lint:css": "stylelint src/**/*.css",
-        "lint:js": "eslint **/*.{js,svelte,ts}",
+        "lint:js": "eslint",
         "lint:svelte": "svelte-check --tsconfig ./tsconfig.json"
     },
     "dependencies": {
