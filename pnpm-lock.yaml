@@ -7,6 +7,25 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@steeze-ui/heroicons':
+        specifier: ^2.4.0
+        version: 2.4.0
+      '@steeze-ui/simple-icons':
+        specifier: ^1.9.0
+        version: 1.9.0
+      '@steeze-ui/svelte-icon':
+        specifier: ^1.5.0
+        version: 1.5.0(svelte@4.2.19)
+      '@sveltejs/kit':
+        specifier: ^2.7.2
+        version: 2.7.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0)))(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0))
+      svelte:
+        specifier: ^4.2.19
+        version: 4.2.19
+      valibot:
+        specifier: ^0.42.1
+        version: 0.42.1(typescript@5.6.3)
     devDependencies:
       '@eslint/js':
         specifier: ^9.13.0
@@ -17,24 +36,12 @@ importers:
       '@linthtml/linthtml-config-recommended':
         specifier: ^0.1.0
         version: 0.1.0(@linthtml/linthtml@0.10.1(typescript@5.6.3))
-      '@steeze-ui/heroicons':
-        specifier: ^2.4.0
-        version: 2.4.0
-      '@steeze-ui/simple-icons':
-        specifier: ^1.9.0
-        version: 1.9.0
-      '@steeze-ui/svelte-icon':
-        specifier: ^1.5.0
-        version: 1.5.0(svelte@4.2.19)
       '@sveltejs/adapter-static':
         specifier: ^3.0.5
         version: 3.0.5(@sveltejs/kit@2.7.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0)))(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0)))
       '@sveltejs/enhanced-img':
         specifier: ^0.3.9
         version: 0.3.9(rollup@4.24.0)(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0))
-      '@sveltejs/kit':
-        specifier: ^2.7.2
-        version: 2.7.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0)))(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^3.1.2
         version: 3.1.2(svelte@4.2.19)(vite@5.4.9(@types/node@22.7.8)(terser@5.36.0))
@@ -80,9 +87,6 @@ importers:
       stylelint-config-tailwindcss:
         specifier: ^0.0.7
         version: 0.0.7(stylelint@16.10.0(typescript@5.6.3))(tailwindcss@3.4.14)
-      svelte:
-        specifier: ^4.2.19
-        version: 4.2.19
       svelte-check:
         specifier: ^4.0.5
         version: 4.0.5(svelte@4.2.19)(typescript@5.6.3)
@@ -98,9 +102,6 @@ importers:
       typescript-eslint:
         specifier: ^8.11.0
         version: 8.11.0(eslint@9.13.0(jiti@1.21.6))(typescript@5.6.3)
-      valibot:
-        specifier: ^0.42.1
-        version: 0.42.1(typescript@5.6.3)
       vite:
         specifier: ^5.4.9
         version: 5.4.9(@types/node@22.7.8)(terser@5.36.0)

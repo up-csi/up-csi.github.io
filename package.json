@@ -17,16 +17,20 @@
         "lint:js": "eslint **/*.{js,svelte,ts}",
         "lint:svelte": "svelte-check --tsconfig ./tsconfig.json"
     },
+    "dependencies": {
+        "@steeze-ui/heroicons": "^2.4.0",
+        "@steeze-ui/simple-icons": "^1.9.0",
+        "@steeze-ui/svelte-icon": "^1.5.0",
+        "@sveltejs/kit": "^2.7.2",
+        "svelte": "^4.2.19",
+        "valibot": "^0.42.1"
+    },
     "devDependencies": {
         "@eslint/js": "^9.13.0",
         "@linthtml/linthtml": "^0.10.1",
         "@linthtml/linthtml-config-recommended": "^0.1.0",
-        "@steeze-ui/heroicons": "^2.4.0",
-        "@steeze-ui/simple-icons": "^1.9.0",
-        "@steeze-ui/svelte-icon": "^1.5.0",
         "@sveltejs/adapter-static": "^3.0.5",
         "@sveltejs/enhanced-img": "^0.3.9",
-        "@sveltejs/kit": "^2.7.2",
         "@sveltejs/vite-plugin-svelte": "^3.1.2",
         "@tailwindcss/forms": "^0.5.9",
         "@tailwindcss/typography": "^0.5.15",
@@ -42,13 +46,11 @@
         "stylelint": "^16.10.0",
         "stylelint-config-standard": "^36.0.1",
         "stylelint-config-tailwindcss": "^0.0.7",
-        "svelte": "^4.2.19",
         "svelte-check": "^4.0.5",
         "svelte-eslint-parser": "^0.41.1",
         "tailwindcss": "^3.4.14",
         "typescript": "^5.6.3",
         "typescript-eslint": "^8.11.0",
-        "valibot": "^0.42.1",
         "vite": "^5.4.9",
         "vite-plugin-tailwind-purgecss": "^0.3.3"
     }
