@@ -1,30 +1,40 @@
 <script lang="ts">
+    import Icon from '@iconify/svelte';
+    import Link from '@iconify/icons-heroicons/link-solid';
+
+    import GitHub from '@iconify/icons-simple-icons/github';
+    import Instagram from '@iconify/icons-simple-icons/instagram';
+    import LinkedIn from '@iconify/icons-simple-icons/linkedin';
+
     import { COMMITTEES, type Member } from '$lib/models/member';
-    import { Github, Instagram, Linkedin } from '@steeze-ui/simple-icons';
-    import { Icon } from '@steeze-ui/svelte-icon';
-    import { Link } from '@steeze-ui/heroicons';
     import TeamCard from './TeamCard.svelte';
 
-    // eslint-disable-next-line init-declarations
-    export let team: Member[];
+    const COMMITTEE_FILTERS = ['Everyone', ...COMMITTEES];
 
-    const committeeFilters = ['Everyone', ...COMMITTEES];
+    interface Props {
+        team: Member[];
+    }
 
-    $: currentCommittee = 'Executive';
-    $: filteredTeam =
+    const { team }: Props = $props();
+    let currentCommittee = $state('Executive');
+    const filteredTeam = $derived(
         currentCommittee === 'Everyone'
             ? team
-            : team.filter(({ committee }) => committee === currentCommittee);
-    $: sortedFilteredTeam = structuredClone(filteredTeam).sort(
-        (a, b) => committeeFilters.indexOf(a.committee) - committeeFilters.indexOf(b.committee),
+            : team
+                  .filter(({ committee }) => committee === currentCommittee)
+                  .sort(
+                      (a, b) =>
+                          COMMITTEE_FILTERS.indexOf(a.committee) -
+                          COMMITTEE_FILTERS.indexOf(b.committee),
+                  ),
     );
 
     function getSocialIcon(social: string) {
         switch (social) {
             case 'github':
-                return Github;
+                return GitHub;
             case 'linkedin':
-                return Linkedin;
+                return LinkedIn;
             case 'instagram':
                 return Instagram;
             default:
@@ -64,7 +74,7 @@
             <ul
                 class="m-0 flex max-w-screen-sm list-none flex-row flex-wrap justify-center gap-4 rounded-lg p-0 lg:max-w-fit"
             >
-                {#each committeeFilters as committee}
+                {#each COMMITTEE_FILTERS as committee}
                     {@const neutral =
                         currentCommittee === committee
                             ? 'bg-black text-csi-white dark:bg-csi-blue dark:text-csi-black'
@@ -72,7 +82,7 @@
                     <li class="m-0 p-0">
                         <button
                             class="min-h-10 shrink-0 rounded-md px-6 shadow-md {neutral} transition-colors"
-                            on:click={() => (currentCommittee = committee)}
+                            onclick={() => (currentCommittee = committee)}
                         >
                             {committee}
                         </button>
@@ -84,8 +94,13 @@
     <div
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
-        {#each sortedFilteredTeam as { name, title, committee, src, socials }}
+        {#each filteredTeam as { name, title, committee, src, socials }}
             <TeamCard {src} alt="image of {name}">
+                {#snippet tag()}
+                    <div class="h-fit w-fit rounded-full px-3 py-1 {getCommitteeColor(committee)}">
+                        <p class="m-0 text-sm text-csi-black">{name}</p>
+                    </div>
+                {/snippet}
                 <div>
                     <p class="text-md m-0 md:text-lg">{name}</p>
                     <p class="m-0 text-xs leading-tight">{title}</p>
@@ -93,21 +108,15 @@
                 <div class="flex flex-row flex-wrap gap-2">
                     {#if socials}
                         {#each Object.entries(socials) as [social, href]}
-                            {@const src = getSocialIcon(social)}
+                            {@const icon = getSocialIcon(social)}
                             <a {href} target="_blank"
                                 ><Icon
-                                    {src}
+                                    {icon}
                                     class="size-5 text-csi-black transition-colors hover:text-csi-blue md:text-csi-white dark:text-csi-white"
                                 /></a
                             >
                         {/each}
                     {/if}
-                </div>
-                <div
-                    slot="tag"
-                    class="h-fit w-fit rounded-full px-3 py-1 {getCommitteeColor(committee)}"
-                >
-                    <p class="m-0 text-sm text-csi-black">{name}</p>
                 </div>
             </TeamCard>
         {/each}

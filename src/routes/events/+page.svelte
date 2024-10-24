@@ -17,9 +17,15 @@
 
 <article class="prose flex max-w-full flex-col gap-8 dark:prose-invert">
     <FeaturedEvent tags={[Tag.App]} schedule={['']}>
-        <img slot="image" src={lino} alt="Incoming App Process" />
-        <svelte:fragment slot="name">Incoming App Process...</svelte:fragment>
-        <svelte:fragment slot="description">Stay tuned...</svelte:fragment>
+        {#snippet image()}
+            <img src={lino} alt="Incoming App Process" />
+        {/snippet}
+        {#snippet name()}
+            Incoming App Process...
+        {/snippet}
+        {#snippet description()}
+            Stay Tuned...
+        {/snippet}
     </FeaturedEvent>
     <FilterPagePanel {filters} cardsInfo={events} />
 </article>

@@ -1,16 +1,31 @@
 import { building } from '$app/environment';
-import nano from 'htmlnano';
+import { minify } from 'html-minifier';
 
-// https://kit.svelte.dev/docs/migrating#integrations-html-minifier
 export function handle({ event, resolve }) {
     let page = '';
     return resolve(event, {
-        async transformPageChunk({ html, done }) {
+        transformPageChunk({ html, done }) {
             page += html;
-            if (!done) return;
-            if (!building) return page;
-            const { html: result } = await nano.process(page, {}, nano.presets.safe);
-            return result;
+            if (done)
+                return building
+                    ? minify(page, {
+                          collapseWhitespace: true,
+                          conservativeCollapse: true,
+                          decodeEntities: true,
+                          html5: true,
+                          ignoreCustomComments: [/^#/],
+                          minifyCSS: true,
+                          minifyJS: false,
+                          removeAttributeQuotes: true,
+                          removeComments: false, // necessary for hydration code
+                          removeOptionalTags: true,
+                          removeRedundantAttributes: true,
+                          removeScriptTypeAttributes: true,
+                          removeStyleLinkTypeAttributes: true,
+                          sortAttributes: true,
+                          sortClassName: true,
+                      })
+                    : page;
         },
     });
 }

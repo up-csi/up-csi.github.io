@@ -1,7 +1,7 @@
 <script>
     import ThonkLino from '$lib/lino-thonk.png';
     import { page } from '$app/stores';
-    $: ({ error, status } = $page);
+    const { error, status } = $derived($page);
 </script>
 
 <section class="space-y-12 py-12 text-center text-csi-black dark:text-csi-white">

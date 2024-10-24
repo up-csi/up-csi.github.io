@@ -4,24 +4,29 @@
     import type { Project } from '$lib/projects/projects';
     import ProjectCard from './ProjectCard.svelte';
 
-    // eslint-disable-next-line init-declarations
-    export let filters: string[];
-    // eslint-disable-next-line init-declarations
-    export let cardsInfo: (Event | Project)[];
+    interface Props {
+        /** Max number of events per page in the pagination. */
+        perPage?: number;
+        filters: string[];
+        cardsInfo: (Event | Project)[];
+    }
 
-    $: currentFilter = 'All';
-    $: filteredCards =
-        currentFilter === 'All' ? cardsInfo : cardsInfo.filter(({ tag }) => tag === currentFilter);
+    const { perPage = 6, filters, cardsInfo }: Props = $props();
 
-    export let perPage = 6; // Max number of events per page of the pagination
-    $: pages = Math.ceil(filteredCards.length / perPage);
-
-    let currentPage = 0;
+    let currentFilter = $state('All');
+    const filteredCards = $derived(
+        currentFilter === 'All' ? cardsInfo : cardsInfo.filter(({ tag }) => tag === currentFilter),
+    );
+    const pages = $derived(Math.ceil(filteredCards.length / perPage));
 
     // Computes first and last card in the page to do a correct slice
-    $: start = currentPage * perPage;
-    $: end = currentPage === pages ? cardsInfo.length - 1 : start + perPage - 1;
-    $: filteredCardsInPage = filteredCards.slice(start, end + 1);
+    let currentPage = $state(0);
+    const filteredCardsInPage = $derived.by(() => {
+        const pages = Math.ceil(filteredCards.length / perPage);
+        const start = currentPage * perPage;
+        const end = currentPage === pages ? cardsInfo.length - 1 : start + perPage - 1;
+        return filteredCards.slice(start, end + 1);
+    });
 
     // Goes to the next page in the pagination
     function nextPage() {
@@ -41,9 +46,7 @@
     // Sets current filter
     function setFilter(filter: string) {
         currentFilter = filter;
-
-        // Page is reset back to the first to avoid users from going to a page with no cards
-        currentPage = 0;
+        currentPage = 0; // Reset back to first page to avoid going to a page without cards
     }
 </script>
 
@@ -60,7 +63,7 @@
                 <li class="m-0 p-0">
                     <button
                         class="min-h-10 shrink-0 rounded-md px-6 {neutral}"
-                        on:click={() => setFilter(filter)}
+                        onclick={() => setFilter(filter)}
                     >
                         {filter}
                     </button>
@@ -72,9 +75,9 @@
         <div class="grid w-fit grid-cols-1 items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
             {#each filteredCardsInPage as cardProps}
                 {#if 'event' in cardProps}
-                    <svelte:component this={EventCard} {...cardProps} />
+                    <EventCard {...cardProps} />
                 {:else}
-                    <svelte:component this={ProjectCard} {...cardProps} />
+                    <ProjectCard {...cardProps} />
                 {/if}
             {/each}
         </div>
@@ -86,7 +89,7 @@
             <li class="m-0 p-0">
                 <button
                     class="flex size-10 items-center justify-center disabled:cursor-default disabled:text-csi-neutral-200 dark:disabled:text-csi-neutral-500"
-                    on:click={backPage}
+                    onclick={backPage}
                     disabled={currentPage <= 0}
                 >
                     &lt;
@@ -98,7 +101,7 @@
                 <li class="m-0 p-0">
                     <button
                         class="flex size-10 items-center justify-center {neutral}"
-                        on:click={() => setPage(pageIndex)}
+                        onclick={() => setPage(pageIndex)}
                     >
                         {pageIndex + 1}
                     </button>
@@ -107,7 +110,7 @@
             <li class="m-0 p-0">
                 <button
                     class="flex size-10 items-center justify-center disabled:cursor-default disabled:text-csi-neutral-200 dark:disabled:text-csi-neutral-500"
-                    on:click={nextPage}
+                    onclick={nextPage}
                     disabled={currentPage >= pages - 1}
                 >
                     &gt;

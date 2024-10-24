@@ -26,6 +26,7 @@ function resetTheme() {
 
 /** Assumes browser environment. */
 function createBrowserThemeStore() {
+    // TODO: We need a tri-state theme switch that selects between light, dark, and system.
     const media = matchMedia('(prefers-color-scheme: dark)');
     const init = getTheme() ?? media.matches;
     const { subscribe, update } = writable(init, set => {
