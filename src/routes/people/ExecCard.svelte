@@ -1,4 +1,5 @@
 <script lang="ts">
+    import lino from '$lib/lino-hero.svg';
     import { Officer } from "$lib/models/officer";
 
     interface Props {
@@ -10,7 +11,11 @@
 </script>
 
 <figure class="max-w-[192px]">
-    <img {src} width="192" height="192" class="block rounded-2xl" {alt} />
+    {#if src}
+        <img {src} width="192" height="192" class="block rounded-2xl" {alt} />
+    {:else}
+        <img src={lino} width="192" height="192" class="block rounded-2xl" {alt} />
+    {/if}
     <figcaption>
         <p class="text-csi-black dark:text-csi-white"><strong>{alt}</strong></p>
         <p class="text-csi-black dark:text-csi-white">{pos}</p>
