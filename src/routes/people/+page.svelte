@@ -1,76 +1,35 @@
 <script>
-    import Exec from './ExecCard.svelte';
+    import ExecPanel from './ExecPanel.svelte';
     import TeamPanel from './TeamPanel.svelte';
-
-    import arianRey from '$lib/people/exec/images/2324/arian-rey.webp';
-    import bastiOrtiz from '$lib/people/exec/images/2324/basti-ortiz.webp';
-    import beaDiokno from '$lib/people/exec/images/2324/bea-diokno.webp';
-    import calebBunye from '$lib/people/exec/images/2324/caleb-bunye.webp';
-    import exec2324 from '$lib/people/exec/images/2324/2324.webp?enhanced';
-    import eyronTanael from '$lib/people/exec/images/2324/eyron-tanael.webp';
-    import hansLorico from '$lib/people/exec/images/2324/hans-lorico.webp';
-    import jellyRaborar from '$lib/people/exec/images/2324/jelly-raborar.webp';
-    import lino from '$lib/lino-hero.svg';
 
     const { data } = $props();
     const { team, exec } = $derived(data);
-    let pastExec = $state(false);
+    const [presExec, ...pastExec] = $derived(exec);
 </script>
 
 <section>
-    <section class="prose mb-8 flex max-w-none flex-col gap-8">
-        <h1
-            class="w-full text-center text-3xl font-normal text-csi-black md:text-4xl dark:text-csi-white"
-        >
-            The 2024-2025 Executive Board
-        </h1>
-        <section class="not-prose flex flex-wrap justify-around gap-8">
-            <Exec src={lino} alt="Andri Crisostomo" pos="President" />
-            <Exec src={lino} alt="Andri Crisostomo" pos="Vice President for Innovation" />
-            <Exec src={lino} alt="David Zamuco" pos="Vice President for Service" />
-            <Exec src={lino} alt="Victor Reyes" pos="Director for Engineering" />
-            <Exec src={lino} alt="Bianca Amurao" pos="Director for Membership &amp; Internals" />
-            <Exec src={lino} alt="Clarisse Bucu" pos="Director for Branding &amp; Creatives" />
-            <Exec src={lino} alt="Sean Tolentino" pos="Director for External Relations" />
-        </section>
-    </section>
-    <TeamPanel {team} />
+    {#if presExec}
+        <div class="pb-3">
+            <ExecPanel exec={presExec} />
+        </div>
+    {/if}
+    <div class="py-6">
+        <TeamPanel {team} />
+    </div>
 </section>
 <section>
     <h1 class="mb-4 w-full text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
         The Past Executive Boards
     </h1>
 
-    <details class="py-4">
-        <summary class="text-xl text-csi-black md:text-2xl dark:text-csi-white">2023-2024</summary>
-        <div class="my-4">
-            <section class="prose flex max-w-none flex-col gap-8">
-                <figure class="m-0 flex flex-col items-center">
-                    <enhanced:img
-                        src={exec2324}
-                        sizes="(min-width:768px) 768px, (min-width:640px) 640px"
-                        alt="The 2023-2024 Executive Board"
-                    />
-                    <figcaption>The 2023-2024 Executive Board</figcaption>
-                </figure>
-                <section class="not-prose flex flex-wrap justify-around gap-8">
-                    <Exec src={calebBunye} alt="Caleb Bunye" pos="President" />
-                    <Exec src={hansLorico} alt="Hans Lorico" pos="Vice President for Innovation" />
-                    <Exec src={eyronTanael} alt="Eyron Tanael" pos="Vice President for Service" />
-                    <Exec src={bastiOrtiz} alt="Basti Ortiz" pos="Director for Engineering" />
-                    <Exec
-                        src={arianRey}
-                        alt="Arian Rey"
-                        pos="Director for Membership &amp; Internals"
-                    />
-                    <Exec
-                        src={jellyRaborar}
-                        alt="Jelly Raborar"
-                        pos="Director for Branding &amp; Creatives"
-                    />
-                    <Exec src={beaDiokno} alt="Bea Diokno" pos="Director for External Relations" />
-                </section>
-            </section>
-        </div>
-    </details>
+    {#each pastExec as board}
+        <details class="py-4">
+            <summary class="text-xl text-csi-black md:text-2xl dark:text-csi-white"
+                >{board.year}</summary
+            >
+            <div class="my-4">
+                <ExecPanel exec={board} />
+            </div>
+        </details>
+    {/each}
 </section>
