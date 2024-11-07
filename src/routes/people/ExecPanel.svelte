@@ -21,7 +21,9 @@
             <figcaption>The {year} Executive Board</figcaption>
         </figure>
     {:else}
-        <h1 class="w-full text-center text-3xl font-normal text-csi-black md:text-4xl dark:text-csi-white">
+        <h1
+            class="w-full text-center text-3xl font-normal text-csi-black md:text-4xl dark:text-csi-white"
+        >
             The {year} Executive Board
         </h1>
     {/if}

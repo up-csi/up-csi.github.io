@@ -1,17 +1,18 @@
 import { type Board, Board as BoardSchema } from '$lib/models/board';
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
 import { type InferOutput, parse } from 'valibot';
+import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
 import { Officer as OfficerSchema } from '$lib/models/officer';
-
 import { basename } from 'node:path';
 
 async function getOfficers(data: InferOutput<typeof OfficerSchema>[], folder: string) {
-    const promises = data.map(async (datum) => {
-        const person = parse(OfficerSchema, datum)
+    const promises = data.map(async datum => {
+        const person = parse(OfficerSchema, datum);
         const img = person.name.replace(/\s+/g, '-').toLowerCase();
 
         try {
-            const src: string | null = (await import(`$lib/people/exec/images/${folder}/${img}.webp?url`)).default;
+            const src: string | null = (
+                await import(`$lib/people/exec/images/${folder}/${img}.webp?url`)
+            ).default;
             return { ...person, src };
         } catch {
             const src: string | null = null;
@@ -33,7 +34,9 @@ export async function getExec() {
         const officers = await getOfficers(data, acadYear);
 
         try {
-            const src: EnhancedImgAttributes['src'] | null = (await import(`$lib/people/exec/images/${acadYear}/${acadYear}.webp?enhanced?url`)).default;
+            const src: EnhancedImgAttributes['src'] | null = (
+                await import(`$lib/people/exec/images/${acadYear}/${acadYear}.webp?enhanced?url`)
+            ).default;
             return { year, officers, src };
         } catch {
             const src: EnhancedImgAttributes['src'] | null = null;
