@@ -17,7 +17,7 @@ export interface Board extends v.InferOutput<typeof Board> {
 
 export const Board = v.object({
     year: v.string(),
-    board: v.array(v.record(
+    officers: v.array(v.record(
         v.string(),
         v.picklist(POSITIONS),
     )),
