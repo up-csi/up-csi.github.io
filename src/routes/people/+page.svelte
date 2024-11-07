@@ -3,7 +3,7 @@
     import ChevronUp from '@iconify/icons-heroicons/chevron-up-solid';
     import Icon from '@iconify/svelte';
 
-    import Exec from './Exec.svelte';
+    import Exec from './ExecCard.svelte';
     import TeamPanel from './TeamPanel.svelte';
 
     import arianRey from '$lib/people/exec/images/2324/arian-rey.webp';
