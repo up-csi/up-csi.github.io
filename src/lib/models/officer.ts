@@ -1,4 +1,5 @@
 import * as v from 'valibot';
+import type { HTMLImgAttributes } from 'svelte/elements';
 
 export const POSITIONS = [
     'President',
@@ -11,7 +12,7 @@ export const POSITIONS = [
 ] as const;
 
 export interface Officer extends v.InferOutput<typeof Officer> {
-    src: string | null;
+    src: HTMLImgAttributes['src'] | null;
 }
 
 export const Officer = v.object({
