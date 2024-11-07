@@ -1,13 +1,12 @@
 <script lang="ts">
-    import type { HTMLImgAttributes } from 'svelte/elements';
+    import { Officer } from "$lib/models/officer";
 
     interface Props {
-        src: HTMLImgAttributes['src'];
-        alt: HTMLImgAttributes['alt'];
-        pos: string;
+        officer: Officer;
     }
 
-    const { src, alt, pos }: Props = $props();
+    const { officer }: Props = $props();
+    const { name: alt, pos, src }: Officer = $derived(officer);
 </script>
 
 <figure class="max-w-[192px]">
