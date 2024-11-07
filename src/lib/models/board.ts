@@ -4,6 +4,7 @@ import { Officer } from './officer';
 
 export interface Board extends v.InferOutput<typeof Board> {
     src: EnhancedImgAttributes['src'] | null;
+    officers: Officer[];
 }
 
 export const Board = v.object({
