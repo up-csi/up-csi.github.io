@@ -6,18 +6,18 @@
     import Exec from './Exec.svelte';
     import TeamPanel from './TeamPanel.svelte';
 
-    import arianRey from '$lib/people/arian-rey.webp';
-    import bastiOrtiz from '$lib/people/basti-ortiz.webp';
-    import beaDiokno from '$lib/people/bea-diokno.webp';
-    import calebBunye from '$lib/people/caleb-bunye.webp';
-    import exec2324 from '$lib/people/exec-768.webp?enhanced';
-    import eyronTanael from '$lib/people/eyron-tanael.webp';
-    import hansLorico from '$lib/people/hans-lorico.webp';
-    import jellyRaborar from '$lib/people/jelly-raborar.webp';
+    import arianRey from '$lib/people/exec/images/2324/arian-rey.webp';
+    import bastiOrtiz from '$lib/people/exec/images/2324/basti-ortiz.webp';
+    import beaDiokno from '$lib/people/exec/images/2324/bea-diokno.webp';
+    import calebBunye from '$lib/people/exec/images/2324/caleb-bunye.webp';
+    import exec2324 from '$lib/people/exec/images/2324/2324.webp?enhanced';
+    import eyronTanael from '$lib/people/exec/images/2324/eyron-tanael.webp';
+    import hansLorico from '$lib/people/exec/images/2324/hans-lorico.webp';
+    import jellyRaborar from '$lib/people/exec/images/2324/jelly-raborar.webp';
     import lino from '$lib/lino-hero.svg';
 
     const { data } = $props();
-    const { team } = $derived(data);
+    const { team, exec } = $derived(data);
     let pastExec = $state(false);
 </script>
 
