@@ -1,8 +1,4 @@
 <script>
-    import ChevronDown from '@iconify/icons-heroicons/chevron-down-solid';
-    import ChevronUp from '@iconify/icons-heroicons/chevron-up-solid';
-    import Icon from '@iconify/svelte';
-
     import Exec from './ExecCard.svelte';
     import TeamPanel from './TeamPanel.svelte';
 
@@ -45,47 +41,36 @@
         The Past Executive Boards
     </h1>
 
-    <button
-        class="border-inherit mb-4 w-full border-b-2 text-csi-black dark:text-csi-white"
-        onclick={() => (pastExec = !pastExec)}
-    >
-        <div class="flex w-full flex-row items-center text-center">
-            {#if pastExec}
-                <Icon icon={ChevronUp} class="mr-1 w-6 text-csi-black dark:text-csi-white" />
-            {:else}
-                <Icon icon={ChevronDown} class="mr-1 w-6 text-csi-black dark:text-csi-white" />
-            {/if}
-            <h2 class="text-xl md:text-2xl">2023-2024</h2>
-        </div>
-    </button>
-    <!-- TODO: Prefer <details> element here. -->
-    {#if pastExec}
-        <section class="prose flex max-w-none flex-col gap-8">
-            <figure class="m-0 flex flex-col items-center">
-                <enhanced:img
-                    src={exec2324}
-                    sizes="(min-width:768px) 768px, (min-width:640px) 640px"
-                    alt="The 2023-2024 Executive Board"
-                />
-                <figcaption>The 2023-2024 Executive Board</figcaption>
-            </figure>
-            <section class="not-prose flex flex-wrap justify-around gap-8">
-                <Exec src={calebBunye} alt="Caleb Bunye" pos="President" />
-                <Exec src={hansLorico} alt="Hans Lorico" pos="Vice President for Innovation" />
-                <Exec src={eyronTanael} alt="Eyron Tanael" pos="Vice President for Service" />
-                <Exec src={bastiOrtiz} alt="Basti Ortiz" pos="Director for Engineering" />
-                <Exec
-                    src={arianRey}
-                    alt="Arian Rey"
-                    pos="Director for Membership &amp; Internals"
-                />
-                <Exec
-                    src={jellyRaborar}
-                    alt="Jelly Raborar"
-                    pos="Director for Branding &amp; Creatives"
-                />
-                <Exec src={beaDiokno} alt="Bea Diokno" pos="Director for External Relations" />
+    <details class="py-4">
+        <summary class="text-xl text-csi-black md:text-2xl dark:text-csi-white">2023-2024</summary>
+        <div class="my-4">
+            <section class="prose flex max-w-none flex-col gap-8">
+                <figure class="m-0 flex flex-col items-center">
+                    <enhanced:img
+                        src={exec2324}
+                        sizes="(min-width:768px) 768px, (min-width:640px) 640px"
+                        alt="The 2023-2024 Executive Board"
+                    />
+                    <figcaption>The 2023-2024 Executive Board</figcaption>
+                </figure>
+                <section class="not-prose flex flex-wrap justify-around gap-8">
+                    <Exec src={calebBunye} alt="Caleb Bunye" pos="President" />
+                    <Exec src={hansLorico} alt="Hans Lorico" pos="Vice President for Innovation" />
+                    <Exec src={eyronTanael} alt="Eyron Tanael" pos="Vice President for Service" />
+                    <Exec src={bastiOrtiz} alt="Basti Ortiz" pos="Director for Engineering" />
+                    <Exec
+                        src={arianRey}
+                        alt="Arian Rey"
+                        pos="Director for Membership &amp; Internals"
+                    />
+                    <Exec
+                        src={jellyRaborar}
+                        alt="Jelly Raborar"
+                        pos="Director for Branding &amp; Creatives"
+                    />
+                    <Exec src={beaDiokno} alt="Bea Diokno" pos="Director for External Relations" />
+                </section>
             </section>
-        </section>
-    {/if}
+        </div>
+    </details>
 </section>
