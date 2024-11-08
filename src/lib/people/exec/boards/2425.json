@@ -1,0 +1,33 @@
+{
+    "year": "2024-2025",
+    "officers": [
+        {
+            "name": "Andri Crisostomo",
+            "pos": "President"
+        },
+        {
+            "name": "Andri Crisostomo",
+            "pos": "Vice President for Innovation"
+        },
+        {
+            "name": "David Zamuco",
+            "pos": "Vice President for Service"
+        },
+        {
+            "name": "Victor Reyes",
+            "pos": "Director for Engineering"
+        },
+        {
+            "name": "Bianca Amurao",
+            "pos": "Director for Membership & Internals"
+        },
+        {
+            "name": "Clarisse Bucu",
+            "pos": "Director for Branding & Creatives"
+        },
+        {
+            "name": "Sean Tolentino",
+            "pos": "Director for External Relations"
+        }
+    ]
+}
