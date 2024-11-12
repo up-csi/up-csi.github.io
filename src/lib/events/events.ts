@@ -1,11 +1,11 @@
+import appProcess from '$lib/events/app-process.jpg';
 import ascenc10n from '$lib/events/ascension.webp';
-import bootcamp10 from '$lib/events/bootcamp-10.webp';
-import csflight from '$lib/events/csflight.webp';
 import ex2023 from '$lib/events/EX-series-2023.webp';
-import firstGa2023 from '$lib/events/first-GA-2324B.webp';
-import gitWorkshop from '$lib/events/git-workshop.webp';
-import pyrolympics from '$lib/events/pyrolympics.webp';
-import yearEndGa2023 from '$lib/events/year-end-GA-2023.webp';
+import innovcamp from '$lib/events/innovcamp.jpg';
+import kopiKorner from '$lib/events/kopi-korner.png';
+import mindfulness from '$lib/events/mindfulness.jpg';
+import service101 from '$lib/events/service-101.png';
+import teamBuilding from '$lib/events/team-building.jpg';
 
 export interface Event {
     tag: string;
@@ -44,10 +44,10 @@ export default [
         tag: Tag.Other,
         state: State.Past,
         type: Type.Internal,
-        event: 'ASCENS10N',
+        event: 'Ascent: The 10th Anniversary',
         dates: 'August 4 - August 6, 2023',
         description:
-            'On its tenth year, UP CSI celebrates a decade of innovation and excellence with its members and alumni who became a part of this incredible journey.',
+            "UP CSI’s 10th anniversary was celebrated with a series of fun-filled activities, including a game night, an open-tambay day, and, all highlighting the organization's growth and bond over the years.",
         src: ascenc10n,
         href: '/events/',
     },
@@ -55,75 +55,77 @@ export default [
         tag: Tag.EX,
         state: State.Past,
         type: Type.External,
-        event: 'EX Series 2023',
+        event: 'EX Series',
         dates: 'August 4 - August 6, 2023',
         description:
-            'Aute incididunt officia exercitation ea aliqua officia culpa incididunt proident aliqua commodo velit.',
+            'EX Series is an initiative of UP CSI that provides company talks and workshops which give students a glimpse of what work is like once they graduate.',
         src: ex2023,
         href: '/events/',
     },
     {
         tag: Tag.App,
-        state: State.Past,
-        type: Type.Internal,
-        event: 'CSFlight',
+        state: State.Present,
+        type: Type.External,
+        event: 'Application Process',
         dates: 'August 4 - August 6, 2023',
         description:
-            'Qui eu voluptate non nostrud. Et irure reprehenderit pariatur nulla laboris ipsum ut tempor magna officia tempor mollit Lorem reprehenderit.',
-        src: csflight,
+            'The application process serves as the recruitment phase of UP CSI. During this process, applicants undergo necessary training and development to prepare them for membership in the organization.',
+        src: appProcess,
         href: '/events/',
     },
     {
-        tag: Tag.Partnership,
+        tag: Tag.Other,
+        state: State.Past,
+        type: Type.Internal,
+        event: 'Team Building',
+        dates: 'August 4 - August 6, 2023',
+        description:
+            "UP CSI's yearly team building aims to build rapport and strengthen the bond of the organizations’ members through fun activities and competition.",
+        src: teamBuilding,
+        href: '/events/',
+    },
+    {
+        tag: Tag.Workshop,
+        state: State.Past,
+        type: Type.Internal,
+        event: 'Kopi Korner',
+        dates: 'August 4 - August 6, 2023',
+        description:
+            'Kopi Korner is a series of casual coffee conversations with different guests who share stories, knowledge, and advice about different topics to UP CSI members, applicants, and even alumni.',
+        src: kopiKorner,
+        href: '/events/',
+    },
+    {
+        tag: Tag.Workshop,
+        state: State.Past,
+        type: Type.Internal,
+        event: 'Service Project 101',
+        dates: 'August 4 - August 6, 2023',
+        description:
+            'Service Project 101 is an internal workshop session tackling the ins and outs of UP CSI Service Projects, and how members can take part in them.',
+        src: service101,
+        href: '/events/',
+    },
+    {
+        tag: Tag.Other,
         state: State.Past,
         type: Type.External,
-        event: 'Bootcamp 10.0',
+        event: 'Mindfulness Caravan',
         dates: 'August 4 - August 6, 2023',
-        description: 'Nisi consequat consequat nisi ipsum. Ut dolore dolore officia ea ipsum.',
-        src: bootcamp10,
+        description:
+            'The Mindfulness Caravan is an event during CS week that gives DCS students and/or faculty a chance to destress and learn helpful mindfulness practices that can aid them in their life.',
+        src: mindfulness,
         href: '/events/',
     },
     {
-        tag: Tag.Partnership,
+        tag: Tag.Workshop,
         state: State.Past,
         type: Type.External,
-        event: 'Git Workshop',
+        event: 'InnovCamp',
         dates: 'August 4 - August 6, 2023',
         description:
-            'Laboris ullamco do occaecat nostrud nisi irure. Ullamco nulla duis elit fugiat anim sint.',
-        src: gitWorkshop,
-        href: '/events/',
-    },
-    {
-        tag: Tag.GA,
-        state: State.Past,
-        type: Type.Internal,
-        event: 'Year-end General Assembly 2023',
-        dates: 'August 4 - August 6, 2023',
-        description: 'Proident in aliqua proident quis ex ad excepteur culpa sunt.',
-        src: yearEndGa2023,
-        href: '/events/',
-    },
-    {
-        tag: Tag.App,
-        state: State.Past,
-        type: Type.Internal,
-        event: 'Pyrolympics',
-        dates: 'August 4 - August 6, 2023',
-        description:
-            'Elit irure elit adipisicing consectetur nisi laborum mollit esse eu dolore nostrud laborum laborum. Excepteur nulla velit aliquip eiusmod duis.',
-        src: pyrolympics,
-        href: '/events/',
-    },
-    {
-        tag: Tag.GA,
-        state: State.Past,
-        type: Type.Internal,
-        event: 'First GA 2324B',
-        dates: 'August 4 - August 6, 2023',
-        description:
-            'Culpa consectetur enim fugiat in labore laborum et adipisicing Lorem. Enim mollit excepteur est ea nulla in nulla dolor et.',
-        src: firstGa2023,
+            'Innovcamp is an event that aims to teach students how to ideate, design, and build their own ideas. InnovCamp also serves as foundation training for those eager to start their web development journey.',
+        src: innovcamp,
         href: '/events/',
     },
 ] satisfies Event[];
