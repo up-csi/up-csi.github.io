@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Button from '$lib/components/Button.svelte';
+    import LinkButton from '$lib/components/LinkButton.svelte';
     import type { Snippet } from 'svelte';
     import { Tag } from '$lib/events/events';
 
@@ -37,7 +37,7 @@
         <!-- Tags -->
         <div class="flex gap-4">
             {#each tags as tag}
-                <Button>{tag}</Button>
+                <LinkButton>{tag}</LinkButton>
             {/each}
         </div>
 
@@ -56,8 +56,8 @@
 
         <!-- Call to Action (replace button to anchor tag when there is a valid href) -->
         <div class="flex gap-6">
-            <button class="bg-csi-black p-3 text-center text-csi-white">More Info</button>
-            <button class="bg-csi-black p-3 text-center text-csi-white">Register</button>
+            <LinkButton href="/#">More Info</LinkButton>
+            <LinkButton href="/#">Register</LinkButton>
         </div>
     </div>
 </div>
