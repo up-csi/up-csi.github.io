@@ -19,7 +19,7 @@
 </script>
 
 <div
-    class="transition-colors ease-in-out duration-300 flex items-center justify-between rounded-full border-2 border-light-gray bg-csi-white/90 p-1 font-dm text-csi-black shadow-lg backdrop-blur-xl lg:mx-24 dark:border-dark-gray dark:bg-csi-black/90 dark:text-csi-white"
+    class="flex items-center justify-between rounded-full border-2 border-light-gray bg-csi-white/90 p-1 font-dm text-csi-black shadow-lg backdrop-blur-xl transition-colors duration-300 ease-in-out lg:mx-24 dark:border-dark-gray dark:bg-csi-black/90 dark:text-csi-white"
 >
     <a class="flex items-center px-2" href="/">
         <div class="mx-1 h-6 w-6">

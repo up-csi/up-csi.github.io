@@ -17,7 +17,11 @@
         <img src={lino} width="192" height="192" class="block rounded-2xl" {alt} />
     {/if}
     <figcaption>
-        <p class="transition-colors ease-in-out duration-300 text-csi-black dark:text-csi-white"><strong>{alt}</strong></p>
-        <p class="transition-colors ease-in-out duration-300 text-csi-black dark:text-csi-white">{pos}</p>
+        <p class="text-csi-black transition-colors duration-300 ease-in-out dark:text-csi-white">
+            <strong>{alt}</strong>
+        </p>
+        <p class="text-csi-black transition-colors duration-300 ease-in-out dark:text-csi-white">
+            {pos}
+        </p>
     </figcaption>
 </figure>

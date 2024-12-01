@@ -14,7 +14,7 @@
 </section>
 <WhoWeAre />
 <section class="prose max-w-full dark:prose-invert">
-    <h1 class="transition-colors ease-in-out duration-300 text-center font-normal">Why UP CSI?</h1>
+    <h1 class="text-center font-normal transition-colors duration-300 ease-in-out">Why UP CSI?</h1>
     <div class="space-y-4">
         <ContentContainer>
             {#snippet text()}
