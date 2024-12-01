@@ -50,7 +50,7 @@
     }
 </script>
 
-<div class="flex flex-col gap-10 transition-colors duration-300 ease-in-out">
+<div class="flex flex-col gap-10 transition-colors ease-in-out">
     <div class="flex flex-row justify-center">
         <ul
             class="m-0 flex max-w-screen-sm list-none flex-row flex-wrap justify-center gap-2 rounded-lg bg-csi-neutral-50 p-1 shadow-lg lg:max-w-fit dark:bg-csi-neutral-900"
@@ -62,7 +62,7 @@
                         : 'bg-csi-neutral-100 dark:bg-csi-neutral-700'}
                 <li class="m-0 p-0">
                     <button
-                        class="min-h-10 shrink-0 rounded-md px-6 transition-colors duration-300 hover:bg-csi-black hover:text-csi-white dark:hover:bg-csi-white dark:hover:text-csi-black {neutral}"
+                        class="min-h-10 shrink-0 rounded-md px-6 transition-colors ease-in-out hover:bg-csi-black hover:text-csi-white dark:hover:bg-csi-white dark:hover:text-csi-black {neutral}"
                         onclick={() => setFilter(filter)}
                     >
                         {filter}
@@ -72,7 +72,7 @@
         </ul>
     </div>
     <div class="flex justify-center">
-        <div class="grid w-fit grid-cols-1 items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="transition-colors ease-in-out grid w-fit grid-cols-1 items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
             {#each filteredCardsInPage as cardProps}
                 {#if 'event' in cardProps}
                     <EventCard {...cardProps} />
@@ -88,7 +88,7 @@
         >
             <li class="m-0 p-0">
                 <button
-                    class="flex size-10 items-center justify-center rounded-l-lg transition-colors duration-300 ease-in-out hover:bg-csi-black hover:text-csi-white disabled:cursor-default disabled:bg-csi-neutral-50 disabled:text-csi-neutral-200 dark:hover:bg-csi-white dark:hover:text-csi-black dark:disabled:bg-csi-neutral-900 dark:disabled:text-csi-neutral-500"
+                    class="flex size-10 items-center justify-center rounded-l-lg transition-colors ease-in-out hover:bg-csi-neutral-100 disabled:cursor-default disabled:bg-csi-neutral-50 disabled:text-csi-neutral-200 dark:hover:bg-csi-neutral-700 dark:disabled:bg-csi-neutral-900 dark:disabled:text-csi-neutral-500"
                     onclick={backPage}
                     disabled={currentPage <= 0}
                 >
@@ -100,7 +100,7 @@
                     pageIndex === currentPage ? 'bg-csi-neutral-100 dark:bg-csi-neutral-700' : ''}
                 <li class="m-0 p-0">
                     <button
-                        class="flex size-10 items-center justify-center transition-colors duration-300 ease-in-out {neutral} hover:bg-csi-black hover:text-csi-white dark:hover:bg-csi-white dark:hover:text-csi-black"
+                        class="flex size-10 items-center justify-center transition-colors ease-in-out {neutral} hover:bg-csi-neutral-100 dark:hover:bg-csi-neutral-700"
                         onclick={() => setPage(pageIndex)}
                     >
                         {pageIndex + 1}
@@ -109,7 +109,7 @@
             {/each}
             <li class="m-0 p-0">
                 <button
-                    class="flex size-10 items-center justify-center rounded-r-lg transition-colors duration-300 ease-in-out hover:bg-csi-black hover:text-csi-white disabled:cursor-default disabled:bg-csi-neutral-50 disabled:text-csi-neutral-200 dark:hover:bg-csi-white dark:hover:text-csi-black dark:disabled:bg-csi-neutral-900 dark:disabled:text-csi-neutral-500"
+                    class="flex size-10 items-center justify-center rounded-r-lg transition-colors ease-in-out hover:bg-csi-neutral-100 disabled:cursor-default disabled:bg-csi-neutral-50 disabled:text-csi-neutral-200 dark:hover:bg-csi-neutral-700 dark:disabled:bg-csi-neutral-900 dark:disabled:text-csi-neutral-500"
                     onclick={nextPage}
                     disabled={currentPage >= pages - 1}
                 >

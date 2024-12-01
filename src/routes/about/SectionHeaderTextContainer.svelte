@@ -5,7 +5,7 @@
 </script>
 
 <section
-    class="flex flex-col items-center gap-5 bg-csi-white p-3 text-csi-black transition-colors duration-300 ease-in-out md:flex-row md:items-start dark:bg-csi-black dark:text-csi-white"
+    class="flex flex-col items-center gap-5 bg-csi-white p-3 text-csi-black transition-colors ease-in-out md:flex-row md:items-start dark:bg-csi-black dark:text-csi-white"
 >
     <!--PLACEHOLDER IMAGES-->
     <div class="w-full md:w-7/12">
@@ -26,11 +26,11 @@
         <div class="text-center text-csi-white md:text-left dark:text-csi-black">
             <!--Might be good to just use the button component for this?-->
             <button
-                class="rounded-full bg-black px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-csi-blue dark:bg-csi-blue dark:hover:bg-csi-white"
+                class="rounded-full bg-black px-4 py-2 transition-colors ease-in-out hover:bg-csi-blue dark:bg-csi-blue dark:hover:bg-csi-white"
                 >Mission and Vision</button
             >
             <button
-                class="rounded-full bg-black px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-csi-blue dark:bg-csi-blue dark:hover:bg-csi-white"
+                class="rounded-full bg-black px-4 py-2 transition-colors ease-in-out hover:bg-csi-blue dark:bg-csi-blue dark:hover:bg-csi-white"
                 >See Team</button
             >
         </div>

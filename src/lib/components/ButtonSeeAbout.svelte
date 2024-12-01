@@ -10,7 +10,7 @@
 
 <a
     href="/about"
-    class="rounded-full bg-black px-4 py-3 text-center font-inter text-csi-white no-underline transition-colors duration-300 ease-in-out hover:bg-csi-blue dark:bg-csi-blue dark:text-csi-black dark:hover:bg-csi-white"
+    class="rounded-full bg-black px-4 py-3 text-center font-inter text-csi-white no-underline transition-colors ease-in-out hover:bg-csi-blue dark:bg-csi-blue dark:text-csi-black dark:hover:bg-csi-white"
 >
     {@render children?.()}
 </a>
