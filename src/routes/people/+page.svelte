@@ -18,13 +18,13 @@
     </div>
 </section>
 <section>
-    <h1 class="mb-4 w-full text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
+    <h1 class="transition-colors duration-300 mb-4 w-full text-center text-3xl text-csi-black md:text-4xl dark:text-csi-white">
         The Past Executive Boards
     </h1>
 
     {#each pastExec as board}
         <details class="py-4">
-            <summary class="text-xl text-csi-black md:text-2xl dark:text-csi-white"
+            <summary class="transition-colors duration-300 text-xl text-csi-black md:text-2xl dark:text-csi-white"
                 >{board.year}</summary
             >
             <div class="my-4">

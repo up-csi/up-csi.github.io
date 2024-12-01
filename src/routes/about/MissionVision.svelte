@@ -9,7 +9,7 @@
 </script>
 
 <section
-    class="flex flex-col gap-16 rounded-3xl bg-csi-neutral-50 px-8 py-12 font-dm text-csi-black md:px-12 dark:bg-csi-neutral-950 dark:text-csi-white"
+    class="transition-colors ease-in-out duration-300 flex flex-col gap-16 rounded-3xl bg-csi-neutral-50 px-8 py-12 font-dm text-csi-black md:px-12 dark:bg-csi-neutral-950 dark:text-csi-white"
 >
     <div class="flex flex-col gap-8">
         <div class="text-center text-2xl">Mission</div>

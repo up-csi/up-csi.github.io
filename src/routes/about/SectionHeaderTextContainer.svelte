@@ -5,7 +5,7 @@
 </script>
 
 <section
-    class="flex flex-col items-center gap-5 bg-csi-white p-3 text-csi-black md:flex-row md:items-start dark:bg-csi-black dark:text-csi-white"
+    class="transition-colors ease-in-out duration-300 flex flex-col items-center gap-5 bg-csi-white p-3 text-csi-black md:flex-row md:items-start dark:bg-csi-black dark:text-csi-white"
 >
     <!--PLACEHOLDER IMAGES-->
     <div class="w-full md:w-7/12">
@@ -24,10 +24,11 @@
             To create a center where students can innovate with the latest technology.
         </p>
         <div class="text-center text-csi-white md:text-left dark:text-csi-black">
-            <button class="rounded-full bg-black px-4 py-2 dark:bg-csi-blue"
+            <!--Might be good to just use the button component for this?-->
+            <button class="transition-colors ease-in-out duration-300 rounded-full bg-black hover:bg-csi-blue px-4 py-2 dark:bg-csi-blue dark:hover:bg-csi-white"
                 >Mission and Vision</button
             >
-            <button class="rounded-full bg-black px-4 py-2 dark:bg-csi-blue">See Team</button>
+            <button class="transition-colors ease-in-out duration-300 rounded-full bg-black hover:bg-csi-blue px-4 py-2 dark:bg-csi-blue dark:hover:bg-csi-white">See Team</button>
         </div>
     </div>
 </section>

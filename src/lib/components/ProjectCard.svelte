@@ -11,6 +11,6 @@
         <p class="m-0">{type}</p>
         <h2 class="m-0">{project}</h2>
         <p class="m-0 grow overflow-hidden">{description}</p>
-        <p class="m-0"><a {href}>More Info</a></p>
+        <p class="m-0"><a {href} class="transition-colors ease-in-out duration-300 no-underline hover:underline">More Info</a></p>
     </div>
 </div>
