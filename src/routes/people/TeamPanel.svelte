@@ -67,9 +67,7 @@
 >
     <div class="flex w-full flex-col items-center text-center lg:w-2/3">
         <p class="m-0">The Team</p>
-        <h1
-            class="mb-4 w-full text-3xl font-normal transition-colors sm:w-3/4 md:text-4xl"
-        >
+        <h1 class="mb-4 w-full text-3xl font-normal transition-colors sm:w-3/4 md:text-4xl">
             Meet the people that make innovation possible.
         </h1>
         <div class="flex flex-row justify-center">

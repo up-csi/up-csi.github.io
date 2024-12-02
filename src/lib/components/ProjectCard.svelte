@@ -12,9 +12,7 @@
         <h2 class="m-0 duration-150">{project}</h2>
         <p class="m-0 grow overflow-hidden">{description}</p>
         <p class="m-0">
-            <a
-                {href}
-                class="no-underline transition-colors ease-in-out hover:underline"
+            <a {href} class="no-underline transition-colors ease-in-out hover:underline"
                 >More Info</a
             >
         </p>

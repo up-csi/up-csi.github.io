@@ -30,27 +30,22 @@
     <nav class="absolute left-1/2 hidden -translate-x-1/2 lg:block">
         <ul class="flex items-center gap-8">
             <li>
-                <a
-                    class="transition-colors ease-in-out hover:text-csi-blue"
-                    href="/about/">About</a
+                <a class="transition-colors ease-in-out hover:text-csi-blue" href="/about/">About</a
                 >
             </li>
             <li>
-                <a
-                    class="transition-colors ease-in-out hover:text-csi-blue"
-                    href="/people/">People</a
+                <a class="transition-colors ease-in-out hover:text-csi-blue" href="/people/"
+                    >People</a
                 >
             </li>
             <li>
-                <a
-                    class="transition-colors ease-in-out hover:text-csi-blue"
-                    href="/events/">Events</a
+                <a class="transition-colors ease-in-out hover:text-csi-blue" href="/events/"
+                    >Events</a
                 >
             </li>
             <li>
-                <a
-                    class="transition-colors ease-in-out hover:text-csi-blue"
-                    href="/projects/">Projects</a
+                <a class="transition-colors ease-in-out hover:text-csi-blue" href="/projects/"
+                    >Projects</a
                 >
             </li>
         </ul>
