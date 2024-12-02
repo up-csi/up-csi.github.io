@@ -19,7 +19,7 @@
 </script>
 
 <div
-    class="flex items-center justify-between rounded-full border-2 border-light-gray bg-csi-white/90 p-1 font-dm text-csi-black shadow-lg backdrop-blur-xl transition-colors duration-300 ease-in-out lg:mx-24 dark:border-dark-gray dark:bg-csi-black/90 dark:text-csi-white"
+    class="flex items-center justify-between rounded-full border-2 border-light-gray bg-csi-white/90 p-1 font-dm text-csi-black shadow-lg backdrop-blur-xl transition-colors ease-in-out lg:mx-24 dark:border-dark-gray dark:bg-csi-black/90 dark:text-csi-white"
 >
     <a class="flex items-center px-2" href="/">
         <div class="mx-1 h-6 w-6">
@@ -31,25 +31,25 @@
         <ul class="flex items-center gap-8">
             <li>
                 <a
-                    class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
+                    class="transition-colors ease-in-out hover:text-csi-blue"
                     href="/about/">About</a
                 >
             </li>
             <li>
                 <a
-                    class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
+                    class="transition-colors ease-in-out hover:text-csi-blue"
                     href="/people/">People</a
                 >
             </li>
             <li>
                 <a
-                    class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
+                    class="transition-colors ease-in-out hover:text-csi-blue"
                     href="/events/">Events</a
                 >
             </li>
             <li>
                 <a
-                    class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
+                    class="transition-colors ease-in-out hover:text-csi-blue"
                     href="/projects/">Projects</a
                 >
             </li>
@@ -57,7 +57,7 @@
     </nav>
     <div class="flex items-center gap-2">
         <button
-            class="rounded-full border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-light-gray hover:shadow-inner dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
+            class="rounded-full border border-csi-neutral-200 p-2 transition-colors hover:bg-light-gray hover:shadow-inner dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
             onclick={theme.toggle}
         >
             <Icon icon={Moon} width="18" height="18" class="dark:hidden" />
@@ -65,13 +65,13 @@
         </button>
         <a
             href="mailto:lino@up-csi.org"
-            class="hidden whitespace-nowrap rounded-full border-2 border-csi-blue px-4 py-1 transition-colors duration-300 hover:bg-csi-blue hover:shadow-inner lg:block"
+            class="hidden whitespace-nowrap rounded-full border-2 border-csi-blue px-4 py-1 transition-colors hover:bg-csi-blue hover:shadow-inner lg:block"
         >
             Contact Us
         </a>
 
         <button
-            class="rounded-full border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-light-gray lg:hidden dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
+            class="rounded-full border border-csi-neutral-200 p-2 transition-colors hover:bg-light-gray lg:hidden dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
             onclick={() => (mobileMenu = !mobileMenu)}
         >
             {#if mobileMenu}
@@ -90,7 +90,7 @@
         <div class="flex h-full flex-col items-end justify-between p-4">
             <div class="flex flex-col items-end">
                 <button
-                    class="p-1 pb-6 transition-colors duration-200 ease-in-out hover:text-csi-blue"
+                    class="p-1 pb-6 transition-colors ease-in-out hover:text-csi-blue"
                     onclick={() => (mobileMenu = !mobileMenu)}
                 >
                     <Icon icon={XMark} width="18" height="18" />
@@ -100,28 +100,28 @@
                 >
                     <li>
                         <a
-                            class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
+                            class="transition-colors ease-in-out hover:text-csi-blue"
                             href="/about/"
                             onclick={closeMenu}>About</a
                         >
                     </li>
                     <li>
                         <a
-                            class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
+                            class="transition-colors ease-in-out hover:text-csi-blue"
                             href="/people/"
                             onclick={closeMenu}>People</a
                         >
                     </li>
                     <li>
                         <a
-                            class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
+                            class="transition-colors ease-in-out hover:text-csi-blue"
                             href="/events/"
                             onclick={closeMenu}>Events</a
                         >
                     </li>
                     <li>
                         <a
-                            class="transition-colors duration-300 ease-in-out hover:text-csi-blue"
+                            class="transition-colors ease-in-out hover:text-csi-blue"
                             href="/projects/"
                             onclick={closeMenu}>Projects</a
                         >
@@ -130,7 +130,7 @@
             </div>
             <a
                 href="mailto:lino@up-csi.org"
-                class="w-full whitespace-nowrap rounded-full border-2 border-csi-blue px-4 py-1 text-center transition-colors duration-300 hover:bg-csi-blue hover:shadow-inner"
+                class="w-full whitespace-nowrap rounded-full border-2 border-csi-blue px-4 py-1 text-center transition-colors hover:bg-csi-blue hover:shadow-inner"
             >
                 Contact Us
             </a>
