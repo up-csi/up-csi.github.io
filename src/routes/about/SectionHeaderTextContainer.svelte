@@ -1,7 +1,7 @@
 <script>
+    import LinkButton from '$lib/components/LinkButton.svelte';
     import src from '$lib/lino-sablay.svg';
     import upcsi from '$lib/icons/upcsi.svg';
-    /* TODO: implement the anchors for the buttons so that the page scrolls/jumps to those points when the buttons are clicked */
 </script>
 
 <section
@@ -24,10 +24,8 @@
             To create a center where students can innovate with the latest technology.
         </p>
         <div class="text-center text-csi-white md:text-left dark:text-csi-black">
-            <button class="rounded-full bg-black px-4 py-2 dark:bg-csi-blue"
-                >Mission and Vision</button
-            >
-            <button class="rounded-full bg-black px-4 py-2 dark:bg-csi-blue">See Team</button>
+            <LinkButton href="#mission-vision">Mission and Vision</LinkButton>
+            <LinkButton href="/people">See Team</LinkButton>
         </div>
     </div>
 </section>
