@@ -37,7 +37,7 @@
         <!-- Tags -->
         <div class="flex gap-4">
             {#each tags as tag}
-                <LinkButton>{tag}</LinkButton>
+                <LinkButton href="/#">{tag}</LinkButton>
             {/each}
         </div>
 
