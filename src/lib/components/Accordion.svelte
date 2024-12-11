@@ -18,13 +18,15 @@
     const { children, title }: Props = $props();
 </script>
 
-<div class="w-full rounded-2xl shadow-lg">
+<div class="w-full rounded-2xl bg-csi-neutral-50 shadow-lg dark:bg-csi-neutral-900">
     <button
-        class="flex w-full rounded-2xl bg-csi-neutral-50 px-5 py-4 aria-expanded:bg-csi-neutral-100"
+        class="flex w-full rounded-2xl bg-csi-neutral-50 px-5 py-4 aria-expanded:bg-csi-neutral-100 dark:bg-csi-neutral-900 aria-expanded:dark:bg-csi-neutral-700"
         onclick={toggle}
         aria-expanded={open}
     >
-        <span class="grow text-left font-inter text-lg font-bold">{title}</span>
+        <span class="grow text-left font-inter text-lg font-bold text-csi-black dark:text-csi-white"
+            >{title}</span
+        >
         <span class="grow-0">
             <Icon
                 icon={ChevronDown}
@@ -34,7 +36,10 @@
         </span>
     </button>
     {#if open}
-        <div class="flex w-full items-center px-5 py-4" transition:slide>
+        <div
+            class="flex w-full items-center px-5 py-4 text-csi-black dark:text-csi-white"
+            transition:slide
+        >
             {@render children?.()}
         </div>
     {/if}
