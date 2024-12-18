@@ -10,6 +10,8 @@
     import { get } from '$lib/stores/color-scheme';
     import upcsi from '$lib/icons/upcsi.svg';
 
+    import LinkButtonNavBar from '$lib/components/LinkButtonNavBar.svelte';
+
     const theme = get();
     let mobileMenu = $state(false);
 
@@ -63,12 +65,7 @@
             <Icon icon={Moon} width="18" height="18" class="dark:hidden" />
             <Icon icon={Sun} width="18" height="18" class="hidden dark:block" />
         </button>
-        <a
-            href="mailto:lino@up-csi.org"
-            class="hidden whitespace-nowrap rounded-full border-2 border-csi-blue px-4 py-1 transition-colors duration-300 hover:bg-csi-blue hover:shadow-inner lg:block"
-        >
-            Contact Us
-        </a>
+        <LinkButtonNavBar href="mailto:lino@up-csi.org">Contact Us</LinkButtonNavBar>
 
         <button
             class="rounded-full border border-csi-neutral-200 p-2 transition-colors duration-200 hover:bg-light-gray lg:hidden dark:border-csi-neutral-800 dark:hover:bg-dark-gray"
@@ -128,12 +125,7 @@
                     </li>
                 </ul>
             </div>
-            <a
-                href="mailto:lino@up-csi.org"
-                class="w-full whitespace-nowrap rounded-full border-2 border-csi-blue px-4 py-1 text-center transition-colors duration-300 hover:bg-csi-blue hover:shadow-inner"
-            >
-                Contact Us
-            </a>
+            <LinkButtonNavBar href="mailto:lino@up-csi.org">Contact Us</LinkButtonNavBar>
         </div>
     </div>
 {/if}
