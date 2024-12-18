@@ -5,7 +5,7 @@
 </script>
 
 <section
-    class="flex flex-col items-center gap-5 bg-csi-white p-3 text-csi-black md:flex-row md:items-start dark:bg-csi-black dark:text-csi-white"
+    class="flex flex-col items-center gap-5 bg-csi-white p-3 text-csi-black transition-colors ease-in-out md:flex-row md:items-start dark:bg-csi-black dark:text-csi-white"
 >
     <!--PLACEHOLDER IMAGES-->
     <div class="w-full md:w-7/12">
