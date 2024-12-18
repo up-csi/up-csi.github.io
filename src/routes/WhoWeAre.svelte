@@ -1,5 +1,5 @@
 <script>
-    import ButtonSeeAbout from '$lib/components/ButtonSeeAbout.svelte';
+    import LinkButton from '$lib/components/LinkButton.svelte';
     import src from '$lib/lino-sablay.svg';
 </script>
 
@@ -17,7 +17,7 @@
             working with real-world projects.
         </p>
         <div class="w-full text-center md:text-left">
-            <ButtonSeeAbout>See About</ButtonSeeAbout>
+            <LinkButton href="/about">See About</LinkButton>
         </div>
     </div>
 </div>

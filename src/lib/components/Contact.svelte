@@ -1,5 +1,5 @@
 <script>
-    import ButtonMailTo from '$lib/components/ButtonMailTo.svelte';
+    import LinkButton from '$lib/components/LinkButton.svelte';
     import src from '$lib/lino-hero.svg';
 </script>
 
@@ -17,6 +17,6 @@
         >
             Let's innovate together!
         </h1>
-        <ButtonMailTo>Shoot us a message</ButtonMailTo>
+        <LinkButton href="mailto:lino@up-csi.org">Shoot us a message</LinkButton>
     </div>
 </section>
