@@ -13,6 +13,6 @@
         <h2 class="font-lato font-bold mb-2 text-xl md:text-lg">{faq_title}</h2>
     </div>
     <div class="text-center max-w-md md:w-1/2 dark:hidden">
-        <h2 class="font-lato font-bold mb-2 text-xl md:text-lg">{faq_title}</h2>
+        <h2 class="font-lato font-bold mb-2 text-xl md:text-lg">{faq_title1}</h2>
     </div>
 </div>
