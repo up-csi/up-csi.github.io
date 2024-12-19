@@ -18,7 +18,7 @@
     <div class="text-center max-w-md md:w-1/2 dark:hidden">
         <h2 class="font-lato font-bold mb-2 text-xl md:text-lg">{faq_title1}</h2>
         <p class="font-lato text-sm md:text-base text-gray-700 leading-relaxed text-justify">
-            {paragraph}
+            {paragraph1}
           </p>
     </div>
 </div>
