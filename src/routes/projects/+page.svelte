@@ -8,4 +8,4 @@
 <article class="prose max-w-full dark:prose-invert">
     <FilterPagePanel {filters} cardsInfo={projects} />
 </article>
-<Faq></Faq>
+<Faq faq_title="GENERAL FAQ"></Faq>
