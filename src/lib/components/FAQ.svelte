@@ -9,5 +9,8 @@
 </script>
 
 <div class="container mx-auto px-20 flex flex-col md:flex-row md:justify-between items-center gap-8">
-    
+    <div class="text-center max-w-md md:w-1/2 dark:hidden">
+    </div>
+    <div class="text-center max-w-md md:w-1/2 dark:hidden">
+    </div>
 </div>
