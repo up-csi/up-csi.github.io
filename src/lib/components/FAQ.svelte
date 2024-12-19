@@ -7,3 +7,7 @@
     }
     const {faq_title, paragraph, faq_title1, paragraph1}:Props = $props();
 </script>
+
+<div class="container mx-auto px-20 flex flex-col md:flex-row md:justify-between items-center gap-8">
+    
+</div>
