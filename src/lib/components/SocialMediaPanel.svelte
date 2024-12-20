@@ -28,7 +28,7 @@
 
 <div class="flex w-fit flex-col">
     <div
-        class="w-lg w-fit rounded-t-2xl bg-csi-neutral-50 p-2 px-5 text-center text-lg
+        class="w-lg w-fit rounded-t-2xl bg-csi-neutral-50 px-4 py-2 text-center text-lg
         font-semibold dark:bg-csi-neutral-800 dark:text-csi-white"
     >
         Social Media
