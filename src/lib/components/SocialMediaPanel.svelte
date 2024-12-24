@@ -39,7 +39,7 @@
             <a {href} target="_blank"
                 ><Icon
                     {icon}
-                    class="size-16 text-csi-black transition-colors hover:text-csi-blue md:text-csi-black dark:text-csi-white"
+                    class="size-16 text-csi-black md:text-csi-black dark:text-csi-white"
                 /></a
             >
         {/each}
