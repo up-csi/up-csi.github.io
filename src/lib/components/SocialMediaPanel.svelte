@@ -26,22 +26,19 @@
     ];
 </script>
 
-<div class="flex w-fit flex-col">
+<div class="flex w-fit flex-col text-csi-black dark:text-csi-white">
     <div
-        class="w-lg w-fit rounded-t-2xl bg-csi-neutral-50 px-4 pt-1.5 text-center font-semibold dark:bg-csi-neutral-800 dark:text-csi-white"
+        class="hidden w-fit rounded-t-2xl bg-csi-neutral-50 px-4 pt-1.5 text-center font-semibold md:block dark:bg-csi-neutral-800 dark:text-csi-white"
     >
         Social Media
     </div>
     <div
-        class="flex flex-row space-x-8 rounded-2xl rounded-tl-none bg-csi-neutral-50 p-5 shadow-lg dark:bg-csi-neutral-800"
+        class="flex flex-row space-x-8 rounded-2xl rounded-tl-none bg-none p-5 md:bg-csi-neutral-50 md:shadow-lg dark:md:bg-csi-neutral-800"
     >
         {#each socials as { icon, href }}
-            <a {href} target="_blank"
-                ><Icon
-                    {icon}
-                    class="size-16 text-csi-black md:text-csi-black dark:text-csi-white"
-                /></a
-            >
+            <a {href} target="_blank">
+                <Icon {icon} class="size-14 text-csi-black md:size-16 dark:text-csi-white" />
+            </a>
         {/each}
     </div>
 </div>
