@@ -28,8 +28,7 @@
 
 <div class="flex w-fit flex-col">
     <div
-        class="w-lg w-fit rounded-t-2xl bg-csi-neutral-50 px-4 pt-1.5 text-center
-        font-semibold dark:bg-csi-neutral-800 dark:text-csi-white"
+        class="w-lg w-fit rounded-t-2xl bg-csi-neutral-50 px-4 pt-1.5 text-center font-semibold dark:bg-csi-neutral-800 dark:text-csi-white"
     >
         Social Media
     </div>
@@ -40,8 +39,7 @@
             <a {href} target="_blank"
                 ><Icon
                     {icon}
-                    class="size-16 text-csi-black transition-colors hover:text-csi-blue md:text-csi-black
-                dark:text-csi-white"
+                    class="size-16 text-csi-black transition-colors hover:text-csi-blue md:text-csi-black dark:text-csi-white"
                 /></a
             >
         {/each}
