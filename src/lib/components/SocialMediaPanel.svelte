@@ -26,9 +26,9 @@
     ];
 </script>
 
-<div class="flex w-fit flex-col text-csi-black dark:text-csi-white">
+<div class="prose flex flex-col dark:prose-invert">
     <div
-        class="hidden w-fit rounded-t-2xl bg-csi-neutral-50 px-4 pt-1.5 text-center font-semibold md:block dark:bg-csi-neutral-800 dark:text-csi-white"
+        class="hidden w-fit rounded-t-2xl bg-csi-neutral-50 px-4 pt-1.5 text-center font-semibold md:block dark:bg-csi-neutral-800"
     >
         Social Media
     </div>
@@ -37,7 +37,7 @@
     >
         {#each socials as { icon, href }}
             <a {href} target="_blank">
-                <Icon {icon} class="size-14 text-csi-black md:size-16 dark:text-csi-white" />
+                <Icon {icon} class="size-14 md:size-16" />
             </a>
         {/each}
     </div>
