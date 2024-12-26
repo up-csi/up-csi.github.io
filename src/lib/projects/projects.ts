@@ -2,20 +2,30 @@ import lino from '$lib/lino-sablay.svg';
 
 export interface Project {
     tag: string;
-    type: string;
     project: string;
     description: string;
-    src: string;
-    href: string;
+    src?: string;
 }
 
 export default [
     {
         tag: 'Service',
-        type: 'Internal',
         project: 'Service Project',
-        description: 'Lorep ipsum.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         src: lino,
-        href: '/projects/',
+    },
+    {
+        tag: 'Innovation',
+        project: 'Innovcamp',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        src: lino,
+    },
+    {
+        tag: 'Innovation',
+        project: 'Kopi Korner',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },
 ] satisfies Project[];
