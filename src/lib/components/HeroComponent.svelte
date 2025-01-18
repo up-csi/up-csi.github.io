@@ -1,5 +1,5 @@
 <script>
-    import ButtonMailTo from '$lib/components/ButtonMailTo.svelte';
+    import LinkButton from '$lib/components/LinkButton.svelte';
     import src from '$lib/lino-sablay.svg';
 </script>
 
@@ -17,7 +17,7 @@
             </h1>
             <p class="text-sm">With UP Center for Student Innovations.</p>
         </div>
-        <ButtonMailTo>Get in Touch</ButtonMailTo>
+        <LinkButton href="mailto:lino@up-csi.org">Get in Touch</LinkButton>
     </div>
     <div class="flex h-full flex-col items-center justify-end lg:mr-6">
         <img {src} alt="Lino Sablay" class="relative top-4 w-[39rem] sm:top-6" />
