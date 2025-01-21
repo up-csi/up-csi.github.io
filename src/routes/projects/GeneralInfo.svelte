@@ -1,5 +1,5 @@
 <div
-    class="m-0 rounded-2xl bg-csi-neutral-50 px-8 py-8 dark:prose-invert shadow-lg lg:max-w-fit dark:bg-csi-neutral-900"
+    class="m-0 rounded-2xl bg-csi-neutral-50 px-8 py-8 shadow-lg dark:prose-invert lg:max-w-fit dark:bg-csi-neutral-900"
 >
     <div class="flex flex-col gap-5">
         <div>
