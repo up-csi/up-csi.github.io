@@ -3,7 +3,7 @@
     import GeneralInfo from './GeneralInfo.svelte';
     import SocialMediaPanel from '$lib/components/SocialMediaPanel.svelte';
     import projects from '$lib/projects/projects';
-    
+
     const filters = ['All', 'Service', 'Innovation', 'Other'];
 </script>
 
