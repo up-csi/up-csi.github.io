@@ -20,7 +20,9 @@
 
 <section>
     <h1 class="mb-4 w-2/5 text-3xl text-csi-black md:text-4xl dark:text-csi-white">FAQs</h1>
-    <Accordion title="Lorem ipsum dolor sit amet?">
-        <span> Lorem ipsum dolor sit amet adipiscing elit consectitur </span>
-    </Accordion>
+    <div class="flex flex-col gap-6">
+        <Accordion title="Lorem ipsum dolor sit amet?">
+            <span> Lorem ipsum dolor sit amet adipiscing elit consectitur </span>
+        </Accordion>
+    </div>
 </section>
