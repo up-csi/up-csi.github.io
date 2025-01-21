@@ -9,8 +9,8 @@
         <div class="w-full justify-center border-csi-blue bg-csi-blue p-0.5"></div>
 
         <div>
+            <a class="underline" href="mailto:lino@up-csi.org">lino@up-csi.org</a>
             <p class="m-0 max-w-full lg:max-w-80">
-                lino@up-csi.org <br />
                 Department of Computer Science, UP Diliman, Diliman, Quezon City, Metro Manila
             </p>
         </div>
