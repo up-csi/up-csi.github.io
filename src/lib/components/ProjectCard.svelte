@@ -1,20 +1,16 @@
 <script lang="ts">
     import type { Project } from '$lib/projects/projects';
-    const { src, project, type, description, href }: Project = $props();
+    const { src, project, description }: Project = $props();
 </script>
 
 <div
-    class="flex h-auto w-full flex-col overflow-hidden rounded-2xl bg-csi-neutral-50 shadow-lg md:h-[32rem] md:w-72 dark:bg-csi-neutral-900"
+    class="flex h-full w-full flex-col overflow-hidden rounded-2xl bg-csi-neutral-50 px-1 shadow-lg md:max-w-72 md:px-2 dark:bg-csi-neutral-900"
 >
-    <img {src} alt={project} loading="lazy" class="m-0 h-64 shrink-0 object-cover md:h-48" />
-    <div class="m-3 flex h-full flex-col justify-between gap-2 overflow-hidden">
-        <p class="m-0">{type}</p>
+    {#if src}
+        <img {src} alt={project} loading="lazy" class="m-0 h-64 shrink-0 object-cover md:h-48" />
+    {/if}
+    <div class="md:text-md m-3 flex h-full flex-col justify-between gap-2 overflow-hidden">
         <h2 class="m-0 duration-150">{project}</h2>
-        <p class="m-0 grow overflow-hidden">{description}</p>
-        <p class="m-0">
-            <a {href} class="no-underline transition-colors ease-in-out hover:underline"
-                >More Info</a
-            >
-        </p>
+        <p class="m-0 grow overflow-hidden text-justify">{description}</p>
     </div>
 </div>
