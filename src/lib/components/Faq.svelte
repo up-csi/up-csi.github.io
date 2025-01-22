@@ -1,7 +1,9 @@
 <script lang="ts">
+    import type { Snippet } from "svelte";
+
     export interface FaqEntry {
         title: string;
-        paragraph: string;
+        paragraph: Snippet;
     }
     
     interface Props {
@@ -17,7 +19,7 @@
         <div class="max-w-md text-center md:w-1/2">
             <h2 class="prose mb-2 text-xl font-bold dark:prose-invert md:text-lg">{faqEntry.title}</h2>
             <p class="prose text-justify text-sm leading-relaxed dark:prose-invert md:text-base">
-                {faqEntry.paragraph}
+                {@render faqEntry.paragraph()}
             </p>
         </div>
     {/each}
