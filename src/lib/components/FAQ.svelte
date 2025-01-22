@@ -17,9 +17,9 @@
             {paragraph}
         </p>
     </div>
-    <div class="max-w-md text-center md:w-1/2 dark:hidden">
-        <h2 class="font-lato mb-2 text-xl font-bold md:text-lg">{faq_title1}</h2>
-        <p class="font-lato text-gray-700 text-justify text-sm leading-relaxed md:text-base">
+    <div class="max-w-md text-center md:w-1/2">
+        <h2 class="prose mb-2 text-xl font-bold dark:prose-invert md:text-lg">{faq_title1}</h2>
+        <p class="prose text-justify text-sm leading-relaxed dark:prose-invert md:text-base">
             {paragraph1}
         </p>
     </div>
