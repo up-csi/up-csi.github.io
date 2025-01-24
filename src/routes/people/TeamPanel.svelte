@@ -63,11 +63,11 @@
 </script>
 
 <section
-    class="prose flex w-full max-w-full flex-col items-center gap-8 rounded-3xl bg-blue-white px-6 py-16 dark:prose-invert md:p-12 dark:bg-black"
+    class="prose flex w-full max-w-full flex-col items-center gap-8 rounded-3xl bg-blue-white px-6 py-16 transition-colors dark:prose-invert md:p-12 dark:bg-black"
 >
     <div class="flex w-full flex-col items-center text-center lg:w-2/3">
         <p class="m-0">The Team</p>
-        <h1 class="mb-4 w-full text-3xl font-normal sm:w-3/4 md:text-4xl">
+        <h1 class="mb-4 w-full text-3xl font-normal transition-colors sm:w-3/4 md:text-4xl">
             Meet the people that make innovation possible.
         </h1>
         <div class="flex flex-row justify-center">
@@ -81,7 +81,7 @@
                             : 'bg-csi-white text-csi-black dark:bg-blue-white'}
                     <li class="m-0 p-0">
                         <button
-                            class="min-h-10 shrink-0 rounded-md px-6 shadow-md {neutral} transition-colors"
+                            class="min-h-10 shrink-0 rounded-md px-6 shadow-md transition-colors hover:bg-csi-blue dark:hover:bg-csi-white {neutral}"
                             onclick={() => (currentCommittee = committee)}
                         >
                             {committee}
