@@ -1,5 +1,6 @@
 <script>
-    import Accordion from '$lib/components/Accordion.svelte';
+    import Faq from '$lib/components/Faq.svelte';
+    import FaqEntry from '$lib/components/FaqEntry.svelte';
     import FilterPagePanel from '$lib/components/FilterPagePanel.svelte';
     import GeneralInfo from './GeneralInfo.svelte';
     import SocialMediaPanel from '$lib/components/SocialMediaPanel.svelte';
@@ -19,10 +20,20 @@
 </article>
 
 <section>
-    <h1 class="mb-4 w-2/5 text-3xl text-csi-black md:text-4xl dark:text-csi-white">FAQs</h1>
-    <div class="flex flex-col gap-6">
-        <Accordion title="Lorem ipsum dolor sit amet?">
-            <span> Lorem ipsum dolor sit amet adipiscing elit consectitur </span>
-        </Accordion>
-    </div>
+    <Faq>
+        <FaqEntry title="GENERAL FAQ">
+            <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span
+            >
+        </FaqEntry>
+        <FaqEntry title="GENERAL FAQ">
+            <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span
+            >
+        </FaqEntry>
+    </Faq>
 </section>
