@@ -76,8 +76,8 @@ Unlike `npm`, `pnpm` is fast and space-efficient. Instead of downloading an enti
 
 # Credits
 
--   This repository was originally bootstrapped by [Basti Ortiz](https://bastidood.github.io/) during the Academic Year 2023-2024 when he served as the UP CSI Director for Engineering.
-    -   Repository Setup
-    -   Automation with GitHub Actions
-    -   Original Build System with Parcel
-    -   New Build System with Vite
+- This repository was originally bootstrapped by [Basti Ortiz](https://bastidood.github.io/) during the Academic Year 2023-2024 when he served as the UP CSI Director for Engineering.
+    - Repository Setup
+    - Automation with GitHub Actions
+    - Original Build System with Parcel
+    - New Build System with Vite
