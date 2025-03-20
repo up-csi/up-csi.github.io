@@ -4,7 +4,6 @@
     "title": ["President", "Director for Engineering"],
     "committee": ["Engineering", "Executive"],
     "socials": {
-        "instagram": "veeisforvanana",
-        "website": { "https": "//callmevee.crabdance.com" }
+        "instagram": "veeisforvanana"
     }
 }
