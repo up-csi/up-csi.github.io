@@ -1,10 +1,10 @@
 <script lang="ts">
-    import { COMMITTEES } from '$lib/types/committees';
+    import { MemberCommittees, getCommitteeInfo } from '$lib/types/committees';
     import type { Member } from '$lib/models/member';
 
     import TeamCard from '$lib/components/cards/MemberCard.svelte';
 
-    const COMMITTEE_FILTERS = ['Everyone', ...COMMITTEES];
+    const COMMITTEE_FILTERS = ['Everyone', ...Object.keys(MemberCommittees)];
 
     interface Props {
         team: Member[];
@@ -23,25 +23,6 @@
                   return in_committee;
               }),
     );
-
-    function getCommitteeColor(committee: string) {
-        switch (committee) {
-            case 'Innovation':
-                return 'bg-committees-innov';
-            case 'Service':
-                return 'bg-committees-service';
-            case 'External Relations':
-                return 'bg-committees-exte';
-            case 'Membership & Internals':
-                return 'bg-committees-mni';
-            case 'Branding & Creatives':
-                return 'bg-committees-bnc';
-            case 'Engineering':
-                return 'bg-committees-engg';
-            default:
-                return 'bg-csi-blue';
-        }
-    }
 </script>
 
 <section
@@ -77,7 +58,8 @@
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
         {#each filteredTeam as member}
-            <TeamCard {member} color={getCommitteeColor(currentCommittee)} />
+            {@const { color } = getCommitteeInfo(currentCommittee)}
+            <TeamCard {member} {color} />
         {/each}
     </div>
 </section>
