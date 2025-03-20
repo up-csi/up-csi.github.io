@@ -7,4 +7,3 @@ export const POSITIONS = [
     'Director for Branding & Creatives',
     'Director for Engineering',
 ] as const;
-
