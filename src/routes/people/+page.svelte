@@ -1,6 +1,6 @@
 <script>
     import ExecPanel from './ExecPanel.svelte';
-    import TeamPanel from './TeamPanel.svelte';
+    import TeamPanel from '$lib/components/panel/TeamPanel.svelte';
 
     const { data } = $props();
     const { team, exec } = $derived(data);
