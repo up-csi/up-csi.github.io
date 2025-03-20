@@ -1,8 +1,8 @@
 <script lang="ts">
     import Icon from '@iconify/svelte';
 
-    import { getSocialMedium } from '$lib/types/social_media';
     import type { Member } from '$lib/models/member';
+    import { getSocialMedium } from '$lib/types/social_media';
 
     interface Props {
         member: Member;

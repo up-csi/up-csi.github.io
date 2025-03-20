@@ -14,9 +14,7 @@
     const { team, filteredTeams }: Props = $props();
     let currentCommittee = $state('Executive');
     const filteredTeam = $derived(
-        currentCommittee === 'Everyone'
-            ? team
-            : filteredTeams[currentCommittee],
+        currentCommittee === 'Everyone' ? team : filteredTeams[currentCommittee],
     );
 </script>
 

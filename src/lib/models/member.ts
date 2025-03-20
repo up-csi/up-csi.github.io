@@ -3,8 +3,8 @@ import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
 import { type InferOutput, array, object, optional, picklist, record, string } from 'valibot';
 
 import { MemberCommittees } from '$lib/types/committees';
-import { POSITIONS } from '$lib/types/positions';
 import { MemberSocialMedia } from '$lib/types/social_media';
+import { POSITIONS } from '$lib/types/positions';
 
 export const Member = object({
     name: string(),
