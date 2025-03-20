@@ -4,15 +4,14 @@ import { type InferOutput, array, object, optional, picklist, record, string } f
 
 import { COMMITTEES } from '$lib/types/committees';
 import { POSITIONS } from '$lib/types/positions';
-
-const SOCIALS = ['github', 'linkedin', 'instagram', 'website'];
+import { MemberSocialMedia } from '$lib/types/social_media';
 
 export const Member = object({
     name: string(),
     img: string(),
     title: optional(array(picklist(POSITIONS))),
     committee: array(picklist(COMMITTEES)),
-    socials: optional(record(picklist(SOCIALS), string())),
+    socials: optional(record(picklist(Object.keys(MemberSocialMedia)), string())),
 });
 
 export interface Member extends InferOutput<typeof Member> {
