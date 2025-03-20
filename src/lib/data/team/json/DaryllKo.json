@@ -1,0 +1,10 @@
+{
+    "name": "Daryll Ko",
+    "img": "DaryllKo",
+    "committee": ["Engineering"],
+    "socials": {
+        "github": "daryll-ko",
+        "linkedin": "daryll-ko",
+        "website": { "https": "//daryll.vercel.app" }
+    }
+}
