@@ -6,10 +6,10 @@
     import Instagram from '@iconify/icons-simple-icons/instagram';
     import LinkedIn from '@iconify/icons-simple-icons/linkedin';
 
-    import type { Member } from "$lib/models/member";
+    import type { Member } from '$lib/models/member';
 
     interface Props {
-        member: Member
+        member: Member;
     }
 
     const { member }: Props = $props();

@@ -1,6 +1,6 @@
 import * as v from 'valibot';
-import { POSITIONS } from '$lib/types/positions';
 import type { HTMLImgAttributes } from 'svelte/elements';
+import { POSITIONS } from '$lib/types/positions';
 
 export interface Officer extends v.InferOutput<typeof Officer> {
     src: HTMLImgAttributes['src'] | null;

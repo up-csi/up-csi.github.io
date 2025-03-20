@@ -1,14 +1,9 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-import { array, type InferOutput, object, optional, picklist, record, string } from 'valibot';
-import { POSITIONS } from '$lib/types/positions';
+import { type InferOutput, array, object, optional, picklist, record, string } from 'valibot';
 import { COMMITTEES } from '$lib/types/committees';
+import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
+import { POSITIONS } from '$lib/types/positions';
 
-const SOCIALS = [
-    'github',
-    'linkedin',
-    'instagram',
-    'website'
-];
+const SOCIALS = ['github', 'linkedin', 'instagram', 'website'];
 
 export const Member = object({
     name: string(),

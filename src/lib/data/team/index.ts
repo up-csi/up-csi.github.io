@@ -7,7 +7,9 @@ export async function getTeam() {
 
     const promises = Object.entries(imports).map(async ([_, asset]) => {
         const member = parse(MemberSchema, await asset());
-        const src: EnhancedImgAttributes['src'] = (await import(`$lib/assets/team/${member.img}.webp?enhanced?url`)).default;
+        const src: EnhancedImgAttributes['src'] = (
+            await import(`$lib/assets/team/${member.img}.webp?enhanced?url`)
+        ).default;
 
         return { ...member, src };
     });

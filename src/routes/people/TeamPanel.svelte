@@ -1,6 +1,6 @@
 <script lang="ts">
-    import type { Member } from '$lib/models/member';
     import { COMMITTEES } from '$lib/types/committees';
+    import type { Member } from '$lib/models/member';
     import TeamCard from './TeamCard.svelte';
 
     const COMMITTEE_FILTERS = ['Everyone', ...COMMITTEES];
@@ -14,8 +14,8 @@
     const filteredTeam = $derived(
         currentCommittee === 'Everyone'
             ? team
-            // @ts-expect-error
-            : team.filter(({ committee }) => committee.includes(currentCommittee))
+            : // @ts-expect-error: previous implementation of type guard did not work
+              team.filter(({ committee }) => committee.includes(currentCommittee)),
     );
 
     function getCommitteeColor(committee: string) {

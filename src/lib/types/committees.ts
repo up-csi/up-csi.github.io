@@ -5,9 +5,5 @@ export const COMMITTEES = [
     'External Relations',
     'Membership & Internals',
     'Branding & Creatives',
-    'Engineering'
+    'Engineering',
 ] as const;
-
-export type Committee = typeof COMMITTEES[number];
-
-export const isCommittee = (x: any): x is Committee => { return COMMITTEES.includes(x) };

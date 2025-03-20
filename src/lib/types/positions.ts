@@ -5,9 +5,6 @@ export const POSITIONS = [
     'Director for External Relations',
     'Director for Membership & Internals',
     'Director for Branding & Creatives',
-    'Director for Engineering'
+    'Director for Engineering',
 ] as const;
 
-export type Position = typeof POSITIONS[number];
-
-export const isPosition = (x: any): x is Position => { return POSITIONS.includes(x) };
