@@ -8,20 +8,15 @@
 
     interface Props {
         team: Member[];
+        filteredTeams: Record<string, Member[]>;
     }
 
-    const { team }: Props = $props();
+    const { team, filteredTeams }: Props = $props();
     let currentCommittee = $state('Executive');
     const filteredTeam = $derived(
         currentCommittee === 'Everyone'
             ? team
-            : team.filter(({ committee }) => {
-                  let in_committee = false;
-                  committee.forEach(comm => {
-                      in_committee ||= comm === currentCommittee;
-                  });
-                  return in_committee;
-              }),
+            : filteredTeams[currentCommittee],
     );
 </script>
 
@@ -57,9 +52,11 @@
     <div
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
-        {#each filteredTeam as member}
+        {#if filteredTeam}
             {@const { color } = getCommitteeInfo(currentCommittee)}
-            <TeamCard {member} {color} />
-        {/each}
+            {#each filteredTeam as member}
+                <TeamCard {member} {color} />
+            {/each}
+        {/if}
     </div>
 </section>
