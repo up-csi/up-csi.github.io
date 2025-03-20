@@ -1,12 +1,6 @@
 <script lang="ts">
-    import Icon from '@iconify/svelte';
-    import Link from '@iconify/icons-heroicons/link-solid';
-
-    import GitHub from '@iconify/icons-simple-icons/github';
-    import Instagram from '@iconify/icons-simple-icons/instagram';
-    import LinkedIn from '@iconify/icons-simple-icons/linkedin';
-
-    import { COMMITTEES, type Member } from '$lib/models/member';
+    import { COMMITTEES } from '$lib/types/committees';
+    import type { Member } from '$lib/models/member';
     import TeamCard from './TeamCard.svelte';
 
     const COMMITTEE_FILTERS = ['Everyone', ...COMMITTEES];
@@ -20,27 +14,9 @@
     const filteredTeam = $derived(
         currentCommittee === 'Everyone'
             ? team
-            : team
-                  .filter(({ committee }) => committee === currentCommittee)
-                  .sort(
-                      (a, b) =>
-                          COMMITTEE_FILTERS.indexOf(a.committee) -
-                          COMMITTEE_FILTERS.indexOf(b.committee),
-                  ),
+            : // @ts-expect-error: previous implementation of type guard did not work
+              team.filter(({ committee }) => committee.includes(currentCommittee)),
     );
-
-    function getSocialIcon(social: string) {
-        switch (social) {
-            case 'github':
-                return GitHub;
-            case 'linkedin':
-                return LinkedIn;
-            case 'instagram':
-                return Instagram;
-            default:
-                return Link;
-        }
-    }
 
     function getCommitteeColor(committee: string) {
         switch (committee) {
@@ -94,31 +70,8 @@
     <div
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
-        {#each filteredTeam as { name, title, committee, src, socials }}
-            <TeamCard {src} alt="image of {name}">
-                {#snippet tag()}
-                    <div class="h-fit w-fit rounded-full px-3 py-1 {getCommitteeColor(committee)}">
-                        <p class="m-0 text-sm text-csi-black">{name}</p>
-                    </div>
-                {/snippet}
-                <div>
-                    <p class="text-md m-0 md:text-lg">{name}</p>
-                    <p class="m-0 text-xs leading-tight">{title}</p>
-                </div>
-                <div class="flex flex-row flex-wrap gap-2">
-                    {#if socials}
-                        {#each Object.entries(socials) as [social, href]}
-                            {@const icon = getSocialIcon(social)}
-                            <a {href} target="_blank"
-                                ><Icon
-                                    {icon}
-                                    class="size-5 text-csi-black transition-colors hover:text-csi-blue md:text-csi-white dark:text-csi-white"
-                                /></a
-                            >
-                        {/each}
-                    {/if}
-                </div>
-            </TeamCard>
+        {#each filteredTeam as member}
+            <TeamCard {member} color={getCommitteeColor(currentCommittee)} />
         {/each}
     </div>
 </section>

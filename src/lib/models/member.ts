@@ -1,22 +1,18 @@
-import * as v from 'valibot';
+import { type InferOutput, array, object, optional, picklist, record, string } from 'valibot';
+import { COMMITTEES } from '$lib/types/committees';
+import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
+import { POSITIONS } from '$lib/types/positions';
 
-export const COMMITTEES = [
-    'Executive',
-    'Innovation',
-    'Service',
-    'External Relations',
-    'Membership & Internals',
-    'Branding & Creatives',
-    'Engineering',
-] as const;
+const SOCIALS = ['github', 'linkedin', 'instagram', 'website'];
 
-export interface Member extends v.InferOutput<typeof Member> {
-    src: string;
-}
-
-export const Member = v.object({
-    name: v.string(),
-    title: v.string(),
-    committee: v.picklist(COMMITTEES),
-    socials: v.optional(v.record(v.string(), v.pipe(v.string(), v.url()))),
+export const Member = object({
+    name: string(),
+    img: string(),
+    title: optional(array(picklist(POSITIONS))),
+    committee: array(picklist(COMMITTEES)),
+    socials: optional(record(picklist(SOCIALS), string())),
 });
+
+export interface Member extends InferOutput<typeof Member> {
+    src: EnhancedImgAttributes['src'];
+}
