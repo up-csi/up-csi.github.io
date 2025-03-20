@@ -2,7 +2,7 @@
     import type { Member } from '$lib/models/member';
 
     import { COMMITTEES } from '$lib/types/committees';
-    import TeamCard from '$lib/components/cards/TeamCard.svelte';
+    import TeamCard from '$lib/components/cards/MemberCard.svelte';
 
     const COMMITTEE_FILTERS = ['Everyone', ...COMMITTEES];
 
