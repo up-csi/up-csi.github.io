@@ -37,7 +37,7 @@
             case 'instagram':
                 return 'https://www.instagram.com';
             default:
-                return Link;
+                return '';
         }
     }
 </script>
@@ -48,9 +48,10 @@
 </div>
 <div class="flex flex-row flex-wrap gap-2">
     {#if socials}
-        {#each Object.entries(socials) as [social, username]}
+        {#each Object.entries(socials) as [social, link]}
             {@const icon = getSocialIcon(social)}
-            {@const href = `${getSocialPath(social)}/${username}`}
+            {@const path = getSocialPath(social)}
+            {@const href = path ? `${path}/${link}` : link}
             <a {href} target="_blank"
                 ><Icon
                     {icon}
