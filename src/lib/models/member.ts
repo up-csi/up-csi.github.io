@@ -1,6 +1,8 @@
-import { type InferOutput, array, object, optional, picklist, record, string } from 'valibot';
-import { COMMITTEES } from '$lib/types/committees';
 import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
+
+import { type InferOutput, array, object, optional, picklist, record, string } from 'valibot';
+
+import { COMMITTEES } from '$lib/types/committees';
 import { POSITIONS } from '$lib/types/positions';
 
 const SOCIALS = ['github', 'linkedin', 'instagram', 'website'];
