@@ -5,7 +5,6 @@
 
     import MemberCardTag from '$lib/components/cards/MemberCardTag.svelte';
 
-
     interface Props {
         member: Member;
         color: string;

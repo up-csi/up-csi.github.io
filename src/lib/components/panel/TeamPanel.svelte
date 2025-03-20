@@ -16,12 +16,12 @@
         currentCommittee === 'Everyone'
             ? team
             : team.filter(({ committee }) => {
-                let in_committee = false;
-                committee.forEach(comm => {
-                    in_committee ||= comm === currentCommittee;
-                });
-                return in_committee;
-            }),
+                  let in_committee = false;
+                  committee.forEach(comm => {
+                      in_committee ||= comm === currentCommittee;
+                  });
+                  return in_committee;
+              }),
     );
 
     function getCommitteeColor(committee: string) {
