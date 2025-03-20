@@ -1,6 +1,9 @@
-import { type Member, Member as MemberSchema } from '$lib/models/member';
 import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
+
 import { parse } from 'valibot';
+
+import { type Member, Member as MemberSchema } from '$lib/models/member';
+
 
 export async function getTeam() {
     const imports = import.meta.glob<Member>('./json/*.json');

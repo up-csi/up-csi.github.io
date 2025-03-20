@@ -1,8 +1,10 @@
 <script lang="ts">
     import type { Member } from '$lib/models/member';
 
-    import MemberCardTag from '$lib/components/cards/MemberCardTag.svelte';
     import { fade } from 'svelte/transition';
+
+    import MemberCardTag from '$lib/components/cards/MemberCardTag.svelte';
+
 
     interface Props {
         member: Member;
