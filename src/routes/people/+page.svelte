@@ -1,9 +1,9 @@
 <script>
     import ExecPanel from './ExecPanel.svelte';
-    import TeamPanel from './TeamPanel.svelte';
+    import TeamPanel from '$lib/components/panel/TeamPanel.svelte';
 
     const { data } = $props();
-    const { team, exec } = $derived(data);
+    const { team, filteredTeams, exec } = $derived(data);
     const [presExec, ...pastExec] = $derived(exec);
 </script>
 
@@ -14,7 +14,7 @@
         </div>
     {/if}
     <div class="py-6">
-        <TeamPanel {team} />
+        <TeamPanel {team} {filteredTeams} />
     </div>
 </section>
 <section>

@@ -3,7 +3,5 @@
     "img": "VictorReyes",
     "title": ["President", "Director for Engineering"],
     "committee": ["Engineering", "Executive"],
-    "socials": {
-        "instagram": "veeisforvanana"
-    }
+    "socials": { "instagram": "veeisforvanana", "website": "https://callmevee.crabdance.com" }
 }

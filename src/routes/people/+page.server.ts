@@ -1,6 +1,22 @@
+import type { Member } from '$lib/models/member';
+import { MemberCommittees } from '$lib/types/committees';
+
 import { getExec } from '$lib/people/exec/exec';
 import { getTeam } from '$lib/data/team';
 
 export async function load() {
-    return { team: await getTeam(), exec: (await getExec()).reverse() };
+    const team = await getTeam();
+
+    const filteredTeams: Record<string, Member[]> = {};
+    Object.keys(MemberCommittees).forEach(filterComm => {
+        filteredTeams[filterComm] = team.filter(({ committee }) => {
+            let in_committee = false;
+            committee.forEach(comm => {
+                in_committee ||= comm === filterComm;
+            });
+            return in_committee;
+        });
+    });
+
+    return { team, filteredTeams, exec: (await getExec()).reverse() };
 }
