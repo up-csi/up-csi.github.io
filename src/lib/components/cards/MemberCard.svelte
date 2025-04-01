@@ -42,7 +42,7 @@
             in:fade={{ duration: 75 }}
         >
             <div class="h-fit w-fit rounded-full px-3 py-1 {color}">
-                <p class="m-0 text-sm text-csi-black">{name}</p>
+                <p class="m-0 text-sm text-csi-white">{name}</p>
             </div>
         </div>
     {/if}

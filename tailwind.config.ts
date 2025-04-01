@@ -12,7 +12,7 @@ export default {
             inter: ['Inter', ...defaultTheme.fontFamily.sans],
         },
         colors: {
-            'csi-blue': '#00C6D7',
+            'csi-blue': '#10743c',
             'csi-black': '#212121',
             'csi-yellow': '#F7CF2F',
             'csi-white': '#F9FAFB',
@@ -30,7 +30,7 @@ export default {
                 '950': '#1D1D1D',
             },
             'warm-white': '#E0E1E0',
-            'blue-white': '#D7E6ED',
+            'blue-white': '#bfd8cb',
             'blue-neutral': '#32718E',
             blue: '#35ADBB',
             black: '#253242',
