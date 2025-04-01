@@ -1,7 +1,7 @@
 <script>
     import LinkButton from '$lib/components/LinkButton.svelte';
-    import src from '$lib/lino-sablay.svg';
-    import upcsi from '$lib/icons/upcsi.svg';
+    import src from '$lib/lino-owlright.svg';
+    import secsi from '$lib/icons/secsi.svg';
 </script>
 
 <section
@@ -14,7 +14,7 @@
     <div class="flex flex-col gap-5 font-dm md:w-5/12">
         <div class="flex flex-col items-center md:items-start md:pb-6">
             <img
-                src={upcsi}
+                src={secsi}
                 alt="Circle placeholder"
                 class="h-20 w-20 rounded-full bg-black p-2 dark:bg-csi-white"
             />

@@ -1,4 +1,4 @@
-import lino from '$lib/lino-sablay.svg';
+import lino from '$lib/lino-owlright.svg';
 
 export interface Project {
     tag: string;

@@ -2,7 +2,7 @@
     import events, { Tag } from '$lib/events/events';
     import FeaturedEvent from './FeaturedEvent.svelte';
     import FilterPagePanel from '$lib/components/FilterPagePanel.svelte';
-    import lino from '$lib/lino-sablay.svg';
+    import lino from '$lib/lino-owlright.svg';
 
     const filters = [
         'All',
