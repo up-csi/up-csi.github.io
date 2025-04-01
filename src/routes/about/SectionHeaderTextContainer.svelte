@@ -1,7 +1,7 @@
 <script>
     import LinkButton from '$lib/components/LinkButton.svelte';
-    import src from '$lib/lino-owlright.svg';
     import secsi from '$lib/icons/secsi.svg';
+    import src from '$lib/lino-owlright.svg';
 </script>
 
 <section
