@@ -13,9 +13,9 @@
             class="flex flex-col gap-3 text-csi-black transition-colors ease-in-out dark:text-csi-white"
         >
             <h1 class="font-dm text-5xl font-bold leading-tight sm:w-[26rem] sm:text-6xl">
-                Learn. Create. Innovate.
+                <del>Learn. Create. Innovate.</del> Sexy since 2013.
             </h1>
-            <p class="text-sm">With UP Center for Student Innovations.</p>
+            <p class="text-sm">With UP Center for <del>Student</del> Sexy Innovations.</p>
         </div>
         <LinkButton href="mailto:lino@up-csi.org">Get in Touch</LinkButton>
     </div>
