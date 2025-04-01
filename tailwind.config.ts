@@ -12,7 +12,7 @@ export default {
             inter: ['Inter', ...defaultTheme.fontFamily.sans],
         },
         colors: {
-            'csi-blue': '#10743c',
+            'csi-blue': '#00C6D7',
             'csi-black': '#212121',
             'csi-yellow': '#F7CF2F',
             'csi-white': '#F9FAFB',
@@ -30,7 +30,7 @@ export default {
                 '950': '#1D1D1D',
             },
             'warm-white': '#E0E1E0',
-            'blue-white': '#bfd8cb',
+            'blue-white': '#D7E6ED',
             'blue-neutral': '#32718E',
             blue: '#35ADBB',
             black: '#253242',
@@ -62,7 +62,7 @@ export default {
                 },
             }),
             backgroundImage: {
-                lino: 'url("$lib/lino-hero-owlright.svg")',
+                lino: 'url("$lib/lino-hero.svg")',
             },
         },
     },

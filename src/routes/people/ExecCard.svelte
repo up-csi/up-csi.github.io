@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Officer } from '$lib/models/officer';
-    import lino from '$lib/lino-hero-owlright.svg';
+    import lino from '$lib/lino-hero.svg';
 
     interface Props {
         officer: Officer;
