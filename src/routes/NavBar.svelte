@@ -8,7 +8,7 @@
 
     import { fly } from 'svelte/transition';
     import { get } from '$lib/stores/color-scheme';
-    import upcsi from '$lib/icons/upcsi.svg';
+    import secsi from '$lib/icons/secsi.svg';
 
     import LinkButtonNavBar from '$lib/components/LinkButtonNavBar.svelte';
 
@@ -25,7 +25,7 @@
 >
     <a class="flex items-center px-2" href="/">
         <div class="mx-1 h-6 w-6">
-            <img src={upcsi} alt="UP CSI Logo" class="h-full w-full" />
+            <img src={secsi} alt="UP CSI Logo" class="h-full w-full" />
         </div>
         <p class="text-nowrap text-xl font-bold tracking-tight text-csi-blue">UP CSI</p>
     </a>

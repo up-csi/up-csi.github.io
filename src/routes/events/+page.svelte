@@ -2,7 +2,7 @@
     import events, { Tag } from '$lib/events/events';
     import FeaturedEvent from './FeaturedEvent.svelte';
     import FilterPagePanel from '$lib/components/FilterPagePanel.svelte';
-    import lino from '$lib/lino-sablay.svg';
+    import lino from '$lib/lino-owlright.svg';
 
     const filters = [
         'All',
@@ -16,15 +16,15 @@
 </script>
 
 <article class="prose flex max-w-full flex-col gap-8 dark:prose-invert">
-    <FeaturedEvent tags={[Tag.App]} schedule={['']}>
+    <FeaturedEvent tags={[Tag.Other]} schedule={['']}>
         {#snippet image()}
-            <img src={lino} alt="Incoming App Process" />
+            <img src={lino} alt="&num;CURSORSeCSI" />
         {/snippet}
         {#snippet name()}
-            Incoming App Process...
+            Happy April Fools!
         {/snippet}
         {#snippet description()}
-            Stay Tuned...
+            &num;UPCurSIr &num;CURSORSeCSI
         {/snippet}
     </FeaturedEvent>
     <FilterPagePanel {filters} cardsInfo={events} />
