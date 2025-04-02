@@ -53,5 +53,11 @@
 
         <!-- Description -->
         <p>{@render description?.()}</p>
+
+        <!-- Call to Action (replace button to anchor tag when there is a valid href) -->
+        <div class="flex gap-6">
+            <LinkButton href="/#">More Info</LinkButton>
+            <LinkButton href="/#">Register</LinkButton>
+        </div>
     </div>
 </div>

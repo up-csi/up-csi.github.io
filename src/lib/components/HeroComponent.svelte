@@ -1,6 +1,6 @@
 <script>
     import LinkButton from '$lib/components/LinkButton.svelte';
-    import src from '$lib/lino-owlright.svg';
+    import src from '$lib/lino-sablay.svg';
 </script>
 
 <div
@@ -13,9 +13,9 @@
             class="flex flex-col gap-3 text-csi-black transition-colors ease-in-out dark:text-csi-white"
         >
             <h1 class="font-dm text-5xl font-bold leading-tight sm:w-[26rem] sm:text-6xl">
-                <del>Learn. Create. Innovate.</del> Sexy since 2013.
+                Learn. Create. Innovate.
             </h1>
-            <p class="text-sm">With UP Center for <del>Student</del> Sexy Innovations.</p>
+            <p class="text-sm">With UP Center for Student Innovations.</p>
         </div>
         <LinkButton href="mailto:lino@up-csi.org">Get in Touch</LinkButton>
     </div>
