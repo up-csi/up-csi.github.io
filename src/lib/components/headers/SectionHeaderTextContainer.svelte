@@ -1,7 +1,7 @@
 <script>
-    import LinkButton from '$lib/components/LinkButton.svelte';
-    import src from '$lib/lino-sablay.svg';
-    import upcsi from '$lib/icons/upcsi.svg';
+    import LinkButton from '$lib/components/buttons/LinkButton.svelte';
+    import src from '$lib/assets/lino/lino-sablay.svg';
+    import upcsi from '$lib/assets/icons/upcsi.svg';
 </script>
 
 <section

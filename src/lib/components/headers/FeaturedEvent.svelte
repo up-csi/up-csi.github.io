@@ -1,7 +1,7 @@
 <script lang="ts">
-    import LinkButton from '$lib/components/LinkButton.svelte';
+    import LinkButton from '$lib/components/buttons/LinkButton.svelte';
     import type { Snippet } from 'svelte';
-    import { Tag } from '$lib/events/events';
+    import { Tag } from '$lib/data/events';
 
     interface Props {
         tags: Tag[];

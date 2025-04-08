@@ -1,11 +1,11 @@
-import ascenc10n from '$lib/events/ascension.webp';
-import bootcamp10 from '$lib/events/bootcamp-10.webp';
-import csflight from '$lib/events/csflight.webp';
-import ex2023 from '$lib/events/EX-series-2023.webp';
-import firstGa2023 from '$lib/events/first-GA-2324B.webp';
-import gitWorkshop from '$lib/events/git-workshop.webp';
-import pyrolympics from '$lib/events/pyrolympics.webp';
-import yearEndGa2023 from '$lib/events/year-end-GA-2023.webp';
+import ascenc10n from '$lib/assets/events/ascension.webp';
+import bootcamp10 from '$lib/assets/events/bootcamp-10.webp';
+import csflight from '$lib/assets/events/csflight.webp';
+import ex2023 from '$lib/assets/events/EX-series-2023.webp';
+import firstGa2023 from '$lib/assets/events/first-GA-2324B.webp';
+import gitWorkshop from '$lib/assets/events/git-workshop.webp';
+import pyrolympics from '$lib/assets/events/pyrolympics.webp';
+import yearEndGa2023 from '$lib/assets/events/year-end-GA-2023.webp';
 
 export interface Event {
     tag: string;

@@ -1,6 +1,6 @@
 <script>
-    import LinkButton from '$lib/components/LinkButton.svelte';
-    import src from '$lib/lino-sablay.svg';
+    import LinkButton from '$lib/components/buttons/LinkButton.svelte';
+    import src from '$lib/assets/lino/lino-sablay.svg';
 </script>
 
 <div

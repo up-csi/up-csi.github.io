@@ -1,8 +1,8 @@
 <script>
-    import events, { Tag } from '$lib/events/events';
-    import FeaturedEvent from './FeaturedEvent.svelte';
-    import FilterPagePanel from '$lib/components/FilterPagePanel.svelte';
-    import lino from '$lib/lino-sablay.svg';
+    import events, { Tag } from '$lib/data/events';
+    import FeaturedEvent from '$lib/components/headers/FeaturedEvent.svelte';
+    import FilterPagePanel from '$lib/components/panels/FilterPagePanel.svelte';
+    import lino from '$lib/assets/lino/lino-sablay.svg';
 
     const filters = [
         'All',

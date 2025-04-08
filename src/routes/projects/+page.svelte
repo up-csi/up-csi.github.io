@@ -1,10 +1,10 @@
 <script>
-    import Faq from '$lib/components/Faq.svelte';
-    import FaqEntry from '$lib/components/FaqEntry.svelte';
-    import FilterPagePanel from '$lib/components/FilterPagePanel.svelte';
-    import GeneralInfo from './GeneralInfo.svelte';
-    import SocialMediaPanel from '$lib/components/SocialMediaPanel.svelte';
-    import projects from '$lib/projects/projects';
+    import Faq from '$lib/components/panels/Faq.svelte';
+    import FaqEntry from '$lib/components/items/FaqEntry.svelte';
+    import FilterPagePanel from '$lib/components/panels/FilterPagePanel.svelte';
+    import GeneralInfo from '../../lib/components/miscellaneous/GeneralInfo.svelte';
+    import SocialMediaPanel from '$lib/components/panels/SocialMediaPanel.svelte';
+    import projects from '$lib/data/projects';
 
     const filters = ['All', 'Service', 'Innovation', 'Other'];
 </script>

@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Board } from '$lib/models/board';
-    import ExecCard from './ExecCard.svelte';
+    import ExecCard from '../cards/ExecCard.svelte';
 
     interface Props {
         exec: Board;

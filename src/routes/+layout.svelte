@@ -1,8 +1,8 @@
 <script lang="ts">
     import './app.css';
     import { get, init } from '$lib/stores/color-scheme';
-    import Footer from './Footer.svelte';
-    import NavBar from './NavBar.svelte';
+    import Footer from '$lib/components/footers/Footer.svelte';
+    import NavBar from '$lib/components/nav/NavBar.svelte';
     import type { Snippet } from 'svelte';
 
     interface Props {

@@ -8,9 +8,9 @@
 
     import { fly } from 'svelte/transition';
     import { get } from '$lib/stores/color-scheme';
-    import upcsi from '$lib/icons/upcsi.svg';
+    import upcsi from '$lib/assets/icons/upcsi.svg';
 
-    import LinkButtonNavBar from '$lib/components/LinkButtonNavBar.svelte';
+    import LinkButtonNavBar from '$lib/components/buttons/LinkButtonNavBar.svelte';
 
     const theme = get();
     let mobileMenu = $state(false);

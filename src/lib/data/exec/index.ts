@@ -10,9 +10,8 @@ async function getOfficers(data: InferOutput<typeof OfficerSchema>[], folder: st
         const img = person.name.replace(/\s+/g, '-').toLowerCase();
 
         try {
-            const src: string | null = (
-                await import(`$lib/people/exec/images/${folder}/${img}.webp?url`)
-            ).default;
+            const src: string | null = (await import(`$lib/assets/exec/${folder}/${img}.webp?url`))
+                .default;
             return { ...person, src };
         } catch {
             const src: string | null = null;
@@ -24,7 +23,7 @@ async function getOfficers(data: InferOutput<typeof OfficerSchema>[], folder: st
 }
 
 export async function getExec() {
-    const imports = import.meta.glob<Board>('./boards/*.json');
+    const imports = import.meta.glob<Board>('./json/*.json');
 
     const promises = Object.entries(imports).map(async ([path, asset]) => {
         const acadYear = basename(path, '.json');
@@ -35,7 +34,7 @@ export async function getExec() {
 
         try {
             const src: EnhancedImgAttributes['src'] | null = (
-                await import(`$lib/people/exec/images/${acadYear}/${acadYear}.webp?enhanced?url`)
+                await import(`$lib/assets/exec/${acadYear}/${acadYear}.webp?enhanced?url`)
             ).default;
             return { year, officers, src };
         } catch {
