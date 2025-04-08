@@ -1,7 +1,7 @@
 import type { Member } from '$lib/models/member';
 import { MemberCommittees } from '$lib/types/committees';
 
-import { getExec } from '$lib/people/exec/exec';
+import { getExec } from '$lib/data/exec';
 import { getTeam } from '$lib/data/team';
 
 export async function load() {
