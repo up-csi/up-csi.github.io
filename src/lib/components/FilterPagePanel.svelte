@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { Event } from '$lib/events/events';
     import EventCard from '$lib/components/EventCard.svelte';
-    import type { Project } from '$lib/projects/projects';
+    import type { Project } from '$lib/data/projects';
     import ProjectCard from './ProjectCard.svelte';
 
     interface Props {

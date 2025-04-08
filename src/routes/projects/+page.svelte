@@ -4,7 +4,7 @@
     import FilterPagePanel from '$lib/components/FilterPagePanel.svelte';
     import GeneralInfo from './GeneralInfo.svelte';
     import SocialMediaPanel from '$lib/components/SocialMediaPanel.svelte';
-    import projects from '$lib/projects/projects';
+    import projects from '$lib/data/projects';
 
     const filters = ['All', 'Service', 'Innovation', 'Other'];
 </script>
