@@ -1,5 +1,5 @@
 <script>
-    import events, { Tag } from '$lib/events/events';
+    import events, { Tag } from '$lib/data/events';
     import FeaturedEvent from './FeaturedEvent.svelte';
     import FilterPagePanel from '$lib/components/FilterPagePanel.svelte';
     import lino from '$lib/assets/lino/lino-sablay.svg';

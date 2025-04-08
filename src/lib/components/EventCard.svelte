@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Event } from '$lib/events/events';
+    import type { Event } from '$lib/data/events';
     const { src, event, state, type, dates, description, href }: Event = $props();
 </script>
 
