@@ -49,7 +49,7 @@ export default [
         description:
             'On its tenth year, UP CSI celebrates a decade of innovation and excellence with its members and alumni who became a part of this incredible journey.',
         src: ascenc10n,
-        href: '/assets/events/',
+        href: '/events/',
     },
     {
         tag: Tag.EX,
@@ -60,7 +60,7 @@ export default [
         description:
             'Aute incididunt officia exercitation ea aliqua officia culpa incididunt proident aliqua commodo velit.',
         src: ex2023,
-        href: '/assets/events/',
+        href: '/events/',
     },
     {
         tag: Tag.App,
@@ -71,7 +71,7 @@ export default [
         description:
             'Qui eu voluptate non nostrud. Et irure reprehenderit pariatur nulla laboris ipsum ut tempor magna officia tempor mollit Lorem reprehenderit.',
         src: csflight,
-        href: '/assets/events/',
+        href: '/events/',
     },
     {
         tag: Tag.Partnership,
@@ -81,7 +81,7 @@ export default [
         dates: 'August 4 - August 6, 2023',
         description: 'Nisi consequat consequat nisi ipsum. Ut dolore dolore officia ea ipsum.',
         src: bootcamp10,
-        href: '/assets/events/',
+        href: '/events/',
     },
     {
         tag: Tag.Partnership,
@@ -92,7 +92,7 @@ export default [
         description:
             'Laboris ullamco do occaecat nostrud nisi irure. Ullamco nulla duis elit fugiat anim sint.',
         src: gitWorkshop,
-        href: '/assets/events/',
+        href: '/events/',
     },
     {
         tag: Tag.GA,
@@ -102,7 +102,7 @@ export default [
         dates: 'August 4 - August 6, 2023',
         description: 'Proident in aliqua proident quis ex ad excepteur culpa sunt.',
         src: yearEndGa2023,
-        href: '/assets/events/',
+        href: '/events/',
     },
     {
         tag: Tag.App,
@@ -113,7 +113,7 @@ export default [
         description:
             'Elit irure elit adipisicing consectetur nisi laborum mollit esse eu dolore nostrud laborum laborum. Excepteur nulla velit aliquip eiusmod duis.',
         src: pyrolympics,
-        href: '/assets/events/',
+        href: '/events/',
     },
     {
         tag: Tag.GA,
@@ -124,6 +124,6 @@ export default [
         description:
             'Culpa consectetur enim fugiat in labore laborum et adipisicing Lorem. Enim mollit excepteur est ea nulla in nulla dolor et.',
         src: firstGa2023,
-        href: '/assets/events/',
+        href: '/events/',
     },
 ] satisfies Event[];
