@@ -1,6 +1,0 @@
-@import url('$lib/fonts/DMSans/font.css');
-@import url('$lib/fonts/Inter/font.css');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

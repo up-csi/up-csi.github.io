@@ -6,7 +6,7 @@
 <section
     class="flex flex-col items-center justify-center gap-3 px-8 py-12 transition-colors ease-in-out md:flex-row"
 >
-    <div class="p-4 transition-colors ease-in-out sm:flex-shrink-0">
+    <div class="p-4 transition-colors ease-in-out sm:shrink-0">
         <img {src} alt="Cool Lino" class="m-0 w-52 transition-colors ease-in-out" />
     </div>
     <div

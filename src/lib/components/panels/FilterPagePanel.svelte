@@ -53,7 +53,7 @@
 <div class="flex flex-col gap-10 transition-colors ease-in-out">
     <div class="flex flex-row justify-center">
         <ul
-            class="m-0 flex max-w-screen-sm list-none flex-row flex-wrap justify-center gap-2 rounded-lg bg-csi-neutral-50 p-1 shadow-lg lg:max-w-fit dark:bg-csi-neutral-900"
+            class="m-0 flex max-w-(--breakpoint-sm) list-none flex-row flex-wrap justify-center gap-2 rounded-lg bg-csi-neutral-50 p-1 shadow-lg lg:max-w-fit dark:bg-csi-neutral-900"
         >
             {#each filters as filter}
                 {@const neutral =

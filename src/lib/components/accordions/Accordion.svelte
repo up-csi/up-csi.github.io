@@ -20,7 +20,7 @@
 
 <div class="w-full rounded-2xl bg-csi-neutral-50 shadow-lg dark:bg-csi-neutral-900">
     <button
-        class="flex w-full items-center rounded-2xl bg-csi-neutral-50 px-5 py-4 aria-expanded:bg-csi-neutral-100 dark:bg-csi-neutral-900 aria-expanded:dark:bg-csi-neutral-700"
+        class="flex w-full items-center rounded-2xl bg-csi-neutral-50 px-5 py-4 aria-expanded:bg-csi-neutral-100 dark:bg-csi-neutral-900 dark:aria-expanded:bg-csi-neutral-700"
         onclick={toggle}
         aria-expanded={open}
     >

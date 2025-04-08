@@ -28,7 +28,7 @@
         </h1>
         <div class="flex flex-row justify-center">
             <ul
-                class="m-0 flex max-w-screen-sm list-none flex-row flex-wrap justify-center gap-4 rounded-lg p-0 lg:max-w-fit"
+                class="m-0 flex max-w-(--breakpoint-sm) list-none flex-row flex-wrap justify-center gap-4 rounded-lg p-0 lg:max-w-fit"
             >
                 {#each COMMITTEE_FILTERS as committee}
                     {@const neutral =
