@@ -1,0 +1,10 @@
+{
+    "tag": "Service",
+    "name": "Bobbie Angacao’s Memorial Website",
+    "description": "The memorial website pays tribute to late Bobbie Angacao.",
+    "proponents": {
+        "pm": ["Amiel David Zamuco"],
+        "devs": ["Justin Ruaya", "Hans Lorico", "Denver Bugaoisan"]
+    },
+    "slug": "bobbie-angacaos-memorial-website"
+}

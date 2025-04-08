@@ -1,0 +1,11 @@
+{
+    "tag": "Service",
+    "name": "Pan Xenia Website",
+    "client": "Pan Xenia Fraternity",
+    "proponents": {
+        "pm": ["Jan Carlo Albano,"],
+        "devs": ["Abigail Antonio", "Celine Moredo", "Jays Tajora", "Trev Uy", "Gabriel Patron"]
+    },
+    "end_date": { "Sun Apr 30 2017 00": { "00": "00 GMT+0800 (Philippine Standard Time)" } },
+    "slug": "pan-xenia-website"
+}

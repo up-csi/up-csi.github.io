@@ -1,0 +1,7 @@
+{
+    "tag": "Service",
+    "name": "Choice Harvest Marketing, Inc.",
+    "description": "The Inventory and Sales Management System will be web-based, hosted locally on the company’s network. It will be capable of generating and displaying inventory and sales reports from XML data, which can be shared across different computers in the network.",
+    "proponents": { "pm": ["Mikaela Angeles"], "devs": ["Samuel Kirby Aguilar", "Kim Palao"] },
+    "slug": "choice-harvest-marketing-inc"
+}

@@ -1,0 +1,7 @@
+{
+    "tag": "Service",
+    "name": "MAG Web-Based Election",
+    "client": "Medical Action Group",
+    "description": "An online election system for Medical Action Group.",
+    "slug": "mag-web-based-election"
+}

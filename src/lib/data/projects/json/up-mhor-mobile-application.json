@@ -1,0 +1,8 @@
+{
+    "tag": "Service",
+    "name": "UP MHOR Mobile Application",
+    "client": "U.P. Model House of Representatives",
+    "proponents": { "devs": ["Son Roy Almerol"] },
+    "end_date": { "Mon Apr 09 2018 00": { "00": "00 GMT+0800 (Philippine Standard Time)" } },
+    "slug": "up-mhor-mobile-application"
+}

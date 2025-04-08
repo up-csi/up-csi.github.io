@@ -1,0 +1,6 @@
+{
+    "tag": "Service",
+    "name": "Guilder",
+    "proponents": { "pm": ["DJ Leviste"], "devs": ["Jerome Indefenzo"] },
+    "slug": "guilder"
+}
