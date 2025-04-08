@@ -1,1 +1,11 @@
-{"tag": "Service", "name": "IB Database", "client": "Ian Fontanilla (IB)", "description": "A local database that houses the research and findings of the Institute of Biology. It replicates boldsystems.org, an international database for biologists. Currently, the scope is limited to the research of just one laboratory.", "proponents": {"pm": ["David Hostallero"], "devs": ["Hillary Datoc", "Marco Francisco", "Ephraim Mendoza", "Matthew Villaflores"]}, "slug": "ib-database"}
+{
+    "tag": "Service",
+    "name": "IB Database",
+    "client": "Ian Fontanilla (IB)",
+    "description": "A local database that houses the research and findings of the Institute of Biology. It replicates boldsystems.org, an international database for biologists. Currently, the scope is limited to the research of just one laboratory.",
+    "proponents": {
+        "pm": ["David Hostallero"],
+        "devs": ["Hillary Datoc", "Marco Francisco", "Ephraim Mendoza", "Matthew Villaflores"]
+    },
+    "slug": "ib-database"
+}

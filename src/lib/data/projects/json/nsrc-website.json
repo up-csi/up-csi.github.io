@@ -1,1 +1,7 @@
-{"tag": "Service", "name": "NSRC Website", "description": "Technical Staff for Website Building and Website Developer for the project “Development of NSTP/NSRC Volunteerism Website.”", "proponents": {"devs": ["Brandon Martin", "Karlo Tablang", "Renzo Virtucio"]}, "slug": "nsrc-website"}
+{
+    "tag": "Service",
+    "name": "NSRC Website",
+    "description": "Technical Staff for Website Building and Website Developer for the project “Development of NSTP/NSRC Volunteerism Website.”",
+    "proponents": { "devs": ["Brandon Martin", "Karlo Tablang", "Renzo Virtucio"] },
+    "slug": "nsrc-website"
+}

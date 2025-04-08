@@ -1,1 +1,6 @@
-{"tag": "Service", "name": "KULE Website", "client": "Philippine Collegian", "slug": "kule-website"}
+{
+    "tag": "Service",
+    "name": "KULE Website",
+    "client": "Philippine Collegian",
+    "slug": "kule-website"
+}

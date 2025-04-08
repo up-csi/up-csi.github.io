@@ -1,1 +1,7 @@
-{"tag": "Service", "name": "Health Service", "description": "As part of their thesis requirements, the students from last year created an application for the Health Service. However it is currently unusable. CSI is asked to fix or perhaps redo the application.", "proponents": {"devs": ["Daniel Garcia"]}, "slug": "health-service"}
+{
+    "tag": "Service",
+    "name": "Health Service",
+    "description": "As part of their thesis requirements, the students from last year created an application for the Health Service. However it is currently unusable. CSI is asked to fix or perhaps redo the application.",
+    "proponents": { "devs": ["Daniel Garcia"] },
+    "slug": "health-service"
+}

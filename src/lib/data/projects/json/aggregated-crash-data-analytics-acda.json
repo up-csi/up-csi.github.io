@@ -1,1 +1,9 @@
-{"name": "Aggregated Crash Data Analytics (ACDA)", "description": "The Aggregated Crash Data Analytics (ACDA) is a website that shows statistics and data analytics of vehicle incidents. ", "proponents": {"pm": ["Aaron Jude Tanael"], "devs": ["Sebastian Luis Ortiz", "Jeric Narte", "Lhee Crisostomo"]}, "slug": "aggregated-crash-data-analytics-acda"}
+{
+    "name": "Aggregated Crash Data Analytics (ACDA)",
+    "description": "The Aggregated Crash Data Analytics (ACDA) is a website that shows statistics and data analytics of vehicle incidents. ",
+    "proponents": {
+        "pm": ["Aaron Jude Tanael"],
+        "devs": ["Sebastian Luis Ortiz", "Jeric Narte", "Lhee Crisostomo"]
+    },
+    "slug": "aggregated-crash-data-analytics-acda"
+}

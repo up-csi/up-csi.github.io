@@ -1,1 +1,9 @@
-{"tag": "Service", "name": "NCES 2018 Website", "client": "UP ACES", "description": "A web app that manages the registration for NCES 2018.", "proponents": {"pm": ["Mikhael Dionio"], "devs": ["Michael Pio Mayol"]}, "end_date": {"Sun Jul 01 2018 00": {"00": "00 GMT+0800 (Philippine Standard Time)"}}, "slug": "nces-2018-website"}
+{
+    "tag": "Service",
+    "name": "NCES 2018 Website",
+    "client": "UP ACES",
+    "description": "A web app that manages the registration for NCES 2018.",
+    "proponents": { "pm": ["Mikhael Dionio"], "devs": ["Michael Pio Mayol"] },
+    "end_date": { "Sun Jul 01 2018 00": { "00": "00 GMT+0800 (Philippine Standard Time)" } },
+    "slug": "nces-2018-website"
+}

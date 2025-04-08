@@ -1,1 +1,8 @@
-{"tag": "Service", "name": "UP AdCore Website", "client": "UP AdCore", "description": "Official website for UP AdCore", "proponents": {"devs": ["Jacob Pineda"]}, "slug": "up-adcore-website"}
+{
+    "tag": "Service",
+    "name": "UP AdCore Website",
+    "client": "UP AdCore",
+    "description": "Official website for UP AdCore",
+    "proponents": { "devs": ["Jacob Pineda"] },
+    "slug": "up-adcore-website"
+}

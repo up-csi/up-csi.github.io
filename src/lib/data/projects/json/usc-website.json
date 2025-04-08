@@ -1,1 +1,20 @@
-{"tag": "Service", "name": "USC Website", "client": "V Manalo (USC Councilor)", "description": "Official website for the University Student Council. Features news, announcements, and important updates from the USC.", "proponents": {"pm": ["Justin delos Reyes \n"], "devs": ["Nigel Rodriguez", "Neil Calabroso", "Andie Rabino", "Earle Bunao", "Bryan Casper Chan", "Tricia Mae Esguerra", "Joshua Frank Rayo", "Jerome Indefenzo"]}, "slug": "usc-website"}
+{
+    "tag": "Service",
+    "name": "USC Website",
+    "client": "V Manalo (USC Councilor)",
+    "description": "Official website for the University Student Council. Features news, announcements, and important updates from the USC.",
+    "proponents": {
+        "pm": ["Justin delos Reyes \n"],
+        "devs": [
+            "Nigel Rodriguez",
+            "Neil Calabroso",
+            "Andie Rabino",
+            "Earle Bunao",
+            "Bryan Casper Chan",
+            "Tricia Mae Esguerra",
+            "Joshua Frank Rayo",
+            "Jerome Indefenzo"
+        ]
+    },
+    "slug": "usc-website"
+}
