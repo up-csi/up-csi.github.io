@@ -1,8 +1,8 @@
 <script lang="ts">
     import type { Event } from '$lib/data/events';
-    import EventCard from '$lib/components/EventCard.svelte';
+    import EventCard from '$lib/components/cards/EventCard.svelte';
     import type { Project } from '$lib/data/projects';
-    import ProjectCard from './ProjectCard.svelte';
+    import ProjectCard from '$lib/components/cards/ProjectCard.svelte';
 
     interface Props {
         /** Max number of events per page in the pagination. */

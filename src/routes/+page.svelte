@@ -1,9 +1,9 @@
 <script>
-    import CartoonCard from '$lib/components/CartoonCard.svelte';
-    import Contact from '$lib/components/Contact.svelte';
-    import ContentContainer from '$lib/components/ContentContainer.svelte';
-    import HeroComponent from '$lib/components/HeroComponent.svelte';
-    import WhoWeAre from './WhoWeAre.svelte';
+    import CartoonCard from '$lib/components/cards/CartoonCard.svelte';
+    import Contact from '$lib/components/footers/Contact.svelte';
+    import ContentContainer from '$lib/components/panels/ContentContainer.svelte';
+    import HeroComponent from '$lib/components/headers/HeroComponent.svelte';
+    import WhoWeAre from '$lib/components/miscellaneous/WhoWeAre.svelte';
     import devcamps from '$lib/assets/cartoons/devcamps.svg';
     import services from '$lib/assets/cartoons/cartoon-card-placeholder.svg';
     import tech from '$lib/assets/cartoons/tech.svg';

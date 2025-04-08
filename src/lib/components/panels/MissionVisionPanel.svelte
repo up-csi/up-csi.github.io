@@ -1,5 +1,5 @@
 <script>
-    import Card from './Card.svelte';
+    import Card from '$lib/components/cards/MissionVisionCard.svelte';
     import create from '$lib/assets/cartoons/create.svg';
     import develop from '$lib/assets/cartoons/develop.svg';
     import establish from '$lib/assets/cartoons/establish.svg';
