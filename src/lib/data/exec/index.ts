@@ -10,9 +10,8 @@ async function getOfficers(data: InferOutput<typeof OfficerSchema>[], folder: st
         const img = person.name.replace(/\s+/g, '-').toLowerCase();
 
         try {
-            const src: string | null = (
-                await import(`$lib/assets/exec/${folder}/${img}.webp?url`)
-            ).default;
+            const src: string | null = (await import(`$lib/assets/exec/${folder}/${img}.webp?url`))
+                .default;
             return { ...person, src };
         } catch {
             const src: string | null = null;
