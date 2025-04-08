@@ -1,0 +1,1 @@
+{"tag": "Service", "name": "Nestogen Website", "client": "Cyril Silagan (Nestle)", "description": "An event scheduler for the internal use of Nestogen. It allows users to manage company events across the different regions of the country. ", "proponents": {"pm": ["Mireya Andres"], "devs": ["Errol Pineda", "Acezon Cay"]}, "slug": "nestogen-website"}
