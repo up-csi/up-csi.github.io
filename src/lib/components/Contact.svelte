@@ -1,6 +1,6 @@
 <script>
     import LinkButton from '$lib/components/LinkButton.svelte';
-    import src from '$lib/lino-hero.svg';
+    import src from '$lib/assets/lino/lino-hero.svg';
 </script>
 
 <section

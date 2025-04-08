@@ -1,5 +1,5 @@
 <script>
-    import ThonkLino from '$lib/lino-thonk.png';
+    import ThonkLino from '$lib/assets/lino/lino-thonk.png';
     import { page } from '$app/stores';
     const { error, status } = $derived($page);
 </script>

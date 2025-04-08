@@ -62,7 +62,7 @@ export default {
                 },
             }),
             backgroundImage: {
-                lino: 'url("$lib/lino-hero.svg")',
+                lino: 'url("$lib/assets/lino/lino-hero.svg")',
             },
         },
     },
