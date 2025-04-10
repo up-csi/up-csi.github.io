@@ -1,6 +1,5 @@
 @import url('$lib/fonts/DMSans/font.css') layer(base);
 @import url('$lib/fonts/Inter/font.css') layer(base);
-
 @import 'tailwindcss';
 
 @config '../tailwind.config.ts';

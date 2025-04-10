@@ -4,15 +4,15 @@
 </script>
 
 <div
-    class="flex h-auto flex-col items-center justify-between rounded-3xl bg-linear-to-b from-csi-blue/25 to-blue-white/25 transition-colors ease-in-out lg:h-[34rem] lg:flex-row dark:from-csi-blue/50 dark:to-blue-neutral/25"
+    class="from-csi-blue/25 to-blue-white/25 dark:from-csi-blue/50 dark:to-blue-neutral/25 flex h-auto flex-col items-center justify-between rounded-3xl bg-linear-to-b transition-colors ease-in-out lg:h-[34rem] lg:flex-row"
 >
     <div
-        class="mx-5 mb-12 mt-24 flex flex-col items-center gap-12 text-center lg:ml-20 lg:mr-0 lg:items-start lg:text-left xl:ml-40"
+        class="mx-5 mt-24 mb-12 flex flex-col items-center gap-12 text-center lg:mr-0 lg:ml-20 lg:items-start lg:text-left xl:ml-40"
     >
         <div
-            class="flex flex-col gap-3 text-csi-black transition-colors ease-in-out dark:text-csi-white"
+            class="text-csi-black dark:text-csi-white flex flex-col gap-3 transition-colors ease-in-out"
         >
-            <h1 class="font-dm text-5xl font-bold leading-tight sm:w-[26rem] sm:text-6xl">
+            <h1 class="font-dm text-5xl leading-tight font-bold sm:w-[26rem] sm:text-6xl">
                 Learn. Create. Innovate.
             </h1>
             <p class="text-sm">With UP Center for Student Innovations.</p>

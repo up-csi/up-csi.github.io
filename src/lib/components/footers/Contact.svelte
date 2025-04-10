@@ -13,7 +13,7 @@
         class="flex w-fit flex-col items-center justify-center gap-8 transition-colors ease-in-out md:items-start md:gap-6"
     >
         <h1
-            class="m-0 text-center font-dm text-3xl font-light text-csi-black transition-colors ease-in-out sm:text-5xl md:text-left dark:text-csi-white"
+            class="font-dm text-csi-black dark:text-csi-white m-0 text-center text-3xl font-light transition-colors ease-in-out sm:text-5xl md:text-left"
         >
             Let's innovate together!
         </h1>

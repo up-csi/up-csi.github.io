@@ -24,7 +24,7 @@
             <a {href} target="_blank"
                 ><Icon
                     {icon}
-                    class="size-5 text-csi-black transition-colors hover:text-csi-blue md:text-csi-white dark:text-csi-white"
+                    class="text-csi-black hover:text-csi-blue md:text-csi-white dark:text-csi-white size-5 transition-colors"
                 /></a
             >
         {/each}
