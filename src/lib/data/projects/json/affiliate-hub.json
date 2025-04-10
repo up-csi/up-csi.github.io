@@ -3,6 +3,6 @@
     "name": "Affiliate Hub",
     "client": "Philippine Society of Youth Science Clubs",
     "proponents": { "pm": ["Gerard Montemayor"] },
-    "end_date": { "Thu Feb 01 2018 00": { "00": "00 GMT+0800 (Philippine Standard Time)" } },
+    "end_date": "2018-02-01",
     "slug": "affiliate-hub"
 }

@@ -6,6 +6,6 @@
         "pm": ["Jan Carlo Albano,"],
         "devs": ["Abigail Antonio", "Celine Moredo", "Jays Tajora", "Trev Uy", "Gabriel Patron"]
     },
-    "end_date": { "Sun Apr 30 2017 00": { "00": "00 GMT+0800 (Philippine Standard Time)" } },
+    "end_date": "2017-04-30",
     "slug": "pan-xenia-website"
 }
