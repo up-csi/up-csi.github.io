@@ -1,31 +1,18 @@
-import lino from '$lib/assets/lino/lino-sablay.svg';
+import { parse } from 'valibot';
 
-export interface Project {
-    tag: string;
-    project: string;
-    description: string;
-    src?: string;
+import { type Project, Project as ProjectSchema } from '$lib/models/project';
+
+export async function getProjects() {
+    const imports = import.meta.glob<Project>('./json/*.json');
+
+    const promises = Object.entries(imports).map(async ([_, asset]) => {
+        const project = parse(ProjectSchema, await asset());
+        const end_date = project.end_date;
+        const parsed_end_date = (end_date) ? new Date(end_date) : null;
+
+        const parsed_project: Project = { ...project, parsed_end_date }
+        return parsed_project;
+    });
+
+    return await Promise.all(promises);
 }
-
-export default [
-    {
-        tag: 'Service',
-        project: 'Service Project',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        src: lino,
-    },
-    {
-        tag: 'Innovation',
-        project: 'Innovcamp',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        src: lino,
-    },
-    {
-        tag: 'Innovation',
-        project: 'Kopi Korner',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    },
-] satisfies Project[];
