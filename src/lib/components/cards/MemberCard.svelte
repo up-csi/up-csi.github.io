@@ -31,7 +31,7 @@
     />
     {#if isOverlayVisible}
         <div
-            class="absolute z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end gap-2 bg-csi-black/70 p-4 text-csi-white md:flex"
+            class="bg-csi-black/70 text-csi-white absolute z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end gap-2 p-4 md:flex"
             transition:fade={{ duration: 75 }}
         >
             <MemberCardTag {member} />
@@ -42,7 +42,7 @@
             in:fade={{ duration: 75 }}
         >
             <div class="h-fit w-fit rounded-full px-3 py-1 {color}">
-                <p class="m-0 text-sm text-csi-black">{name}</p>
+                <p class="text-csi-black m-0 text-sm">{name}</p>
             </div>
         </div>
     {/if}

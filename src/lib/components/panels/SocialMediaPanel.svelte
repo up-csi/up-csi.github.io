@@ -26,14 +26,14 @@
     ];
 </script>
 
-<div class="prose flex flex-col dark:prose-invert">
+<div class="prose dark:prose-invert flex flex-col">
     <div
-        class="hidden w-fit rounded-t-2xl bg-csi-neutral-50 px-4 pt-1.5 text-center font-semibold md:block dark:bg-csi-neutral-800"
+        class="bg-csi-neutral-50 dark:bg-csi-neutral-800 hidden w-fit rounded-t-2xl px-4 pt-1.5 text-center font-semibold md:block"
     >
         Social Media
     </div>
     <div
-        class="flex flex-row space-x-8 rounded-2xl rounded-tl-none bg-none p-5 md:bg-csi-neutral-50 md:shadow-lg dark:md:bg-csi-neutral-800"
+        class="md:bg-csi-neutral-50 dark:md:bg-csi-neutral-800 flex flex-row space-x-8 rounded-2xl rounded-tl-none bg-none p-5 md:shadow-lg"
     >
         {#each socials as { icon, href }}
             <a {href} target="_blank">

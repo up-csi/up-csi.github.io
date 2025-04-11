@@ -19,6 +19,10 @@ export default tsEslint.config(
                 extraFileExtensions: ['.svelte'],
             },
         },
+        rules: {
+            'svelte/no-at-html-tags': 'warn',
+            'svelte/require-each-key': 'off',
+        },
     },
     {
         languageOptions: { globals: { ...globals.browser, ...globals.node } },

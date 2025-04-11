@@ -1,5 +1,5 @@
 <script lang="ts">
-    import './app.css';
+    import '../app.css';
     import { get, init } from '$lib/stores/color-scheme';
     import Footer from '$lib/components/footers/Footer.svelte';
     import NavBar from '$lib/components/nav/NavBar.svelte';

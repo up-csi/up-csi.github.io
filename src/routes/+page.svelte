@@ -13,18 +13,18 @@
     <HeroComponent />
 </section>
 <WhoWeAre />
-<section class="prose max-w-full dark:prose-invert">
+<section class="prose dark:prose-invert max-w-full">
     <h1 class="text-center font-normal transition-colors ease-in-out">Why UP CSI?</h1>
     <div class="space-y-4">
         <ContentContainer>
             {#snippet text()}
-                <p class="m-0 text-csi-black dark:text-csi-white">For organizations</p>
+                <p class="text-csi-black dark:text-csi-white m-0">For organizations</p>
                 <h3
-                    class="m-0 font-dm text-2xl font-normal text-csi-black sm:text-3xl dark:text-csi-white"
+                    class="font-dm text-csi-black dark:text-csi-white m-0 text-2xl font-normal sm:text-3xl"
                 >
                     We offer services catered to your specific software needs.
                 </h3>
-                <p class="m-0 leading-5 text-csi-black sm:leading-6 dark:text-csi-white">
+                <p class="text-csi-black dark:text-csi-white m-0 leading-5 sm:leading-6">
                     Need a small site or a full-scale project? Contact us to see how we can help.
                 </p>
             {/snippet}
@@ -34,13 +34,13 @@
         </ContentContainer>
         <ContentContainer>
             {#snippet text()}
-                <p class="m-0 text-csi-black dark:text-csi-white">For students</p>
+                <p class="text-csi-black dark:text-csi-white m-0">For students</p>
                 <h3
-                    class="m-0 font-dm text-2xl font-normal text-csi-black sm:text-3xl dark:text-csi-white"
+                    class="font-dm text-csi-black dark:text-csi-white m-0 text-2xl font-normal sm:text-3xl"
                 >
                     We enhance and upskill student abilities.
                 </h3>
-                <p class="m-0 leading-5 text-csi-black sm:leading-6 dark:text-csi-white">
+                <p class="text-csi-black dark:text-csi-white m-0 leading-5 sm:leading-6">
                     From training programs to external workshops, we elevate students' development
                     skills.
                 </p>
@@ -52,6 +52,6 @@
         </ContentContainer>
     </div>
 </section>
-<section class="prose max-w-full dark:prose-invert">
+<section class="prose dark:prose-invert max-w-full">
     <Contact />
 </section>

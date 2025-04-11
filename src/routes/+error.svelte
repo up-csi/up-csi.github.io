@@ -4,7 +4,7 @@
     const { error, status } = $derived($page);
 </script>
 
-<section class="space-y-12 py-12 text-center text-csi-black dark:text-csi-white">
+<section class="text-csi-black dark:text-csi-white space-y-12 py-12 text-center">
     {#if error === null}
         <p>{status}</p>
         <p>Woops! An error occurred.</p>

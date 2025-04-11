@@ -19,7 +19,7 @@
 </script>
 
 <section
-    class="prose flex w-full max-w-full flex-col items-center gap-8 rounded-3xl bg-blue-white px-6 py-16 transition-colors dark:prose-invert md:p-12 dark:bg-black"
+    class="prose bg-blue-white dark:prose-invert flex w-full max-w-full flex-col items-center gap-8 rounded-3xl px-6 py-16 transition-colors md:p-12 dark:bg-black"
 >
     <div class="flex w-full flex-col items-center text-center lg:w-2/3">
         <p class="m-0">The Team</p>
@@ -28,7 +28,7 @@
         </h1>
         <div class="flex flex-row justify-center">
             <ul
-                class="m-0 flex max-w-screen-sm list-none flex-row flex-wrap justify-center gap-4 rounded-lg p-0 lg:max-w-fit"
+                class="m-0 flex max-w-(--breakpoint-sm) list-none flex-row flex-wrap justify-center gap-4 rounded-lg p-0 lg:max-w-fit"
             >
                 {#each COMMITTEE_FILTERS as committee}
                     {@const neutral =
@@ -37,7 +37,7 @@
                             : 'bg-csi-white text-csi-black dark:bg-blue-white'}
                     <li class="m-0 p-0">
                         <button
-                            class="min-h-10 shrink-0 rounded-md px-6 shadow-md transition-colors hover:bg-csi-blue dark:hover:bg-csi-white {neutral}"
+                            class="hover:bg-csi-blue dark:hover:bg-csi-white min-h-10 shrink-0 rounded-md px-6 shadow-md transition-colors {neutral}"
                             onclick={() => (currentCommittee = committee)}
                         >
                             {committee}
