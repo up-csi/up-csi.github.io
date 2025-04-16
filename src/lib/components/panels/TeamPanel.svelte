@@ -19,7 +19,7 @@
 </script>
 
 <section
-    class="prose bg-blue-white dark:prose-invert flex w-full max-w-full flex-col items-center gap-8 rounded-3xl px-6 py-16 transition-colors md:p-12 dark:bg-black"
+    class="prose bg-highlight flex w-full max-w-full flex-col items-center gap-8 rounded-3xl px-6 py-16 transition-colors ease-in-out md:p-12"
 >
     <div class="flex w-full flex-col items-center text-center lg:w-2/3">
         <p class="m-0">The Team</p>
@@ -33,11 +33,11 @@
                 {#each COMMITTEE_FILTERS as committee}
                     {@const neutral =
                         currentCommittee === committee
-                            ? 'bg-black text-csi-white dark:bg-csi-blue dark:text-csi-black'
-                            : 'bg-csi-white text-csi-black dark:bg-blue-white'}
+                            ? 'bg-selected-filter text-selected-filter-foreground'
+                            : 'bg-filter text-filter-foreground'}
                     <li class="m-0 p-0">
                         <button
-                            class="hover:bg-csi-blue dark:hover:bg-csi-white min-h-10 shrink-0 rounded-md px-6 shadow-md transition-colors {neutral}"
+                            class="hover:bg-filter-hover min-h-10 shrink-0 rounded-md px-6 shadow-md transition-colors {neutral}"
                             onclick={() => (currentCommittee = committee)}
                         >
                             {committee}
@@ -51,9 +51,9 @@
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
         {#if filteredTeam}
-            {@const { color } = getCommitteeInfo(currentCommittee)}
+            {@const { color, foreground } = getCommitteeInfo(currentCommittee)}
             {#each filteredTeam as member}
-                <TeamCard {member} {color} />
+                <TeamCard {member} {color} {foreground} />
             {/each}
         {/if}
     </div>

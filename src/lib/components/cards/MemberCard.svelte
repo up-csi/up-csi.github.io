@@ -8,9 +8,10 @@
     interface Props {
         member: Member;
         color: string;
+        foreground: string;
     }
 
-    const { member, color }: Props = $props();
+    const { member, color, foreground }: Props = $props();
     const { name, src } = $derived(member);
     let isOverlayVisible = $state(false);
 </script>
@@ -42,7 +43,7 @@
             in:fade={{ duration: 75 }}
         >
             <div class="h-fit w-fit rounded-full px-3 py-1 {color}">
-                <p class="text-csi-black m-0 text-sm">{name}</p>
+                <p class="{foreground} m-0 text-sm">{name}</p>
             </div>
         </div>
     {/if}
