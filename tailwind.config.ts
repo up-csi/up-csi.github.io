@@ -3,7 +3,6 @@ import forms from '@tailwindcss/forms';
 import typo from '@tailwindcss/typography';
 
 export default {
-    darkMode: 'selector',
     content: ['./src/**/*.{css,html,js,svelte,ts}'],
     theme: {
         extend: {

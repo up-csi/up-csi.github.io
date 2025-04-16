@@ -41,7 +41,7 @@
         --color-float-foreground: var(--color-csi-black);
     }
 
-    :root[class="dark"] {
+    :root[data-theme="dark"] {
         --color-background: var(--color-csi-black);
         --color-foreground: var(--color-csi-white);
 

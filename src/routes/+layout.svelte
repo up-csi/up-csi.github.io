@@ -15,7 +15,7 @@
     const theme = get();
 
     $effect(() => {
-        document.documentElement.classList.toggle('dark', $theme);
+        document.documentElement.setAttribute('data-theme', ($theme) ? 'dark' : '');
     });
 </script>
 
