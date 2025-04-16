@@ -18,7 +18,7 @@
 
 <!-- TODO: Prefer using `hover:` modifiers in native CSS. -->
 <div
-    class="grid-rows-[1fr auto] relative grid grid-cols-1 content-start items-start overflow-hidden *:m-0 md:aspect-square md:grid-rows-1 md:rounded-2xl md:shadow-lg"
+    class="grid-rows-[1fr auto] relative grid grid-cols-1 content-start items-start overflow-hidden *:!m-0 md:aspect-square md:grid-rows-1 md:rounded-2xl md:shadow-lg"
     role="img"
     onmouseenter={() => (isOverlayVisible = true)}
     onmouseleave={() => (isOverlayVisible = false)}
@@ -28,7 +28,7 @@
         alt={name}
         height="300px"
         loading="lazy"
-        class="col-start-1 row-start-1 m-0 aspect-square h-56 w-full rounded-2xl object-cover md:h-full"
+        class="col-start-1 row-start-1 !m-0 aspect-square h-56 w-full rounded-2xl object-cover md:h-full"
     />
     {#if isOverlayVisible}
         <div
@@ -43,7 +43,7 @@
             in:fade={{ duration: 75 }}
         >
             <div class="h-fit w-fit rounded-full px-3 py-1 {color}">
-                <p class="{foreground} m-0 text-sm">{name}</p>
+                <p class="{foreground} !m-0 text-sm">{name}</p>
             </div>
         </div>
     {/if}

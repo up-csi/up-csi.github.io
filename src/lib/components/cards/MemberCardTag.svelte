@@ -13,8 +13,8 @@
 </script>
 
 <div>
-    <p class="text-md m-0 md:text-lg">{name}</p>
-    <p class="m-0 text-xs leading-tight">{title}</p>
+    <p class="text-md !m-0 md:text-lg">{name}</p>
+    <p class="!m-0 text-xs leading-tight">{title}</p>
 </div>
 <div class="flex flex-row flex-wrap gap-2">
     {#if socials}

@@ -12,7 +12,7 @@
 
 <section class="prose flex max-w-none flex-col gap-8">
     {#if src}
-        <figure class="m-0 flex flex-col items-center">
+        <figure class="!m-0 flex flex-col items-center">
             <enhanced:img
                 {src}
                 sizes="(min-width:768px) 768px, (min-width:640px) 640px"
