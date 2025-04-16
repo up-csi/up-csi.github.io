@@ -1,6 +1,5 @@
 import { Config } from 'tailwindcss';
 import forms from '@tailwindcss/forms';
-import typo from '@tailwindcss/typography';
 
 export default {
     content: ['./src/**/*.{css,html,js,svelte,ts}'],
@@ -52,5 +51,5 @@ export default {
             },
         },
     },
-    plugins: [forms, typo],
+    plugins: [forms],
 } satisfies Config;
