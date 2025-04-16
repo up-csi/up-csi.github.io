@@ -12,7 +12,7 @@
 <HeroLanding />
 <WhoWeAre />
 
-<section class="prose max-w-full">
+<section class="prose">
     <h1 class="text-center font-normal transition-colors ease-in-out">Why UP CSI?</h1>
     <div class="space-y-4">
         <CardContainer>

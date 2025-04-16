@@ -7,17 +7,17 @@
     const [presExec, ...pastExec] = $derived(exec);
 </script>
 
-<section>
-    {#if presExec}
-        <div class="pb-3">
-            <ExecPanel exec={presExec} />
-        </div>
-    {/if}
-    <div class="py-6">
-        <TeamPanel {team} {filteredTeams} />
+{#if presExec}
+    <div class="pb-3">
+        <ExecPanel exec={presExec} />
     </div>
-</section>
-<section>
+{/if}
+
+<div class="py-6">
+    <TeamPanel {team} {filteredTeams} />
+</div>
+
+<section class="w-full">
     <h1
         class="text-foreground mb-4 w-full text-center text-3xl transition-colors md:text-4xl"
     >

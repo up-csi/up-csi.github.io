@@ -5,7 +5,7 @@
 </script>
 
 <section
-    class="prose max-w-full flex flex-col items-center gap-5 p-3 transition-colors ease-in-out md:flex-row md:items-start"
+    class="prose flex flex-col items-center gap-5 p-3 transition-colors ease-in-out md:flex-row md:items-start"
 >
     <!--PLACEHOLDER IMAGES-->
     <div class="w-full md:w-7/12">

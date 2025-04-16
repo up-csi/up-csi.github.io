@@ -13,6 +13,6 @@
     ];
 </script>
 
-<section class="prose flex max-w-full">
+<section class="prose">
     <FilterPagePanel {filters} cardsInfo={events} />
 </section>
