@@ -21,7 +21,7 @@
 </script>
 
 <div
-    class="border-light-gray bg-csi-white/90 font-dm text-csi-black dark:border-dark-gray dark:bg-csi-black/90 dark:text-csi-white flex items-center justify-between rounded-full border-2 p-1 shadow-lg backdrop-blur-xl transition-colors ease-in-out lg:mx-24"
+    class="border-muted/50 text-foreground bg-background/90 font-dm flex items-center justify-between rounded-full border-2 p-1 shadow-lg backdrop-blur-xl transition-colors ease-in-out lg:mx-24"
 >
     <a class="flex items-center px-2" href="/">
         <div class="mx-1 h-6 w-6">
@@ -30,23 +30,23 @@
         <p class="text-csi-blue text-xl font-bold tracking-tight text-nowrap">UP CSI</p>
     </a>
     <nav class="absolute left-1/2 hidden -translate-x-1/2 lg:block">
-        <ul class="flex items-center gap-8">
+        <ul class="flex items-center gap-8 *:hover:text-csi-blue">
             <li>
-                <a class="hover:text-csi-blue transition-colors ease-in-out" href="/about/">About</a
+                <a href="/about/">About</a
                 >
             </li>
             <li>
-                <a class="hover:text-csi-blue transition-colors ease-in-out" href="/people/"
+                <a href="/people/"
                     >People</a
                 >
             </li>
             <li>
-                <a class="hover:text-csi-blue transition-colors ease-in-out" href="/events/"
+                <a href="/events/"
                     >Events</a
                 >
             </li>
             <li>
-                <a class="hover:text-csi-blue transition-colors ease-in-out" href="/projects/"
+                <a href="/projects/"
                     >Projects</a
                 >
             </li>
@@ -54,16 +54,15 @@
     </nav>
     <div class="flex items-center gap-2">
         <button
-            class="border-csi-neutral-200 hover:bg-light-gray dark:border-csi-neutral-800 dark:hover:bg-dark-gray rounded-full border p-2 transition-colors hover:shadow-inner"
+            class="border-muted hover:bg-muted/25 rounded-full border p-2 transition-colors hover:shadow-inner"
             onclick={theme.toggle}
         >
-            <Icon icon={Moon} width="18" height="18" class="dark:hidden" />
-            <Icon icon={Sun} width="18" height="18" class="hidden dark:block" />
+            <Icon icon={($theme) ? Sun : Moon} width="18" height="18" />
         </button>
         <LinkButtonNavBar href="mailto:lino@up-csi.org">Contact Us</LinkButtonNavBar>
 
         <button
-            class="border-csi-neutral-200 hover:bg-light-gray dark:border-csi-neutral-800 dark:hover:bg-dark-gray rounded-full border p-2 transition-colors lg:hidden"
+            class="border-muted hover:bg-muted/25 rounded-full border p-2 transition-colors lg:hidden"
             onclick={() => (mobileMenu = !mobileMenu)}
         >
             {#if mobileMenu}
@@ -76,8 +75,8 @@
 </div>
 {#if mobileMenu}
     <div
-        class="bg-blue-white/95 font-dm dark:text-csi-white fixed inset-2 block rounded-2xl text-xl backdrop-blur-2xl sm:left-auto sm:w-3/4 sm:max-w-sm lg:hidden dark:bg-black/95"
-        transition:fly={{ x: 300, duration: 150 }}
+        class="bg-highlight/95 text-foreground font-dm fixed inset-2 block rounded-2xl text-xl backdrop-blur-2xl sm:left-auto sm:w-3/4 sm:max-w-sm lg:hidden"
+        transition:fly={{ x: 300, duration: 300 }}
     >
         <div class="flex h-full flex-col items-end justify-between p-4">
             <div class="flex flex-col items-end">
@@ -88,32 +87,28 @@
                     <Icon icon={XMark} width="18" height="18" />
                 </button>
                 <ul
-                    class="text-csi-black dark:text-csi-white flex w-full flex-col items-end space-y-6 px-2"
+                    class="flex w-full flex-col items-end space-y-6 px-2 *:hover:text-csi-blue"
                 >
                     <li>
                         <a
-                            class="hover:text-csi-blue transition-colors ease-in-out"
                             href="/about/"
                             onclick={closeMenu}>About</a
                         >
                     </li>
                     <li>
                         <a
-                            class="hover:text-csi-blue transition-colors ease-in-out"
                             href="/people/"
                             onclick={closeMenu}>People</a
                         >
                     </li>
                     <li>
                         <a
-                            class="hover:text-csi-blue transition-colors ease-in-out"
                             href="/events/"
                             onclick={closeMenu}>Events</a
                         >
                     </li>
                     <li>
                         <a
-                            class="hover:text-csi-blue transition-colors ease-in-out"
                             href="/projects/"
                             onclick={closeMenu}>Projects</a
                         >
