@@ -18,9 +18,7 @@
         <CardContainer>
             {#snippet text()}
                 <p class=" m-0">For organizations</p>
-                <h3
-                    class="font-dm m-0 text-2xl font-normal sm:text-3xl"
-                >
+                <h3 class="font-dm m-0 text-2xl font-normal sm:text-3xl">
                     We offer services catered to your specific software needs.
                 </h3>
                 <p class="m-0 leading-5 sm:leading-6">
@@ -34,9 +32,7 @@
         <CardContainer>
             {#snippet text()}
                 <p class="m-0">For students</p>
-                <h3
-                    class="font-dm m-0 text-2xl font-normal sm:text-3xl"
-                >
+                <h3 class="font-dm m-0 text-2xl font-normal sm:text-3xl">
                     We enhance and upskill student abilities.
                 </h3>
                 <p class="m-0 leading-5 sm:leading-6">

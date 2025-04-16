@@ -1,7 +1,6 @@
 @theme inline {
-    --font-dm: DMSans, sans-serif;
-    --font-inter: Inter, sans-serif;
-
+    --font-dm: dmsans, sans-serif;
+    --font-inter: inter, sans-serif;
     --color-csi-blue-100: rgb(235 253 255);
     --color-csi-blue-200: rgb(183 249 255);
     --color-csi-blue-300: rgb(131 245 255);
@@ -11,7 +10,6 @@
     --color-csi-blue-700: rgb(0 125 136);
     --color-csi-blue-800: rgb(0 74 81);
     --color-csi-blue-900: rgb(0 44 48);
-
     --color-csi-gold-100: rgb(255 251 235);
     --color-csi-gold-200: rgb(255 243 194);
     --color-csi-gold-300: rgb(255 236 157);
@@ -21,7 +19,6 @@
     --color-csi-gold-700: rgb(161 133 26);
     --color-csi-gold-800: rgb(122 98 15);
     --color-csi-gold-900: rgb(61 46 0);
-
     --color-csi-grayscale-100: rgb(249 250 251);
     --color-csi-grayscale-200: rgb(226 226 226);
     --color-csi-grayscale-300: rgb(194 194 194);
@@ -31,25 +28,20 @@
     --color-csi-grayscale-700: rgb(87 87 87);
     --color-csi-grayscale-800: rgb(61 61 61);
     --color-csi-grayscale-900: rgb(33 33 33);
-
-
     --color-csi-blue: var(--color-csi-blue-500);
     --color-csi-gold: var(--color-csi-gold-500);
     --color-csi-white: var(--color-csi-grayscale-100);
     --color-csi-black: var(--color-csi-grayscale-900);
-
-    --color-mni: #FF96BD;
-    --color-service: #E9D15C;
-    --color-innov: #FFA047;
-    --color-engg: #FF6864;
-    --color-exte: #3566AA;
-    --color-bnc: #44A966;
-
+    --color-mni: #ff96bd;
+    --color-service: #e9d15c;
+    --color-innov: #ffa047;
+    --color-engg: #ff6864;
+    --color-exte: #3566aa;
+    --color-bnc: #44a966;
     --color-blue: rgb(53 173 187);
     --color-black: rgb(37 50 66);
     --color-warm-white: var(--color-csi-grayscale-200);
     --color-blue-white: rgb(215 230 237);
-
     --color-danger: rgb(217 43 52);
     --color-success: rgb(37 184 103);
     --color-warning: rgb(255 170 51);

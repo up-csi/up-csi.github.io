@@ -27,7 +27,7 @@
 
         <script lang="ts">
             const initial_theme = +`${localStorage.getItem('theme')}`;
-            document.documentElement.setAttribute('data-theme', (initial_theme) ? 'dark' : '');
+            document.documentElement.setAttribute('data-theme', initial_theme ? 'dark' : '');
         </script>
     </head>
     <body

@@ -30,25 +30,18 @@
         <p class="text-csi-blue text-xl font-bold tracking-tight text-nowrap">UP CSI</p>
     </a>
     <nav class="absolute left-1/2 hidden -translate-x-1/2 lg:block">
-        <ul class="flex items-center gap-8 *:hover:text-csi-blue">
+        <ul class="*:hover:text-csi-blue flex items-center gap-8">
             <li>
-                <a href="/about/">About</a
-                >
+                <a href="/about/">About</a>
             </li>
             <li>
-                <a href="/people/"
-                    >People</a
-                >
+                <a href="/people/">People</a>
             </li>
             <li>
-                <a href="/events/"
-                    >Events</a
-                >
+                <a href="/events/">Events</a>
             </li>
             <li>
-                <a href="/projects/"
-                    >Projects</a
-                >
+                <a href="/projects/">Projects</a>
             </li>
         </ul>
     </nav>
@@ -57,7 +50,7 @@
             class="border-muted hover:bg-muted/25 rounded-full border p-2 transition-colors hover:shadow-inner"
             onclick={theme.toggle}
         >
-            <Icon icon={($theme) ? Sun : Moon} width="18" height="18" />
+            <Icon icon={$theme ? Sun : Moon} width="18" height="18" />
         </button>
         <LinkButtonNavBar href="mailto:lino@up-csi.org">Contact Us</LinkButtonNavBar>
 
@@ -86,32 +79,18 @@
                 >
                     <Icon icon={XMark} width="18" height="18" />
                 </button>
-                <ul
-                    class="flex w-full flex-col items-end space-y-6 px-2 *:hover:text-csi-blue"
-                >
+                <ul class="*:hover:text-csi-blue flex w-full flex-col items-end space-y-6 px-2">
                     <li>
-                        <a
-                            href="/about/"
-                            onclick={closeMenu}>About</a
-                        >
+                        <a href="/about/" onclick={closeMenu}>About</a>
                     </li>
                     <li>
-                        <a
-                            href="/people/"
-                            onclick={closeMenu}>People</a
-                        >
+                        <a href="/people/" onclick={closeMenu}>People</a>
                     </li>
                     <li>
-                        <a
-                            href="/events/"
-                            onclick={closeMenu}>Events</a
-                        >
+                        <a href="/events/" onclick={closeMenu}>Events</a>
                     </li>
                     <li>
-                        <a
-                            href="/projects/"
-                            onclick={closeMenu}>Projects</a
-                        >
+                        <a href="/projects/" onclick={closeMenu}>Projects</a>
                     </li>
                 </ul>
             </div>

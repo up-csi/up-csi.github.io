@@ -57,9 +57,7 @@
         >
             {#each filters as filter}
                 {@const neutral =
-                    currentFilter === filter
-                        ? 'bg-csi-blue text-csi-black'
-                        : 'bg-invert/10'}
+                    currentFilter === filter ? 'bg-csi-blue text-csi-black' : 'bg-invert/10'}
                 <li class="!m-0 p-0">
                     <button
                         class="hover:bg-invert hover:text-invert-foreground min-h-10 shrink-0 rounded-md px-6 transition-colors ease-in-out {neutral}"
@@ -85,12 +83,10 @@
         </div>
     </div>
     <div class="flex flex-row justify-center">
-        <ul
-            class="bg-float !m-0 flex list-none flex-row rounded-lg p-0 shadow-lg"
-        >
+        <ul class="bg-float !m-0 flex list-none flex-row rounded-lg p-0 shadow-lg">
             <li class="!m-0 p-0">
                 <button
-                    class="hover:bg-invert/10 disabled:text-float-foreground/10 disabled:hover:bg-transparent flex size-10 items-center justify-center rounded-l-lg transition-colors ease-in-out disabled:cursor-default"
+                    class="hover:bg-invert/10 disabled:text-float-foreground/10 flex size-10 items-center justify-center rounded-l-lg transition-colors ease-in-out disabled:cursor-default disabled:hover:bg-transparent"
                     onclick={backPage}
                     disabled={currentPage <= 0}
                 >
@@ -98,8 +94,7 @@
                 </button>
             </li>
             {#each Array(pages) as _, pageIndex}
-                {@const neutral =
-                    pageIndex === currentPage ? 'bg-invert/10' : ''}
+                {@const neutral = pageIndex === currentPage ? 'bg-invert/10' : ''}
                 <li class="!m-0 p-0">
                     <button
                         class="flex size-10 items-center justify-center transition-colors ease-in-out {neutral} hover:bg-invert/10"
@@ -111,7 +106,7 @@
             {/each}
             <li class="!m-0 p-0">
                 <button
-                    class="hover:bg-invert/10 disabled:text-float-foreground/10 disabled:hover:bg-transparent flex size-10 items-center justify-center rounded-r-lg transition-colors ease-in-out disabled:cursor-default"
+                    class="hover:bg-invert/10 disabled:text-float-foreground/10 flex size-10 items-center justify-center rounded-r-lg transition-colors ease-in-out disabled:cursor-default disabled:hover:bg-transparent"
                     onclick={nextPage}
                     disabled={currentPage >= pages - 1}
                 >

@@ -4,7 +4,7 @@
 </script>
 
 <section
-    class="prose max-w-full flex flex-col items-center justify-center gap-3 px-8 py-12 transition-colors ease-in-out md:flex-row"
+    class="prose flex max-w-full flex-col items-center justify-center gap-3 px-8 py-12 transition-colors ease-in-out md:flex-row"
 >
     <div class="p-4 transition-colors ease-in-out sm:shrink-0">
         <img {src} alt="Cool Lino" class="!m-0 w-52 transition-colors ease-in-out" />

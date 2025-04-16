@@ -14,7 +14,9 @@
         <p class="!m-0">{dates}</p>
         <p class="!m-0 grow overflow-hidden">{description}</p>
         <p class="!m-0">
-            <a {href} class="text-float-foreground no-underline transition-colors ease-in-out hover:underline"
+            <a
+                {href}
+                class="text-float-foreground no-underline transition-colors ease-in-out hover:underline"
                 >More Info</a
             >
         </p>

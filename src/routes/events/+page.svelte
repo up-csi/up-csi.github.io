@@ -1,5 +1,6 @@
 <script>
     import events from '$lib/data/events';
+
     import FilterPagePanel from '$lib/components/panels/FilterPagePanel.svelte';
 
     const filters = [

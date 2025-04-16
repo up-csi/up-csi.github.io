@@ -1,6 +1,4 @@
-<div
-    class="bg-float !m-0 rounded-2xl px-8 py-8 shadow-lg lg:max-w-fit"
->
+<div class="bg-float !m-0 rounded-2xl px-8 py-8 shadow-lg lg:max-w-fit">
     <div class="flex flex-col gap-5">
         <div>
             <h1 class="!m-0">General Info</h1>

@@ -5,9 +5,9 @@
 @plugin '@tailwindcss/typography';
 @config '../tailwind.config.ts';
 
-@import "./lib/csi.css" layer(theme);
+@import './lib/csi.css' layer(theme);
 
-@layer base {    
+@layer base {
     :root {
         --color-background: var(--color-csi-white);
         --color-foreground: var(--color-csi-black);
@@ -41,7 +41,7 @@
         --color-float-foreground: var(--color-csi-black);
     }
 
-    :root[data-theme="dark"] {
+    :root[data-theme='dark'] {
         --color-background: var(--color-csi-black);
         --color-foreground: var(--color-csi-white);
 

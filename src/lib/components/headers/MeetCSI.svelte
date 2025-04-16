@@ -9,7 +9,11 @@
 >
     <!--PLACEHOLDER IMAGES-->
     <div class="w-full md:w-7/12">
-        <img {src} alt="UP CSI Logo Placeholder" class="bg-muted rounded-3xl md:h-[500px] transition-colors ease-in-out" />
+        <img
+            {src}
+            alt="UP CSI Logo Placeholder"
+            class="bg-muted rounded-3xl transition-colors ease-in-out md:h-[500px]"
+        />
     </div>
     <div class="font-dm flex flex-col gap-5 md:w-5/12">
         <div class="flex flex-col items-center md:items-start md:pb-6">
@@ -19,11 +23,13 @@
                 class="bg-csi-white h-20 w-20 rounded-full p-2"
             />
         </div>
-        <h1 class="text-sm transition-colors ease-in-out">Meet UP Center for Student Innovations</h1>
+        <h1 class="text-sm transition-colors ease-in-out">
+            Meet UP Center for Student Innovations
+        </h1>
         <p class="text-3xl transition-colors ease-in-out">
             To create a center where students can innovate with the latest technology.
         </p>
-        <div class="text-center md:text-left transition-colors ease-in-out">
+        <div class="text-center transition-colors ease-in-out md:text-left">
             <LinkButton href="#mission-vision">Mission and Vision</LinkButton>
             <LinkButton href="/people">See Team</LinkButton>
         </div>

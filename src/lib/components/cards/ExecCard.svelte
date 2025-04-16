@@ -16,7 +16,7 @@
     {:else}
         <img src={lino} width="192" height="192" class="block rounded-2xl" {alt} />
     {/if}
-    <figcaption class="*:transition-colors *:ease-in-out *:text-foreground">
+    <figcaption class="*:text-foreground *:transition-colors *:ease-in-out">
         <p class="font-bold">{alt}</p>
         <p>{pos}</p>
     </figcaption>

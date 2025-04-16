@@ -27,9 +27,7 @@
 </script>
 
 <div class="prose flex flex-col">
-    <div
-        class="bg-float hidden w-fit rounded-t-2xl px-4 pt-1.5 text-center font-semibold md:block"
-    >
+    <div class="bg-float hidden w-fit rounded-t-2xl px-4 pt-1.5 text-center font-semibold md:block">
         Social Media
     </div>
     <div
@@ -37,7 +35,7 @@
     >
         {#each socials as { icon, href }}
             <a {href} target="_blank">
-                <Icon {icon} class="size-14 md:size-16 text-float-foreground" />
+                <Icon {icon} class="text-float-foreground size-14 md:size-16" />
             </a>
         {/each}
     </div>

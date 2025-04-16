@@ -9,7 +9,7 @@
 </script>
 
 <section
-    class="prose max-w-full bg-muted text-muted-foreground font-dm flex flex-col gap-16 rounded-3xl px-8 py-12 transition-colors ease-in-out md:px-12"
+    class="prose bg-muted text-muted-foreground font-dm flex max-w-full flex-col gap-16 rounded-3xl px-8 py-12 transition-colors ease-in-out md:px-12"
     id="mission-vision"
 >
     <div class="flex flex-col gap-8">

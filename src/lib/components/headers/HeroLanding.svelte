@@ -9,9 +9,7 @@
     <div
         class="mx-5 mt-24 mb-12 flex flex-col items-center gap-12 text-center lg:mr-0 lg:ml-20 lg:items-start lg:text-left xl:ml-40"
     >
-        <div
-            class="text-foreground flex flex-col gap-3 transition-colors ease-in-out"
-        >
+        <div class="text-foreground flex flex-col gap-3 transition-colors ease-in-out">
             <h1 class="font-dm text-5xl leading-tight font-bold sm:w-[26rem] sm:text-6xl">
                 Learn. Create. Innovate.
             </h1>

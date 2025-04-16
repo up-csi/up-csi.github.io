@@ -15,7 +15,9 @@
     <div class="flex flex-1 flex-col gap-4 *:transition-colors *:ease-in-out">
         {@render text()}
     </div>
-    <div class="flex w-5/6 flex-col justify-center gap-4 md:flex-row xl:w-1/2 *:transition-colors *:ease-in-out">
+    <div
+        class="flex w-5/6 flex-col justify-center gap-4 *:transition-colors *:ease-in-out md:flex-row xl:w-1/2"
+    >
         {@render cards()}
     </div>
 </div>
