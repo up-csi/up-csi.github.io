@@ -27,7 +27,7 @@
 - `description`
 -->
 <div
-    class="bg-csi-neutral-50 dark:bg-csi-neutral-900 flex w-full flex-col items-center justify-center gap-6 rounded-3xl p-4 text-center shadow-lg transition-colors ease-in-out md:flex-row md:justify-normal md:gap-8 md:text-left"
+    class="bg-float text-float-foreground flex w-full flex-col items-center justify-center gap-6 rounded-3xl p-4 text-center shadow-lg transition-colors ease-in-out md:flex-row md:justify-normal md:gap-8 md:text-left"
 >
     <div class="flex w-full flex-col border-b-2 md:w-1/3 md:flex-row md:border-b-0">
         {@render image?.()}
@@ -42,7 +42,7 @@
         </div>
 
         <!-- Event Name -->
-        <h2 class="font-inter text-4xl font-bold">{@render name?.()}</h2>
+        <h2 class="font-inter text-float-foreground transition-colors ease-in-out text-4xl font-bold">{@render name?.()}</h2>
 
         <!-- Schedule -->
         <div>
