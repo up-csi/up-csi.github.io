@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Board } from '$lib/models/board';
-    import ExecCard from '../cards/ExecCard.svelte';
+    import Card from '$lib/components/cards/ExecCard.svelte';
 
     interface Props {
         exec: Board;
@@ -30,7 +30,7 @@
 
     <section class="not-prose flex flex-wrap justify-around gap-8">
         {#each officers as officer}
-            <ExecCard {officer} />
+            <Card {officer} />
         {/each}
     </section>
 </section>

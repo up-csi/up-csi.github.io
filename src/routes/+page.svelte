@@ -1,21 +1,21 @@
 <script>
+    import CardContainer from '$lib/components/panels/CardContainer.svelte';
     import CartoonCard from '$lib/components/cards/CartoonCard.svelte';
-    import Contact from '$lib/components/footers/Contact.svelte';
-    import ContentContainer from '$lib/components/panels/ContentContainer.svelte';
-    import HeroComponent from '$lib/components/headers/HeroComponent.svelte';
-    import WhoWeAre from '$lib/components/miscellaneous/WhoWeAre.svelte';
+    import ContactUs from '$lib/components/contacts/ContactUs.svelte';
+    import HeroLanding from '$lib/components/headers/HeroLanding.svelte';
+    import WhoWeAre from '$lib/components/headers/WhoWeAre.svelte';
     import devcamps from '$lib/assets/cartoons/devcamps.svg';
     import services from '$lib/assets/cartoons/cartoon-card-placeholder.svg';
     import tech from '$lib/assets/cartoons/tech.svg';
 </script>
 
-<HeroComponent />
+<HeroLanding />
 <WhoWeAre />
 
 <section class="prose max-w-full">
     <h1 class="text-center font-normal transition-colors ease-in-out">Why UP CSI?</h1>
     <div class="space-y-4">
-        <ContentContainer>
+        <CardContainer>
             {#snippet text()}
                 <p class=" m-0">For organizations</p>
                 <h3
@@ -30,8 +30,8 @@
             {#snippet cards()}
                 <CartoonCard src={services}></CartoonCard>
             {/snippet}
-        </ContentContainer>
-        <ContentContainer>
+        </CardContainer>
+        <CardContainer>
             {#snippet text()}
                 <p class="m-0">For students</p>
                 <h3
@@ -48,8 +48,8 @@
                 <CartoonCard src={devcamps}>Developer Training Program & DevCamp</CartoonCard>
                 <CartoonCard src={tech}>Technology Workshops</CartoonCard>
             {/snippet}
-        </ContentContainer>
+        </CardContainer>
     </div>
 </section>
 
-<Contact />
+<ContactUs />

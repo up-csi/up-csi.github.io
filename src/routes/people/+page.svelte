@@ -1,5 +1,5 @@
 <script>
-    import ExecPanel from '../../lib/components/panels/ExecPanel.svelte';
+    import ExecPanel from '$lib/components/panels/ExecPanel.svelte';
     import TeamPanel from '$lib/components/panels/TeamPanel.svelte';
 
     const { data } = $props();

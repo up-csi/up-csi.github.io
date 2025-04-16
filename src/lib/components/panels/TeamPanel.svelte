@@ -2,7 +2,7 @@
     import { MemberCommittees, getCommitteeInfo } from '$lib/types/committees';
     import type { Member } from '$lib/models/member';
 
-    import TeamCard from '$lib/components/cards/MemberCard.svelte';
+    import Card from '$lib/components/cards/MemberCard.svelte';
 
     const COMMITTEE_FILTERS = ['Everyone', ...Object.keys(MemberCommittees)];
 
@@ -53,7 +53,7 @@
         {#if filteredTeam}
             {@const { color, foreground } = getCommitteeInfo(currentCommittee)}
             {#each filteredTeam as member}
-                <TeamCard {member} {color} {foreground} />
+                <Card {member} {color} {foreground} />
             {/each}
         {/if}
     </div>

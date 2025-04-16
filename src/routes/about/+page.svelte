@@ -1,9 +1,9 @@
 <script>
-    import Contact from '$lib/components/footers/Contact.svelte';
+    import ContactUs from '$lib/components/contacts/ContactUs.svelte';
     import MissionVision from '$lib/components/panels/MissionVisionPanel.svelte';
-    import SectionHeaderTextContainer from '../../lib/components/headers/SectionHeaderTextContainer.svelte';
+    import MeetCSI from '$lib/components/headers/MeetCSI.svelte';
 </script>
 
-<SectionHeaderTextContainer />
+<MeetCSI />
 <MissionVision />
-<Contact />
+<ContactUs />
