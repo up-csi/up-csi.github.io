@@ -22,7 +22,7 @@
         </figure>
     {:else}
         <h1
-            class="text-csi-black dark:text-csi-white w-full text-center text-3xl font-normal transition-colors ease-in-out md:text-4xl"
+            class="w-full text-center text-3xl font-normal transition-colors ease-in-out md:text-4xl"
         >
             The {year} Executive Board
         </h1>
