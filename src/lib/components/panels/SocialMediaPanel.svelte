@@ -26,18 +26,18 @@
     ];
 </script>
 
-<div class="prose dark:prose-invert flex flex-col">
+<div class="prose flex flex-col">
     <div
-        class="bg-csi-neutral-50 dark:bg-csi-neutral-800 hidden w-fit rounded-t-2xl px-4 pt-1.5 text-center font-semibold md:block"
+        class="bg-card hidden w-fit rounded-t-2xl px-4 pt-1.5 text-center font-semibold md:block"
     >
         Social Media
     </div>
     <div
-        class="md:bg-csi-neutral-50 dark:md:bg-csi-neutral-800 flex flex-row space-x-8 rounded-2xl rounded-tl-none bg-none p-5 md:shadow-lg"
+        class="md:bg-card flex flex-row space-x-8 rounded-2xl rounded-tl-none bg-none p-5 md:shadow-lg"
     >
         {#each socials as { icon, href }}
             <a {href} target="_blank">
-                <Icon {icon} class="size-14 md:size-16" />
+                <Icon {icon} class="size-14 md:size-16 text-card-foreground" />
             </a>
         {/each}
     </div>
