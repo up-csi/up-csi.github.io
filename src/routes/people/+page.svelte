@@ -19,7 +19,7 @@
 </section>
 <section>
     <h1
-        class="text-csi-black dark:text-csi-white mb-4 w-full text-center text-3xl transition-colors md:text-4xl"
+        class="text-foreground mb-4 w-full text-center text-3xl transition-colors md:text-4xl"
     >
         The Past Executive Boards
     </h1>
@@ -27,7 +27,7 @@
     {#each pastExec as board}
         <details class="py-4">
             <summary
-                class="text-csi-black dark:text-csi-white text-xl transition-colors md:text-2xl"
+                class="text-foreground text-xl transition-colors md:text-2xl"
                 >{board.year}</summary
             >
             <div class="my-4">

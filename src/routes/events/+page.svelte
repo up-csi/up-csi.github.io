@@ -15,7 +15,7 @@
     ];
 </script>
 
-<article class="prose dark:prose-invert flex max-w-full flex-col gap-8">
+<article class="prose flex max-w-full flex-col gap-8">
     <FeaturedEvent tags={[Tag.App]} schedule={['']}>
         {#snippet image()}
             <img src={lino} alt="Incoming App Process" />

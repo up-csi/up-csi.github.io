@@ -9,7 +9,7 @@
     const filters = ['All', 'Service', 'Innovation', 'Other'];
 </script>
 
-<article class="prose dark:prose-invert flex max-w-full flex-col gap-4 lg:flex-row">
+<section class="prose flex max-w-full flex-col gap-4 lg:flex-row">
     <div class="grow">
         <FilterPagePanel {filters} cardsInfo={projects} />
     </div>
@@ -17,7 +17,7 @@
         <GeneralInfo />
         <SocialMediaPanel />
     </div>
-</article>
+</section>
 
 <section>
     <Faq>
