@@ -4,7 +4,7 @@
 </script>
 
 <div
-    class="bg-csi-neutral-50 dark:bg-csi-neutral-900 flex h-full w-full flex-col overflow-hidden rounded-2xl px-1 shadow-lg md:max-w-72 md:px-2"
+    class="bg-float text-float-foreground flex h-full w-full flex-col overflow-hidden rounded-2xl px-1 shadow-lg md:max-w-72 md:px-2"
 >
     {#if src}
         <img {src} alt={project} loading="lazy" class="m-0 h-64 shrink-0 object-cover md:h-48" />

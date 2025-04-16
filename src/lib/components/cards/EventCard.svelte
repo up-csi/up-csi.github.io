@@ -4,7 +4,7 @@
 </script>
 
 <div
-    class="bg-csi-neutral-50 dark:bg-csi-neutral-900 flex h-auto w-full flex-col overflow-hidden rounded-2xl shadow-lg md:h-[32rem] md:w-72"
+    class="bg-float text-float-foreground flex h-auto w-full flex-col overflow-hidden rounded-2xl shadow-lg md:h-[32rem] md:w-72"
 >
     <img {src} alt={event} loading="lazy" class="m-0 h-64 shrink-0 object-cover md:h-48" />
     <div class="m-3 flex h-full flex-col justify-between gap-2 overflow-hidden">

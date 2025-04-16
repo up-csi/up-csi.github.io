@@ -53,16 +53,16 @@
 <div class="flex flex-col gap-10 transition-colors ease-in-out">
     <div class="flex flex-row justify-center">
         <ul
-            class="bg-csi-neutral-50 dark:bg-csi-neutral-900 m-0 flex max-w-(--breakpoint-sm) list-none flex-row flex-wrap justify-center gap-2 rounded-lg p-1 shadow-lg lg:max-w-fit"
+            class="bg-float m-0 flex max-w-(--breakpoint-sm) list-none flex-row flex-wrap justify-center gap-2 rounded-lg p-1 shadow-lg lg:max-w-fit"
         >
             {#each filters as filter}
                 {@const neutral =
                     currentFilter === filter
                         ? 'bg-csi-blue text-csi-black'
-                        : 'bg-csi-neutral-100 dark:bg-csi-neutral-700'}
+                        : 'bg-invert/10'}
                 <li class="m-0 p-0">
                     <button
-                        class="hover:bg-csi-black hover:text-csi-white dark:hover:bg-csi-white dark:hover:text-csi-black min-h-10 shrink-0 rounded-md px-6 transition-colors ease-in-out {neutral}"
+                        class="hover:bg-invert hover:text-invert-foreground min-h-10 shrink-0 rounded-md px-6 transition-colors ease-in-out {neutral}"
                         onclick={() => setFilter(filter)}
                     >
                         {filter}
@@ -86,11 +86,11 @@
     </div>
     <div class="flex flex-row justify-center">
         <ul
-            class="bg-csi-neutral-50 dark:bg-csi-neutral-900 m-0 flex list-none flex-row rounded-lg p-0 shadow-lg"
+            class="bg-float m-0 flex list-none flex-row rounded-lg p-0 shadow-lg"
         >
             <li class="m-0 p-0">
                 <button
-                    class="hover:bg-csi-neutral-100 disabled:bg-csi-neutral-50 disabled:text-csi-neutral-200 dark:hover:bg-csi-neutral-700 dark:disabled:bg-csi-neutral-900 dark:disabled:text-csi-neutral-500 flex size-10 items-center justify-center rounded-l-lg transition-colors ease-in-out disabled:cursor-default"
+                    class="hover:bg-invert/10 disabled:text-float-foreground/10 disabled:hover:bg-transparent flex size-10 items-center justify-center rounded-l-lg transition-colors ease-in-out disabled:cursor-default"
                     onclick={backPage}
                     disabled={currentPage <= 0}
                 >
@@ -99,10 +99,10 @@
             </li>
             {#each Array(pages) as _, pageIndex}
                 {@const neutral =
-                    pageIndex === currentPage ? 'bg-csi-neutral-100 dark:bg-csi-neutral-700' : ''}
+                    pageIndex === currentPage ? 'bg-invert/10' : ''}
                 <li class="m-0 p-0">
                     <button
-                        class="flex size-10 items-center justify-center transition-colors ease-in-out {neutral} hover:bg-csi-neutral-100 dark:hover:bg-csi-neutral-700"
+                        class="flex size-10 items-center justify-center transition-colors ease-in-out {neutral} hover:bg-invert/10"
                         onclick={() => setPage(pageIndex)}
                     >
                         {pageIndex + 1}
@@ -111,7 +111,7 @@
             {/each}
             <li class="m-0 p-0">
                 <button
-                    class="hover:bg-csi-neutral-100 disabled:bg-csi-neutral-50 disabled:text-csi-neutral-200 dark:hover:bg-csi-neutral-700 dark:disabled:bg-csi-neutral-900 dark:disabled:text-csi-neutral-500 flex size-10 items-center justify-center rounded-r-lg transition-colors ease-in-out disabled:cursor-default"
+                    class="hover:bg-invert/10 disabled:text-float-foreground/10 disabled:hover:bg-transparent flex size-10 items-center justify-center rounded-r-lg transition-colors ease-in-out disabled:cursor-default"
                     onclick={nextPage}
                     disabled={currentPage >= pages - 1}
                 >
