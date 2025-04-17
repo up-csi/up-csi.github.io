@@ -2,7 +2,7 @@
     import FaqItem from '$lib/components/items/FaqItem.svelte';
     import FaqPanel from '$lib/components/panels/FaqPanel.svelte';
     import FilterPagePanel from '$lib/components/panels/FilterPagePanel.svelte';
-    import GeneralInfo from '../../lib/components/contacts/GeneralInfo.svelte';
+    import GeneralInfo from '$lib/components/contacts/GeneralInfo.svelte';
     import SocialMedia from '$lib/components/contacts/SocialMedia.svelte';
     import projects from '$lib/data/projects';
 

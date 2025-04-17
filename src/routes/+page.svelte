@@ -17,11 +17,11 @@
     <div class="space-y-4">
         <CardContainer>
             {#snippet text()}
-                <p class=" m-0">For organizations</p>
-                <h3 class="font-dm m-0 text-2xl font-normal sm:text-3xl">
+                <p>For organizations</p>
+                <h3 class="font-dm text-2xl font-normal sm:text-3xl">
                     We offer services catered to your specific software needs.
                 </h3>
-                <p class="m-0 leading-5 sm:leading-6">
+                <p class="leading-5 sm:leading-6">
                     Need a small site or a full-scale project? Contact us to see how we can help.
                 </p>
             {/snippet}
@@ -31,11 +31,11 @@
         </CardContainer>
         <CardContainer>
             {#snippet text()}
-                <p class="m-0">For students</p>
-                <h3 class="font-dm m-0 text-2xl font-normal sm:text-3xl">
+                <p>For students</p>
+                <h3 class="font-dm text-2xl font-normal sm:text-3xl">
                     We enhance and upskill student abilities.
                 </h3>
-                <p class="m-0 leading-5 sm:leading-6">
+                <p class="leading-5 sm:leading-6">
                     From training programs to external workshops, we elevate students' development
                     skills.
                 </p>
