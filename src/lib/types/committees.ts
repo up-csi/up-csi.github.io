@@ -1,30 +1,38 @@
 interface CommitteeInfo {
     color: string;
+    foreground: string;
 }
 
 const defaultCommitteeInfo: CommitteeInfo = {
     color: 'bg-csi-blue',
+    foreground: 'text-csi-black',
 };
 
 export const MemberCommittees: Record<string, CommitteeInfo> = {
     Executive: defaultCommitteeInfo,
     Innovation: {
-        color: 'bg-committees-innov',
+        color: 'bg-innov',
+        foreground: 'text-csi-black',
     },
     Service: {
-        color: 'bg-committees-service',
+        color: 'bg-service',
+        foreground: 'text-csi-black',
     },
     'External Relations': {
-        color: 'bg-committees-exte',
+        color: 'bg-exte',
+        foreground: 'text-csi-white',
     },
     'Membership & Internals': {
-        color: 'bg-committees-mni',
+        color: 'bg-mni',
+        foreground: 'text-csi-black',
     },
     'Branding & Creatives': {
-        color: 'bg-committees-bnc',
+        color: 'bg-bnc',
+        foreground: 'text-csi-white',
     },
     Engineering: {
-        color: 'bg-committees-engg',
+        color: 'bg-engg',
+        foreground: 'text-csi-black',
     },
 } as const;
 

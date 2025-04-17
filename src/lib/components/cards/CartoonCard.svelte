@@ -17,7 +17,7 @@
     </div>
     {#if typeof children !== 'undefined'}
         <div class="leading-6">
-            <p class="text-csi-black dark:text-csi-white text-center">{@render children()}</p>
+            <p class="text-center">{@render children()}</p>
         </div>
     {/if}
 </div>

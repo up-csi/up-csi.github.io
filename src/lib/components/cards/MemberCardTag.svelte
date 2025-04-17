@@ -12,9 +12,9 @@
     const { name, title, socials } = $derived(member);
 </script>
 
-<div>
-    <p class="text-md m-0 md:text-lg">{name}</p>
-    <p class="m-0 text-xs leading-tight">{title}</p>
+<div class="*:!m-0">
+    <p class="text-md md:text-lg">{name}</p>
+    <p class="text-xs leading-tight">{title}</p>
 </div>
 <div class="flex flex-row flex-wrap gap-2">
     {#if socials}
@@ -24,7 +24,7 @@
             <a {href} target="_blank"
                 ><Icon
                     {icon}
-                    class="text-csi-black hover:text-csi-blue md:text-csi-white dark:text-csi-white size-5 transition-colors"
+                    class="text-foreground hover:text-csi-blue md:text-csi-white size-5 transition-colors"
                 /></a
             >
         {/each}

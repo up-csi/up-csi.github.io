@@ -11,6 +11,6 @@
 
 <a
     {...rest}
-    class="font-inter text-csi-white hover:bg-csi-blue dark:bg-csi-blue dark:text-csi-black dark:hover:bg-csi-white rounded-full bg-black px-4 py-3 text-center no-underline transition-colors ease-in-out"
+    class="font-inter text-button-foreground bg-button hover:bg-button-hover rounded-full px-4 py-3 text-center no-underline transition-colors ease-in-out"
     >{@render children?.()}</a
 >

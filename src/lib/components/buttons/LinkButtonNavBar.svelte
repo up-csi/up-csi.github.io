@@ -11,6 +11,6 @@
 
 <a
     {...rest}
-    class="border-csi-blue hover:bg-csi-blue hidden rounded-full border-2 px-4 py-1 whitespace-nowrap transition-colors duration-300 hover:shadow-inner lg:block"
+    class="border-csi-blue hover:bg-csi-blue hidden rounded-full border-2 px-4 py-1 whitespace-nowrap hover:shadow-inner lg:block"
     >{@render children?.()}</a
 >
