@@ -4,7 +4,7 @@ import { type InferOutput, array, object, optional, picklist, record, string } f
 
 import { MemberCommittees } from '$lib/types/committees';
 import { MemberSocialMedia } from '$lib/types/social_media';
-import { POSITIONS } from '$lib/types/positions';
+import { POSITIONS } from '$lib/models/position';
 
 export const Member = object({
     name: string(),
