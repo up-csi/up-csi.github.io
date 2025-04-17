@@ -12,7 +12,7 @@
 <div
     class="bg-muted text-muted-foreground flex flex-col items-center justify-between gap-12 rounded-3xl px-8 py-8 transition-colors ease-in-out md:px-24 md:py-16 xl:flex-row"
 >
-    <div class="flex flex-1 flex-col gap-4 *:transition-colors *:ease-in-out *:!m-0">
+    <div class="flex flex-1 flex-col gap-4 *:!m-0 *:transition-colors *:ease-in-out">
         {@render text()}
     </div>
     <div
