@@ -1,12 +1,19 @@
-import * as v from 'valibot';
-import type { HTMLImgAttributes } from 'svelte/elements';
-import { POSITIONS } from '$lib/types/positions';
+import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
 
-export interface Officer extends v.InferOutput<typeof Officer> {
-    src: HTMLImgAttributes['src'] | null;
-}
+import { type InferOutput, array, object, string } from 'valibot';
 
-export const Officer = v.object({
-    name: v.string(),
-    pos: v.picklist(POSITIONS),
+import type { Position } from '$lib/models/position';
+
+export const Officer = object({
+    name: object({
+        last_name: string(),
+        nickname: string()
+    }),
+    img: string(),
+    pos: array(string()),
 });
+
+export interface Officer extends InferOutput<typeof Officer> {
+    src: EnhancedImgAttributes['src'];
+    parsed_pos: Array<readonly [string, Position]>;
+}
