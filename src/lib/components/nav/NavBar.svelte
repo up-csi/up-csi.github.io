@@ -2,14 +2,13 @@
     import Icon from '@iconify/svelte';
 
     import Bars3 from '@iconify/icons-heroicons/bars-3-solid';
-    import Moon from '@iconify/icons-heroicons/moon-solid';
-    import Sun from '@iconify/icons-heroicons/sun-solid';
     import XMark from '@iconify/icons-heroicons/x-mark-solid';
 
     import { fly } from 'svelte/transition';
     import upcsi from '$lib/assets/icons/upcsi.svg';
 
     import LinkButtonNavBar from '$lib/components/buttons/LinkButtonNavBar.svelte';
+    import ThemeButton from '$lib/components/buttons/ThemeButton.svelte';
 
     let mobileMenu = $state(false);
 
@@ -44,6 +43,7 @@
         </ul>
     </nav>
     <div class="flex items-center gap-2">
+        <ThemeButton />
         <LinkButtonNavBar href="mailto:lino@up-csi.org">Contact Us</LinkButtonNavBar>
 
         <button
