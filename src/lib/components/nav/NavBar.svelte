@@ -7,12 +7,10 @@
     import XMark from '@iconify/icons-heroicons/x-mark-solid';
 
     import { fly } from 'svelte/transition';
-    import { get } from '$lib/stores/color-scheme';
     import upcsi from '$lib/assets/icons/upcsi.svg';
 
     import LinkButtonNavBar from '$lib/components/buttons/LinkButtonNavBar.svelte';
 
-    const theme = get();
     let mobileMenu = $state(false);
 
     function closeMenu() {
@@ -46,12 +44,6 @@
         </ul>
     </nav>
     <div class="flex items-center gap-2">
-        <button
-            class="border-muted hover:bg-muted/25 rounded-full border p-2 transition-colors hover:shadow-inner"
-            onclick={theme.toggle}
-        >
-            <Icon icon={$theme ? Sun : Moon} width="18" height="18" />
-        </button>
         <LinkButtonNavBar href="mailto:lino@up-csi.org">Contact Us</LinkButtonNavBar>
 
         <button

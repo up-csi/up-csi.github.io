@@ -1,6 +1,5 @@
 <script lang="ts">
     import '../app.css';
-    import { get, init } from '$lib/stores/color-scheme';
     import Footer from '$lib/components/footers/Footer.svelte';
     import NavBar from '$lib/components/nav/NavBar.svelte';
     import type { Snippet } from 'svelte';
@@ -10,13 +9,6 @@
     }
 
     const { children }: Props = $props();
-
-    init();
-    const theme = get();
-
-    $effect(() => {
-        document.documentElement.setAttribute('data-theme', $theme ? 'dark' : '');
-    });
 </script>
 
 <header class="sticky inset-x-0 top-0 z-50 items-center justify-center p-3 lg:px-16">
