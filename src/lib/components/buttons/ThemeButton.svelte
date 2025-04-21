@@ -5,17 +5,18 @@
     import Sun from '@iconify/icons-heroicons/sun-solid';
 
     const KEY = 'theme';
-    let is_dark = $state(false);
-
-    $effect(() => {
-        is_dark = getTheme();
-    });
 
     function getTheme() {
         const result = localStorage.getItem(KEY);
         const media = matchMedia('(prefers-color-scheme: dark)');
         return result === null ? media.matches : Boolean(JSON.parse(result));
     }
+
+    let is_dark = $state(false);
+
+    $effect(() => {
+        is_dark = getTheme();
+    });
 
     function toggle() {
         is_dark = !is_dark;
