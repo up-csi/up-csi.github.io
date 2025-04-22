@@ -1,13 +1,13 @@
 <script lang="ts">
-    import { Board } from '$lib/models/board';
+    import type { Board } from '$lib/types/board';
     import Card from '$lib/components/cards/ExecCard.svelte';
 
     interface Props {
-        exec: Board;
+        board: Board;
     }
 
-    const { exec }: Props = $props();
-    const { year, officers, src }: Board = $derived(exec);
+    const { board }: Props = $props();
+    const { term, src, officers }: Board = $derived(board);
 </script>
 
 <section class="prose flex max-w-none flex-col gap-8">
@@ -16,15 +16,15 @@
             <enhanced:img
                 {src}
                 sizes="(min-width:768px) 768px, (min-width:640px) 640px"
-                alt="The {year} Executive Board"
+                alt="The {term} Executive Board"
             />
-            <figcaption>The {year} Executive Board</figcaption>
+            <figcaption>The {term} Executive Board</figcaption>
         </figure>
     {:else}
         <h1
             class="w-full text-center text-3xl font-normal transition-colors ease-in-out md:text-4xl"
         >
-            The {year} Executive Board
+            The {term} Executive Board
         </h1>
     {/if}
 
