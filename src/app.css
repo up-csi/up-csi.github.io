@@ -1,5 +1,76 @@
 @import url('$lib/fonts/DMSans/font.css') layer(base);
 @import url('$lib/fonts/Inter/font.css') layer(base);
-@import 'tailwindcss';
 
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 @config '../tailwind.config.ts';
+
+@import './lib/csi.css' layer(theme);
+
+@layer base {
+    :root {
+        --color-background: var(--color-csi-white);
+        --color-foreground: var(--color-csi-black);
+
+        --color-invert: var(--color-csi-black);
+        --color-invert-foreground: var(--color-csi-white);
+
+        --color-primary: var(--color-csi-blue);
+        --color-primary-foreground: var(--color-csi-white);
+
+        --color-highlight: var(--color-blue-white);
+        --color-highlight-foreground: var(--color-csi-black);
+
+        --color-secondary: var(--color-csi-gold);
+        --color-secondary-foreground: var(--color-csi-black);
+
+        --color-muted: var(--color-csi-grayscale-200);
+        --color-muted-foreground: var(--color-csi-black);
+
+        --color-button: var(--color-black);
+        --color-button-foreground: var(--color-white);
+        --color-button-hover: var(--color-csi-blue);
+
+        --color-filter: var(--color-csi-white);
+        --color-filter-foreground: var(--color-csi-black);
+        --color-filter-hover: var(--color-csi-blue);
+        --color-selected-filter: var(--color-black);
+        --color-selected-filter-foreground: var(--color-csi-white);
+
+        --color-float: var(--color-csi-white);
+        --color-float-foreground: var(--color-csi-black);
+    }
+
+    :root[data-theme='dark'] {
+        --color-background: var(--color-csi-black);
+        --color-foreground: var(--color-csi-white);
+
+        --color-invert: var(--color-csi-white);
+        --color-invert-foreground: var(--color-csi-black);
+
+        --color-primary: var(--color-csi-blue);
+        --color-primary-foreground: var(--color-csi-black);
+
+        --color-highlight: var(--color-black);
+        --color-highlight-foreground: var(--color-csi-white);
+
+        --color-secondary: var(--color-csi-gold);
+        --color-secondary-foreground: var(--color-csi-black);
+
+        --color-muted: var(--color-csi-grayscale-800);
+        --color-muted-foreground: var(--color-csi-white);
+
+        --color-button: var(--color-csi-blue);
+        --color-button-foreground: var(--color-csi-black);
+        --color-button-hover: var(--color-csi-white);
+
+        --color-filter: var(--color-blue-white);
+        --color-filter-foreground: var(--color-csi-black);
+        --color-filter-hover: var(--color-csi-white);
+        --color-selected-filter: var(--color-csi-blue);
+        --color-selected-filter-foreground: var(--color-csi-black);
+
+        --color-float: var(--color-csi-grayscale-800);
+        --color-float-foreground: var(--color-csi-white);
+    }
+}

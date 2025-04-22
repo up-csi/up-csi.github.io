@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Board } from '$lib/models/board';
-    import ExecCard from '../cards/ExecCard.svelte';
+    import Card from '$lib/components/cards/ExecCard.svelte';
 
     interface Props {
         exec: Board;
@@ -12,7 +12,7 @@
 
 <section class="prose flex max-w-none flex-col gap-8">
     {#if src}
-        <figure class="m-0 flex flex-col items-center">
+        <figure class="!m-0 flex flex-col items-center">
             <enhanced:img
                 {src}
                 sizes="(min-width:768px) 768px, (min-width:640px) 640px"
@@ -22,7 +22,7 @@
         </figure>
     {:else}
         <h1
-            class="text-csi-black dark:text-csi-white w-full text-center text-3xl font-normal transition-colors ease-in-out md:text-4xl"
+            class="w-full text-center text-3xl font-normal transition-colors ease-in-out md:text-4xl"
         >
             The {year} Executive Board
         </h1>
@@ -30,7 +30,7 @@
 
     <section class="not-prose flex flex-wrap justify-around gap-8">
         {#each officers as officer}
-            <ExecCard {officer} />
+            <Card {officer} />
         {/each}
     </section>
 </section>
