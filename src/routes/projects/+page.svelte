@@ -1,17 +1,17 @@
-<script>
+<script lang="ts">
     import FaqItem from '$lib/components/items/FaqItem.svelte';
     import FaqPanel from '$lib/components/panels/FaqPanel.svelte';
-    import FilterPagePanel from '$lib/components/panels/FilterPagePanel.svelte';
     import GeneralInfo from '$lib/components/contacts/GeneralInfo.svelte';
+    import Projects from '$lib/components/panels/ProjectPanel.svelte';
     import SocialMedia from '$lib/components/contacts/SocialMedia.svelte';
-    import projects from '$lib/data/projects';
 
-    const filters = ['All', 'Service', 'Innovation', 'Other'];
+    const { data } = $props();
+    const { projects, filteredProjects } = $derived(data);
 </script>
 
 <section class="prose flex flex-col gap-4 lg:flex-row">
     <div class="grow">
-        <FilterPagePanel {filters} cardsInfo={projects} />
+        <Projects {projects} {filteredProjects} />
     </div>
     <div class="flex flex-col gap-4">
         <GeneralInfo />
