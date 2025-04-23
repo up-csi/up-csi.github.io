@@ -1,4 +1,6 @@
-import { type InferOutput, object, picklist, string } from "valibot";
+import type { EnhancedImgAttributes } from "@sveltejs/enhanced-img";
+
+import { type InferOutput, object, picklist, pipe, string, transform } from "valibot";
 
 export const TAGS = [
     'EX Series',
@@ -8,21 +10,19 @@ export const TAGS = [
     'Workshop', 
     'Other'
 ] as const;
-const STATES = ['Past', 'Ongoing', 'Future'];
-const TYPES = ['Internal', 'External']
+
+const TYPES = ['Internal', 'External'];
 
 export const Event = object({
     tag: picklist(TAGS),
-    state: picklist(STATES),
     type: picklist(TYPES),
     name: string(),
     description: string(),
-    start_date: string(),
-    end_date: string(),
+    start_date: pipe(string(), transform(Date)),
+    end_date: pipe(string(), transform(Date)),
     slug: string()
 });
 
 export interface Event extends InferOutput<typeof Event> {
-    parsed_start_date: Date;
-    parsed_end_date: Date;
+    imgs: (EnhancedImgAttributes['src'])[]
 }

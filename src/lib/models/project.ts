@@ -1,4 +1,6 @@
-import { type InferOutput, array, object, optional, picklist, string } from "valibot";
+import type { EnhancedImgAttributes } from "@sveltejs/enhanced-img";
+
+import { type InferOutput, array, object, optional, picklist, pipe, string, transform } from "valibot";
 
 export const TAGS = ['Service', 'Innovation'] as const;
 
@@ -12,10 +14,10 @@ export const Project = object({
         pm: optional(array(string())),
         devs: optional(array(string()))
     })),
-    end_date: optional(string()),
+    end_date: optional(pipe(string(), transform(Date))),
     slug: string()
 });
 
 export interface Project extends InferOutput<typeof Project> {
-    parsed_end_date: Date | null;
+    imgs: (EnhancedImgAttributes['src'])[]
 }
