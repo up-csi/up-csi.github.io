@@ -1,8 +1,8 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
+    import Icon from '@iconify/svelte';
 
-    import ChevronLeft from "@iconify/icons-heroicons/chevron-left-20-solid"; 
-    import ChevronRight from "@iconify/icons-heroicons/chevron-right-20-solid"; 
+    import ChevronLeft from '@iconify/icons-heroicons/chevron-left-20-solid';
+    import ChevronRight from '@iconify/icons-heroicons/chevron-right-20-solid';
 
     interface Props {
         /** Max number of cards per page in the pagination. */

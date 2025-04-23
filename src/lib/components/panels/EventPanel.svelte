@@ -1,16 +1,16 @@
 <script lang="ts">
-    import { type Event, TAGS as eventTags } from "$lib/models/event";
+    import { type Event, TAGS as eventTags } from '$lib/models/event';
 
-    import CardPanel from "$lib/components/panels/CardPanel.svelte";
-    import Item from "$lib/components/items/EventItem.svelte";
-    import PageControls from "$lib/components/controls/PageControls.svelte";
-    import Tags from "$lib/components/controls/TagControls.svelte";
+    import CardPanel from '$lib/components/panels/CardPanel.svelte';
+    import Item from '$lib/components/items/EventItem.svelte';
+    import PageControls from '$lib/components/controls/PageControls.svelte';
+    import Tags from '$lib/components/controls/TagControls.svelte';
 
     interface Props {
         /** Max number of cards per page in the pagination. */
         perPage?: number;
         events: Event[];
-        filteredEvents: Record<string, Event[]>
+        filteredEvents: Record<string, Event[]>;
     }
 
     const { perPage = 6, events, filteredEvents }: Props = $props();
@@ -47,5 +47,5 @@
         {/snippet}
     </CardPanel>
 
-    <PageControls {pages} bind:currentPage={currentPage} />
+    <PageControls {pages} bind:currentPage />
 </div>

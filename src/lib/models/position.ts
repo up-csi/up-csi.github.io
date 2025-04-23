@@ -1,4 +1,4 @@
-import { type InferOutput, picklist } from "valibot";
+import { type InferOutput, picklist } from 'valibot';
 
 export const POSITIONS = [
     'President',
@@ -10,7 +10,6 @@ export const POSITIONS = [
     'Director for Engineering',
     '',
 ] as const;
-
 
 export const Position = picklist(POSITIONS);
 

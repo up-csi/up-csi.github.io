@@ -13,7 +13,7 @@ export async function getTeam() {
             await import(`$lib/assets/team/${member.img}.webp?enhanced?url`)
         ).default;
 
-        const parsed_member: Member = { ...member, src }
+        const parsed_member: Member = { ...member, src };
         return parsed_member;
     });
 

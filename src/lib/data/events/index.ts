@@ -10,16 +10,19 @@ export async function getEvents() {
     const promises = Object.entries(imports).map(async ([_, asset]) => {
         const event = parse(EventSchema, await asset());
 
-        const imgs: (EnhancedImgAttributes['src'])[] = [];
+        const imgs: EnhancedImgAttributes['src'][] = [];
         for (let i = 0; i < 5; i++) {
             try {
-                imgs.push((await import(`$lib/assets/events/${event.slug}/${i}.webp?enhanced?url`)).default);
+                imgs.push(
+                    (await import(`$lib/assets/events/${event.slug}/${i}.webp?enhanced?url`))
+                        .default,
+                );
             } catch {
                 break;
             }
         }
 
-        const parsed_event: Event = { ...event, imgs }
+        const parsed_event: Event = { ...event, imgs };
         return parsed_event;
     });
 

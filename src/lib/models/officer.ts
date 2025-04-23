@@ -7,7 +7,7 @@ import type { Position } from '$lib/models/position';
 export const Officer = object({
     name: object({
         last_name: string(),
-        nickname: string()
+        nickname: string(),
     }),
     img: string(),
     pos: array(string()),

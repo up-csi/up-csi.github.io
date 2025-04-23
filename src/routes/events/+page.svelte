@@ -6,5 +6,5 @@
 </script>
 
 <section class="prose">
-    <Events {events} {filteredEvents}  />
+    <Events {events} {filteredEvents} />
 </section>
