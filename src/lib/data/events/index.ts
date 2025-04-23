@@ -1,3 +1,5 @@
+import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
+
 import { parse } from 'valibot';
 
 import { type Event, Event as EventSchema } from '$lib/models/event';
@@ -7,10 +9,17 @@ export async function getEvents() {
 
     const promises = Object.entries(imports).map(async ([_, asset]) => {
         const event = parse(EventSchema, await asset());
-        const parsed_start_date = new Date(event.start_date);
-        const parsed_end_date = new Date(event.end_date);
 
-        const parsed_event: Event = { ...event, parsed_start_date, parsed_end_date }
+        const imgs: (EnhancedImgAttributes['src'])[] = [];
+        for (let i = 0; i < 5; i++) {
+            try {
+                imgs.push((await import(`$lib/assets/events/${event.slug}/${i}.webp?enhanced?url`)).default);
+            } catch {
+                break;
+            }
+        }
+
+        const parsed_event: Event = { ...event, imgs }
         return parsed_event;
     });
 
