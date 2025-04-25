@@ -1,4 +1,5 @@
 {
+    "tag": "Service",
     "name": "Aggregated Crash Data Analytics (ACDA)",
     "description": "The Aggregated Crash Data Analytics (ACDA) is a website that shows statistics and data analytics of vehicle incidents. ",
     "proponents": {

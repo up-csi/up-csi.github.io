@@ -8,7 +8,7 @@
     import upcsi from '$lib/assets/icons/upcsi.svg';
 
     import LinkButtonNavBar from '$lib/components/buttons/LinkButtonNavBar.svelte';
-    import ThemeButton from '$lib/components/buttons/ThemeButton.svelte';
+    import ThemeButton from '$lib/components/controls/ThemeButton.svelte';
 
     let mobileMenu = $state(false);
 

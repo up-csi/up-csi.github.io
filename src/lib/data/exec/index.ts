@@ -1,47 +1,73 @@
-import { type Board, Board as BoardSchema } from '$lib/models/board';
-import { type InferOutput, parse } from 'valibot';
 import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-import { Officer as OfficerSchema } from '$lib/models/officer';
-import { basename } from 'node:path';
 
-async function getOfficers(data: InferOutput<typeof OfficerSchema>[], folder: string) {
-    const promises = data.map(async datum => {
-        const person = parse(OfficerSchema, datum);
-        const img = person.name.replace(/\s+/g, '-').toLowerCase();
+import { parse } from 'valibot';
 
-        try {
-            const src: string | null = (await import(`$lib/assets/exec/${folder}/${img}.webp?url`))
-                .default;
-            return { ...person, src };
-        } catch {
-            const src: string | null = null;
-            return { ...person, src };
-        }
+import { type Officer, Officer as OfficerSchema } from '$lib/models/officer';
+import { type Position, Position as PositionSchema } from '$lib/models/position';
+import type { Board } from '$lib/types/board';
+import type { BoardOfficer } from '$lib/types/board_officer';
+
+export const pres_term = '2425B';
+
+async function getOfficers() {
+    const imports = import.meta.glob<Officer>('./json/*.json');
+
+    const promises = Object.entries(imports).map(async ([_, asset]) => {
+        const officer = parse(OfficerSchema, await asset());
+
+        const src: EnhancedImgAttributes['src'] = (
+            await import(`$lib/assets/exec/${officer.img}.webp?enhanced?url`)
+        ).default;
+
+        const parsed_pos: Array<readonly [string, Position]> = officer.pos.map(raw_detail => {
+            const detail = raw_detail.split(':');
+            const [term, raw_actual_pos] = detail;
+            const actual_pos: Position = parse(PositionSchema, raw_actual_pos);
+
+            const parsed_detail: readonly [string, Position] =
+                term && actual_pos ? [term, actual_pos] : ['', ''];
+            return parsed_detail;
+        });
+
+        const parsed_officer: Officer = { ...officer, parsed_pos, src };
+        return parsed_officer;
     });
 
     return await Promise.all(promises);
 }
 
 export async function getExec() {
-    const imports = import.meta.glob<Board>('./json/*.json');
+    const officers = await getOfficers();
+    const boards: Record<string, Board> = {};
 
-    const promises = Object.entries(imports).map(async ([path, asset]) => {
-        const acadYear = basename(path, '.json');
-        const board = parse(BoardSchema, await asset());
-        const { year, officers: data } = board;
+    officers.forEach(({ name, src, parsed_pos }) => {
+        const { last_name, nickname } = name;
+        const officer_name = `${nickname} ${last_name}`;
 
-        const officers = await getOfficers(data, acadYear);
+        parsed_pos.forEach(([term, actual_pos]) => {
+            const new_officer: BoardOfficer = { name: officer_name, src, pos: actual_pos };
 
+            if (!boards[term]) {
+                const new_board: Board = { term, src: null, officers: [] };
+                boards[term] = new_board;
+            }
+
+            boards[term].officers.push(new_officer);
+        });
+    });
+
+    Object.keys(boards).forEach(async term => {
+        let src = null;
         try {
-            const src: EnhancedImgAttributes['src'] | null = (
-                await import(`$lib/assets/exec/${acadYear}/${acadYear}.webp?enhanced?url`)
-            ).default;
-            return { year, officers, src };
+            src = (await import(`$lib/assets/exec/${term}.webp?enhanced?url`)).default;
         } catch {
-            const src: EnhancedImgAttributes['src'] | null = null;
-            return { year, officers, src };
+            src = null;
+        }
+
+        if (boards[term]) {
+            boards[term].src = src;
         }
     });
 
-    return await Promise.all(promises);
+    return boards;
 }

@@ -18,5 +18,5 @@ export async function load() {
         });
     });
 
-    return { team, filteredTeams, exec: (await getExec()).reverse() };
+    return { team, filteredTeams, exec: await getExec() };
 }

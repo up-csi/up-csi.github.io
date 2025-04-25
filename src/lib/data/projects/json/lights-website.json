@@ -4,6 +4,6 @@
     "client": "LIGHTS Institute",
     "description": "A website that showcases the organization and its services.",
     "proponents": { "pm": ["Trina Aguilana"], "devs": ["Michael Pio Mayol"] },
-    "end_date": { "Wed Aug 01 2018 00": { "00": "00 GMT+0800 (Philippine Standard Time)" } },
+    "end_date": "2018-08",
     "slug": "lights-website"
 }

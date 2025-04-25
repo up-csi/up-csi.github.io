@@ -1,19 +1,10 @@
-<script>
-    import events from '$lib/data/events';
+<script lang="ts">
+    import Events from '$lib/components/panels/EventPanel.svelte';
 
-    import FilterPagePanel from '$lib/components/panels/FilterPagePanel.svelte';
-
-    const filters = [
-        'All',
-        'EX Series',
-        'App Process',
-        'General Assembly',
-        'Partnership',
-        'Workshop',
-        'Other',
-    ];
+    const { data } = $props();
+    const { events, filteredEvents } = $derived(data);
 </script>
 
 <section class="prose">
-    <FilterPagePanel {filters} cardsInfo={events} />
+    <Events {events} {filteredEvents} />
 </section>

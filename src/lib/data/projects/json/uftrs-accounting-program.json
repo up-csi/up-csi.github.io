@@ -3,6 +3,6 @@
     "name": "UFTRS Accounting Program",
     "client": "UP Junior Philippine Institute of Accountants",
     "description": "An application where cash receipt transactions and cash disbursement transactions are recorded and statement of cash flows can be generated using consolidated data.",
-    "end_date": { "Sat Jan 27 2018 00": { "00": "00 GMT+0800 (Philippine Standard Time)" } },
+    "end_date": "2018-01-27",
     "slug": "uftrs-accounting-program"
 }
