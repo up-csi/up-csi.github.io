@@ -9,7 +9,12 @@
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,
-        "noUncheckedIndexedAccess": true
+        "noUncheckedIndexedAccess": true,
+        "paths": {
+            "$lib": ["/src/lib/*"],
+            "$routes": ["/src/routes/*"],
+            "$static": ["/static/*"]
+        }
     }
     // Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias.
 }

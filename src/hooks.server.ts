@@ -1,12 +1,13 @@
+import type { Handle } from '@sveltejs/kit';
 import { building } from '$app/environment';
 import { minify } from 'html-minifier';
 
-export function handle({ event, resolve }) {
+export const handle: Handle = async ({ event, resolve }) => {
     let page = '';
     return resolve(event, {
-        transformPageChunk({ html, done }) {
+        transformPageChunk({ html, done }): string | undefined {
             page += html;
-            if (done)
+            if (done) {
                 return building
                     ? minify(page, {
                           collapseWhitespace: true,
@@ -17,7 +18,7 @@ export function handle({ event, resolve }) {
                           minifyCSS: true,
                           minifyJS: false,
                           removeAttributeQuotes: true,
-                          removeComments: false, // necessary for hydration code
+                          removeComments: false, // necessary for hydration
                           removeOptionalTags: true,
                           removeRedundantAttributes: true,
                           removeScriptTypeAttributes: true,
@@ -26,6 +27,7 @@ export function handle({ event, resolve }) {
                           sortClassName: true,
                       })
                     : page;
-        },
+            }
+        }
     });
-}
+};
