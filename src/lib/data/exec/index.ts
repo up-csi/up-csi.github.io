@@ -19,14 +19,20 @@ async function getOfficers() {
             await import(`$lib/assets/exec/${officer.img}.webp?enhanced?url`)
         ).default;
 
-        const parsed_pos: Array<readonly [string, Position]> = officer.pos.map(raw_detail => {
+        const parsed_pos: Record<string, Position[]> = {};
+        
+        officer.pos.forEach(raw_detail => {
             const detail = raw_detail.split(':');
             const [term, raw_actual_pos] = detail;
             const actual_pos: Position = parse(PositionSchema, raw_actual_pos);
 
-            const parsed_detail: readonly [string, Position] =
-                term && actual_pos ? [term, actual_pos] : ['', ''];
-            return parsed_detail;
+            if (term) {
+                if (!parsed_pos[term]) {
+                    parsed_pos[term] = [];
+                }
+
+                parsed_pos[term].push(actual_pos);
+            }
         });
 
         const parsed_officer: Officer = { ...officer, parsed_pos, src };
@@ -44,15 +50,18 @@ export async function getExec() {
         const { last_name, nickname } = name;
         const officer_name = `${nickname} ${last_name}`;
 
-        parsed_pos.forEach(([term, actual_pos]) => {
-            const new_officer: BoardOfficer = { name: officer_name, src, pos: actual_pos };
+        Object.keys(parsed_pos).forEach(term => {
+            const title = parsed_pos[term];
+            if (title) {
+                const new_officer: BoardOfficer = { name: officer_name, src, title };
 
-            if (!boards[term]) {
-                const new_board: Board = { term, src: null, officers: [] };
-                boards[term] = new_board;
+                if (!boards[term]) {
+                    const new_board: Board = { term, src: null, officers: [] };
+                    boards[term] = new_board;
+                }
+
+                boards[term].officers.push(new_officer);
             }
-
-            boards[term].officers.push(new_officer);
         });
     });
 
