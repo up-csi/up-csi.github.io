@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { MemberCommittees, getCommitteeInfo } from '$lib/types/committees';
     import type { Member } from '$lib/models/member';
+
+    import { MemberCommittees, getCommitteeInfo } from '$lib/types/committees';
 
     import Card from '$lib/components/cards/MemberCard.svelte';
 

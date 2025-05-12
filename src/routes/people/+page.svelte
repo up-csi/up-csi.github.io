@@ -17,7 +17,9 @@
 </div>
 
 <section class="w-full">
-    <h1 class="pb-4 border-b-3 border-csi-blue mb-8 text-3xl text-foreground text-center">Meet the previous executive boards</h1>
+    <h1 class="border-csi-blue text-foreground mb-8 border-b-3 pb-4 text-center text-3xl">
+        Meet the previous executive boards
+    </h1>
 
     <AccordionPanel>
         {#each terms as term}
@@ -30,5 +32,5 @@
                 {/if}
             {/if}
         {/each}
-    </AccordionPanel>    
+    </AccordionPanel>
 </section>

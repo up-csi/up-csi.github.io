@@ -1,11 +1,11 @@
 <script lang="ts">
+    import { fade } from 'svelte/transition';
+
     import type { BoardOfficer } from '$lib/types/board_officer';
     import type { Member } from '$lib/models/member';
 
-    import { fade } from 'svelte/transition';
-
     import MemberCardTag from '$lib/components/cards/MemberCardTag.svelte';
-    
+
     interface Props {
         member: BoardOfficer | Member;
         socials?: Record<string, string>;

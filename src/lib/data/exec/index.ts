@@ -20,7 +20,7 @@ async function getOfficers() {
         ).default;
 
         const parsed_pos: Record<string, Position[]> = {};
-        
+
         officer.pos.forEach(raw_detail => {
             const detail = raw_detail.split(':');
             const [term, raw_actual_pos] = detail;

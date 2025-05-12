@@ -1,9 +1,9 @@
 <script lang="ts">
+    import Icon from '@iconify/svelte';
+
     import type { Position } from '$lib/models/position';
 
     import { getSocialMedium } from '$lib/types/social_media';
-
-    import Icon from '@iconify/svelte';
 
     interface Props {
         name: string;
@@ -19,7 +19,7 @@
     {#if title}
         <p class="text-xs leading-tight">
             {#each title.slice(0, -1) as pos}
-                {pos}, 
+                {pos},
             {/each}
             {title.slice(-1)}
         </p>

@@ -31,17 +31,11 @@
             >{title}</span
         >
         <span class="grow-0">
-            <Icon
-                icon={(open) ? ChevronUp : ChevronDown}
-                class="text-float-foreground size-5"
-            />
+            <Icon icon={open ? ChevronUp : ChevronDown} class="text-float-foreground size-5" />
         </span>
     </button>
     {#if open}
-        <div
-            class="text-float-foreground flex w-full items-center px-5 py-4"
-            transition:slide
-        >
+        <div class="text-float-foreground flex w-full items-center px-5 py-4" transition:slide>
             {@render children?.()}
         </div>
     {/if}
