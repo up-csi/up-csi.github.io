@@ -1,9 +1,11 @@
 <script lang="ts">
+    import type { Snippet } from 'svelte';
+
+    import { slide } from 'svelte/transition';
+
     import ChevronDown from '@iconify/icons-heroicons/chevron-down';
     import ChevronUp from '@iconify/icons-heroicons/chevron-up';
     import Icon from '@iconify/svelte';
-    import type { Snippet } from 'svelte';
-    import { slide } from 'svelte/transition';
 
     interface Props {
         title: string;
