@@ -1,4 +1,3 @@
-<!-- Faq.svelte -->
 <script lang="ts">
     import type { Snippet } from 'svelte';
 
@@ -9,7 +8,7 @@
 </script>
 
 <div
-    class="container mx-auto flex flex-col flex-wrap items-center gap-8 px-20 md:flex-row md:justify-between"
+    class="container mx-auto flex flex-col flex-wrap items-center gap-4 px-20 md:flex-row md:justify-between"
 >
     {@render children?.()}
 </div>
