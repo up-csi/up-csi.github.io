@@ -1,8 +1,8 @@
 <script>
     import { pres_term } from '$lib/data/exec';
 
+    import Accordion from '$lib/components/accordions/Accordion.svelte';
     import AccordionPanel from '$lib/components/panels/AccordionPanel.svelte';
-    import Exec from '$lib/components/accordions/Accordion.svelte';
     import ExecPanel from '$lib/components/panels/ExecPanel.svelte';
     import TeamPanel from '$lib/components/panels/TeamPanel.svelte';
 
@@ -26,9 +26,9 @@
             {#if term !== pres_term}
                 {@const board = exec[term]}
                 {#if board}
-                    <Exec title={term}>
+                    <Accordion title={term}>
                         <ExecPanel {board} />
-                    </Exec>
+                    </Accordion>
                 {/if}
             {/if}
         {/each}

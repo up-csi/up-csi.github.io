@@ -18,10 +18,7 @@
     <p class="text-md md:text-lg">{name}</p>
     {#if title}
         <p class="text-xs leading-tight">
-            {#each title.slice(0, -1) as pos}
-                {pos},
-            {/each}
-            {title.slice(-1)}
+            {title.join(', ')}
         </p>
     {/if}
 </div>
