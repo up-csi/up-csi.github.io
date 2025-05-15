@@ -1,18 +1,20 @@
 <script lang="ts">
     import { fade } from 'svelte/transition';
 
+    import type { BoardOfficer } from '$lib/types/board_officer';
     import type { Member } from '$lib/models/member';
 
     import MemberCardTag from '$lib/components/cards/MemberCardTag.svelte';
 
     interface Props {
-        member: Member;
+        member: BoardOfficer | Member;
+        socials?: Record<string, string>;
         color: string;
         foreground: string;
     }
 
-    const { member, color, foreground }: Props = $props();
-    const { name, src } = $derived(member);
+    const { member, socials, color, foreground }: Props = $props();
+    const { name, src, title } = $derived(member);
     let isOverlayVisible = $state(false);
 </script>
 
@@ -35,7 +37,7 @@
             class="bg-csi-black/70 text-csi-white absolute z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end gap-2 p-4 md:flex"
             transition:fade={{ duration: 75 }}
         >
-            <MemberCardTag {member} />
+            <MemberCardTag {name} {title} {socials} />
         </div>
     {:else}
         <div
@@ -49,6 +51,6 @@
     {/if}
 
     <div class="col-start-1 row-start-2 flex flex-col gap-2 md:hidden">
-        <MemberCardTag {member} />
+        <MemberCardTag {name} {title} {socials} />
     </div>
 </div>

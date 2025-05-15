@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { MemberCommittees, getCommitteeInfo } from '$lib/types/committees';
     import type { Member } from '$lib/models/member';
+
+    import { MemberCommittees, getCommitteeInfo } from '$lib/types/committees';
 
     import Card from '$lib/components/cards/MemberCard.svelte';
 
@@ -53,7 +54,7 @@
         {#if filteredTeam}
             {@const { color, foreground } = getCommitteeInfo(currentCommittee)}
             {#each filteredTeam as member}
-                <Card {member} {color} {foreground} />
+                <Card {member} socials={member.socials} {color} {foreground} />
             {/each}
         {/if}
     </div>

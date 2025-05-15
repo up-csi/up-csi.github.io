@@ -15,5 +15,5 @@ export const Officer = object({
 
 export interface Officer extends InferOutput<typeof Officer> {
     src: EnhancedImgAttributes['src'];
-    parsed_pos: Array<readonly [string, Position]>;
+    parsed_pos: Record<string, Position[]>;
 }

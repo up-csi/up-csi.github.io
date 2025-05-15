@@ -1,36 +1,23 @@
 <script lang="ts">
     import type { Board } from '$lib/types/board';
-    import Card from '$lib/components/cards/ExecCard.svelte';
+
+    import { getCommitteeInfo } from '$lib/types/committees';
+
+    import Card from '$lib/components/cards/MemberCard.svelte';
 
     interface Props {
         board: Board;
     }
 
     const { board }: Props = $props();
-    const { term, src, officers }: Board = $derived(board);
+    const { officers }: Board = $derived(board);
+    const { color, foreground } = getCommitteeInfo('Executive');
 </script>
 
-<section class="prose flex max-w-none flex-col gap-8">
-    {#if src}
-        <figure class="!m-0 flex flex-col items-center">
-            <enhanced:img
-                {src}
-                sizes="(min-width:768px) 768px, (min-width:640px) 640px"
-                alt="The {term} Executive Board"
-            />
-            <figcaption>The {term} Executive Board</figcaption>
-        </figure>
-    {:else}
-        <h1
-            class="w-full text-center text-3xl font-normal transition-colors ease-in-out md:text-4xl"
-        >
-            The {term} Executive Board
-        </h1>
-    {/if}
-
-    <section class="not-prose flex flex-wrap justify-around gap-8">
-        {#each officers as officer}
-            <Card {officer} />
-        {/each}
-    </section>
+<section
+    class="grid w-full grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
+>
+    {#each officers as member}
+        <Card {member} {color} {foreground} />
+    {/each}
 </section>

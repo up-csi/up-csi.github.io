@@ -1,42 +1,36 @@
 <script>
     import { pres_term } from '$lib/data/exec';
 
+    import Accordion from '$lib/components/accordions/Accordion.svelte';
+    import AccordionPanel from '$lib/components/panels/AccordionPanel.svelte';
     import ExecPanel from '$lib/components/panels/ExecPanel.svelte';
     import TeamPanel from '$lib/components/panels/TeamPanel.svelte';
 
     const { data } = $props();
     const { team, filteredTeams, exec } = $derived(data);
-    const pres_board = $derived(exec[pres_term]);
-</script>
 
-{#if pres_board}
-    <div class="pb-3">
-        <ExecPanel board={pres_board} />
-    </div>
-{/if}
+    const terms = $derived(Object.keys(exec).sort().reverse());
+</script>
 
 <div class="py-6">
     <TeamPanel {team} {filteredTeams} />
 </div>
 
 <section class="w-full">
-    <h1 class="text-foreground mb-4 w-full text-center text-3xl transition-colors md:text-4xl">
-        The Past Executive Boards
+    <h1 class="border-csi-blue text-foreground mb-8 border-b-3 pb-4 text-center text-3xl">
+        Meet the previous executive boards
     </h1>
 
-    {#each Object.keys(exec) as term}
-        {#if term !== pres_term}
-            {@const board = exec[term]}
-            {#if board}
-                <details class="py-4">
-                    <summary class="text-foreground text-xl transition-colors md:text-2xl"
-                        >{term}</summary
-                    >
-                    <div class="my-4">
+    <AccordionPanel>
+        {#each terms as term}
+            {#if term !== pres_term}
+                {@const board = exec[term]}
+                {#if board}
+                    <Accordion title={term}>
                         <ExecPanel {board} />
-                    </div>
-                </details>
+                    </Accordion>
+                {/if}
             {/if}
-        {/if}
-    {/each}
+        {/each}
+    </AccordionPanel>
 </section>

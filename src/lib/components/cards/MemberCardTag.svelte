@@ -1,20 +1,26 @@
 <script lang="ts">
     import Icon from '@iconify/svelte';
 
-    import type { Member } from '$lib/models/member';
+    import type { Position } from '$lib/models/position';
+
     import { getSocialMedium } from '$lib/types/social_media';
 
     interface Props {
-        member: Member;
+        name: string;
+        title?: Position[];
+        socials?: Record<string, string>;
     }
 
-    const { member }: Props = $props();
-    const { name, title, socials } = $derived(member);
+    const { name, title, socials }: Props = $props();
 </script>
 
 <div class="*:!m-0">
     <p class="text-md md:text-lg">{name}</p>
-    <p class="text-xs leading-tight">{title}</p>
+    {#if title}
+        <p class="text-xs leading-tight">
+            {title.join(', ')}
+        </p>
+    {/if}
 </div>
 <div class="flex flex-row flex-wrap gap-2">
     {#if socials}
