@@ -24,6 +24,6 @@
         <span class="bg-csi-blue-500 text-csi-black w-25 rounded-xl py-1">{tag}</span>
         <h2 class="text-left">{name}</h2>
         <p class="text-left text-lg">{[client, formattedDate].filter(v => v).join(' // ')}</p>
-        <p class="line-clamp-3 grow overflow-hidden text-justify">{description}</p>
+        <p class="line-clamp-3 grow overflow-hidden text-left">{description}</p>
     </div>
 </div>
