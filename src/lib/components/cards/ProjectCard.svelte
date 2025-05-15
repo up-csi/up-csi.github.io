@@ -16,7 +16,7 @@
 </script>
 
 <div
-    class="bg-float text-float-foreground flex h-full w-full flex-col overflow-hidden rounded-4xl p-4 shadow-lg md:max-w-72 md:p-3"
+    class="bg-float text-float-foreground flex h-full w-96 flex-col overflow-hidden rounded-4xl p-4 shadow-lg md:max-w-72 md:p-3"
 >
     <div
         class="md:text-md !m-3 flex h-full flex-col items-start justify-between gap-2 overflow-hidden *:!m-0"
