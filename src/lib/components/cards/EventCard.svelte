@@ -6,10 +6,14 @@
     }
 
     const { event }: Props = $props();
-    const { type, imgs, name, start_date, end_date, description }: Event = $derived(event);
+    const { imgs, name, current_session }: Event = $derived(event);
+    const { type, start, end } = $derived(current_session);
     const src = $derived.by(() => {
         return imgs ? imgs[0] : null;
     });
+
+    const date_options = { month: 'long', day: '2-digit', year: 'numeric' } as const;
+    const time_options = { hour: 'numeric', minute: '2-digit' } as const;
 </script>
 
 <div
@@ -25,11 +29,15 @@
             />
         </div>
     {/if}
-    <div class="!m-3 flex h-full flex-col justify-between gap-2 overflow-hidden *:!m-0">
+    <div class="!m-3 flex h-full flex-col grow gap-2 overflow-hidden p-1 *:!m-0">
         <p>{type}</p>
         <h2>{name}</h2>
-        <!-- TODO: Use <time> element here for best accessibility. -->
-        <p>{start_date} - {end_date}</p>
-        <p class="grow overflow-hidden">{description}</p>
+        <p>
+            {#if start.toLocaleDateString() === end.toLocaleDateString()}
+                <time>{start.toLocaleDateString('en-US', date_options)}</time>, <time>{start.toLocaleTimeString('en-US', time_options)}</time> - <time>{end.toLocaleTimeString('en-US', time_options)}</time>
+            {:else}
+                <time>{start.toLocaleDateString("en-US", date_options)}</time> - <time>{end.toLocaleDateString("en-US", date_options)}</time>
+            {/if}
+        </p>
     </div>
 </div>
