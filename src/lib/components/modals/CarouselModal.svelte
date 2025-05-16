@@ -1,11 +1,14 @@
 <script lang="ts">
+    import CloseIcon from '@iconify/icons-heroicons/x-mark';
     import Icon from '@iconify/svelte';
-    import src from '$lib/assets/lino/lino-sablay.svg';
-    import leftArrow from '@iconify/icons-heroicons/arrow-left-circle';
-    import rightArrow from '@iconify/icons-heroicons/arrow-right-circle';
-    import closeIcon from '@iconify/icons-heroicons/x-mark';
+    import LeftArrow from '@iconify/icons-heroicons/arrow-left-circle';
+    import RightArrow from '@iconify/icons-heroicons/arrow-right-circle';
+
     import { scale } from 'svelte/transition';
 
+    import placeholder from '$lib/assets/lino/lino-sablay.svg';
+
+    // eslint-disable-next-line
     let {
         showModal = $bindable(),
         currentIndex = $bindable(),
@@ -15,8 +18,8 @@
         goToItem,
     } = $props();
 
-    let currentItem = $derived(items[currentIndex]);
-    let dialogRef:HTMLDialogElement | undefined= $state();
+    const currentItem = $derived(items[currentIndex]);
+    let dialogRef: HTMLDialogElement | undefined = $state();
 
     $effect(() => {
         if (dialogRef) {
@@ -86,7 +89,7 @@
                         onclick={requestDialogClose}
                         class="p-1 text-gray-500 hover:text-gray-700"
                     >
-                        <Icon icon={closeIcon} class="h-6 w-6 cursor-pointer" />
+                        <Icon icon={CloseIcon} class="h-6 w-6 cursor-pointer" />
                     </button>
                 </div>
             </div>
@@ -109,21 +112,21 @@
                     onclick={prevItem}
                 >
                     <Icon
-                        icon={leftArrow}
+                        icon={LeftArrow}
                         class="hover:text-csi-blue mr-2 cursor-pointer text-4xl "
                     />
                 </button>
                 <div class="col-span-3 mx-4 md:col-span-1 md:mx-0">
                     {#if currentItem.picture}
                         <enhanced:img
-                            {src}
+                            src={currentItem.picture}
                             alt="dummy"
                             loading="lazy"
                             class="m-0 aspect-square w-full rounded-xl object-cover md:h-90"
                         />
                     {:else}
                         <img
-                            {src}
+                            src={placeholder}
                             alt="UP CSI Logo Placeholder"
                             class="m-0 aspect-square w-full rounded-xl object-cover md:h-90"
                         />
@@ -139,7 +142,7 @@
                             onclick={() => {
                                 goToItem(i);
                             }}
-                            class="{item == currentItem ? 'bg-csi-blue' : 'bg-gray-300'} {item !=
+                            class="{item === currentItem ? 'bg-csi-blue' : 'bg-gray-300'} {item !==
                             currentItem
                                 ? 'hover:bg-gray-400'
                                 : ''} focus-visible:ring-csi-blue focus-visible:ring-offset-muted h-2.5 w-2.5 cursor-pointer rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
@@ -152,7 +155,7 @@
                     onclick={nextItem}
                 >
                     <Icon
-                        icon={rightArrow}
+                        icon={RightArrow}
                         class="hover:text-csi-blue ml-2 cursor-pointer text-4xl  "
                     />
                 </button>

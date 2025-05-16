@@ -1,12 +1,15 @@
 <script lang="ts">
+    import CloseIcon from '@iconify/icons-heroicons/x-mark';
     import Icon from '@iconify/svelte';
-    import src from '$lib/assets/lino/lino-sablay.svg';
-    import closeIcon from '@iconify/icons-heroicons/x-mark';
+
     import { scale } from 'svelte/transition';
 
+    import placeholder from '$lib/assets/lino/lino-sablay.svg';
+
+    // eslint-disable-next-line
     let { showModal = $bindable(), currentItem } = $props();
 
-    let dialogRef:HTMLDialogElement | undefined = $state();
+    let dialogRef: HTMLDialogElement | undefined = $state();
 
     $effect(() => {
         if (dialogRef) {
@@ -26,7 +29,7 @@
         }
     }
 
-    function handleDialogCancel(item : Event) {
+    function handleDialogCancel(item: Event) {
         item.preventDefault();
         requestDialogClose();
     }
@@ -76,7 +79,7 @@
                         onclick={requestDialogClose}
                         class="p-1 text-gray-500 hover:text-gray-700"
                     >
-                        <Icon icon={closeIcon} class="h-6 w-6 cursor-pointer" />
+                        <Icon icon={CloseIcon} class="h-6 w-6 cursor-pointer" />
                     </button>
                 </div>
             </div>
@@ -95,14 +98,14 @@
             <div class=" mx-4 md:mx-0">
                 {#if currentItem.picture}
                     <enhanced:img
-                        {src}
+                        src={currentItem.picture}
                         alt="dummy"
                         loading="lazy"
                         class="m-0 aspect-square w-full rounded-xl object-cover md:h-90"
                     />
                 {:else}
                     <img
-                        {src}
+                        src={placeholder}
                         alt="UP CSI Logo Placeholder"
                         class="m-0 aspect-square w-full rounded-xl object-cover md:h-90"
                     />

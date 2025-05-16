@@ -1,19 +1,20 @@
 <script lang="ts">
-    import src from '$lib/assets/lino/lino-sablay.svg';
-    import CarouselModal from '../modals/CarouselModal.svelte';
     import Icon from '@iconify/svelte';
-    import leftArrow from '@iconify/icons-heroicons/arrow-left-circle';
-    import rightArrow from '@iconify/icons-heroicons/arrow-right-circle';
+    import LeftArrow from '@iconify/icons-heroicons/arrow-left-circle';
+    import RightArrow from '@iconify/icons-heroicons/arrow-right-circle';
+
+    import CarouselModal from '$lib/components/modals/CarouselModal.svelte';
+
+    import placeholder from '$lib/assets/lino/lino-sablay.svg';
 
     let showModal = $state(false);
 
-    let { items = [] } = $props();
-    console.log(items);
+    const { items = [] } = $props();
 
     // filter items with pictures only
     let filteredItems = $derived(items.filter(item => item.picture));
 
-    if (filteredItems.length == 0) {
+    if (filteredItems.length === 0) {
         // TODO: the following properties are highly recommended to be filled in order to have complete information
         filteredItems = [
             {
@@ -30,7 +31,7 @@
     }
 
     let currentIndex = $state(0);
-    let currentItem = $derived(filteredItems[currentIndex]);
+    const currentItem = $derived(filteredItems[currentIndex]);
 
     function nextItem() {
         currentIndex = (currentIndex + 1) % filteredItems.length;
@@ -60,7 +61,7 @@
     id="carousel-wrapper"
 >
     <button aria-label="Previous slide" class=" self-center p-1" onclick={prevItem}>
-        <Icon icon={leftArrow} class="hover:text-csi-blue cursor-pointer text-4xl text-gray-400 " />
+        <Icon icon={LeftArrow} class="hover:text-csi-blue cursor-pointer text-4xl text-gray-400 " />
     </button>
 
     <div class="bg-muted shadow-csi-blue-500 overflow-hidden rounded-xl shadow-sm">
@@ -78,7 +79,7 @@
                 {:else}
                     <!-- Placeholder image when events carousel is empty -->
                     <img
-                        {src}
+                        src={placeholder}
                         alt="UP CSI Logo Placeholder"
                         class="aspect-square h-48 rounded-xl object-cover md:h-64 md:w-96"
                     />
@@ -135,7 +136,7 @@
                     onclick={() => {
                         goToItem(i);
                     }}
-                    class="{item == currentItem ? 'bg-csi-blue' : 'bg-gray-300'} {item !=
+                    class="{item === currentItem ? 'bg-csi-blue' : 'bg-gray-300'} {item !==
                     currentItem
                         ? 'hover:bg-gray-400'
                         : ''} h-2.5 w-2.5 cursor-pointer rounded-full"
@@ -146,7 +147,7 @@
 
     <button aria-label="Next slide" class=" self-center p-1" onclick={nextItem}>
         <Icon
-            icon={rightArrow}
+            icon={RightArrow}
             class="hover:text-csi-blue cursor-pointer text-4xl text-gray-400 "
         />
     </button>
