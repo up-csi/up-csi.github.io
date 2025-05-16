@@ -14,10 +14,6 @@
     <div class="grow">
         <Projects {projects} {filteredProjects} />
     </div>
-    <!-- <div class="flex flex-col gap-4">
-        <GeneralInfo />
-        <SocialMedia />
-    </div> -->
 </section>
 
 <section>
