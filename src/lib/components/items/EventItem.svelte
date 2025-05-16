@@ -2,6 +2,7 @@
     import type { Event } from '$lib/models/event';
 
     import Card from '$lib/components/cards/EventCard.svelte';
+    import EventModal from '$lib/components/modals/EventModal.svelte';
 
     interface Props {
         event: Event;
@@ -16,6 +17,7 @@
     onclick={() => {
         modalOpen = true;
     }}
+    class="cursor-pointer"
 >
     <Card {event} />
 </button>
@@ -26,6 +28,6 @@
             ? 'block'
             : 'hidden'}"
     >
-        <!-- TODO: insert modal here -->
+        <EventModal bind:showModal={modalOpen} currentItem={event} />
     </div>
 </div>
