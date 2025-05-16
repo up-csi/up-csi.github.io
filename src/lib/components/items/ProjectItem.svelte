@@ -2,6 +2,7 @@
     import type { Project } from '$lib/models/project';
 
     import Card from '$lib/components/cards/ProjectCard.svelte';
+    import ProjectModal from '$lib/components/modals/ProjectModal.svelte';
 
     interface Props {
         project: Project;
@@ -16,6 +17,7 @@
     onclick={() => {
         modalOpen = true;
     }}
+    class="cursor-pointer"
 >
     <Card {project} />
 </button>
@@ -26,6 +28,6 @@
             ? 'block'
             : 'hidden'}"
     >
-        <!-- TODO: insert modal here -->
+        <ProjectModal bind:showModal={modalOpen} currentItem={project} />
     </div>
 </div>
