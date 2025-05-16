@@ -3,10 +3,10 @@
     import ImageCarousel from '$lib/components/carousels/ImageCarousel.svelte';
 
     const { data } = $props();
-    const { events, filteredEvents } = $derived(data);
+    const { events, filteredEvents, featuredEvents } = $derived(data);
 </script>
 
-<ImageCarousel items={events} />
+<ImageCarousel items={featuredEvents} />
 <section class="prose">
     <Events {events} {filteredEvents} />
 </section>
