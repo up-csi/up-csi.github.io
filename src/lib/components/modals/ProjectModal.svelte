@@ -6,7 +6,7 @@
 
     import placeholder from '$lib/assets/lino/lino-sablay.svg';
 
-    // eslint-disable-next-line
+    // eslint-disable-next-line prefer-const
     let { showModal = $bindable(), currentItem } = $props();
 
     let dialogRef: HTMLDialogElement | undefined = $state();
