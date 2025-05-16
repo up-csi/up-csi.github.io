@@ -9,5 +9,5 @@ export const dummy_session: EventSession = {
     type: 'Internal',
     start: new Date(),
     end: new Date(),
-    description: ''
-}
+    description: '',
+};

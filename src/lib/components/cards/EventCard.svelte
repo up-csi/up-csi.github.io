@@ -29,14 +29,17 @@
             />
         </div>
     {/if}
-    <div class="!m-3 flex h-full flex-col grow gap-2 overflow-hidden p-1 *:!m-0">
+    <div class="!m-3 flex h-full grow flex-col gap-2 overflow-hidden p-1 *:!m-0">
         <p>{type}</p>
         <h2>{name}</h2>
         <p>
             {#if start.toLocaleDateString() === end.toLocaleDateString()}
-                <time>{start.toLocaleDateString('en-US', date_options)}</time>, <time>{start.toLocaleTimeString('en-US', time_options)}</time> - <time>{end.toLocaleTimeString('en-US', time_options)}</time>
+                <time>{start.toLocaleDateString('en-US', date_options)}</time>,
+                <time>{start.toLocaleTimeString('en-US', time_options)}</time>
+                - <time>{end.toLocaleTimeString('en-US', time_options)}</time>
             {:else}
-                <time>{start.toLocaleDateString("en-US", date_options)}</time> - <time>{end.toLocaleDateString("en-US", date_options)}</time>
+                <time>{start.toLocaleDateString('en-US', date_options)}</time> -
+                <time>{end.toLocaleDateString('en-US', date_options)}</time>
             {/if}
         </p>
     </div>
