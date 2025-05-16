@@ -1,0 +1,15 @@
+{
+    "tag": "Innov School/InnovCamp",
+    "name": "InnovCamp 2020",
+    "description": "Introducing the first iteration of InnovCamp! Combining the best of both CSI's InnovSchool and DevCamp, InnovCamp 2020 was a sem-long event aimed to teach students how to ideate, design, and build their own ideas. It also prepares students for hackathons by providing them with the necesssary tools to implement their innovative ideas.",
+    "sessions": [
+        "External|2020-10-24T18:00:00|2020-10-24T20:00:00|Discovery: Hackathon Seminar",
+        "External|2020-10-31T18:00:00|2020-10-31T20:00:00|Ideation: Design Thinking Workshop",
+        "Internal|2020-10-31T18:00:00|2020-10-31T20:00:00|Ideation: Design Thinking Mentorship",
+        "External|2020-11-07T18:00:00|2020-11-07T20:00:00|Execution: Prototyping 101 (Git Tutorial)",
+        "External|2020-11-21T18:00:00|2020-11-21T20:00:00|Execution: Prototyping 101 (React Tutorial)",
+        "External|2020-11-28T18:00:00|2020-11-28T20:00:00|Execution: Prototyping 101 (Node.js and Express Tutorial)",
+        "Internal|2020-12-05T18:00:00|2020-12-05T20:00:00|Presentation: Internal Hackathon"
+    ],
+    "slug": "innovcamp-2020"
+}

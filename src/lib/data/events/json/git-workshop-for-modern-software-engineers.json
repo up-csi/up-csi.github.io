@@ -1,0 +1,7 @@
+{
+    "tag": "Workshop",
+    "name": "Git Workshop for Modern Software Engineers",
+    "description": "The Git Workshop for Modern Software Engineers, hosted by Basti Ortiz, was held last November for students both inside and outside of UP Diliman. Diving into basic workflows, exploring the internals, and practicing active collaboration—the workshop served as a fun crash course to elevate your software development experience.",
+    "sessions": ["External|2023-11-29T18:00:00|2023-11-29T22:30:00|"],
+    "slug": "git-workshop-for-modern-software-engineers"
+}
