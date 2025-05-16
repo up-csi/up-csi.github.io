@@ -8,15 +8,9 @@
 
     import placeholder from '$lib/assets/lino/lino-sablay.svg';
 
+    // prettier-ignore
     // eslint-disable-next-line
-    let {
-        showModal = $bindable(),
-        currentIndex = $bindable(),
-        items = [],
-        nextItem,
-        prevItem,
-        goToItem,
-    } = $props();
+    let {showModal = $bindable(), currentIndex = $bindable(), items = [], nextItem, prevItem, goToItem,} = $props();
 
     const currentItem = $derived(items[currentIndex]);
     let dialogRef: HTMLDialogElement | undefined = $state();
