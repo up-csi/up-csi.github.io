@@ -12,5 +12,9 @@ export async function load() {
         });
     });
 
-    return { events, filteredEvents };
+    const featuredEvents: Event[] = events.filter(({ state }) => {
+        return state === 'Ongoing' || state === 'Future';
+    });
+
+    return { events, filteredEvents, featuredEvents };
 }

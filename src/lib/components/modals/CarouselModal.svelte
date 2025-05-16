@@ -8,9 +8,16 @@
 
     import placeholder from '$lib/assets/lino/lino-sablay.svg';
 
-    // prettier-ignore
-    // eslint-disable-next-line
-    let {showModal = $bindable(), currentIndex = $bindable(), items = [], nextItem, prevItem, goToItem,} = $props();
+    /* eslint-disable prefer-const */
+    let {
+        showModal = $bindable(),
+        currentIndex = $bindable(),
+        items,
+        nextItem,
+        prevItem,
+        goToItem,
+    } = $props();
+    /* eslint-enable prefer-const */
 
     const currentItem = $derived(items[currentIndex]);
     let dialogRef: HTMLDialogElement | undefined = $state();
@@ -55,7 +62,7 @@
         in:scale={{ duration: 200, start: 0.95, opacity: 0.75 }}
         out:scale={{ duration: 150, start: 0.95 }}
     >
-        <div class=" flex flex-col gap-2 overflow-y-auto sm:p-4">
+        <div class="flex flex-col gap-2 overflow-y-auto sm:p-4">
             <div class="mx-8 mt-4 flex items-start justify-between">
                 <div class="flex flex-wrap gap-2">
                     {#if currentItem.state}
