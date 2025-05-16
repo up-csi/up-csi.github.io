@@ -1,21 +1,18 @@
 <script lang="ts">
     import FaqItem from '$lib/components/accordions/Accordion.svelte';
     import FaqPanel from '$lib/components/panels/AccordionPanel.svelte';
-    import GeneralInfo from '$lib/components/contacts/GeneralInfo.svelte';
     import Projects from '$lib/components/panels/ProjectPanel.svelte';
-    import SocialMedia from '$lib/components/contacts/SocialMedia.svelte';
+    import ProjectsHeader from '$lib/components/headers/ProjectsHeader.svelte';
 
     const { data } = $props();
     const { projects, filteredProjects } = $derived(data);
 </script>
 
+<ProjectsHeader />
+
 <section class="prose flex flex-col gap-4 lg:flex-row">
     <div class="grow">
         <Projects {projects} {filteredProjects} />
-    </div>
-    <div class="flex flex-col gap-4">
-        <GeneralInfo />
-        <SocialMedia />
     </div>
 </section>
 
