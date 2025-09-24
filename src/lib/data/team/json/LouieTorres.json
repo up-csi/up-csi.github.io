@@ -1,11 +1,1 @@
-{
-    "name": "Louie Torres",
-    "img": "LouieTorres",
-    "committee": ["Engineering"],
-    "socials": {
-        "github": "louie-github",
-        "linkedin": "aloysius-reve-torres-98829a295",
-        "instagram": "louie_art48",
-        "website": "https://blog.lowkeytowers.com"
-    }
-}
+{"name": "Louie Torres", "img": "LouieTorres", "committee": ["Engineering"], "socials": {"github": "louie-github", "linkedin": "aloysius-reve-torres-98829a295", "instagram": "louie_art48", "website": "https://blog.lowkeytowers.com"}}
