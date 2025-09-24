@@ -25,13 +25,20 @@
     onmouseenter={() => (isOverlayVisible = true)}
     onmouseleave={() => (isOverlayVisible = false)}
 >
-    <enhanced:img
+    <!-- <enhanced:img
         {src}
         alt={name}
         height="300px"
         loading="lazy"
         class="col-start-1 row-start-1 !m-0 aspect-square h-56 w-full rounded-2xl object-cover md:h-full"
-    />
+    /> -->
+    <img 
+        src="http://143.198.208.36/website/{src}.webp" 
+        alt={name} 
+        height="300px" 
+        loading="lazy"
+        class="col-start-1 row-start-1 !m-0 aspect-square h-56 w-full rounded-2xl object-cover md:h-full"
+    >
     {#if isOverlayVisible}
         <div
             class="bg-csi-black/70 text-csi-white absolute z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end gap-2 p-4 md:flex"
