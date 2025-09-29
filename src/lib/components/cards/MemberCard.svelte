@@ -25,6 +25,7 @@
     onmouseenter={() => (isOverlayVisible = true)}
     onmouseleave={() => (isOverlayVisible = false)}
 >
+
     <!-- <enhanced:img
         {src}
         alt={name}
@@ -32,6 +33,8 @@
         loading="lazy"
         class="col-start-1 row-start-1 !m-0 aspect-square h-56 w-full rounded-2xl object-cover md:h-full"
     /> -->
+
+    <!-- dynamic loading below, compared to static loading above -->
     <img 
         src="http://143.198.208.36/website/{src}.webp" 
         alt={name} 
