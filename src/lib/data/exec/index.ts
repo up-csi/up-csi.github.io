@@ -46,14 +46,14 @@ export async function getExec() {
     const officers = await getOfficers();
     const boards: Record<string, Board> = {};
 
-    officers.forEach(({ name, src, parsed_pos }) => {
+    officers.forEach(({ name, img, parsed_pos }) => {
         const { last_name, nickname } = name;
         const officer_name = `${nickname} ${last_name}`;
 
         Object.keys(parsed_pos).forEach(term => {
             const title = parsed_pos[term];
             if (title) {
-                const new_officer: BoardOfficer = { name: officer_name, src, title };
+                const new_officer: BoardOfficer = { name: officer_name, img, title };
 
                 if (!boards[term]) {
                     const new_board: Board = { term, src: null, officers: [] };
