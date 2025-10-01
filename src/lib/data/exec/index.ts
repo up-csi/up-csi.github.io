@@ -1,5 +1,3 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-
 import { parse } from 'valibot';
 
 import { type Officer, Officer as OfficerSchema } from '$lib/models/officer';
@@ -14,10 +12,6 @@ async function getOfficers() {
 
     const promises = Object.entries(imports).map(async ([_, asset]) => {
         const officer = parse(OfficerSchema, await asset());
-
-        const src: EnhancedImgAttributes['src'] = (
-            await import(`$lib/assets/exec/${officer.img}.webp?enhanced?url`)
-        ).default;
 
         const parsed_pos: Record<string, Position[]> = {};
 
@@ -35,7 +29,7 @@ async function getOfficers() {
             }
         });
 
-        const parsed_officer: Officer = { ...officer, parsed_pos, src };
+        const parsed_officer: Officer = { ...officer, parsed_pos };
         return parsed_officer;
     });
 
@@ -46,14 +40,14 @@ export async function getExec() {
     const officers = await getOfficers();
     const boards: Record<string, Board> = {};
 
-    officers.forEach(({ name, src, parsed_pos }) => {
+    officers.forEach(({ name, img, parsed_pos }) => {
         const { last_name, nickname } = name;
         const officer_name = `${nickname} ${last_name}`;
 
         Object.keys(parsed_pos).forEach(term => {
             const title = parsed_pos[term];
             if (title) {
-                const new_officer: BoardOfficer = { name: officer_name, src, title };
+                const new_officer: BoardOfficer = { name: officer_name, img, title };
 
                 if (!boards[term]) {
                     const new_board: Board = { term, src: null, officers: [] };

@@ -1,5 +1,3 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-
 import { type InferOutput, array, object, string } from 'valibot';
 
 import type { Position } from '$lib/models/position';
@@ -14,6 +12,5 @@ export const Officer = object({
 });
 
 export interface Officer extends InferOutput<typeof Officer> {
-    src: EnhancedImgAttributes['src'];
     parsed_pos: Record<string, Position[]>;
 }

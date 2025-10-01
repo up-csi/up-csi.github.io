@@ -1,4 +1,5 @@
 <script lang="ts">
+    import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
     import { fade } from 'svelte/transition';
 
     import type { BoardOfficer } from '$lib/types/board_officer';
@@ -14,7 +15,15 @@
     }
 
     const { member, socials, color, foreground }: Props = $props();
-    const { name, src, title } = $derived(member);
+    const { name, title, img } = $derived(member);
+
+    async function getImg() {
+        const imgImport = await import(`$lib/assets/team/${img}.webp?enhanced?url`);
+        const src: EnhancedImgAttributes['src'] = imgImport.default;
+
+        return src;
+    }
+
     let isOverlayVisible = $state(false);
 </script>
 
@@ -25,30 +34,32 @@
     onmouseenter={() => (isOverlayVisible = true)}
     onmouseleave={() => (isOverlayVisible = false)}
 >
-    <enhanced:img
-        {src}
-        alt={name}
-        height="300px"
-        loading="lazy"
-        class="col-start-1 row-start-1 !m-0 aspect-square h-56 w-full rounded-2xl object-cover md:h-full"
-    />
-    {#if isOverlayVisible}
-        <div
-            class="bg-csi-black/70 text-csi-white absolute z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end gap-2 p-4 md:flex"
-            transition:fade={{ duration: 75 }}
-        >
-            <MemberCardTag {name} {title} {socials} />
-        </div>
-    {:else}
-        <div
-            class="absolute z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end p-1 md:flex"
-            in:fade={{ duration: 75 }}
-        >
-            <div class="h-fit w-fit rounded-full px-3 py-1 {color}">
-                <p class="{foreground} !m-0 text-sm">{name}</p>
+    {#await getImg() then src}
+        <enhanced:img
+            {src}
+            alt={name}
+            height="300px"
+            loading="lazy"
+            class="col-start-1 row-start-1 !m-0 aspect-square h-56 w-full rounded-2xl object-cover md:h-full"
+        />
+        {#if isOverlayVisible}
+            <div
+                class="bg-csi-black/70 text-csi-white absolute z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end gap-2 p-4 md:flex"
+                transition:fade={{ duration: 75 }}
+            >
+                <MemberCardTag {name} {title} {socials} />
             </div>
-        </div>
-    {/if}
+        {:else}
+            <div
+                class="absolute z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end p-1 md:flex"
+                in:fade={{ duration: 75 }}
+            >
+                <div class="h-fit w-fit rounded-full px-3 py-1 {color}">
+                    <p class="{foreground} !m-0 text-sm">{name}</p>
+                </div>
+            </div>
+        {/if}
+    {/await}
 
     <div class="col-start-1 row-start-2 flex flex-col gap-2 md:hidden">
         <MemberCardTag {name} {title} {socials} />
