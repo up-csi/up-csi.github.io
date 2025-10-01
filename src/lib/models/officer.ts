@@ -1,5 +1,3 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-
 import { type InferOutput, array, object, string } from 'valibot';
 
 import type { Position } from '$lib/models/position';

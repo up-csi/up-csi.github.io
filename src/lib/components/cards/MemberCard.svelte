@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { fade } from 'svelte/transition';
     import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
+    import { fade } from 'svelte/transition';
 
     import type { BoardOfficer } from '$lib/types/board_officer';
     import type { Member } from '$lib/models/member';
