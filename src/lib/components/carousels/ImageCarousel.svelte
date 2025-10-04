@@ -6,6 +6,8 @@
 
     import CarouselModal from '$lib/components/modals/CarouselModal.svelte';
 
+    import placeholder from '$lib/assets/lino/lino-sablay.svg';
+
     let showModal = $state(false);
 
     interface Picture {
@@ -20,12 +22,10 @@
     }
 
     interface Props {
-        /** Fallback image URL to use when the events carousel is empty. */
-        placeholder?: string;
         items: Picture[];
     }
 
-    const { items = [], placeholder }: Props = $props();
+    const { items = [] }: Props = $props();
 
     // filter items with pictures only
     const filteredItems = $derived(items.filter(item => item.picture));
