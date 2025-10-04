@@ -27,9 +27,7 @@ async function getOfficers() {
             const actual_pos: Position = parse(PositionSchema, raw_actual_pos);
 
             if (term) {
-                if (!parsed_pos[term])
-                    parsed_pos[term] = [];
-
+                if (!parsed_pos[term]) parsed_pos[term] = [];
 
                 parsed_pos[term].push(actual_pos);
             }
@@ -74,9 +72,7 @@ export async function getExec() {
             src = null;
         }
 
-        if (boards[term])
-            boards[term].src = src;
-
+        if (boards[term]) boards[term].src = src;
     });
 
     return boards;

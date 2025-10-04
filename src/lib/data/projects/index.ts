@@ -11,7 +11,7 @@ export async function getProjects() {
         const project = parse(ProjectSchema, await asset());
 
         const imgs: EnhancedImgAttributes['src'][] = [];
-        for (let i = 0; i < 5; i++) 
+        for (let i = 0; i < 5; i++)
             try {
                 imgs.push(
                     (await import(`$lib/assets/events/${project.slug}/${i}.webp?enhanced?url`))
@@ -20,7 +20,6 @@ export async function getProjects() {
             } catch {
                 break;
             }
-        
 
         const parsed_project: Project = { ...project, imgs };
         return parsed_project;

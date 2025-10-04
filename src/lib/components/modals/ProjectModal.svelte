@@ -12,11 +12,7 @@
     let dialogRef: HTMLDialogElement | undefined = $state();
 
     $effect(() => {
-        if (dialogRef) 
-            if (showModal && !dialogRef.open) 
-                dialogRef.showModal();
-            
-        
+        if (dialogRef) if (showModal && !dialogRef.open) dialogRef.showModal();
     });
 
     function requestDialogClose() {
@@ -24,9 +20,7 @@
     }
 
     function handleNativeDialogClose() {
-        if (showModal) 
-            showModal = false;
-        
+        if (showModal) showModal = false;
     }
 
     function handleDialogCancel(item: Event) {
@@ -35,9 +29,7 @@
     }
 
     function handleBackdropClick(item: Event) {
-        if (item.target === dialogRef) 
-            requestDialogClose();
-        
+        if (item.target === dialogRef) requestDialogClose();
     }
 </script>
 
