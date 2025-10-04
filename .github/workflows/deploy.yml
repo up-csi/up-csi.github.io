@@ -1,56 +1,56 @@
 name: Deploy to GitHub Pages
 
 on:
-  workflow_dispatch:
-  pull_request:
-  push:
-    branches: main
+    workflow_dispatch:
+    pull_request:
+    push:
+        branches: main
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+    contents: read
+    pages: write
+    id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+    group: pages
+    cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-      - name: Install Node.js
-        uses: actions/setup-node@v5
-        with:
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
-          node-version: 24
-      - name: Install Dependencies
-        run: pnpm install
-      - name: Check Formatters
-        run: pnpm fmt
-      - name: Run All Lints in Parallel
-        run: pnpm lint
-      - name: Build Website
-        run: pnpm build
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
-  deploy:
-    if: ${{ github.event_name == 'push' }}
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+            - name: Install Node.js
+              uses: actions/setup-node@v5
+              with:
+                  cache: pnpm
+                  cache-dependency-path: pnpm-lock.yaml
+                  node-version: 24
+            - name: Install Dependencies
+              run: pnpm install
+            - name: Check Formatters
+              run: pnpm fmt
+            - name: Run All Lints in Parallel
+              run: pnpm lint
+            - name: Build Website
+              run: pnpm build
+            - name: Setup Pages
+              uses: actions/configure-pages@v4
+            - name: Upload Artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: build
+    deploy:
+        if: ${{ github.event_name == 'push' }}
+        needs: build
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4

@@ -1,4 +1,5 @@
 .DS_Store
 .svelte-kit
+.eslintcache
 node_modules
 build
