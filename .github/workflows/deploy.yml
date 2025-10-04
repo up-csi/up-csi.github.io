@@ -19,30 +19,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Install Latest Corepack
-        run: npm install -g corepack@latest
-      - name: Enable Corepack for `pnpm`
-        run: corepack enable
-      - name: Get `pnpm` Store Directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-      - uses: actions/cache@v4
-        name: Setup `pnpm` Cache
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v5
         with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          node-version: 24
       - name: Install Dependencies
         run: pnpm install
-      - name: Check Formatting
+      - name: Check Formatters
         run: pnpm fmt
-      - name: Synchronize SvelteKit
-        run: pnpm sync
-      - name: Check All Lints in Parallel
+      - name: Run All Lints in Parallel
         run: pnpm lint
       - name: Build Website
         run: pnpm build
