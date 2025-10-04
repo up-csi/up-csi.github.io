@@ -10,8 +10,8 @@
         "build": "vite build",
         "preview": "vite preview",
         "prepare": "svelte-kit sync",
-        "fmt": "prettier --check .",
-        "fmt:fix": "prettier --write .",
+        "fmt": "prettier --experimental-cli --check .",
+        "fmt:fix": "prettier --experimental-cli --write .",
         "lint": "pnpm --workspace-root --parallel /^lint:/",
         "lint:eslint": "eslint",
         "lint:svelte": "svelte-check --tsconfig ./tsconfig.json"
