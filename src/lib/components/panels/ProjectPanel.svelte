@@ -27,24 +27,25 @@
         const end = currentPage === pages ? selectedProjects.length - 1 : start + perPage - 1;
         return selectedProjects.slice(start, end + 1);
     });
-
-    $effect(() => {
-        if (selected) {
-            currentPage = 0;
-        }
-    });
 </script>
 
 <div class="flex flex-col gap-10 transition-colors ease-in-out">
-    <Tags {tags} bind:selected />
-
+    <Tags
+        {tags}
+        bind:selected={
+            () => selected,
+            tag => {
+                selected = tag;
+                currentPage = 0;
+            }
+        }
+    />
     <CardPanel>
         {#snippet cards()}
-            {#each shown as project}
+            {#each shown as project (project.slug)}
                 <Item {project} />
             {/each}
         {/snippet}
     </CardPanel>
-
     <PageControls {pages} bind:currentPage />
 </div>

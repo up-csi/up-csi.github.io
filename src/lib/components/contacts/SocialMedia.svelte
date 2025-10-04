@@ -33,7 +33,7 @@
     <div
         class="md:bg-float flex flex-row space-x-8 rounded-2xl rounded-tl-none bg-none p-5 md:shadow-lg"
     >
-        {#each socials as { icon, href }}
+        {#each socials as { icon, href } (href)}
             <a {href} target="_blank">
                 <Icon {icon} class="text-float-foreground size-14 md:size-16" />
             </a>

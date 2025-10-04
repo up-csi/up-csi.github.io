@@ -40,11 +40,13 @@
                 <Icon icon={ChevronLeft} width="18" height="18" />
             </button>
         </li>
-        {#each Array(pages) as _, pageIndex}
-            {@const neutral = pageIndex === currentPage ? 'bg-invert/10' : ''}
+        {#each Array(pages) as _, pageIndex (pageIndex)}
             <li class="!m-0 p-0">
                 <button
-                    class="flex size-10 items-center justify-center transition-colors ease-in-out {neutral} hover:bg-invert/10"
+                    class={[
+                        '{neutral} hover:bg-invert/10 flex size-10 items-center justify-center transition-colors ease-in-out',
+                        { 'bg-invert/10': pageIndex === currentPage },
+                    ]}
                     onclick={() => setPage(pageIndex)}
                 >
                     {pageIndex + 1}

@@ -20,9 +20,8 @@
     <h1 class="border-csi-blue text-foreground mb-8 border-b-3 pb-4 text-center text-3xl">
         Meet the previous executive boards
     </h1>
-
     <AccordionPanel>
-        {#each terms as term}
+        {#each terms as term (term)}
             {#if term !== pres_term}
                 {@const board = exec[term]}
                 {#if board}
