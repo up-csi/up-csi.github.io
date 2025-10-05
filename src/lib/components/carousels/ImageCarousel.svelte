@@ -10,7 +10,7 @@
 
     let showModal = $state(false);
 
-    interface Picture {
+    interface Item {
         name: string;
         description: string;
         tag: string;
@@ -22,7 +22,7 @@
     }
 
     interface Props {
-        items: Picture[];
+        items: Item[];
     }
 
     const { items = [] }: Props = $props();
