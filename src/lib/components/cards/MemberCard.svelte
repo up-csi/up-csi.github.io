@@ -36,7 +36,7 @@
 
     <!-- dynamic loading below, compared to static loading above -->
     <img 
-        src="http://143.198.208.36/website/{src}.webp" 
+        src="http://143.198.208.36/website/assets/images/people/{src}.webp" 
         alt={name} 
         height="300px" 
         loading="lazy"
