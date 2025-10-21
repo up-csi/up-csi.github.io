@@ -6,11 +6,8 @@
     }
 
     const { event }: Props = $props();
-    const { imgs, name, current_session }: Event = $derived(event);
+    const { name, slug, current_session }: Event = $derived(event);
     const { type, start, end } = $derived(current_session);
-    const src = $derived.by(() => {
-        return imgs ? imgs[0] : null;
-    });
 
     const date_options = { month: 'long', day: '2-digit', year: 'numeric' } as const;
     const time_options = { hour: 'numeric', minute: '2-digit' } as const;
@@ -19,14 +16,20 @@
 <div
     class="bg-float text-float-foreground flex h-auto w-full flex-col overflow-hidden rounded-lg shadow-lg md:h-[32rem] md:w-72"
 >
-    {#if src}
+    {#if slug}
         <div class="**:!m-0">
-            <enhanced:img
+            <!-- <enhanced:img
                 {src}
                 alt={name}
                 loading="lazy"
                 class="h-64 shrink-0 object-cover md:h-48"
-            />
+            /> -->
+            <img 
+                src="http://143.198.208.36/website/assets/images/events/{slug}/0.webp"
+                alt={name} 
+                loading="lazy"
+                class="h-64 shrink-0 object-cover md:h-48"
+            >
         </div>
     {/if}
     <div class="!m-3 flex h-full grow flex-col gap-2 overflow-hidden p-1 *:!m-0">

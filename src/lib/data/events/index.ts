@@ -13,18 +13,6 @@ export async function getEvents() {
     const promises = Object.entries(imports).map(async ([_, asset]) => {
         const event = parse(EventSchema, await asset());
 
-        const imgs: EnhancedImgAttributes['src'][] = [];
-        for (let i = 0; i < 10; i++) {
-            try {
-                imgs.push(
-                    (await import(`$lib/assets/events/${event.slug}/${i}.webp?enhanced?url`))
-                        .default,
-                );
-            } catch {
-                break;
-            }
-        }
-
         const parsed_sessions: EventSession[] = [];
         event.sessions.forEach(detail => {
             const [type, start, end, description] = detail.split('|');
@@ -63,7 +51,7 @@ export async function getEvents() {
             current_session = parsed_sessions[parsed_sessions.length - 1] ?? dummy_session;
         }
 
-        const parsed_event: Event = { ...event, imgs, parsed_sessions, current_session, state };
+        const parsed_event: Event = { ...event, parsed_sessions, current_session, state };
         return parsed_event;
     });
 

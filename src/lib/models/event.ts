@@ -24,7 +24,6 @@ export const Event = object({
 });
 
 export interface Event extends InferOutput<typeof Event> {
-    imgs: EnhancedImgAttributes['src'][];
     parsed_sessions: EventSession[];
     current_session: EventSession;
     state: State;
