@@ -27,7 +27,7 @@
             <img 
                 src="http://143.198.208.36/website/assets/images/events/{slug}/0.webp"
                 alt={name} 
-                loading="lazy"
+                loading="eager"
                 class="h-64 shrink-0 object-cover md:h-48"
             >
         </div>

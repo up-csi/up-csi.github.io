@@ -2,7 +2,7 @@
     import src from '$lib/assets/lino/lino-sablay.svg';
 </script>
 
-<div class="bg-csi-grayscale-200 shadow-csi-blue flex flex-row gap-10 rounded-md p-5 shadow-md">
+<div class="bg-highlight text-foreground flex flex-row gap-10 rounded-md p-5 shadow-md">
     <div class="flex hidden w-1/2 flex-row items-center rounded-3xl sm:flex">
         <img {src} alt="Placeholder" />
     </div>

@@ -39,7 +39,7 @@
         src="http://143.198.208.36/website/assets/images/people/{src}.webp" 
         alt={name} 
         height="300px" 
-        loading="lazy"
+        loading="eager"
         class="col-start-1 row-start-1 !m-0 aspect-square h-56 w-full rounded-2xl object-cover md:h-full"
     >
     {#if isOverlayVisible}
