@@ -1,1 +1,6 @@
-{"name": "Lily Celestino", "img": "LilyCelestino", "committee": ["Engineering"], "socials": {"github": "Nodeil"}}
+{
+    "name": "Lily Celestino",
+    "img": "LilyCelestino",
+    "committee": ["Engineering"],
+    "socials": { "github": "Nodeil" }
+}

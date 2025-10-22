@@ -1,1 +1,6 @@
-{"name": "Bryan Uy", "img": "BryanUy", "committee": ["Service", "Executive"], "socials": {"github": "SpicySpareRibs"}}
+{
+    "name": "Bryan Uy",
+    "img": "BryanUy",
+    "committee": ["Service", "Executive"],
+    "socials": { "github": "SpicySpareRibs" }
+}

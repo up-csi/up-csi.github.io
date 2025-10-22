@@ -1,1 +1,6 @@
-{"name": "Shereena Villafania", "img": "ShereenaVillafania", "committee": ["Service"], "socials": {"github": "Shereena-Work", "instagram": "shereena_haniwa"}}
+{
+    "name": "Shereena Villafania",
+    "img": "ShereenaVillafania",
+    "committee": ["Service"],
+    "socials": { "github": "Shereena-Work", "instagram": "shereena_haniwa" }
+}

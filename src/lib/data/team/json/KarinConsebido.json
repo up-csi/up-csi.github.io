@@ -1,1 +1,6 @@
-{"name": "Karin Consebido", "img": "KarinConsebido", "committee": ["Branding & Creatives", "Executive"], "socials": {"github": "kalatkarin"}}
+{
+    "name": "Karin Consebido",
+    "img": "KarinConsebido",
+    "committee": ["Branding & Creatives", "Executive"],
+    "socials": { "github": "kalatkarin" }
+}

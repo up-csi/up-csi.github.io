@@ -1,1 +1,10 @@
-{"name": "Isay Bucu", "img": "IsayBucu", "committee": ["Branding & Creatives"], "socials": {"github": "ClarisseCoconut", "linkedin": "Clarisse Bianca Bucu", "instagram": "clarissecoconut"}}
+{
+    "name": "Isay Bucu",
+    "img": "IsayBucu",
+    "committee": ["Branding & Creatives"],
+    "socials": {
+        "github": "ClarisseCoconut",
+        "linkedin": "Clarisse Bianca Bucu",
+        "instagram": "clarissecoconut"
+    }
+}

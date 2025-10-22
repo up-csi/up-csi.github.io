@@ -1,1 +1,6 @@
-{"name": "Gabby Sacramento", "img": "GabbySacramento", "committee": ["Membership & Internals"], "socials": {"github": "gabrielle-denise", "instagram": "gabricllc"}}
+{
+    "name": "Gabby Sacramento",
+    "img": "GabbySacramento",
+    "committee": ["Membership & Internals"],
+    "socials": { "github": "gabrielle-denise", "instagram": "gabricllc" }
+}

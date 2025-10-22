@@ -1,1 +1,11 @@
-{"name": "Ehren Castillo", "img": "EhrenCastillo", "committee": ["Engineering", "Executive"], "socials": {"github": "ehrelevant", "linkedin": "ehren-castillo-a8045a269", "instagram": "ehrelevant_", "website": "https://ehrelevant.github.io/"}}
+{
+    "name": "Ehren Castillo",
+    "img": "EhrenCastillo",
+    "committee": ["Engineering", "Executive"],
+    "socials": {
+        "github": "ehrelevant",
+        "linkedin": "ehren-castillo-a8045a269",
+        "instagram": "ehrelevant_",
+        "website": "https://ehrelevant.github.io/"
+    }
+}

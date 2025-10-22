@@ -1,1 +1,6 @@
-{"name": "Leanne Austria", "img": "LeanneAustria", "committee": ["Service"], "socials": {"github": "aiarre", "linkedin": "leanne-austria-6a4709256"}}
+{
+    "name": "Leanne Austria",
+    "img": "LeanneAustria",
+    "committee": ["Service"],
+    "socials": { "github": "aiarre", "linkedin": "leanne-austria-6a4709256" }
+}

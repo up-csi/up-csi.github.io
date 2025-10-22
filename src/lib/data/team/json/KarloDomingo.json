@@ -1,1 +1,6 @@
-{"name": "Karlo Domingo", "img": "KarloDomingo", "committee": ["Branding & Creatives"], "socials": {"github": "krldomingo"}}
+{
+    "name": "Karlo Domingo",
+    "img": "KarloDomingo",
+    "committee": ["Branding & Creatives"],
+    "socials": { "github": "krldomingo" }
+}

@@ -1,1 +1,6 @@
-{"name": "Ellie Lim", "img": "EllieLim", "committee": ["Innovation"], "socials": {"github": "ElianaLim", "linkedin": "Eliana Mari Lim"}}
+{
+    "name": "Ellie Lim",
+    "img": "EllieLim",
+    "committee": ["Innovation"],
+    "socials": { "github": "ElianaLim", "linkedin": "Eliana Mari Lim" }
+}

@@ -1,1 +1,6 @@
-{"name": "Yuwen Saavedra", "img": "YuwenSaavedra", "committee": ["Branding & Creatives"], "socials": {"github": "BluNuggets"}}
+{
+    "name": "Yuwen Saavedra",
+    "img": "YuwenSaavedra",
+    "committee": ["Branding & Creatives"],
+    "socials": { "github": "BluNuggets" }
+}

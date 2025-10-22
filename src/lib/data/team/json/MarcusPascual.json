@@ -1,1 +1,6 @@
-{"name": "Marcus Pascual", "img": "MarcusPascual", "committee": ["Engineering"], "socials": {"github": "syncopascual", "instagram": "monosyphone"}}
+{
+    "name": "Marcus Pascual",
+    "img": "MarcusPascual",
+    "committee": ["Engineering"],
+    "socials": { "github": "syncopascual", "instagram": "monosyphone" }
+}

@@ -1,1 +1,6 @@
-{"name": "Jacky Abucay", "img": "JackyAbucay", "committee": ["Engineering"], "socials": {"github": "up-jacky"}}
+{
+    "name": "Jacky Abucay",
+    "img": "JackyAbucay",
+    "committee": ["Engineering"],
+    "socials": { "github": "up-jacky" }
+}

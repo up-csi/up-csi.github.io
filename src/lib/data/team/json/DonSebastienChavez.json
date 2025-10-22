@@ -1,1 +1,6 @@
-{"name": "Don Sebastien Chavez", "img": "DonSebastienChavez", "committee": ["Service"], "socials": {"github": "Jol0gs"}}
+{
+    "name": "Don Sebastien Chavez",
+    "img": "DonSebastienChavez",
+    "committee": ["Service"],
+    "socials": { "github": "Jol0gs" }
+}

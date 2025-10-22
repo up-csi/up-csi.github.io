@@ -1,1 +1,6 @@
-{"name": "Bmae Amurao", "img": "BmaeAmurao", "committee": ["Membership & Internals"], "socials": {"github": "Baamurao", "instagram": "bmae.jpg"}}
+{
+    "name": "Bmae Amurao",
+    "img": "BmaeAmurao",
+    "committee": ["Membership & Internals"],
+    "socials": { "github": "Baamurao", "instagram": "bmae.jpg" }
+}

@@ -1,1 +1,6 @@
-{"name": "Lucas Agcaoili", "img": "LucasAgcaoili", "committee": ["Engineering"], "socials": {"github": "roCatalyst"}}
+{
+    "name": "Lucas Agcaoili",
+    "img": "LucasAgcaoili",
+    "committee": ["Engineering"],
+    "socials": { "github": "roCatalyst" }
+}
