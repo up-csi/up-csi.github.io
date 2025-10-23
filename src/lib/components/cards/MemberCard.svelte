@@ -35,7 +35,7 @@
 
     <!-- dynamic loading below, compared to static loading above -->
     <img
-        src="http://174.138.18.60/assets/images/people/{src}.webp"
+        src="https://assets.up-csi.org/website/images/people/{src}.webp"
         alt={name}
         height="300px"
         loading="eager"
