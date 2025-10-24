@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from 'svelte';
+
     import Icon from '@iconify/svelte';
 
     import Moon from '@iconify/icons-heroicons/moon-solid';
@@ -12,16 +14,16 @@
         return result === null ? media.matches : Boolean(JSON.parse(result));
     }
 
-    let is_dark = $state(false);
-
-    $effect(() => {
-        is_dark = getTheme();
+    let isDark = $derived(false);
+    onMount(() => {
+        // HACK: only invoke this in the browser
+        isDark = getTheme();
     });
 
     function toggle() {
-        is_dark = !is_dark;
-        localStorage.setItem(KEY, is_dark ? '1' : '0');
-        document.documentElement.setAttribute('data-theme', is_dark ? 'dark' : '');
+        isDark = !isDark;
+        localStorage.setItem(KEY, isDark ? '1' : '0');
+        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : '');
     }
 </script>
 
@@ -39,5 +41,5 @@
     class="border-muted hover:bg-muted/25 rounded-full border p-2 transition-colors hover:shadow-inner"
     onclick={toggle}
 >
-    <Icon icon={is_dark ? Sun : Moon} width="18" height="18" />
+    <Icon icon={isDark ? Sun : Moon} width="18" height="18" />
 </button>

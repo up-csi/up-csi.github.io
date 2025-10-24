@@ -17,7 +17,7 @@
 <section
     class="grid w-full grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
 >
-    {#each officers as member}
+    {#each officers as member (member.name)}
         <Card {member} {color} {foreground} />
     {/each}
 </section>

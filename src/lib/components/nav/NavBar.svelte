@@ -5,6 +5,7 @@
     import XMark from '@iconify/icons-heroicons/x-mark-solid';
 
     import { fly } from 'svelte/transition';
+    import { resolve } from '$app/paths';
     import upcsi from '$lib/assets/icons/upcsi.svg';
 
     import LinkButtonNavBar from '$lib/components/buttons/LinkButtonNavBar.svelte';
@@ -20,7 +21,7 @@
 <div
     class="border-muted/50 text-foreground bg-background/90 font-dm flex items-center justify-between rounded-full border-2 p-1 shadow-lg backdrop-blur-xl transition-colors ease-in-out lg:mx-24"
 >
-    <a class="flex items-center px-2" href="/">
+    <a class="flex items-center px-2" href={resolve('/')}>
         <div class="mx-1 h-6 w-6">
             <img src={upcsi} alt="UP CSI Logo" class="h-full w-full" />
         </div>
@@ -29,16 +30,16 @@
     <nav class="absolute left-1/2 hidden -translate-x-1/2 lg:block">
         <ul class="*:hover:text-csi-blue flex items-center gap-8">
             <li>
-                <a href="/about/">About</a>
+                <a href={resolve('/about/')}>About</a>
             </li>
             <li>
-                <a href="/people/">People</a>
+                <a href={resolve('/people/')}>People</a>
             </li>
             <li>
-                <a href="/events/">Events</a>
+                <a href={resolve('/events/')}>Events</a>
             </li>
             <li>
-                <a href="/projects/">Projects</a>
+                <a href={resolve('/projects/')}>Projects</a>
             </li>
         </ul>
     </nav>
@@ -73,16 +74,16 @@
                 </button>
                 <ul class="*:hover:text-csi-blue flex w-full flex-col items-end space-y-6 px-2">
                     <li>
-                        <a href="/about/" onclick={closeMenu}>About</a>
+                        <a href={resolve('/about/')} onclick={closeMenu}>About</a>
                     </li>
                     <li>
-                        <a href="/people/" onclick={closeMenu}>People</a>
+                        <a href={resolve('/people/')} onclick={closeMenu}>People</a>
                     </li>
                     <li>
-                        <a href="/events/" onclick={closeMenu}>Events</a>
+                        <a href={resolve('/events/')} onclick={closeMenu}>Events</a>
                     </li>
                     <li>
-                        <a href="/projects/" onclick={closeMenu}>Projects</a>
+                        <a href={resolve('/projects/')} onclick={closeMenu}>Projects</a>
                     </li>
                 </ul>
             </div>

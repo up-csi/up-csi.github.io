@@ -13,7 +13,7 @@ export function handle({ event, resolve }) {
                           conservativeCollapse: true,
                           decodeEntities: true,
                           html5: true,
-                          ignoreCustomComments: [/^#/],
+                          ignoreCustomComments: [/^#/u],
                           minifyCSS: true,
                           minifyJS: false,
                           removeAttributeQuotes: true,

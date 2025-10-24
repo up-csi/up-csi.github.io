@@ -1,5 +1,5 @@
 <script lang="ts">
-    // eslint-disable-next-line init-declarations
+    // eslint-disable-next-line @typescript-eslint/init-declarations
     export let src: string;
 </script>
 

@@ -34,21 +34,24 @@
         const end = currentPage === pages ? selectedEvents.length - 1 : start + perPage - 1;
         return selectedEvents.slice(start, end + 1);
     });
-
-    $effect(() => {
-        if (selectedTag) {
-            currentPage = 0;
-        }
-    });
 </script>
 
 <div class="flex flex-col gap-10 transition-colors ease-in-out">
-    <Tags {tags} bind:selected={selectedTag} />
+    <Tags
+        {tags}
+        bind:selected={
+            () => selectedTag,
+            tag => {
+                selectedTag = tag;
+                currentPage = 0;
+            }
+        }
+    />
     <!-- TODO: add past/ongoing/future and internal/external filters -->
 
     <CardPanel>
         {#snippet cards()}
-            {#each shown as event}
+            {#each shown as event (event.slug)}
                 <Item {event} />
             {/each}
         {/snippet}

@@ -1,4 +1,5 @@
 <script lang="ts">
+    /* eslint-disable svelte/no-navigation-without-resolve */
     import Icon from '@iconify/svelte';
     import LeftArrow from '@iconify/icons-heroicons/arrow-left-circle';
     import RightArrow from '@iconify/icons-heroicons/arrow-right-circle';
@@ -9,33 +10,39 @@
 
     let showModal = $state(false);
 
-    const { items = [] } = $props();
+    interface Item {
+        name: string;
+        description: string;
+        tag: string;
+        state: string;
+        type: string;
+        picture: string | null;
+        registerLink: string;
+        duration: string;
+    }
+
+    interface Props {
+        items: Item[];
+    }
+
+    const { items = [] }: Props = $props();
 
     // filter items with pictures only
-    const filteredItems = $derived.by(() => {
-        const filtered = items.filter(item => item.picture);
-
-        if (filtered.length === 0) {
-            // TODO: the following properties are highly recommended to be filled in order to have complete information
-            return [
-                {
-                    name: 'No Items Yet',
-                    description: 'No items are currently in the database',
-                    tag: 'General',
-                    state: '',
-                    type: '',
-                    picture: null,
-                    registerLink: '', // Optional: for events only
-                    duration: '',
-                },
-            ];
-        }
-
-        return filtered;
-    });
+    const filteredItems = $derived(items.filter(item => item.picture));
 
     let currentIndex = $state(0);
-    const currentItem = $derived(filteredItems[currentIndex]);
+    const currentItem = $derived(
+        filteredItems[currentIndex] ?? {
+            name: 'No Items Yet',
+            description: 'No items are currently in the database',
+            tag: 'General',
+            state: '',
+            type: '',
+            picture: null,
+            registerLink: '', // Optional: for events only
+            duration: '',
+        },
+    );
 
     function nextItem() {
         currentIndex = (currentIndex + 1) % filteredItems.length;
@@ -123,7 +130,9 @@
                     </button>
                     {#if currentItem.state === 'Upcoming' && currentItem.registerLink}
                         <a
-                            href="/"
+                            href={currentItem.registerLink}
+                            target="_blank"
+                            rel="external"
                             class=" border-csi-blue text-foreground hover:bg-csi-blue hover:text-background cursor-pointer rounded-lg border px-3 py-1 text-xs no-underline hover:shadow-inner sm:text-sm"
                             >Register</a
                         >
@@ -133,17 +142,18 @@
         </div>
 
         <div class="bg-background flex items-center justify-center space-x-3 py-4">
-            {#each filteredItems as item, i}
+            {#each filteredItems as item, i (i)}
                 <button
                     aria-label="Go to slide {i}"
                     aria-current="true"
                     onclick={() => {
                         goToItem(i);
                     }}
-                    class="{item === currentItem ? 'bg-csi-blue' : 'bg-gray-300'} {item !==
-                    currentItem
-                        ? 'hover:bg-gray-400'
-                        : ''} h-2.5 w-2.5 cursor-pointer rounded-full"
+                    class={[
+                        'h-2.5 w-2.5 cursor-pointer rounded-full',
+                        item === currentItem ? 'bg-csi-blue' : 'bg-gray-300',
+                        { 'hover:bg-gray-400': item !== currentItem },
+                    ]}
                 ></button>
             {/each}
         </div>
