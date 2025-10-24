@@ -12,23 +12,27 @@
     const { items = [] } = $props();
 
     // filter items with pictures only
-    let filteredItems = $derived(items.filter(item => item.picture));
+    const filteredItems = $derived.by(() => {
+        const filtered = items.filter(item => item.picture);
 
-    if (filteredItems.length === 0) {
-        // TODO: the following properties are highly recommended to be filled in order to have complete information
-        filteredItems = [
-            {
-                name: 'No Items Yet',
-                description: 'No items are currently in the database',
-                tag: 'General',
-                state: '',
-                type: '',
-                picture: null,
-                registerLink: '', // Optional: for events only
-                duration: '',
-            },
-        ];
-    }
+        if (filtered.length === 0) {
+            // TODO: the following properties are highly recommended to be filled in order to have complete information
+            return [
+                {
+                    name: 'No Items Yet',
+                    description: 'No items are currently in the database',
+                    tag: 'General',
+                    state: '',
+                    type: '',
+                    picture: null,
+                    registerLink: '', // Optional: for events only
+                    duration: '',
+                },
+            ];
+        }
+
+        return filtered;
+    });
 
     let currentIndex = $state(0);
     const currentItem = $derived(filteredItems[currentIndex]);

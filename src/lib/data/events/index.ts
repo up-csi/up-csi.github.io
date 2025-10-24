@@ -1,5 +1,3 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-
 import { parse } from 'valibot';
 
 import { type Event, Event as EventSchema } from '$lib/models/event';
