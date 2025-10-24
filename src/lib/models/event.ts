@@ -1,5 +1,3 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-
 import { type InferOutput, array, object, picklist, string } from 'valibot';
 
 import type { EventSession } from '$lib/types/event_session';
@@ -24,7 +22,6 @@ export const Event = object({
 });
 
 export interface Event extends InferOutput<typeof Event> {
-    imgs: EnhancedImgAttributes['src'][];
     parsed_sessions: EventSession[];
     current_session: EventSession;
     state: State;

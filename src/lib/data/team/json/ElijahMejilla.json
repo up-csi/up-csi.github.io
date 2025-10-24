@@ -1,1 +1,6 @@
-{ "name": "Elijah Mejilla", "img": "ElijahMejilla", "committee": ["Service"] }
+{
+    "name": "Elijah Mejilla",
+    "img": "ElijahMejilla",
+    "committee": ["Engineering"],
+    "socials": { "github": "jgmejilla" }
+}

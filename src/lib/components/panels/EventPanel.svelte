@@ -14,7 +14,14 @@
     }
 
     const { perPage = 6, events, filteredEvents }: Props = $props();
-    const tags = ['All', ...eventTags];
+
+    const tags = [
+        'All',
+        ...eventTags.filter(tag => {
+            // must have at least one event
+            return filteredEvents[tag]?.length ?? 0;
+        }),
+    ];
 
     let selectedTag = $state(tags[0] ?? 'All');
     const selectedEvents = $derived(filteredEvents[selectedTag] ?? events);

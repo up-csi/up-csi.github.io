@@ -1,1 +1,6 @@
-{ "name": "Ethan Filio", "img": "EthanFilio", "committee": ["Service"] }
+{
+    "name": "Ethan Filio",
+    "img": "EthanFilio",
+    "committee": ["Service"],
+    "socials": { "github": "EthanFilio", "linkedin": "ethan-filio-608a0b200" }
+}

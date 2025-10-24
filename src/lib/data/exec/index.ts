@@ -1,5 +1,3 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-
 import { parse } from 'valibot';
 
 import { type Officer, Officer as OfficerSchema } from '$lib/models/officer';
@@ -15,9 +13,7 @@ async function getOfficers() {
     const promises = Object.entries(imports).map(async ([_, asset]) => {
         const officer = parse(OfficerSchema, await asset());
 
-        const src: EnhancedImgAttributes['src'] = (
-            await import(`$lib/assets/exec/${officer.img}.webp?enhanced?url`)
-        ).default;
+        const src: string = officer.img;
 
         const parsed_pos: Record<string, Position[]> = {};
 

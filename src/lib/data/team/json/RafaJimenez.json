@@ -1,1 +1,6 @@
-{ "name": "Rafa Jimenez", "img": "RafaJimenez", "committee": ["External Relations"] }
+{
+    "name": "Rafa Jimenez",
+    "img": "RafaJimenez",
+    "committee": ["External Relations"],
+    "socials": { "github": "GRjimenez" }
+}

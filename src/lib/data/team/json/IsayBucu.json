@@ -1,7 +1,10 @@
 {
     "name": "Isay Bucu",
     "img": "IsayBucu",
-    "title": ["Director for Branding & Creatives"],
-    "committee": ["Branding & Creatives", "Executive"],
-    "socials": { "instagram": "clarissecoconut" }
+    "committee": ["Branding & Creatives"],
+    "socials": {
+        "github": "ClarisseCoconut",
+        "linkedin": "Clarisse Bianca Bucu",
+        "instagram": "clarissecoconut"
+    }
 }
