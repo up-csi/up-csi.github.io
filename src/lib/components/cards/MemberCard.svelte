@@ -38,7 +38,7 @@
         src="https://assets.up-csi.org/website/images/people/{src}.webp"
         alt={name}
         height="300px"
-        loading="eager"
+        loading="lazy"
         class="col-start-1 row-start-1 !m-0 aspect-square h-56 w-full rounded-2xl object-cover md:h-full"
     />
     {#if isOverlayVisible}

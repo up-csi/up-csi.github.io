@@ -21,7 +21,7 @@
             <img
                 src="https://assets.up-csi.org/website/images/events/{slug}/0.webp"
                 alt={name}
-                loading="eager"
+                loading="lazy"
                 class="h-64 shrink-0 object-cover md:h-48"
             />
         </div>

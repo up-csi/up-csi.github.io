@@ -73,7 +73,7 @@
                     <enhanced:img
                         src={currentItem.picture}
                         alt={currentItem.name}
-                        loading="eager"
+                        loading="lazy"
                         class="aspect-square h-48 rounded-xl object-cover md:h-64 md:w-96"
                     />
                 {:else}

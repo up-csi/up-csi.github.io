@@ -122,7 +122,7 @@
                         <enhanced:img
                             src={currentItem.picture}
                             alt="dummy"
-                            loading="eager"
+                            loading="lazy"
                             class="m-0 aspect-square w-full rounded-xl object-cover md:h-90"
                         />
                     {:else}
