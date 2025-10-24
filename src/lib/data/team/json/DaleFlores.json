@@ -1,1 +1,6 @@
-{ "name": "Dale Flores", "img": "DaleFlores", "committee": ["Service"] }
+{
+    "name": "Dale Flores",
+    "img": "DaleFlores",
+    "committee": ["Innovation"],
+    "socials": { "github": "exos7", "linkedin": "dale-sealtiel-flores-3734b3296" }
+}

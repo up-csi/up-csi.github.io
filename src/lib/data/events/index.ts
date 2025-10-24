@@ -1,5 +1,3 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-
 import { parse } from 'valibot';
 
 import { type Event, Event as EventSchema } from '$lib/models/event';
@@ -13,19 +11,8 @@ export async function getEvents() {
     const promises = Object.entries(imports).map(async ([_, asset]) => {
         const event = parse(EventSchema, await asset());
 
-        const imgs: EnhancedImgAttributes['src'][] = [];
-        for (let i = 0; i < 10; i++)
-            try {
-                imgs.push(
-                    (await import(`$lib/assets/events/${event.slug}/${i}.webp?enhanced?url`))
-                        .default,
-                );
-            } catch {
-                break;
-            }
-
         const parsed_sessions: EventSession[] = [];
-        event.sessions.forEach(detail => {
+        for (const detail of event.sessions) {
             const [type, start, end, description] = detail.split('|');
             if ((type === 'Internal' || type === 'External') && start && end) {
                 const new_session: EventSession = {
@@ -36,15 +23,14 @@ export async function getEvents() {
                 };
                 parsed_sessions.push(new_session);
             }
-        });
-        parsed_sessions.sort((a, b) => {
-            return b.end.getTime() - a.end.getTime();
-        });
+        }
+
+        parsed_sessions.sort((a, b) => b.end.getTime() - a.end.getTime());
 
         let state: State = 'Past';
         const present = new Date().getTime();
         let current_session: EventSession = parsed_sessions[0] ?? dummy_session;
-        parsed_sessions.forEach(ps => {
+        for (const ps of parsed_sessions) {
             const { start, end } = ps;
             if (end.getTime() < present) {
                 state = 'Past';
@@ -56,12 +42,12 @@ export async function getEvents() {
 
                 state = 'Future';
             }
-        });
+        }
+
         if (state === 'Past')
             current_session = parsed_sessions[parsed_sessions.length - 1] ?? dummy_session;
 
-        const parsed_event: Event = { ...event, imgs, parsed_sessions, current_session, state };
-        return parsed_event;
+        return { ...event, parsed_sessions, current_session, state } as Event;
     });
 
     return await Promise.all(promises);

@@ -1,6 +1,6 @@
 {
     "name": "Sean Kenji Tolentino",
     "img": "SeanKenjiTolentino",
-    "title": ["Director for External Relations"],
-    "committee": ["External Relations", "Executive"]
+    "committee": ["External Relations"],
+    "socials": { "github": "Tolenn", "linkedin": "Sean Kenji Tolentino" }
 }

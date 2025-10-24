@@ -1,1 +1,6 @@
-{ "name": "CJ Salces", "img": "CJSalces", "committee": ["Innovation"] }
+{
+    "name": "CJ Salces",
+    "img": "CJSalces",
+    "committee": ["Innovation"],
+    "socials": { "github": "rue-22" }
+}

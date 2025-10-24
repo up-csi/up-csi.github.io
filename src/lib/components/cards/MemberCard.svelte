@@ -25,8 +25,8 @@
     onmouseenter={() => (isOverlayVisible = true)}
     onmouseleave={() => (isOverlayVisible = false)}
 >
-    <enhanced:img
-        {src}
+    <img
+        src="https://assets.up-csi.org/website/images/people/{src}.webp"
         alt={name}
         height="300px"
         loading="lazy"

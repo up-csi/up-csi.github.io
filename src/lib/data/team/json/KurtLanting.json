@@ -1,1 +1,6 @@
-{ "name": "Kurt Lanting", "img": "KurtLanting", "committee": ["Innovation"] }
+{
+    "name": "Kurt Lanting",
+    "img": "KurtLanting",
+    "committee": ["Innovation"],
+    "socials": { "github": "LantingKurt", "linkedin": "Kurt Lanting" }
+}

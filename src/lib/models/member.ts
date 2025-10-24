@@ -1,5 +1,3 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-
 import { type InferOutput, array, object, optional, picklist, record, string } from 'valibot';
 
 import { MemberCommittees } from '$lib/types/committees';
@@ -15,5 +13,5 @@ export const Member = object({
 });
 
 export interface Member extends InferOutput<typeof Member> {
-    src: EnhancedImgAttributes['src'];
+    src: string;
 }
