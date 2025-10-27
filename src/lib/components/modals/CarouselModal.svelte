@@ -23,21 +23,11 @@
     let dialogRef: HTMLDialogElement | undefined = $state();
 
     $effect(() => {
-        if (dialogRef) {
-            if (showModal && !dialogRef.open) {
-                dialogRef.showModal();
-            }
-        }
+        if (dialogRef && !dialogRef.open && showModal) dialogRef.showModal();
     });
 
     function requestDialogClose() {
         showModal = false;
-    }
-
-    function handleNativeDialogClose() {
-        if (showModal) {
-            showModal = false;
-        }
     }
 
     function handleDialogCancel(item: Event) {
@@ -46,16 +36,14 @@
     }
 
     function handleBackdropClick(item: Event) {
-        if (item.target === dialogRef) {
-            requestDialogClose();
-        }
+        if (item.target === dialogRef) requestDialogClose();
     }
 </script>
 
 {#if showModal}
     <dialog
         bind:this={dialogRef}
-        onclose={handleNativeDialogClose}
+        onclose={requestDialogClose}
         oncancel={handleDialogCancel}
         onmousedown={handleBackdropClick}
         class="font-dm shadow-csi-blue text-foreground bg-background mx-auto my-auto h-4/5 w-3/4 overflow-y-auto rounded-3xl p-0 shadow-md sm:w-2/3 md:w-3/5 lg:w-1/2"
@@ -136,17 +124,18 @@
                 <div
                     class="bg-background col-span-1 col-start-2 row-start-2 flex items-center justify-center space-x-3 pt-4 md:col-span-3 md:col-start-1"
                 >
-                    {#each items as item, i}
+                    {#each items as item, i (i)}
                         <button
                             aria-label="Go to slide {i}"
                             aria-current="true"
                             onclick={() => {
                                 goToItem(i);
                             }}
-                            class="{item === currentItem ? 'bg-csi-blue' : 'bg-gray-300'} {item !==
-                            currentItem
-                                ? 'hover:bg-gray-400'
-                                : ''} focus-visible:ring-csi-blue focus-visible:ring-offset-muted h-2.5 w-2.5 cursor-pointer rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+                            class={[
+                                'focus-visible:ring-csi-blue focus-visible:ring-offset-muted h-2.5 w-2.5 cursor-pointer rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+                                item === currentItem ? 'bg-csi-blue' : 'bg-gray-300',
+                                { 'hover:bg-gray-400': item !== currentItem },
+                            ]}
                         ></button>
                     {/each}
                 </div>

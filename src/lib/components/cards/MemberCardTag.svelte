@@ -24,7 +24,7 @@
 </div>
 <div class="flex flex-row flex-wrap gap-2">
     {#if socials}
-        {#each Object.entries(socials) as [social, link]}
+        {#each Object.entries(socials) as [social, link] (social)}
             {@const { path, icon } = getSocialMedium(social)}
             {@const href = path ? `${path}/${link}` : link}
             <a {href} target="_blank"

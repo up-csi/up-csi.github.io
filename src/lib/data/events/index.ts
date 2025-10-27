@@ -12,7 +12,7 @@ export async function getEvents() {
         const event = parse(EventSchema, await asset());
 
         const parsed_sessions: EventSession[] = [];
-        event.sessions.forEach(detail => {
+        for (const detail of event.sessions) {
             const [type, start, end, description] = detail.split('|');
             if ((type === 'Internal' || type === 'External') && start && end) {
                 const new_session: EventSession = {
@@ -23,15 +23,14 @@ export async function getEvents() {
                 };
                 parsed_sessions.push(new_session);
             }
-        });
-        parsed_sessions.sort((a, b) => {
-            return b.end.getTime() - a.end.getTime();
-        });
+        }
+
+        parsed_sessions.sort((a, b) => b.end.getTime() - a.end.getTime());
 
         let state: State = 'Past';
         const present = new Date().getTime();
         let current_session: EventSession = parsed_sessions[0] ?? dummy_session;
-        parsed_sessions.forEach(ps => {
+        for (const ps of parsed_sessions) {
             const { start, end } = ps;
             if (end.getTime() < present) {
                 state = 'Past';
@@ -39,18 +38,16 @@ export async function getEvents() {
                 state = 'Ongoing';
                 current_session = ps;
             } else {
-                if (state === 'Past') {
-                    current_session = ps;
-                }
+                if (state === 'Past') current_session = ps;
+
                 state = 'Future';
             }
-        });
-        if (state === 'Past') {
-            current_session = parsed_sessions[parsed_sessions.length - 1] ?? dummy_session;
         }
 
-        const parsed_event: Event = { ...event, parsed_sessions, current_session, state };
-        return parsed_event;
+        if (state === 'Past')
+            current_session = parsed_sessions[parsed_sessions.length - 1] ?? dummy_session;
+
+        return { ...event, parsed_sessions, current_session, state } as Event;
     });
 
     return await Promise.all(promises);

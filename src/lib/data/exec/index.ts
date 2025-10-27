@@ -1,3 +1,4 @@
+import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
 import { parse } from 'valibot';
 
 import { type Officer, Officer as OfficerSchema } from '$lib/models/officer';
@@ -23,9 +24,7 @@ async function getOfficers() {
             const actual_pos: Position = parse(PositionSchema, raw_actual_pos);
 
             if (term) {
-                if (!parsed_pos[term]) {
-                    parsed_pos[term] = [];
-                }
+                if (!parsed_pos[term]) parsed_pos[term] = [];
 
                 parsed_pos[term].push(actual_pos);
             }
@@ -62,16 +61,15 @@ export async function getExec() {
     });
 
     Object.keys(boards).forEach(async term => {
-        let src = null;
+        // eslint-disable-next-line @typescript-eslint/init-declarations
+        let src: EnhancedImgAttributes['src'] | null;
         try {
             src = (await import(`$lib/assets/exec/${term}.webp?enhanced?url`)).default;
         } catch {
             src = null;
         }
 
-        if (boards[term]) {
-            boards[term].src = src;
-        }
+        if (boards[term]) boards[term].src = src;
     });
 
     return boards;

@@ -31,7 +31,7 @@
             <ul
                 class="!m-0 flex max-w-(--breakpoint-sm) list-none flex-row flex-wrap justify-center gap-4 rounded-lg p-0 lg:max-w-fit"
             >
-                {#each COMMITTEE_FILTERS as committee}
+                {#each COMMITTEE_FILTERS as committee (committee)}
                     {@const neutral =
                         currentCommittee === committee
                             ? 'bg-selected-filter text-selected-filter-foreground'
@@ -53,7 +53,7 @@
     >
         {#if filteredTeam}
             {@const { color, foreground } = getCommitteeInfo(currentCommittee)}
-            {#each filteredTeam as member}
+            {#each filteredTeam as member (member.name)}
                 <Card {member} socials={member.socials} {color} {foreground} />
             {/each}
         {/if}
