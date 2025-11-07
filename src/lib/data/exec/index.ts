@@ -6,7 +6,7 @@ import { type Position, Position as PositionSchema } from '$lib/models/position'
 import type { Board } from '$lib/types/board';
 import type { BoardOfficer } from '$lib/types/board_officer';
 
-export const pres_term = '2425B';
+export const pres_term = '2526A';
 
 async function getOfficers() {
     const imports = import.meta.glob<Officer>('./json/*.json');
