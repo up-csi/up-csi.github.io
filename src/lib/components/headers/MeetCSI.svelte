@@ -30,7 +30,7 @@
             To create a center where students can innovate with the latest technology.
         </p>
         <div class="text-center transition-colors ease-in-out md:text-left">
-            <LinkButton href="#mission-vision">Mission and Vision</LinkButton>
+            <LinkButton href="#mission-vision">UP CSI Core Messages and Tagline</LinkButton>
             <LinkButton href="/people">See Team</LinkButton>
         </div>
     </div>
