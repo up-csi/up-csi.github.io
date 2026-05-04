@@ -25,8 +25,10 @@ export const Member = object({
     website_url: nullable(pipe(string(), url('Invalid Website URL'))),
 });
 
-export interface Member
-    extends Pick<InferOutput<typeof Member>, 'id' | 'last_name' | 'nickname' | 'image_url'> {
+export interface Member extends Pick<
+    InferOutput<typeof Member>,
+    'id' | 'last_name' | 'nickname' | 'image_url'
+> {
     committees: string[];
     socials: Record<string, string>;
 }

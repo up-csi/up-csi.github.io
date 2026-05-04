@@ -1,7 +1,7 @@
 onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
-  - esbuild
-  - sharp
+    - '@tailwindcss/oxide'
+    - esbuild
+    - sharp
 
 overrides:
-  cookie@<0.7.0: '>=0.7.0'
+    cookie@<0.7.0: '>=0.7.0'
