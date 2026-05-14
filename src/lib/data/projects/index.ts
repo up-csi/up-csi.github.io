@@ -1,29 +1,18 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
+import { parse, array } from 'valibot';
 
-import { parse } from 'valibot';
+import { supabase } from '$lib/supabaseClient';
 
-import { type Project, Project as ProjectSchema } from '$lib/models/project';
+import { Project as ProjectSchema } from '$lib/models/project';
 
 export async function getProjects() {
-    const imports = import.meta.glob<Project>('./json/*.json');
+    const { data, error } = await supabase.from('projects').select(`
+        name, tag, client, description,
+        project_url, project_managers, devs, end_date, imgs, slug
+    `);
 
-    const promises = Object.entries(imports).map(async ([_, asset]) => {
-        const project = parse(ProjectSchema, await asset());
+    if (error) throw new Error('project data fetching error');
 
-        const imgs: EnhancedImgAttributes['src'][] = [];
-        for (let i = 0; i < 5; i++)
-            try {
-                imgs.push(
-                    (await import(`$lib/assets/events/${project.slug}/${i}.webp?enhanced?url`))
-                        .default,
-                );
-            } catch {
-                break;
-            }
+    const projects = parse(array(ProjectSchema), data);
 
-        const parsed_project: Project = { ...project, imgs };
-        return parsed_project;
-    });
-
-    return await Promise.all(promises);
+    return projects;
 }

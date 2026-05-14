@@ -84,9 +84,9 @@
             </div>
 
             <div class="col-span-3 mx-4 md:col-span-1 md:mx-0">
-                {#if currentItem.picture}
+                {#if currentItem.img_url}
                     <enhanced:img
-                        src={currentItem.picture}
+                        src={currentItem.img_url}
                         alt="dummy"
                         loading="lazy"
                         class="m-0 aspect-square w-full rounded-xl object-cover md:h-90"

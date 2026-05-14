@@ -3,27 +3,35 @@ import { parse } from 'valibot';
 import { type Event, Event as EventSchema } from '$lib/models/event';
 import type { State } from '$lib/types/state';
 
+import { supabase } from '$lib/supabaseClient';
+
 import { type EventSession, dummy_session } from '$lib/types/event_session';
 
 export async function getEvents() {
-    const imports = import.meta.glob<Event>('./json/*.json');
+    const { data, error } = await supabase
+        .from('events')
+        .select(
+            `
+            id, name, tag, description, img_url, slug,
+            event_sessions (audience_type, start_time, end_time, session_desc)
+        `,
+        )
+        .order('id');
 
-    const promises = Object.entries(imports).map(async ([_, asset]) => {
-        const event = parse(EventSchema, await asset());
+    if (error) throw new Error('events data fetching error');
 
-        const parsed_sessions: EventSession[] = [];
-        for (const detail of event.sessions) {
-            const [type, start, end, description] = detail.split('|');
-            if ((type === 'Internal' || type === 'External') && start && end) {
-                const new_session: EventSession = {
-                    type,
-                    start: new Date(start),
-                    end: new Date(end),
-                    description: description ?? null,
-                };
-                parsed_sessions.push(new_session);
-            }
-        }
+    const events: Event[] = [];
+    for (const eventData of data ?? []) {
+        const event = parse(EventSchema, eventData);
+
+        const currEventSessions = eventData.event_sessions ?? [];
+
+        const parsed_sessions: EventSession[] = currEventSessions.map(s => ({
+            type: s.audience_type as 'Internal' | 'External',
+            start: new Date(s.start_time),
+            end: new Date(s.end_time),
+            description: s.session_desc ?? null,
+        }));
 
         parsed_sessions.sort((a, b) => b.end.getTime() - a.end.getTime());
 
@@ -47,8 +55,8 @@ export async function getEvents() {
         if (state === 'Past')
             current_session = parsed_sessions[parsed_sessions.length - 1] ?? dummy_session;
 
-        return { ...event, parsed_sessions, current_session, state } as Event;
-    });
+        events.push({ ...event, parsed_sessions, current_session, state } as Event);
+    }
 
-    return await Promise.all(promises);
+    return events;
 }

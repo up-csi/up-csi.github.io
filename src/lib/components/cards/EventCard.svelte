@@ -1,12 +1,14 @@
 <script lang="ts">
     import type { Event } from '$lib/models/event';
 
+    import placeholder from '$lib/assets/lino/lino-sablay.svg';
+
     interface Props {
         event: Event;
     }
 
     const { event }: Props = $props();
-    const { name, slug, current_session }: Event = $derived(event);
+    const { name, img_url, current_session }: Event = $derived(event);
     const { type, start, end } = $derived(current_session);
 
     const date_options = { month: 'long', day: '2-digit', year: 'numeric' } as const;
@@ -16,16 +18,15 @@
 <div
     class="bg-float text-float-foreground flex h-auto w-full flex-col overflow-hidden rounded-lg shadow-lg md:h-[32rem] md:w-72"
 >
-    {#if slug}
-        <div class="**:!m-0">
-            <img
-                src="https://assets.up-csi.org/website/images/events/{slug}/0.webp"
-                alt={name}
-                loading="lazy"
-                class="h-64 w-full shrink-0 object-cover md:h-48"
-            />
-        </div>
-    {/if}
+    <div class="**:!m-0">
+        <img
+            src={img_url ?? placeholder}
+            alt={name}
+            loading="lazy"
+            class="h-64 w-full shrink-0 object-cover md:h-48"
+        />
+    </div>
+
     <div class="!m-3 flex h-full grow flex-col gap-2 overflow-hidden p-1 *:!m-0">
         <p>{type}</p>
         <h2>{name}</h2>

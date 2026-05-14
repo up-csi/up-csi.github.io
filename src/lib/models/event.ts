@@ -1,4 +1,4 @@
-import { type InferOutput, array, object, picklist, string } from 'valibot';
+import { type InferOutput, object, picklist, string, pipe, url, nullable } from 'valibot';
 
 import type { EventSession } from '$lib/types/event_session';
 import type { State } from '$lib/types/state';
@@ -11,13 +11,14 @@ export const TAGS = [
     'Partnership',
     'Workshop',
     'Other',
+    'Hackathon',
 ] as const;
 
 export const Event = object({
     tag: picklist(TAGS),
     name: string(),
     description: string(),
-    sessions: array(string()),
+    img_url: nullable(pipe(string(), url('Invalid image URL'))),
     slug: string(),
 });
 

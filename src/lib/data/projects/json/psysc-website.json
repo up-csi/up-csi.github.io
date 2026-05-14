@@ -1,8 +1,0 @@
-{
-    "tag": "Service",
-    "name": "PSYSC Website",
-    "client": "Philippine Society of Youth Science Clubs",
-    "proponents": { "pm": ["Gerard Montemayor"], "devs": ["Jigger Pilipina"] },
-    "end_date": "2018-02-01",
-    "slug": "psysc-website"
-}

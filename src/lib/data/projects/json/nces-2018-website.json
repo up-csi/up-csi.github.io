@@ -1,9 +1,0 @@
-{
-    "tag": "Service",
-    "name": "NCES 2018 Website",
-    "client": "UP ACES",
-    "description": "A web app that manages the registration for NCES 2018.",
-    "proponents": { "pm": ["Mikhael Dionio"], "devs": ["Michael Pio Mayol"] },
-    "end_date": "2018-07",
-    "slug": "nces-2018-website"
-}

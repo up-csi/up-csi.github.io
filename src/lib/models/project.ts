@@ -1,8 +1,7 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
-
 import {
     type InferOutput,
     array,
+    nullable,
     object,
     optional,
     picklist,
@@ -16,19 +15,14 @@ export const TAGS = ['Service', 'Innovation'] as const;
 export const Project = object({
     tag: picklist(TAGS),
     name: string(),
-    client: optional(string()),
-    description: optional(string()),
-    link: optional(string()),
-    proponents: optional(
-        object({
-            pm: optional(array(string())),
-            devs: optional(array(string())),
-        }),
-    ),
-    end_date: optional(pipe(string(), transform(Date))),
+    client: nullable(string()),
+    description: nullable(string()),
+    project_url: nullable(string()),
+    project_managers: optional(array(string())),
+    devs: optional(array(string())),
+    end_date: nullable(pipe(string(), transform(Date))),
     slug: string(),
+    imgs: nullable(array(string())),
 });
 
-export interface Project extends InferOutput<typeof Project> {
-    imgs: EnhancedImgAttributes['src'][];
-}
+export type Project = InferOutput<typeof Project>;
