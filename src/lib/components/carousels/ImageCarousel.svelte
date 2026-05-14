@@ -1,5 +1,4 @@
 <script lang="ts">
-    /* eslint-disable svelte/no-navigation-without-resolve */
     import Icon from '@iconify/svelte';
     import LeftArrow from '@iconify/icons-heroicons/arrow-left-circle';
     import RightArrow from '@iconify/icons-heroicons/arrow-right-circle';

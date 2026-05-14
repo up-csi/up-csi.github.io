@@ -1,4 +1,4 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
+// `@sveltejs/enhanced-img` no longer exports `EnhancedImgAttributes` type; use `string[]` for image src URLs
 
 import { parse } from 'valibot';
 
@@ -10,7 +10,7 @@ export async function getProjects() {
     const promises = Object.entries(imports).map(async ([_, asset]) => {
         const project = parse(ProjectSchema, await asset());
 
-        const imgs: EnhancedImgAttributes['src'][] = [];
+        const imgs: string[] = [];
         for (let i = 0; i < 5; i++)
             try {
                 imgs.push(

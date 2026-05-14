@@ -1,4 +1,4 @@
-import type { EnhancedImgAttributes } from '@sveltejs/enhanced-img';
+// `@sveltejs/enhanced-img` no longer exports `EnhancedImgAttributes` type; use `string[]` for image src URLs
 
 import {
     type InferOutput,
@@ -30,5 +30,5 @@ export const Project = object({
 });
 
 export interface Project extends InferOutput<typeof Project> {
-    imgs: EnhancedImgAttributes['src'][];
+    imgs: string[];
 }

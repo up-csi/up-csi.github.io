@@ -51,6 +51,7 @@ export default defineConfig(
             '@html-eslint/require-frame-title': 'error',
             '@html-eslint/require-input-label': 'error',
             '@html-eslint/require-meta-viewport': 'error',
+            '@html-eslint/no-extra-spacing-tags': 'off',
         },
     },
     {
@@ -182,11 +183,13 @@ export default defineConfig(
             'require-unicode-regexp': 'error',
             'symbol-description': 'error',
             yoda: ['warn', 'never', { exceptRange: true }],
+            'svelte/no-navigation-without-resolve': 'off',
         },
     },
     {
         files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
         extends: [...svelte.configs.recommended, ...svelte.configs.prettier],
+        rules: { 'svelte/no-navigation-without-resolve': 'off' },
         languageOptions: {
             parserOptions: {
                 projectService: true,
